@@ -16,3 +16,5 @@ Kurzbeschreibung: {{PROJECT_DESCRIPTION}}
 - [ ] MVP definieren
 - [ ] Erste lauffähige Version bauen
 
+***REMOVED***
+***REMOVED***
