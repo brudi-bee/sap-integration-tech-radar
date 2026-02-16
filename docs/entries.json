@@ -1,0 +1,37 @@
+{
+  "title": "SAP Integration Tech Radar",
+  "quadrants": [
+    {"name":"Platforms"},
+    {"name":"Tooling & Ops"},
+    {"name":"Patterns & Architecture"},
+    {"name":"Protocols & APIs"}
+  ],
+  "rings": [
+    {"name":"ADOPT", "color":"#5ba300"},
+    {"name":"TRIAL", "color":"#009eb0"},
+    {"name":"ASSESS", "color":"#c7ba00"},
+    {"name":"HOLD", "color":"#e09b96"}
+  ],
+  "entries": [
+    {"label":"SAP Integration Suite (Cloud Integration)","quadrant":0,"ring":0,"moved":0},
+    {"label":"SAP API Management","quadrant":0,"ring":0,"moved":0},
+    {"label":"SAP Event Mesh","quadrant":0,"ring":1,"moved":2},
+    {"label":"SAP PI/PO","quadrant":0,"ring":3,"moved":-1},
+
+    {"label":"CI/CD for integration artifacts","quadrant":1,"ring":1,"moved":2},
+    {"label":"Central logging + correlation IDs","quadrant":1,"ring":0,"moved":0},
+    {"label":"OpenTelemetry","quadrant":1,"ring":2,"moved":1},
+    {"label":"Manual prod changes","quadrant":1,"ring":3,"moved":-1},
+
+    {"label":"API-first","quadrant":2,"ring":0,"moved":0},
+    {"label":"Event-driven integration","quadrant":2,"ring":1,"moved":2},
+    {"label":"Canonical data model (lightweight)","quadrant":2,"ring":2,"moved":0},
+    {"label":"Direct DB integration","quadrant":2,"ring":3,"moved":-1},
+
+    {"label":"OData v4","quadrant":3,"ring":0,"moved":0},
+    {"label":"REST/JSON","quadrant":3,"ring":0,"moved":0},
+    {"label":"OAuth2 / OIDC","quadrant":3,"ring":0,"moved":0},
+    {"label":"AsyncAPI","quadrant":3,"ring":1,"moved":2},
+    {"label":"SOAP (legacy)","quadrant":3,"ring":3,"moved":-1}
+  ]
+}
