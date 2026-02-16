@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SAP Integration Tech Radar</title>
+  <style>
+    body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,sans-serif;background:#0e1324;color:#eef2ff}
+    header{padding:16px 18px;border-bottom:1px solid rgba(255,255,255,.12);display:flex;justify-content:space-between;gap:12px;align-items:end}
+    h1{margin:0;font-size:20px}
+    .muted{color:#b5c0e7;font-size:13px}
+    .wrap{max-width:1400px;margin:0 auto}
+    #radar{width:100%;height:auto;display:block;background:#fff}
+    .bar{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+    .btn{border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.06);color:#dce5ff;border-radius:12px;padding:8px 10px;text-decoration:none;font-size:13px}
+  </style>
+</head>
+<body>
+  <header>
+    <div>
+      <h1>SAP Integration Tech Radar</h1>
+      <div class="muted">Based on the open-source Zalando Tech Radar visualization (MIT). Project content: SAP integration technologies.</div>
+    </div>
+    <div class="bar">
+      <a class="btn" href="https://github.com/brudi-bee/sap-integration-tech-radar" target="_blank" rel="noreferrer">Repo</a>
+      <a class="btn" href="entries.json" target="_blank" rel="noreferrer">Entries (JSON)</a>
+    </div>
+  </header>
+
+  <div class="wrap">
+    <svg id="radar"></svg>
+  </div>
+
+  <!-- d3 + zalando radar release -->
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="https://zalando.github.io/tech-radar/release/radar-0.12.js"></script>
+  <script src="radar-config.js"></script>
+</body>
+</html>
