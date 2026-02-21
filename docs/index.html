@@ -1,25 +1,86 @@
 <!doctype html>
-<html lang="en">
+<html lang="de">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>SAP Integration Tech Radar</title>
   <style>
-    body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,sans-serif;background:#0e1324;color:#eef2ff}
-    header{padding:16px 18px;border-bottom:1px solid rgba(255,255,255,.12);display:flex;justify-content:space-between;gap:12px;align-items:end}
-    h1{margin:0;font-size:20px}
-    .muted{color:#b5c0e7;font-size:13px}
-    .wrap{max-width:1400px;margin:0 auto}
-    #radar{width:100%;height:auto;display:block;background:#fff}
+    :root{
+      --bg:#050b24;
+      --bg2:#0a1542;
+      --line:rgba(122,154,255,.28);
+      --text:#e8eeff;
+      --muted:#9fb3ff;
+      --card:rgba(17,31,84,.65);
+      --btn-border:rgba(138,164,255,.35);
+      --btn-bg:rgba(40,72,190,.26);
+      --btn-text:#dbe7ff;
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Segoe UI,Roboto,sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(1200px 700px at 85% -10%, #1f49d5 0%, transparent 55%),
+        linear-gradient(180deg, var(--bg2) 0%, var(--bg) 55%);
+      min-height:100vh;
+    }
+
+    header{
+      padding:16px 18px;
+      border-bottom:1px solid var(--line);
+      display:flex;
+      justify-content:space-between;
+      gap:12px;
+      align-items:end;
+      position:sticky;
+      top:0;
+      backdrop-filter: blur(8px);
+      background:rgba(5,11,36,.72);
+      z-index:5;
+    }
+
+    h1{margin:0;font-size:22px;line-height:1.15}
+    .muted{color:var(--muted);font-size:13px;max-width:760px}
+    .wrap{max-width:1400px;margin:0 auto;padding:8px 8px 18px}
+
+    #radar{
+      width:100%;
+      height:auto;
+      display:block;
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:14px;
+      box-shadow:0 16px 40px rgba(0,0,0,.35);
+    }
+
     .bar{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
-    .btn{border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.06);color:#dce5ff;border-radius:12px;padding:8px 10px;text-decoration:none;font-size:13px}
+    .btn{
+      border:1px solid var(--btn-border);
+      background:var(--btn-bg);
+      color:var(--btn-text);
+      border-radius:12px;
+      padding:8px 12px;
+      text-decoration:none;
+      font-size:13px;
+      font-weight:600;
+    }
+
+    @media (max-width: 720px){
+      h1{font-size:17px}
+      .muted{font-size:12px}
+      .wrap{padding:8px 6px 14px}
+      #radar{border-radius:10px}
+    }
   </style>
 </head>
 <body>
   <header>
     <div>
       <h1>SAP Integration Tech Radar</h1>
-      <div class="muted">Based on the open-source Zalando Tech Radar visualization (MIT). Project content: SAP integration technologies.</div>
+      <div class="muted">Zalando-Tech-Radar-Basis, visualisiert im Dark/Future-Blue-Look für unterwegs und Team-Reviews.</div>
     </div>
     <div class="bar">
       <a class="btn" href="https://github.com/brudi-bee/sap-integration-tech-radar" target="_blank" rel="noreferrer">Repo</a>
@@ -31,7 +92,6 @@
     <svg id="radar"></svg>
   </div>
 
-  <!-- d3 + zalando radar release -->
   <script src="https://d3js.org/d3.v7.min.js"></script>
   <script src="https://zalando.github.io/tech-radar/release/radar-0.12.js"></script>
   <script src="radar-config.js"></script>

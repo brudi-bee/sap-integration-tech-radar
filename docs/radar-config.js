@@ -2,24 +2,46 @@
   const res = await fetch('./entries.json');
   const cfg = await res.json();
 
-  // Zalando radar expects a single config object; entries are auto-positioned.
+  // Future-blue palette / NTT-like dark vibe
+  const ringColors = {
+    ADOPT: '#63e6ff',
+    TRIAL: '#4d8dff',
+    ASSESS: '#7a7dff',
+    HOLD: '#8f5fff'
+  };
+
+  const rings = (cfg.rings || []).map(r => ({
+    ...r,
+    color: ringColors[r.name] || r.color
+  }));
+
+  const isMobile = window.innerWidth <= 720;
+
   radar_visualization({
     repo_url: 'https://github.com/brudi-bee/sap-integration-tech-radar',
     svg_id: 'radar',
-    width: 1450,
-    height: 1000,
-    scale: 1.0,
+    width: isMobile ? 980 : 1450,
+    height: isMobile ? 1180 : 1060,
+    scale: isMobile ? 0.88 : 1,
     colors: {
-      background: '#ffffff',
-      grid: '#bbbbbb',
-      inactive: '#dddddd'
+      background: '#0a1542',
+      grid: '#3d64ff',
+      inactive: '#1d2a66'
     },
     font_family: 'Inter, Arial, Helvetica',
     title: cfg.title || 'SAP Integration Tech Radar',
     quadrants: cfg.quadrants,
-    rings: cfg.rings,
-    print_layout: true,
+    rings,
+    print_layout: false,
     links_in_new_tabs: true,
     entries: cfg.entries
   });
+
+  // Improve readability on dark background after render
+  const style = document.createElement('style');
+  style.textContent = `
+    #radar text { fill: #e6eeff; }
+    #radar a text { fill: #dce7ff; }
+  `;
+  document.head.appendChild(style);
 })();
