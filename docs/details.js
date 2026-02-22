@@ -36,21 +36,29 @@
 
   const detailItem = (detailsData.items || []).find(i => i.label === entry.label);
 
-  const desc = detailItem?.summary || 'Technologie/Pattern im Integrationskontext anhand Nutzen, Risiko und operativer Reife bewerten.';
-  document.getElementById('desc').textContent = desc;
+  document.getElementById('intro').textContent = detailItem?.intro || `Es geht um ${entry.label} als Integrationsbaustein.`;
+  document.getElementById('why-ring').textContent = detailItem?.whyRing || 'Die Einordnung folgt dem erwarteten Nutzen-Risiko-Verhältnis für neue Implementierungen.';
 
-  const actions = detailItem?.actions?.length
-    ? detailItem.actions
+  const risks = detailItem?.risks?.length
+    ? detailItem.risks
+    : ['Ohne klare Leitplanken steigt das Risiko inkonsistenter Integrationsmuster über Teams hinweg.'];
+  document.getElementById('risks').innerHTML = risks.map(r => `<li>${r}</li>`).join('');
+
+  const dos = detailItem?.do?.length
+    ? detailItem.do
     : [
-        'Scope klar ziehen: Wo bringt das Thema den größten Integrationsnutzen?',
-        'Nicht-funktionale Anforderungen festhalten (Security, Monitoring, Betrieb).',
-        'Ein kleines Referenz-Setup mit messbaren Erfolgsmetriken aufbauen.'
+        'Klare Success-Kriterien und Betriebsmetriken vor dem Rollout festlegen.',
+        'Scope und Ownership früh zwischen Architektur, Produkt und Betrieb abstimmen.'
       ];
-  document.getElementById('actions').innerHTML = actions.map(a => `<li>${a}</li>`).join('');
+  document.getElementById('do-list').innerHTML = dos.map(a => `<li>${a}</li>`).join('');
+
+  const donts = detailItem?.dont?.length
+    ? detailItem.dont
+    : ['Keine Einführung ohne abgestimmtes Betriebs- und Ownership-Modell.'];
+  document.getElementById('dont-list').innerHTML = donts.map(a => `<li>${a}</li>`).join('');
 
   document.getElementById('raw').textContent = JSON.stringify({
     ...entry,
-    detailSummary: detailItem?.summary,
-    detailSources: detailItem?.sources || []
+    details: detailItem || null
   }, null, 2);
 })();

@@ -5,10 +5,16 @@
       "label": "SAP Cloud Integration (CI)",
       "ring": "ADOPT",
       "quadrant": "Platforms",
-      "summary": "Zentrale iPaaS-Basis auf BTP für robuste API-/Event-nahe Integrationsflows.",
-      "actions": [
-        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
-        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      "intro": "Es geht um die zentrale Integrationslaufzeit auf SAP BTP für API-, Event- und Prozessnahe Integrationen.",
+      "whyRing": "Dieser Punkt ist operativ bewährt und für neue Integrationen die Standardwahl.",
+      "risks": [
+        "Fehlende klare Zuständigkeiten und Zielbilder führen zu inkonsistenten Umsetzungen zwischen Teams."
+      ],
+      "do": [
+        "Klare Success-Kriterien und Betriebsmetriken vor dem Rollout festlegen."
+      ],
+      "dont": [
+        "Keine Einführung ohne abgestimmtes Betriebs- und Ownership-Modell."
       ],
       "sources": [
         "docs/research-notes-2026-02-21.md",
@@ -19,11 +25,17 @@
       "label": "SAP API Management",
       "ring": "ADOPT",
       "quadrant": "Platforms",
-      "summary": "API-Security, Policies, Quotas und Developer Experience zentral steuern.",
-      "actions": [
-        "API-Vertrag und Security-Policy (AuthN/AuthZ, Versionierung, Error-Modell) explizit festlegen.",
-        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
-        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      "intro": "Es geht um die kontrollierte Bereitstellung, Absicherung und Governierung von APIs über ihren gesamten Lifecycle.",
+      "whyRing": "Dieser Punkt ist operativ bewährt und für neue Integrationen die Standardwahl.",
+      "risks": [
+        "Unklare API-Verträge und Security-Regeln führen zu Integrationsbrüchen und erhöhtem Betriebsaufwand."
+      ],
+      "do": [
+        "API-Vertrag inkl. Fehlercode-Modell und Versionierung verbindlich machen.",
+        "AuthN/AuthZ, Rate Limits und Secrets sauber über Policies steuern."
+      ],
+      "dont": [
+        "Keine stillen Breaking Changes ohne Migrationspfad einführen."
       ],
       "sources": [
         "docs/research-notes-2026-02-21.md",
@@ -34,11 +46,18 @@
       "label": "SAP Event Mesh",
       "ring": "TRIAL",
       "quadrant": "Platforms",
-      "summary": "Asynchrone Entkopplung und resiliente Event-Verarbeitung für verteilte Prozesse.",
-      "actions": [
-        "Event-Schema, Delivery-Semantik (at-least-once/exactly-once) und DLQ-Strategie definieren.",
-        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
-        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      "intro": "Es geht um asynchrone, event-getriebene Kopplung zwischen Systemen mit robuster Entkopplung.",
+      "whyRing": "Dieser Punkt ist vielversprechend, sollte aber gezielt und mit klaren Guardrails eingesetzt werden.",
+      "risks": [
+        "Unklare Zustellsemantik oder fehlende DLQ/Retry-Strategien erzeugen schwer reproduzierbare Fehlerbilder."
+      ],
+      "do": [
+        "Einsatz auf wenige, geeignete Domänen begrenzen und Ergebnisse systematisch auswerten.",
+        "Schemas versionieren und Consumer-Kompatibilität explizit testen.",
+        "Retry/Backoff, DLQ und Reprocessing-Runbook definieren."
+      ],
+      "dont": [
+        "Keine Events ohne Ownership und fachliche Idempotenz veröffentlichen."
       ],
       "sources": [
         "docs/research-notes-2026-02-21.md",
@@ -49,11 +68,18 @@
       "label": "SAP Advanced Event Mesh (AEM)",
       "ring": "TRIAL",
       "quadrant": "Platforms",
-      "summary": "Erweiterte Event-Broker-Fähigkeiten für komplexe Eventing-Szenarien.",
-      "actions": [
-        "Event-Schema, Delivery-Semantik (at-least-once/exactly-once) und DLQ-Strategie definieren.",
-        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
-        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      "intro": "Es geht um erweiterte Event-Broker-Fähigkeiten für komplexere Enterprise-Eventing-Topologien.",
+      "whyRing": "Dieser Punkt ist vielversprechend, sollte aber gezielt und mit klaren Guardrails eingesetzt werden.",
+      "risks": [
+        "Unklare Zustellsemantik oder fehlende DLQ/Retry-Strategien erzeugen schwer reproduzierbare Fehlerbilder."
+      ],
+      "do": [
+        "Einsatz auf wenige, geeignete Domänen begrenzen und Ergebnisse systematisch auswerten.",
+        "Schemas versionieren und Consumer-Kompatibilität explizit testen.",
+        "Retry/Backoff, DLQ und Reprocessing-Runbook definieren."
+      ],
+      "dont": [
+        "Keine Events ohne Ownership und fachliche Idempotenz veröffentlichen."
       ],
       "sources": [
         "docs/research-notes-2026-02-21.md",
@@ -64,10 +90,16 @@
       "label": "SAP Cloud Connector",
       "ring": "ADOPT",
       "quadrant": "Tooling & Ops",
-      "summary": "Bewährt für produktive SAP-Integrationslandschaften; standardisieren und breit einsetzen. Kontext: Tooling & Ops.",
-      "actions": [
-        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
-        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      "intro": "Es geht um SAP Cloud Connector als Baustein im Quadranten \"Tooling & Ops\".",
+      "whyRing": "Dieser Punkt ist operativ bewährt und für neue Integrationen die Standardwahl.",
+      "risks": [
+        "Fehlende klare Zuständigkeiten und Zielbilder führen zu inkonsistenten Umsetzungen zwischen Teams."
+      ],
+      "do": [
+        "Klare Success-Kriterien und Betriebsmetriken vor dem Rollout festlegen."
+      ],
+      "dont": [
+        "Keine Einführung ohne abgestimmtes Betriebs- und Ownership-Modell."
       ],
       "sources": [
         "docs/research-notes-2026-02-21.md",
@@ -78,10 +110,17 @@
       "label": "SAP Integration Advisor",
       "ring": "TRIAL",
       "quadrant": "Platforms",
-      "summary": "Sinnvoll in gezielten produktionsnahen Use-Cases mit klaren Guardrails. Kontext: Platforms.",
-      "actions": [
-        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
-        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      "intro": "Es geht um SAP Integration Advisor als Baustein im Quadranten \"Platforms\".",
+      "whyRing": "Dieser Punkt ist vielversprechend, sollte aber gezielt und mit klaren Guardrails eingesetzt werden.",
+      "risks": [
+        "Fehlende klare Zuständigkeiten und Zielbilder führen zu inkonsistenten Umsetzungen zwischen Teams."
+      ],
+      "do": [
+        "Einsatz auf wenige, geeignete Domänen begrenzen und Ergebnisse systematisch auswerten.",
+        "Klare Success-Kriterien und Betriebsmetriken vor dem Rollout festlegen."
+      ],
+      "dont": [
+        "Keine Einführung ohne abgestimmtes Betriebs- und Ownership-Modell."
       ],
       "sources": [
         "docs/research-notes-2026-02-21.md",
@@ -92,10 +131,17 @@
       "label": "SAP Trading Partner Management",
       "ring": "ASSESS",
       "quadrant": "Platforms",
-      "summary": "Gezielt evaluieren (PoC/Spike), bevor breiter Einsatz entschieden wird. Kontext: Platforms.",
-      "actions": [
-        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
-        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      "intro": "Es geht um SAP Trading Partner Management als Baustein im Quadranten \"Platforms\".",
+      "whyRing": "Dieser Punkt hat Potenzial, braucht aber vor breiter Nutzung noch strukturierte Validierung.",
+      "risks": [
+        "Fehlende klare Zuständigkeiten und Zielbilder führen zu inkonsistenten Umsetzungen zwischen Teams."
+      ],
+      "do": [
+        "Zeitlich begrenzten PoC mit klarer Go/No-Go-Entscheidung durchführen.",
+        "Klare Success-Kriterien und Betriebsmetriken vor dem Rollout festlegen."
+      ],
+      "dont": [
+        "Keine Einführung ohne abgestimmtes Betriebs- und Ownership-Modell."
       ],
       "sources": [
         "docs/research-notes-2026-02-21.md",
@@ -106,10 +152,17 @@
       "label": "Edge Integration Cell",
       "ring": "TRIAL",
       "quadrant": "Platforms",
-      "summary": "Sinnvoll in gezielten produktionsnahen Use-Cases mit klaren Guardrails. Kontext: Platforms.",
-      "actions": [
-        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
-        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      "intro": "Es geht um Edge Integration Cell als Baustein im Quadranten \"Platforms\".",
+      "whyRing": "Dieser Punkt ist vielversprechend, sollte aber gezielt und mit klaren Guardrails eingesetzt werden.",
+      "risks": [
+        "Fehlende klare Zuständigkeiten und Zielbilder führen zu inkonsistenten Umsetzungen zwischen Teams."
+      ],
+      "do": [
+        "Einsatz auf wenige, geeignete Domänen begrenzen und Ergebnisse systematisch auswerten.",
+        "Klare Success-Kriterien und Betriebsmetriken vor dem Rollout festlegen."
+      ],
+      "dont": [
+        "Keine Einführung ohne abgestimmtes Betriebs- und Ownership-Modell."
       ],
       "sources": [
         "docs/research-notes-2026-02-21.md",
@@ -120,10 +173,17 @@
       "label": "Kyma Runtime (for integration microservices)",
       "ring": "TRIAL",
       "quadrant": "Platforms",
-      "summary": "Sinnvoll in gezielten produktionsnahen Use-Cases mit klaren Guardrails. Kontext: Platforms.",
-      "actions": [
-        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
-        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      "intro": "Es geht um Kyma Runtime (for integration microservices) als Baustein im Quadranten \"Platforms\".",
+      "whyRing": "Dieser Punkt ist vielversprechend, sollte aber gezielt und mit klaren Guardrails eingesetzt werden.",
+      "risks": [
+        "Fehlende klare Zuständigkeiten und Zielbilder führen zu inkonsistenten Umsetzungen zwischen Teams."
+      ],
+      "do": [
+        "Einsatz auf wenige, geeignete Domänen begrenzen und Ergebnisse systematisch auswerten.",
+        "Klare Success-Kriterien und Betriebsmetriken vor dem Rollout festlegen."
+      ],
+      "dont": [
+        "Keine Einführung ohne abgestimmtes Betriebs- und Ownership-Modell."
       ],
       "sources": [
         "docs/research-notes-2026-02-21.md",
@@ -134,11 +194,17 @@
       "label": "SAP Build Process Automation",
       "ring": "ASSESS",
       "quadrant": "Platforms",
-      "summary": "Gezielt evaluieren (PoC/Spike), bevor breiter Einsatz entschieden wird. Kontext: Platforms.",
-      "actions": [
-        "Deployment- und Rollback-Strategie inklusive Compliance-Gates standardisieren.",
-        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
-        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      "intro": "Es geht um SAP Build Process Automation als Baustein im Quadranten \"Platforms\".",
+      "whyRing": "Dieser Punkt hat Potenzial, braucht aber vor breiter Nutzung noch strukturierte Validierung.",
+      "risks": [
+        "Schwache Deployment-Governance erhöht Change-Risiko und Audit-Aufwand."
+      ],
+      "do": [
+        "Zeitlich begrenzten PoC mit klarer Go/No-Go-Entscheidung durchführen.",
+        "Changes über Pipeline mit Freigaben, Checks und Rollback-Plan ausrollen."
+      ],
+      "dont": [
+        "Keine direkten Prod-Änderungen außerhalb des definierten Change-Prozesses."
       ],
       "sources": [
         "docs/research-notes-2026-02-21.md",
@@ -149,10 +215,17 @@
       "label": "SAP Open Connectors",
       "ring": "HOLD",
       "quadrant": "Platforms",
-      "summary": "Für neue Implementierungen vermeiden; nur für Bestand mit Migrationspfad. Kontext: Platforms.",
-      "actions": [
-        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
-        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      "intro": "Es geht um SAP Open Connectors als Baustein im Quadranten \"Platforms\".",
+      "whyRing": "Dieser Punkt ist für neue Implementierungen nicht empfohlen und sollte nur kontrolliert im Bestand laufen.",
+      "risks": [
+        "Fehlende klare Zuständigkeiten und Zielbilder führen zu inkonsistenten Umsetzungen zwischen Teams."
+      ],
+      "do": [
+        "Bestandsnutzung nur mit Exit-Strategie und priorisiertem Ablöseplan fortführen.",
+        "Klare Success-Kriterien und Betriebsmetriken vor dem Rollout festlegen."
+      ],
+      "dont": [
+        "Keine Einführung ohne abgestimmtes Betriebs- und Ownership-Modell."
       ],
       "sources": [
         "docs/research-notes-2026-02-21.md",
@@ -163,10 +236,17 @@
       "label": "SAP PI/PO",
       "ring": "HOLD",
       "quadrant": "Platforms",
-      "summary": "Legacy-Middleware; strategisch Richtung Integration Suite migrieren.",
-      "actions": [
-        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
-        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      "intro": "Es geht um SAP PI/PO als Baustein im Quadranten \"Platforms\".",
+      "whyRing": "Dieser Punkt ist für neue Implementierungen nicht empfohlen und sollte nur kontrolliert im Bestand laufen.",
+      "risks": [
+        "Fehlende klare Zuständigkeiten und Zielbilder führen zu inkonsistenten Umsetzungen zwischen Teams."
+      ],
+      "do": [
+        "Bestandsnutzung nur mit Exit-Strategie und priorisiertem Ablöseplan fortführen.",
+        "Migrationspfad zu API-/Event-basierten Integrationsmustern aktiv planen."
+      ],
+      "dont": [
+        "Keine neuen Legacy-Kopplungen in Greenfield-Umfängen aufbauen."
       ],
       "sources": [
         "docs/research-notes-2026-02-21.md",
@@ -177,11 +257,16 @@
       "label": "Central logging + correlation IDs",
       "ring": "ADOPT",
       "quadrant": "Tooling & Ops",
-      "summary": "Bewährt für produktive SAP-Integrationslandschaften; standardisieren und breit einsetzen. Kontext: Tooling & Ops.",
-      "actions": [
-        "SLIs/SLOs und Alerting-Regeln je Integrationsfluss festschreiben.",
-        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
-        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      "intro": "Es geht um Central logging + correlation IDs als Baustein im Quadranten \"Tooling & Ops\".",
+      "whyRing": "Dieser Punkt ist operativ bewährt und für neue Integrationen die Standardwahl.",
+      "risks": [
+        "Fehlende End-to-End-Sichtbarkeit verlängert Incident-Zeiten und erschwert Ursachenanalyse."
+      ],
+      "do": [
+        "Klare Success-Kriterien und Betriebsmetriken vor dem Rollout festlegen."
+      ],
+      "dont": [
+        "Keine Einführung ohne abgestimmtes Betriebs- und Ownership-Modell."
       ],
       "sources": [
         "docs/research-notes-2026-02-21.md",
@@ -192,11 +277,17 @@
       "label": "CI/CD for integration artifacts",
       "ring": "TRIAL",
       "quadrant": "Tooling & Ops",
-      "summary": "Sinnvoll in gezielten produktionsnahen Use-Cases mit klaren Guardrails. Kontext: Tooling & Ops.",
-      "actions": [
-        "Deployment- und Rollback-Strategie inklusive Compliance-Gates standardisieren.",
-        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
-        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      "intro": "Es geht um CI/CD for integration artifacts als Baustein im Quadranten \"Tooling & Ops\".",
+      "whyRing": "Dieser Punkt ist vielversprechend, sollte aber gezielt und mit klaren Guardrails eingesetzt werden.",
+      "risks": [
+        "Schwache Deployment-Governance erhöht Change-Risiko und Audit-Aufwand."
+      ],
+      "do": [
+        "Einsatz auf wenige, geeignete Domänen begrenzen und Ergebnisse systematisch auswerten.",
+        "Changes über Pipeline mit Freigaben, Checks und Rollback-Plan ausrollen."
+      ],
+      "dont": [
+        "Keine direkten Prod-Änderungen außerhalb des definierten Change-Prozesses."
       ],
       "sources": [
         "docs/research-notes-2026-02-21.md",
@@ -207,10 +298,16 @@
       "label": "Secret handling via vault/KMS",
       "ring": "ADOPT",
       "quadrant": "Tooling & Ops",
-      "summary": "Bewährt für produktive SAP-Integrationslandschaften; standardisieren und breit einsetzen. Kontext: Tooling & Ops.",
-      "actions": [
-        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
-        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      "intro": "Es geht um Secret handling via vault/KMS als Baustein im Quadranten \"Tooling & Ops\".",
+      "whyRing": "Dieser Punkt ist operativ bewährt und für neue Integrationen die Standardwahl.",
+      "risks": [
+        "Fehlende klare Zuständigkeiten und Zielbilder führen zu inkonsistenten Umsetzungen zwischen Teams."
+      ],
+      "do": [
+        "Klare Success-Kriterien und Betriebsmetriken vor dem Rollout festlegen."
+      ],
+      "dont": [
+        "Keine Einführung ohne abgestimmtes Betriebs- und Ownership-Modell."
       ],
       "sources": [
         "docs/research-notes-2026-02-21.md",
@@ -221,11 +318,17 @@
       "label": "OpenTelemetry",
       "ring": "TRIAL",
       "quadrant": "Tooling & Ops",
-      "summary": "E2E-Observability über Integrationspfade (Tracing/Metrics/Logs) priorisieren.",
-      "actions": [
-        "SLIs/SLOs und Alerting-Regeln je Integrationsfluss festschreiben.",
-        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
-        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      "intro": "Es geht um durchgängige Observability über Integrationsflüsse mit Traces, Metrics und Logs.",
+      "whyRing": "Dieser Punkt ist vielversprechend, sollte aber gezielt und mit klaren Guardrails eingesetzt werden.",
+      "risks": [
+        "Fehlende End-to-End-Sichtbarkeit verlängert Incident-Zeiten und erschwert Ursachenanalyse."
+      ],
+      "do": [
+        "Einsatz auf wenige, geeignete Domänen begrenzen und Ergebnisse systematisch auswerten.",
+        "Klare Success-Kriterien und Betriebsmetriken vor dem Rollout festlegen."
+      ],
+      "dont": [
+        "Keine Einführung ohne abgestimmtes Betriebs- und Ownership-Modell."
       ],
       "sources": [
         "docs/research-notes-2026-02-21.md",
@@ -236,10 +339,17 @@
       "label": "Contract testing for integrations",
       "ring": "TRIAL",
       "quadrant": "Tooling & Ops",
-      "summary": "Sinnvoll in gezielten produktionsnahen Use-Cases mit klaren Guardrails. Kontext: Tooling & Ops.",
-      "actions": [
-        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
-        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      "intro": "Es geht um Contract testing for integrations als Baustein im Quadranten \"Tooling & Ops\".",
+      "whyRing": "Dieser Punkt ist vielversprechend, sollte aber gezielt und mit klaren Guardrails eingesetzt werden.",
+      "risks": [
+        "Fehlende klare Zuständigkeiten und Zielbilder führen zu inkonsistenten Umsetzungen zwischen Teams."
+      ],
+      "do": [
+        "Einsatz auf wenige, geeignete Domänen begrenzen und Ergebnisse systematisch auswerten.",
+        "Klare Success-Kriterien und Betriebsmetriken vor dem Rollout festlegen."
+      ],
+      "dont": [
+        "Keine Einführung ohne abgestimmtes Betriebs- und Ownership-Modell."
       ],
       "sources": [
         "docs/research-notes-2026-02-21.md",
@@ -250,11 +360,17 @@
       "label": "Terraform for SAP BTP",
       "ring": "TRIAL",
       "quadrant": "Tooling & Ops",
-      "summary": "Sinnvoll in gezielten produktionsnahen Use-Cases mit klaren Guardrails. Kontext: Tooling & Ops.",
-      "actions": [
-        "Deployment- und Rollback-Strategie inklusive Compliance-Gates standardisieren.",
-        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
-        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      "intro": "Es geht um Terraform for SAP BTP als Baustein im Quadranten \"Tooling & Ops\".",
+      "whyRing": "Dieser Punkt ist vielversprechend, sollte aber gezielt und mit klaren Guardrails eingesetzt werden.",
+      "risks": [
+        "Schwache Deployment-Governance erhöht Change-Risiko und Audit-Aufwand."
+      ],
+      "do": [
+        "Einsatz auf wenige, geeignete Domänen begrenzen und Ergebnisse systematisch auswerten.",
+        "Changes über Pipeline mit Freigaben, Checks und Rollback-Plan ausrollen."
+      ],
+      "dont": [
+        "Keine direkten Prod-Änderungen außerhalb des definierten Change-Prozesses."
       ],
       "sources": [
         "docs/research-notes-2026-02-21.md",
@@ -265,11 +381,17 @@
       "label": "Cloud Integration Automation Tool",
       "ring": "ASSESS",
       "quadrant": "Tooling & Ops",
-      "summary": "Gezielt evaluieren (PoC/Spike), bevor breiter Einsatz entschieden wird. Kontext: Tooling & Ops.",
-      "actions": [
-        "Deployment- und Rollback-Strategie inklusive Compliance-Gates standardisieren.",
-        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
-        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      "intro": "Es geht um Cloud Integration Automation Tool als Baustein im Quadranten \"Tooling & Ops\".",
+      "whyRing": "Dieser Punkt hat Potenzial, braucht aber vor breiter Nutzung noch strukturierte Validierung.",
+      "risks": [
+        "Schwache Deployment-Governance erhöht Change-Risiko und Audit-Aufwand."
+      ],
+      "do": [
+        "Zeitlich begrenzten PoC mit klarer Go/No-Go-Entscheidung durchführen.",
+        "Changes über Pipeline mit Freigaben, Checks und Rollback-Plan ausrollen."
+      ],
+      "dont": [
+        "Keine direkten Prod-Änderungen außerhalb des definierten Change-Prozesses."
       ],
       "sources": [
         "docs/research-notes-2026-02-21.md",
@@ -280,10 +402,17 @@
       "label": "Third-party CPI DevOps suites (e.g., Figaf/Int4)",
       "ring": "ASSESS",
       "quadrant": "Tooling & Ops",
-      "summary": "Gezielt evaluieren (PoC/Spike), bevor breiter Einsatz entschieden wird. Kontext: Tooling & Ops.",
-      "actions": [
-        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
-        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      "intro": "Es geht um Third-party CPI DevOps suites (e.g., Figaf/Int4) als Baustein im Quadranten \"Tooling & Ops\".",
+      "whyRing": "Dieser Punkt hat Potenzial, braucht aber vor breiter Nutzung noch strukturierte Validierung.",
+      "risks": [
+        "Fehlende klare Zuständigkeiten und Zielbilder führen zu inkonsistenten Umsetzungen zwischen Teams."
+      ],
+      "do": [
+        "Zeitlich begrenzten PoC mit klarer Go/No-Go-Entscheidung durchführen.",
+        "Klare Success-Kriterien und Betriebsmetriken vor dem Rollout festlegen."
+      ],
+      "dont": [
+        "Keine Einführung ohne abgestimmtes Betriebs- und Ownership-Modell."
       ],
       "sources": [
         "docs/research-notes-2026-02-21.md",
@@ -294,11 +423,16 @@
       "label": "SAP Cloud Transport Management (CTMS) + Content Agent",
       "ring": "ADOPT",
       "quadrant": "Tooling & Ops",
-      "summary": "Bewährt für produktive SAP-Integrationslandschaften; standardisieren und breit einsetzen. Kontext: Tooling & Ops.",
-      "actions": [
-        "Deployment- und Rollback-Strategie inklusive Compliance-Gates standardisieren.",
-        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
-        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      "intro": "Es geht um SAP Cloud Transport Management (CTMS) + Content Agent als Baustein im Quadranten \"Tooling & Ops\".",
+      "whyRing": "Dieser Punkt ist operativ bewährt und für neue Integrationen die Standardwahl.",
+      "risks": [
+        "Schwache Deployment-Governance erhöht Change-Risiko und Audit-Aufwand."
+      ],
+      "do": [
+        "Changes über Pipeline mit Freigaben, Checks und Rollback-Plan ausrollen."
+      ],
+      "dont": [
+        "Keine direkten Prod-Änderungen außerhalb des definierten Change-Prozesses."
       ],
       "sources": [
         "docs/research-notes-2026-02-21.md",
@@ -309,11 +443,17 @@
       "label": "Content transport via CTS+ (transition)",
       "ring": "ASSESS",
       "quadrant": "Tooling & Ops",
-      "summary": "Gezielt evaluieren (PoC/Spike), bevor breiter Einsatz entschieden wird. Kontext: Tooling & Ops.",
-      "actions": [
-        "Deployment- und Rollback-Strategie inklusive Compliance-Gates standardisieren.",
-        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
-        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      "intro": "Es geht um Content transport via CTS+ (transition) als Baustein im Quadranten \"Tooling & Ops\".",
+      "whyRing": "Dieser Punkt hat Potenzial, braucht aber vor breiter Nutzung noch strukturierte Validierung.",
+      "risks": [
+        "Schwache Deployment-Governance erhöht Change-Risiko und Audit-Aufwand."
+      ],
+      "do": [
+        "Zeitlich begrenzten PoC mit klarer Go/No-Go-Entscheidung durchführen.",
+        "Changes über Pipeline mit Freigaben, Checks und Rollback-Plan ausrollen."
+      ],
+      "dont": [
+        "Keine direkten Prod-Änderungen außerhalb des definierten Change-Prozesses."
       ],
       "sources": [
         "docs/research-notes-2026-02-21.md",
@@ -324,11 +464,16 @@
       "label": "SAP Cloud ALM integration & exception monitoring",
       "ring": "ADOPT",
       "quadrant": "Tooling & Ops",
-      "summary": "Bewährt für produktive SAP-Integrationslandschaften; standardisieren und breit einsetzen. Kontext: Tooling & Ops.",
-      "actions": [
-        "SLIs/SLOs und Alerting-Regeln je Integrationsfluss festschreiben.",
-        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
-        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      "intro": "Es geht um SAP Cloud ALM integration & exception monitoring als Baustein im Quadranten \"Tooling & Ops\".",
+      "whyRing": "Dieser Punkt ist operativ bewährt und für neue Integrationen die Standardwahl.",
+      "risks": [
+        "Fehlende End-to-End-Sichtbarkeit verlängert Incident-Zeiten und erschwert Ursachenanalyse."
+      ],
+      "do": [
+        "Klare Success-Kriterien und Betriebsmetriken vor dem Rollout festlegen."
+      ],
+      "dont": [
+        "Keine Einführung ohne abgestimmtes Betriebs- und Ownership-Modell."
       ],
       "sources": [
         "docs/research-notes-2026-02-21.md",
@@ -339,11 +484,16 @@
       "label": "Cloud Integration central monitoring & alerting",
       "ring": "ADOPT",
       "quadrant": "Tooling & Ops",
-      "summary": "Bewährt für produktive SAP-Integrationslandschaften; standardisieren und breit einsetzen. Kontext: Tooling & Ops.",
-      "actions": [
-        "SLIs/SLOs und Alerting-Regeln je Integrationsfluss festschreiben.",
-        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
-        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      "intro": "Es geht um Cloud Integration central monitoring & alerting als Baustein im Quadranten \"Tooling & Ops\".",
+      "whyRing": "Dieser Punkt ist operativ bewährt und für neue Integrationen die Standardwahl.",
+      "risks": [
+        "Fehlende End-to-End-Sichtbarkeit verlängert Incident-Zeiten und erschwert Ursachenanalyse."
+      ],
+      "do": [
+        "Klare Success-Kriterien und Betriebsmetriken vor dem Rollout festlegen."
+      ],
+      "dont": [
+        "Keine Einführung ohne abgestimmtes Betriebs- und Ownership-Modell."
       ],
       "sources": [
         "docs/research-notes-2026-02-21.md",
@@ -354,10 +504,16 @@
       "label": "Integration Assessment (ISA-M)",
       "ring": "ADOPT",
       "quadrant": "Tooling & Ops",
-      "summary": "Bewährt für produktive SAP-Integrationslandschaften; standardisieren und breit einsetzen. Kontext: Tooling & Ops.",
-      "actions": [
-        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
-        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      "intro": "Es geht um Integration Assessment (ISA-M) als Baustein im Quadranten \"Tooling & Ops\".",
+      "whyRing": "Dieser Punkt ist operativ bewährt und für neue Integrationen die Standardwahl.",
+      "risks": [
+        "Fehlende klare Zuständigkeiten und Zielbilder führen zu inkonsistenten Umsetzungen zwischen Teams."
+      ],
+      "do": [
+        "Klare Success-Kriterien und Betriebsmetriken vor dem Rollout festlegen."
+      ],
+      "dont": [
+        "Keine Einführung ohne abgestimmtes Betriebs- und Ownership-Modell."
       ],
       "sources": [
         "docs/research-notes-2026-02-21.md",
@@ -368,11 +524,17 @@
       "label": "Postman/Bruno API test collections",
       "ring": "ADOPT",
       "quadrant": "Tooling & Ops",
-      "summary": "Bewährt für produktive SAP-Integrationslandschaften; standardisieren und breit einsetzen. Kontext: Tooling & Ops.",
-      "actions": [
-        "API-Vertrag und Security-Policy (AuthN/AuthZ, Versionierung, Error-Modell) explizit festlegen.",
-        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
-        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      "intro": "Es geht um Postman/Bruno API test collections als Baustein im Quadranten \"Tooling & Ops\".",
+      "whyRing": "Dieser Punkt ist operativ bewährt und für neue Integrationen die Standardwahl.",
+      "risks": [
+        "Unklare API-Verträge und Security-Regeln führen zu Integrationsbrüchen und erhöhtem Betriebsaufwand."
+      ],
+      "do": [
+        "API-Vertrag inkl. Fehlercode-Modell und Versionierung verbindlich machen.",
+        "AuthN/AuthZ, Rate Limits und Secrets sauber über Policies steuern."
+      ],
+      "dont": [
+        "Keine stillen Breaking Changes ohne Migrationspfad einführen."
       ],
       "sources": [
         "docs/research-notes-2026-02-21.md",
@@ -383,10 +545,17 @@
       "label": "SAP Application Interface Framework (AIF)",
       "ring": "ASSESS",
       "quadrant": "Tooling & Ops",
-      "summary": "Gezielt evaluieren (PoC/Spike), bevor breiter Einsatz entschieden wird. Kontext: Tooling & Ops.",
-      "actions": [
-        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
-        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      "intro": "Es geht um SAP Application Interface Framework (AIF) als Baustein im Quadranten \"Tooling & Ops\".",
+      "whyRing": "Dieser Punkt hat Potenzial, braucht aber vor breiter Nutzung noch strukturierte Validierung.",
+      "risks": [
+        "Fehlende klare Zuständigkeiten und Zielbilder führen zu inkonsistenten Umsetzungen zwischen Teams."
+      ],
+      "do": [
+        "Zeitlich begrenzten PoC mit klarer Go/No-Go-Entscheidung durchführen.",
+        "Klare Success-Kriterien und Betriebsmetriken vor dem Rollout festlegen."
+      ],
+      "dont": [
+        "Keine Einführung ohne abgestimmtes Betriebs- und Ownership-Modell."
       ],
       "sources": [
         "docs/research-notes-2026-02-21.md",
@@ -397,10 +566,17 @@
       "label": "Manual prod changes",
       "ring": "HOLD",
       "quadrant": "Tooling & Ops",
-      "summary": "Änderungen nur über kontrollierte CI/CD-Pipelines und Freigaben.",
-      "actions": [
-        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
-        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      "intro": "Es geht um direkte manuelle Änderungen in Produktion außerhalb kontrollierter Deployment-Pipelines.",
+      "whyRing": "Dieser Punkt ist für neue Implementierungen nicht empfohlen und sollte nur kontrolliert im Bestand laufen.",
+      "risks": [
+        "Fehlende klare Zuständigkeiten und Zielbilder führen zu inkonsistenten Umsetzungen zwischen Teams."
+      ],
+      "do": [
+        "Bestandsnutzung nur mit Exit-Strategie und priorisiertem Ablöseplan fortführen.",
+        "Changes über Pipeline mit Freigaben, Checks und Rollback-Plan ausrollen."
+      ],
+      "dont": [
+        "Keine direkten Prod-Änderungen außerhalb des definierten Change-Prozesses."
       ],
       "sources": [
         "docs/research-notes-2026-02-21.md",
@@ -411,12 +587,17 @@
       "label": "API-first",
       "ring": "ADOPT",
       "quadrant": "Patterns & Architecture",
-      "summary": "Bewährt für produktive SAP-Integrationslandschaften; standardisieren und breit einsetzen. Kontext: Patterns & Architecture.",
-      "actions": [
-        "API-Vertrag und Security-Policy (AuthN/AuthZ, Versionierung, Error-Modell) explizit festlegen.",
-        "Pattern nur dort anwenden, wo Komplexität/Nutzen klar nachweisbar ist.",
-        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
-        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      "intro": "Es geht darum, Integrationen von klaren API-Verträgen her zu denken statt von Implementierungsdetails.",
+      "whyRing": "Dieser Punkt ist operativ bewährt und für neue Integrationen die Standardwahl.",
+      "risks": [
+        "Unklare API-Verträge und Security-Regeln führen zu Integrationsbrüchen und erhöhtem Betriebsaufwand."
+      ],
+      "do": [
+        "API-Vertrag inkl. Fehlercode-Modell und Versionierung verbindlich machen.",
+        "AuthN/AuthZ, Rate Limits und Secrets sauber über Policies steuern."
+      ],
+      "dont": [
+        "Keine stillen Breaking Changes ohne Migrationspfad einführen."
       ],
       "sources": [
         "docs/research-notes-2026-02-21.md",
@@ -427,11 +608,17 @@
       "label": "API-led connectivity (system/process/experience)",
       "ring": "ADOPT",
       "quadrant": "Patterns & Architecture",
-      "summary": "Bewährt für produktive SAP-Integrationslandschaften; standardisieren und breit einsetzen. Kontext: Patterns & Architecture.",
-      "actions": [
-        "API-Vertrag und Security-Policy (AuthN/AuthZ, Versionierung, Error-Modell) explizit festlegen.",
-        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
-        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      "intro": "Es geht um API-led connectivity (system/process/experience) als Baustein im Quadranten \"Patterns & Architecture\".",
+      "whyRing": "Dieser Punkt ist operativ bewährt und für neue Integrationen die Standardwahl.",
+      "risks": [
+        "Unklare API-Verträge und Security-Regeln führen zu Integrationsbrüchen und erhöhtem Betriebsaufwand."
+      ],
+      "do": [
+        "API-Vertrag inkl. Fehlercode-Modell und Versionierung verbindlich machen.",
+        "AuthN/AuthZ, Rate Limits und Secrets sauber über Policies steuern."
+      ],
+      "dont": [
+        "Keine stillen Breaking Changes ohne Migrationspfad einführen."
       ],
       "sources": [
         "docs/research-notes-2026-02-21.md",
@@ -442,11 +629,17 @@
       "label": "Contract-first with OpenAPI",
       "ring": "ADOPT",
       "quadrant": "Patterns & Architecture",
-      "summary": "Bewährt für produktive SAP-Integrationslandschaften; standardisieren und breit einsetzen. Kontext: Patterns & Architecture.",
-      "actions": [
-        "API-Vertrag und Security-Policy (AuthN/AuthZ, Versionierung, Error-Modell) explizit festlegen.",
-        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
-        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      "intro": "Es geht um Contract-first with OpenAPI als Baustein im Quadranten \"Patterns & Architecture\".",
+      "whyRing": "Dieser Punkt ist operativ bewährt und für neue Integrationen die Standardwahl.",
+      "risks": [
+        "Unklare API-Verträge und Security-Regeln führen zu Integrationsbrüchen und erhöhtem Betriebsaufwand."
+      ],
+      "do": [
+        "API-Vertrag inkl. Fehlercode-Modell und Versionierung verbindlich machen.",
+        "AuthN/AuthZ, Rate Limits und Secrets sauber über Policies steuern."
+      ],
+      "dont": [
+        "Keine stillen Breaking Changes ohne Migrationspfad einführen."
       ],
       "sources": [
         "docs/research-notes-2026-02-21.md",
@@ -457,12 +650,19 @@
       "label": "Contract-first with AsyncAPI",
       "ring": "TRIAL",
       "quadrant": "Patterns & Architecture",
-      "summary": "Sinnvoll in gezielten produktionsnahen Use-Cases mit klaren Guardrails. Kontext: Patterns & Architecture.",
-      "actions": [
-        "API-Vertrag und Security-Policy (AuthN/AuthZ, Versionierung, Error-Modell) explizit festlegen.",
-        "Event-Schema, Delivery-Semantik (at-least-once/exactly-once) und DLQ-Strategie definieren.",
-        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
-        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      "intro": "Es geht um Contract-first with AsyncAPI als Baustein im Quadranten \"Patterns & Architecture\".",
+      "whyRing": "Dieser Punkt ist vielversprechend, sollte aber gezielt und mit klaren Guardrails eingesetzt werden.",
+      "risks": [
+        "Unklare Zustellsemantik oder fehlende DLQ/Retry-Strategien erzeugen schwer reproduzierbare Fehlerbilder."
+      ],
+      "do": [
+        "Einsatz auf wenige, geeignete Domänen begrenzen und Ergebnisse systematisch auswerten.",
+        "Schemas versionieren und Consumer-Kompatibilität explizit testen.",
+        "Retry/Backoff, DLQ und Reprocessing-Runbook definieren."
+      ],
+      "dont": [
+        "Keine Events ohne Ownership und fachliche Idempotenz veröffentlichen.",
+        "Keine stillen Breaking Changes ohne Migrationspfad einführen."
       ],
       "sources": [
         "docs/research-notes-2026-02-21.md",
@@ -473,11 +673,18 @@
       "label": "Event-driven integration",
       "ring": "TRIAL",
       "quadrant": "Patterns & Architecture",
-      "summary": "Sinnvoll in gezielten produktionsnahen Use-Cases mit klaren Guardrails. Kontext: Patterns & Architecture.",
-      "actions": [
-        "Event-Schema, Delivery-Semantik (at-least-once/exactly-once) und DLQ-Strategie definieren.",
-        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
-        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      "intro": "Es geht um Event-driven integration als Baustein im Quadranten \"Patterns & Architecture\".",
+      "whyRing": "Dieser Punkt ist vielversprechend, sollte aber gezielt und mit klaren Guardrails eingesetzt werden.",
+      "risks": [
+        "Unklare Zustellsemantik oder fehlende DLQ/Retry-Strategien erzeugen schwer reproduzierbare Fehlerbilder."
+      ],
+      "do": [
+        "Einsatz auf wenige, geeignete Domänen begrenzen und Ergebnisse systematisch auswerten.",
+        "Schemas versionieren und Consumer-Kompatibilität explizit testen.",
+        "Retry/Backoff, DLQ und Reprocessing-Runbook definieren."
+      ],
+      "dont": [
+        "Keine Events ohne Ownership und fachliche Idempotenz veröffentlichen."
       ],
       "sources": [
         "docs/research-notes-2026-02-21.md",
@@ -488,10 +695,16 @@
       "label": "Side-by-side extensibility",
       "ring": "ADOPT",
       "quadrant": "Patterns & Architecture",
-      "summary": "Bewährt für produktive SAP-Integrationslandschaften; standardisieren und breit einsetzen. Kontext: Patterns & Architecture.",
-      "actions": [
-        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
-        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      "intro": "Es geht um Side-by-side extensibility als Baustein im Quadranten \"Patterns & Architecture\".",
+      "whyRing": "Dieser Punkt ist operativ bewährt und für neue Integrationen die Standardwahl.",
+      "risks": [
+        "Fehlende klare Zuständigkeiten und Zielbilder führen zu inkonsistenten Umsetzungen zwischen Teams."
+      ],
+      "do": [
+        "Klare Success-Kriterien und Betriebsmetriken vor dem Rollout festlegen."
+      ],
+      "dont": [
+        "Keine Einführung ohne abgestimmtes Betriebs- und Ownership-Modell."
       ],
       "sources": [
         "docs/research-notes-2026-02-21.md",
@@ -502,11 +715,16 @@
       "label": "Circuit breaker pattern",
       "ring": "ADOPT",
       "quadrant": "Patterns & Architecture",
-      "summary": "Bewährt für produktive SAP-Integrationslandschaften; standardisieren und breit einsetzen. Kontext: Patterns & Architecture.",
-      "actions": [
-        "Pattern nur dort anwenden, wo Komplexität/Nutzen klar nachweisbar ist.",
-        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
-        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      "intro": "Es geht um Circuit breaker pattern als Baustein im Quadranten \"Patterns & Architecture\".",
+      "whyRing": "Dieser Punkt ist operativ bewährt und für neue Integrationen die Standardwahl.",
+      "risks": [
+        "Falsch eingesetzte Architektur-Pattern erhöhen Komplexität ohne proportionalen Nutzen."
+      ],
+      "do": [
+        "Klare Success-Kriterien und Betriebsmetriken vor dem Rollout festlegen."
+      ],
+      "dont": [
+        "Keine Einführung ohne abgestimmtes Betriebs- und Ownership-Modell."
       ],
       "sources": [
         "docs/research-notes-2026-02-21.md",
@@ -517,11 +735,16 @@
       "label": "Idempotent consumer pattern",
       "ring": "ADOPT",
       "quadrant": "Patterns & Architecture",
-      "summary": "Bewährt für produktive SAP-Integrationslandschaften; standardisieren und breit einsetzen. Kontext: Patterns & Architecture.",
-      "actions": [
-        "Pattern nur dort anwenden, wo Komplexität/Nutzen klar nachweisbar ist.",
-        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
-        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      "intro": "Es geht um Idempotent consumer pattern als Baustein im Quadranten \"Patterns & Architecture\".",
+      "whyRing": "Dieser Punkt ist operativ bewährt und für neue Integrationen die Standardwahl.",
+      "risks": [
+        "Falsch eingesetzte Architektur-Pattern erhöhen Komplexität ohne proportionalen Nutzen."
+      ],
+      "do": [
+        "Klare Success-Kriterien und Betriebsmetriken vor dem Rollout festlegen."
+      ],
+      "dont": [
+        "Keine Einführung ohne abgestimmtes Betriebs- und Ownership-Modell."
       ],
       "sources": [
         "docs/research-notes-2026-02-21.md",
@@ -532,11 +755,16 @@
       "label": "Retry/backoff + dead-letter handling",
       "ring": "ADOPT",
       "quadrant": "Patterns & Architecture",
-      "summary": "Bewährt für produktive SAP-Integrationslandschaften; standardisieren und breit einsetzen. Kontext: Patterns & Architecture.",
-      "actions": [
-        "Pattern nur dort anwenden, wo Komplexität/Nutzen klar nachweisbar ist.",
-        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
-        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      "intro": "Es geht um Retry/backoff + dead-letter handling als Baustein im Quadranten \"Patterns & Architecture\".",
+      "whyRing": "Dieser Punkt ist operativ bewährt und für neue Integrationen die Standardwahl.",
+      "risks": [
+        "Falsch eingesetzte Architektur-Pattern erhöhen Komplexität ohne proportionalen Nutzen."
+      ],
+      "do": [
+        "Klare Success-Kriterien und Betriebsmetriken vor dem Rollout festlegen."
+      ],
+      "dont": [
+        "Keine Einführung ohne abgestimmtes Betriebs- und Ownership-Modell."
       ],
       "sources": [
         "docs/research-notes-2026-02-21.md",
@@ -547,11 +775,17 @@
       "label": "Outbox pattern",
       "ring": "TRIAL",
       "quadrant": "Patterns & Architecture",
-      "summary": "Sinnvoll in gezielten produktionsnahen Use-Cases mit klaren Guardrails. Kontext: Patterns & Architecture.",
-      "actions": [
-        "Pattern nur dort anwenden, wo Komplexität/Nutzen klar nachweisbar ist.",
-        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
-        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      "intro": "Es geht um Outbox pattern als Baustein im Quadranten \"Patterns & Architecture\".",
+      "whyRing": "Dieser Punkt ist vielversprechend, sollte aber gezielt und mit klaren Guardrails eingesetzt werden.",
+      "risks": [
+        "Falsch eingesetzte Architektur-Pattern erhöhen Komplexität ohne proportionalen Nutzen."
+      ],
+      "do": [
+        "Einsatz auf wenige, geeignete Domänen begrenzen und Ergebnisse systematisch auswerten.",
+        "Klare Success-Kriterien und Betriebsmetriken vor dem Rollout festlegen."
+      ],
+      "dont": [
+        "Keine Einführung ohne abgestimmtes Betriebs- und Ownership-Modell."
       ],
       "sources": [
         "docs/research-notes-2026-02-21.md",
@@ -562,11 +796,16 @@
       "label": "Strangler pattern for legacy replacement",
       "ring": "ADOPT",
       "quadrant": "Patterns & Architecture",
-      "summary": "Bewährt für produktive SAP-Integrationslandschaften; standardisieren und breit einsetzen. Kontext: Patterns & Architecture.",
-      "actions": [
-        "Pattern nur dort anwenden, wo Komplexität/Nutzen klar nachweisbar ist.",
-        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
-        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      "intro": "Es geht um Strangler pattern for legacy replacement als Baustein im Quadranten \"Patterns & Architecture\".",
+      "whyRing": "Dieser Punkt ist operativ bewährt und für neue Integrationen die Standardwahl.",
+      "risks": [
+        "Falsch eingesetzte Architektur-Pattern erhöhen Komplexität ohne proportionalen Nutzen."
+      ],
+      "do": [
+        "Klare Success-Kriterien und Betriebsmetriken vor dem Rollout festlegen."
+      ],
+      "dont": [
+        "Keine Einführung ohne abgestimmtes Betriebs- und Ownership-Modell."
       ],
       "sources": [
         "docs/research-notes-2026-02-21.md",
@@ -577,11 +816,18 @@
       "label": "Event-driven architecture with CloudEvents envelope",
       "ring": "TRIAL",
       "quadrant": "Patterns & Architecture",
-      "summary": "Sinnvoll in gezielten produktionsnahen Use-Cases mit klaren Guardrails. Kontext: Patterns & Architecture.",
-      "actions": [
-        "Event-Schema, Delivery-Semantik (at-least-once/exactly-once) und DLQ-Strategie definieren.",
-        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
-        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      "intro": "Es geht um Event-driven architecture with CloudEvents envelope als Baustein im Quadranten \"Patterns & Architecture\".",
+      "whyRing": "Dieser Punkt ist vielversprechend, sollte aber gezielt und mit klaren Guardrails eingesetzt werden.",
+      "risks": [
+        "Unklare Zustellsemantik oder fehlende DLQ/Retry-Strategien erzeugen schwer reproduzierbare Fehlerbilder."
+      ],
+      "do": [
+        "Einsatz auf wenige, geeignete Domänen begrenzen und Ergebnisse systematisch auswerten.",
+        "Schemas versionieren und Consumer-Kompatibilität explizit testen.",
+        "Retry/Backoff, DLQ und Reprocessing-Runbook definieren."
+      ],
+      "dont": [
+        "Keine Events ohne Ownership und fachliche Idempotenz veröffentlichen."
       ],
       "sources": [
         "docs/research-notes-2026-02-21.md",
@@ -592,11 +838,17 @@
       "label": "Choreography over central orchestration (selective)",
       "ring": "TRIAL",
       "quadrant": "Patterns & Architecture",
-      "summary": "Sinnvoll in gezielten produktionsnahen Use-Cases mit klaren Guardrails. Kontext: Patterns & Architecture.",
-      "actions": [
-        "Pattern nur dort anwenden, wo Komplexität/Nutzen klar nachweisbar ist.",
-        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
-        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      "intro": "Es geht um Choreography over central orchestration (selective) als Baustein im Quadranten \"Patterns & Architecture\".",
+      "whyRing": "Dieser Punkt ist vielversprechend, sollte aber gezielt und mit klaren Guardrails eingesetzt werden.",
+      "risks": [
+        "Falsch eingesetzte Architektur-Pattern erhöhen Komplexität ohne proportionalen Nutzen."
+      ],
+      "do": [
+        "Einsatz auf wenige, geeignete Domänen begrenzen und Ergebnisse systematisch auswerten.",
+        "Klare Success-Kriterien und Betriebsmetriken vor dem Rollout festlegen."
+      ],
+      "dont": [
+        "Keine Einführung ohne abgestimmtes Betriebs- und Ownership-Modell."
       ],
       "sources": [
         "docs/research-notes-2026-02-21.md",
@@ -607,10 +859,17 @@
       "label": "Canonical data model (lightweight)",
       "ring": "ASSESS",
       "quadrant": "Patterns & Architecture",
-      "summary": "Gezielt evaluieren (PoC/Spike), bevor breiter Einsatz entschieden wird. Kontext: Patterns & Architecture.",
-      "actions": [
-        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
-        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      "intro": "Es geht um Canonical data model (lightweight) als Baustein im Quadranten \"Patterns & Architecture\".",
+      "whyRing": "Dieser Punkt hat Potenzial, braucht aber vor breiter Nutzung noch strukturierte Validierung.",
+      "risks": [
+        "Falsch eingesetzte Architektur-Pattern erhöhen Komplexität ohne proportionalen Nutzen."
+      ],
+      "do": [
+        "Zeitlich begrenzten PoC mit klarer Go/No-Go-Entscheidung durchführen.",
+        "Klare Success-Kriterien und Betriebsmetriken vor dem Rollout festlegen."
+      ],
+      "dont": [
+        "Keine Einführung ohne abgestimmtes Betriebs- und Ownership-Modell."
       ],
       "sources": [
         "docs/research-notes-2026-02-21.md",
@@ -621,11 +880,17 @@
       "label": "CQRS (selective)",
       "ring": "ASSESS",
       "quadrant": "Patterns & Architecture",
-      "summary": "Gezielt evaluieren (PoC/Spike), bevor breiter Einsatz entschieden wird. Kontext: Patterns & Architecture.",
-      "actions": [
-        "Pattern nur dort anwenden, wo Komplexität/Nutzen klar nachweisbar ist.",
-        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
-        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      "intro": "Es geht um CQRS (selective) als Baustein im Quadranten \"Patterns & Architecture\".",
+      "whyRing": "Dieser Punkt hat Potenzial, braucht aber vor breiter Nutzung noch strukturierte Validierung.",
+      "risks": [
+        "Falsch eingesetzte Architektur-Pattern erhöhen Komplexität ohne proportionalen Nutzen."
+      ],
+      "do": [
+        "Zeitlich begrenzten PoC mit klarer Go/No-Go-Entscheidung durchführen.",
+        "Klare Success-Kriterien und Betriebsmetriken vor dem Rollout festlegen."
+      ],
+      "dont": [
+        "Keine Einführung ohne abgestimmtes Betriebs- und Ownership-Modell."
       ],
       "sources": [
         "docs/research-notes-2026-02-21.md",
@@ -636,10 +901,17 @@
       "label": "Direct point-to-point connections",
       "ring": "HOLD",
       "quadrant": "Patterns & Architecture",
-      "summary": "Für neue Implementierungen vermeiden; nur für Bestand mit Migrationspfad. Kontext: Patterns & Architecture.",
-      "actions": [
-        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
-        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      "intro": "Es geht um Direct point-to-point connections als Baustein im Quadranten \"Patterns & Architecture\".",
+      "whyRing": "Dieser Punkt ist für neue Implementierungen nicht empfohlen und sollte nur kontrolliert im Bestand laufen.",
+      "risks": [
+        "Fehlende klare Zuständigkeiten und Zielbilder führen zu inkonsistenten Umsetzungen zwischen Teams."
+      ],
+      "do": [
+        "Bestandsnutzung nur mit Exit-Strategie und priorisiertem Ablöseplan fortführen.",
+        "Migrationspfad zu API-/Event-basierten Integrationsmustern aktiv planen."
+      ],
+      "dont": [
+        "Keine neuen Legacy-Kopplungen in Greenfield-Umfängen aufbauen."
       ],
       "sources": [
         "docs/research-notes-2026-02-21.md",
@@ -650,10 +922,19 @@
       "label": "File-drop integrations (shared folder/manual polling)",
       "ring": "HOLD",
       "quadrant": "Patterns & Architecture",
-      "summary": "Für neue Implementierungen vermeiden; nur für Bestand mit Migrationspfad. Kontext: Patterns & Architecture.",
-      "actions": [
-        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
-        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      "intro": "Es geht um File-drop integrations (shared folder/manual polling) als Baustein im Quadranten \"Patterns & Architecture\".",
+      "whyRing": "Dieser Punkt ist für neue Implementierungen nicht empfohlen und sollte nur kontrolliert im Bestand laufen.",
+      "risks": [
+        "Fehlende klare Zuständigkeiten und Zielbilder führen zu inkonsistenten Umsetzungen zwischen Teams."
+      ],
+      "do": [
+        "Bestandsnutzung nur mit Exit-Strategie und priorisiertem Ablöseplan fortführen.",
+        "Changes über Pipeline mit Freigaben, Checks und Rollback-Plan ausrollen.",
+        "Migrationspfad zu API-/Event-basierten Integrationsmustern aktiv planen."
+      ],
+      "dont": [
+        "Keine direkten Prod-Änderungen außerhalb des definierten Change-Prozesses.",
+        "Keine neuen Legacy-Kopplungen in Greenfield-Umfängen aufbauen."
       ],
       "sources": [
         "docs/research-notes-2026-02-21.md",
@@ -664,10 +945,17 @@
       "label": "Direct DB integration",
       "ring": "HOLD",
       "quadrant": "Patterns & Architecture",
-      "summary": "Für neue Implementierungen vermeiden; nur für Bestand mit Migrationspfad. Kontext: Patterns & Architecture.",
-      "actions": [
-        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
-        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      "intro": "Es geht um Direct DB integration als Baustein im Quadranten \"Patterns & Architecture\".",
+      "whyRing": "Dieser Punkt ist für neue Implementierungen nicht empfohlen und sollte nur kontrolliert im Bestand laufen.",
+      "risks": [
+        "Fehlende klare Zuständigkeiten und Zielbilder führen zu inkonsistenten Umsetzungen zwischen Teams."
+      ],
+      "do": [
+        "Bestandsnutzung nur mit Exit-Strategie und priorisiertem Ablöseplan fortführen.",
+        "Migrationspfad zu API-/Event-basierten Integrationsmustern aktiv planen."
+      ],
+      "dont": [
+        "Keine neuen Legacy-Kopplungen in Greenfield-Umfängen aufbauen."
       ],
       "sources": [
         "docs/research-notes-2026-02-21.md",
@@ -678,11 +966,17 @@
       "label": "REST/JSON",
       "ring": "ADOPT",
       "quadrant": "Protocols & APIs",
-      "summary": "Bewährt für produktive SAP-Integrationslandschaften; standardisieren und breit einsetzen. Kontext: Protocols & APIs.",
-      "actions": [
-        "API-Vertrag und Security-Policy (AuthN/AuthZ, Versionierung, Error-Modell) explizit festlegen.",
-        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
-        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      "intro": "Es geht um REST/JSON als Baustein im Quadranten \"Protocols & APIs\".",
+      "whyRing": "Dieser Punkt ist operativ bewährt und für neue Integrationen die Standardwahl.",
+      "risks": [
+        "Unklare API-Verträge und Security-Regeln führen zu Integrationsbrüchen und erhöhtem Betriebsaufwand."
+      ],
+      "do": [
+        "API-Vertrag inkl. Fehlercode-Modell und Versionierung verbindlich machen.",
+        "AuthN/AuthZ, Rate Limits und Secrets sauber über Policies steuern."
+      ],
+      "dont": [
+        "Keine stillen Breaking Changes ohne Migrationspfad einführen."
       ],
       "sources": [
         "docs/research-notes-2026-02-21.md",
@@ -693,11 +987,17 @@
       "label": "OData v4",
       "ring": "ADOPT",
       "quadrant": "Protocols & APIs",
-      "summary": "Bewährt für produktive SAP-Integrationslandschaften; standardisieren und breit einsetzen. Kontext: Protocols & APIs.",
-      "actions": [
-        "API-Vertrag und Security-Policy (AuthN/AuthZ, Versionierung, Error-Modell) explizit festlegen.",
-        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
-        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      "intro": "Es geht um OData v4 als Baustein im Quadranten \"Protocols & APIs\".",
+      "whyRing": "Dieser Punkt ist operativ bewährt und für neue Integrationen die Standardwahl.",
+      "risks": [
+        "Unklare API-Verträge und Security-Regeln führen zu Integrationsbrüchen und erhöhtem Betriebsaufwand."
+      ],
+      "do": [
+        "API-Vertrag inkl. Fehlercode-Modell und Versionierung verbindlich machen.",
+        "AuthN/AuthZ, Rate Limits und Secrets sauber über Policies steuern."
+      ],
+      "dont": [
+        "Keine stillen Breaking Changes ohne Migrationspfad einführen."
       ],
       "sources": [
         "docs/research-notes-2026-02-21.md",
@@ -708,11 +1008,17 @@
       "label": "OAuth2 / OIDC",
       "ring": "ADOPT",
       "quadrant": "Protocols & APIs",
-      "summary": "Bewährt für produktive SAP-Integrationslandschaften; standardisieren und breit einsetzen. Kontext: Protocols & APIs.",
-      "actions": [
-        "API-Vertrag und Security-Policy (AuthN/AuthZ, Versionierung, Error-Modell) explizit festlegen.",
-        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
-        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      "intro": "Es geht um OAuth2 / OIDC als Baustein im Quadranten \"Protocols & APIs\".",
+      "whyRing": "Dieser Punkt ist operativ bewährt und für neue Integrationen die Standardwahl.",
+      "risks": [
+        "Unklare API-Verträge und Security-Regeln führen zu Integrationsbrüchen und erhöhtem Betriebsaufwand."
+      ],
+      "do": [
+        "API-Vertrag inkl. Fehlercode-Modell und Versionierung verbindlich machen.",
+        "AuthN/AuthZ, Rate Limits und Secrets sauber über Policies steuern."
+      ],
+      "dont": [
+        "Keine stillen Breaking Changes ohne Migrationspfad einführen."
       ],
       "sources": [
         "docs/research-notes-2026-02-21.md",
@@ -723,11 +1029,17 @@
       "label": "OpenAPI 3.x",
       "ring": "ADOPT",
       "quadrant": "Protocols & APIs",
-      "summary": "API-Verträge versioniert und reviewbar als verbindliche Schnittstellenbasis nutzen.",
-      "actions": [
-        "API-Vertrag und Security-Policy (AuthN/AuthZ, Versionierung, Error-Modell) explizit festlegen.",
-        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
-        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      "intro": "Es geht um OpenAPI 3.x als Baustein im Quadranten \"Protocols & APIs\".",
+      "whyRing": "Dieser Punkt ist operativ bewährt und für neue Integrationen die Standardwahl.",
+      "risks": [
+        "Unklare API-Verträge und Security-Regeln führen zu Integrationsbrüchen und erhöhtem Betriebsaufwand."
+      ],
+      "do": [
+        "API-Vertrag inkl. Fehlercode-Modell und Versionierung verbindlich machen.",
+        "AuthN/AuthZ, Rate Limits und Secrets sauber über Policies steuern."
+      ],
+      "dont": [
+        "Keine stillen Breaking Changes ohne Migrationspfad einführen."
       ],
       "sources": [
         "docs/research-notes-2026-02-21.md",
@@ -738,10 +1050,16 @@
       "label": "Webhooks with signature verification",
       "ring": "ADOPT",
       "quadrant": "Protocols & APIs",
-      "summary": "Bewährt für produktive SAP-Integrationslandschaften; standardisieren und breit einsetzen. Kontext: Protocols & APIs.",
-      "actions": [
-        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
-        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      "intro": "Es geht um Webhooks with signature verification als Baustein im Quadranten \"Protocols & APIs\".",
+      "whyRing": "Dieser Punkt ist operativ bewährt und für neue Integrationen die Standardwahl.",
+      "risks": [
+        "Fehlende klare Zuständigkeiten und Zielbilder führen zu inkonsistenten Umsetzungen zwischen Teams."
+      ],
+      "do": [
+        "Klare Success-Kriterien und Betriebsmetriken vor dem Rollout festlegen."
+      ],
+      "dont": [
+        "Keine Einführung ohne abgestimmtes Betriebs- und Ownership-Modell."
       ],
       "sources": [
         "docs/research-notes-2026-02-21.md",
@@ -752,12 +1070,19 @@
       "label": "AsyncAPI",
       "ring": "TRIAL",
       "quadrant": "Protocols & APIs",
-      "summary": "Event-Verträge klar versionieren; besonders relevant bei Event Mesh/AEM.",
-      "actions": [
-        "API-Vertrag und Security-Policy (AuthN/AuthZ, Versionierung, Error-Modell) explizit festlegen.",
-        "Event-Schema, Delivery-Semantik (at-least-once/exactly-once) und DLQ-Strategie definieren.",
-        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
-        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      "intro": "Es geht um AsyncAPI als Baustein im Quadranten \"Protocols & APIs\".",
+      "whyRing": "Dieser Punkt ist vielversprechend, sollte aber gezielt und mit klaren Guardrails eingesetzt werden.",
+      "risks": [
+        "Unklare Zustellsemantik oder fehlende DLQ/Retry-Strategien erzeugen schwer reproduzierbare Fehlerbilder."
+      ],
+      "do": [
+        "Einsatz auf wenige, geeignete Domänen begrenzen und Ergebnisse systematisch auswerten.",
+        "Schemas versionieren und Consumer-Kompatibilität explizit testen.",
+        "Retry/Backoff, DLQ und Reprocessing-Runbook definieren."
+      ],
+      "dont": [
+        "Keine Events ohne Ownership und fachliche Idempotenz veröffentlichen.",
+        "Keine stillen Breaking Changes ohne Migrationspfad einführen."
       ],
       "sources": [
         "docs/research-notes-2026-02-21.md",
@@ -768,11 +1093,18 @@
       "label": "CloudEvents",
       "ring": "TRIAL",
       "quadrant": "Protocols & APIs",
-      "summary": "Standardisiertes Event-Enveloping für lose gekoppelte Integrationsarchitekturen.",
-      "actions": [
-        "Event-Schema, Delivery-Semantik (at-least-once/exactly-once) und DLQ-Strategie definieren.",
-        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
-        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      "intro": "Es geht um CloudEvents als Baustein im Quadranten \"Protocols & APIs\".",
+      "whyRing": "Dieser Punkt ist vielversprechend, sollte aber gezielt und mit klaren Guardrails eingesetzt werden.",
+      "risks": [
+        "Unklare Zustellsemantik oder fehlende DLQ/Retry-Strategien erzeugen schwer reproduzierbare Fehlerbilder."
+      ],
+      "do": [
+        "Einsatz auf wenige, geeignete Domänen begrenzen und Ergebnisse systematisch auswerten.",
+        "Schemas versionieren und Consumer-Kompatibilität explizit testen.",
+        "Retry/Backoff, DLQ und Reprocessing-Runbook definieren."
+      ],
+      "dont": [
+        "Keine Events ohne Ownership und fachliche Idempotenz veröffentlichen."
       ],
       "sources": [
         "docs/research-notes-2026-02-21.md",
@@ -783,11 +1115,17 @@
       "label": "AMQP 1.0",
       "ring": "ADOPT",
       "quadrant": "Protocols & APIs",
-      "summary": "Bewährt für produktive SAP-Integrationslandschaften; standardisieren und breit einsetzen. Kontext: Protocols & APIs.",
-      "actions": [
-        "Event-Schema, Delivery-Semantik (at-least-once/exactly-once) und DLQ-Strategie definieren.",
-        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
-        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      "intro": "Es geht um AMQP 1.0 als Baustein im Quadranten \"Protocols & APIs\".",
+      "whyRing": "Dieser Punkt ist operativ bewährt und für neue Integrationen die Standardwahl.",
+      "risks": [
+        "Unklare Zustellsemantik oder fehlende DLQ/Retry-Strategien erzeugen schwer reproduzierbare Fehlerbilder."
+      ],
+      "do": [
+        "Schemas versionieren und Consumer-Kompatibilität explizit testen.",
+        "Retry/Backoff, DLQ und Reprocessing-Runbook definieren."
+      ],
+      "dont": [
+        "Keine Events ohne Ownership und fachliche Idempotenz veröffentlichen."
       ],
       "sources": [
         "docs/research-notes-2026-02-21.md",
@@ -798,11 +1136,18 @@
       "label": "MQTT (IoT/OT scenarios)",
       "ring": "ASSESS",
       "quadrant": "Protocols & APIs",
-      "summary": "Gezielt evaluieren (PoC/Spike), bevor breiter Einsatz entschieden wird. Kontext: Protocols & APIs.",
-      "actions": [
-        "Event-Schema, Delivery-Semantik (at-least-once/exactly-once) und DLQ-Strategie definieren.",
-        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
-        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      "intro": "Es geht um MQTT (IoT/OT scenarios) als Baustein im Quadranten \"Protocols & APIs\".",
+      "whyRing": "Dieser Punkt hat Potenzial, braucht aber vor breiter Nutzung noch strukturierte Validierung.",
+      "risks": [
+        "Unklare Zustellsemantik oder fehlende DLQ/Retry-Strategien erzeugen schwer reproduzierbare Fehlerbilder."
+      ],
+      "do": [
+        "Zeitlich begrenzten PoC mit klarer Go/No-Go-Entscheidung durchführen.",
+        "Schemas versionieren und Consumer-Kompatibilität explizit testen.",
+        "Retry/Backoff, DLQ und Reprocessing-Runbook definieren."
+      ],
+      "dont": [
+        "Keine Events ohne Ownership und fachliche Idempotenz veröffentlichen."
       ],
       "sources": [
         "docs/research-notes-2026-02-21.md",
@@ -813,11 +1158,18 @@
       "label": "GraphQL (BFF/aggregation only)",
       "ring": "ASSESS",
       "quadrant": "Protocols & APIs",
-      "summary": "Gezielt evaluieren (PoC/Spike), bevor breiter Einsatz entschieden wird. Kontext: Protocols & APIs.",
-      "actions": [
-        "API-Vertrag und Security-Policy (AuthN/AuthZ, Versionierung, Error-Modell) explizit festlegen.",
-        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
-        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      "intro": "Es geht um GraphQL (BFF/aggregation only) als Baustein im Quadranten \"Protocols & APIs\".",
+      "whyRing": "Dieser Punkt hat Potenzial, braucht aber vor breiter Nutzung noch strukturierte Validierung.",
+      "risks": [
+        "Unklare API-Verträge und Security-Regeln führen zu Integrationsbrüchen und erhöhtem Betriebsaufwand."
+      ],
+      "do": [
+        "Zeitlich begrenzten PoC mit klarer Go/No-Go-Entscheidung durchführen.",
+        "API-Vertrag inkl. Fehlercode-Modell und Versionierung verbindlich machen.",
+        "AuthN/AuthZ, Rate Limits und Secrets sauber über Policies steuern."
+      ],
+      "dont": [
+        "Keine stillen Breaking Changes ohne Migrationspfad einführen."
       ],
       "sources": [
         "docs/research-notes-2026-02-21.md",
@@ -828,11 +1180,18 @@
       "label": "gRPC (internal service-to-service)",
       "ring": "ASSESS",
       "quadrant": "Protocols & APIs",
-      "summary": "Gezielt evaluieren (PoC/Spike), bevor breiter Einsatz entschieden wird. Kontext: Protocols & APIs.",
-      "actions": [
-        "API-Vertrag und Security-Policy (AuthN/AuthZ, Versionierung, Error-Modell) explizit festlegen.",
-        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
-        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      "intro": "Es geht um gRPC (internal service-to-service) als Baustein im Quadranten \"Protocols & APIs\".",
+      "whyRing": "Dieser Punkt hat Potenzial, braucht aber vor breiter Nutzung noch strukturierte Validierung.",
+      "risks": [
+        "Unklare API-Verträge und Security-Regeln führen zu Integrationsbrüchen und erhöhtem Betriebsaufwand."
+      ],
+      "do": [
+        "Zeitlich begrenzten PoC mit klarer Go/No-Go-Entscheidung durchführen.",
+        "API-Vertrag inkl. Fehlercode-Modell und Versionierung verbindlich machen.",
+        "AuthN/AuthZ, Rate Limits und Secrets sauber über Policies steuern."
+      ],
+      "dont": [
+        "Keine stillen Breaking Changes ohne Migrationspfad einführen."
       ],
       "sources": [
         "docs/research-notes-2026-02-21.md",
@@ -843,10 +1202,17 @@
       "label": "AVRO + Schema Registry",
       "ring": "ASSESS",
       "quadrant": "Protocols & APIs",
-      "summary": "Gezielt evaluieren (PoC/Spike), bevor breiter Einsatz entschieden wird. Kontext: Protocols & APIs.",
-      "actions": [
-        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
-        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      "intro": "Es geht um AVRO + Schema Registry als Baustein im Quadranten \"Protocols & APIs\".",
+      "whyRing": "Dieser Punkt hat Potenzial, braucht aber vor breiter Nutzung noch strukturierte Validierung.",
+      "risks": [
+        "Fehlende klare Zuständigkeiten und Zielbilder führen zu inkonsistenten Umsetzungen zwischen Teams."
+      ],
+      "do": [
+        "Zeitlich begrenzten PoC mit klarer Go/No-Go-Entscheidung durchführen.",
+        "Klare Success-Kriterien und Betriebsmetriken vor dem Rollout festlegen."
+      ],
+      "dont": [
+        "Keine Einführung ohne abgestimmtes Betriebs- und Ownership-Modell."
       ],
       "sources": [
         "docs/research-notes-2026-02-21.md",
@@ -857,10 +1223,17 @@
       "label": "EDI/AS2",
       "ring": "ASSESS",
       "quadrant": "Protocols & APIs",
-      "summary": "Gezielt evaluieren (PoC/Spike), bevor breiter Einsatz entschieden wird. Kontext: Protocols & APIs.",
-      "actions": [
-        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
-        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      "intro": "Es geht um EDI/AS2 als Baustein im Quadranten \"Protocols & APIs\".",
+      "whyRing": "Dieser Punkt hat Potenzial, braucht aber vor breiter Nutzung noch strukturierte Validierung.",
+      "risks": [
+        "Fehlende klare Zuständigkeiten und Zielbilder führen zu inkonsistenten Umsetzungen zwischen Teams."
+      ],
+      "do": [
+        "Zeitlich begrenzten PoC mit klarer Go/No-Go-Entscheidung durchführen.",
+        "Klare Success-Kriterien und Betriebsmetriken vor dem Rollout festlegen."
+      ],
+      "dont": [
+        "Keine Einführung ohne abgestimmtes Betriebs- und Ownership-Modell."
       ],
       "sources": [
         "docs/research-notes-2026-02-21.md",
@@ -871,11 +1244,19 @@
       "label": "RFC/BAPI (remote)",
       "ring": "HOLD",
       "quadrant": "Protocols & APIs",
-      "summary": "Nur kontrolliert für Legacy-Interop; neue Integrationen API/Event-basiert bauen.",
-      "actions": [
-        "API-Vertrag und Security-Policy (AuthN/AuthZ, Versionierung, Error-Modell) explizit festlegen.",
-        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
-        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      "intro": "Es geht um klassische SAP-Remote-Schnittstellen, die oft aus Legacy-Gründen noch gebraucht werden.",
+      "whyRing": "Dieser Punkt ist für neue Implementierungen nicht empfohlen und sollte nur kontrolliert im Bestand laufen.",
+      "risks": [
+        "Unklare API-Verträge und Security-Regeln führen zu Integrationsbrüchen und erhöhtem Betriebsaufwand."
+      ],
+      "do": [
+        "Bestandsnutzung nur mit Exit-Strategie und priorisiertem Ablöseplan fortführen.",
+        "API-Vertrag inkl. Fehlercode-Modell und Versionierung verbindlich machen.",
+        "AuthN/AuthZ, Rate Limits und Secrets sauber über Policies steuern."
+      ],
+      "dont": [
+        "Keine stillen Breaking Changes ohne Migrationspfad einführen.",
+        "Keine neuen Legacy-Kopplungen in Greenfield-Umfängen aufbauen."
       ],
       "sources": [
         "docs/research-notes-2026-02-21.md",
@@ -886,10 +1267,17 @@
       "label": "SFTP (managed file transfer transition)",
       "ring": "ASSESS",
       "quadrant": "Protocols & APIs",
-      "summary": "Gezielt evaluieren (PoC/Spike), bevor breiter Einsatz entschieden wird. Kontext: Protocols & APIs.",
-      "actions": [
-        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
-        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      "intro": "Es geht um SFTP (managed file transfer transition) als Baustein im Quadranten \"Protocols & APIs\".",
+      "whyRing": "Dieser Punkt hat Potenzial, braucht aber vor breiter Nutzung noch strukturierte Validierung.",
+      "risks": [
+        "Fehlende klare Zuständigkeiten und Zielbilder führen zu inkonsistenten Umsetzungen zwischen Teams."
+      ],
+      "do": [
+        "Zeitlich begrenzten PoC mit klarer Go/No-Go-Entscheidung durchführen.",
+        "Klare Success-Kriterien und Betriebsmetriken vor dem Rollout festlegen."
+      ],
+      "dont": [
+        "Keine Einführung ohne abgestimmtes Betriebs- und Ownership-Modell."
       ],
       "sources": [
         "docs/research-notes-2026-02-21.md",
@@ -900,11 +1288,17 @@
       "label": "New SOAP/WSDL interfaces",
       "ring": "HOLD",
       "quadrant": "Protocols & APIs",
-      "summary": "Keine neuen SOAP-Strecken aufbauen; REST/Event bevorzugen.",
-      "actions": [
-        "API-Vertrag und Security-Policy (AuthN/AuthZ, Versionierung, Error-Modell) explizit festlegen.",
-        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
-        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      "intro": "Es geht um die Frage, ob neue SOAP/WSDL-Schnittstellen noch eingeführt werden sollten.",
+      "whyRing": "Dieser Punkt ist für neue Implementierungen nicht empfohlen und sollte nur kontrolliert im Bestand laufen.",
+      "risks": [
+        "Unklare API-Verträge und Security-Regeln führen zu Integrationsbrüchen und erhöhtem Betriebsaufwand."
+      ],
+      "do": [
+        "Bestandsnutzung nur mit Exit-Strategie und priorisiertem Ablöseplan fortführen.",
+        "Migrationspfad zu API-/Event-basierten Integrationsmustern aktiv planen."
+      ],
+      "dont": [
+        "Keine neuen Legacy-Kopplungen in Greenfield-Umfängen aufbauen."
       ],
       "sources": [
         "docs/research-notes-2026-02-21.md",
@@ -915,11 +1309,17 @@
       "label": "SOAP (legacy)",
       "ring": "HOLD",
       "quadrant": "Protocols & APIs",
-      "summary": "Für neue Implementierungen vermeiden; nur für Bestand mit Migrationspfad. Kontext: Protocols & APIs.",
-      "actions": [
-        "API-Vertrag und Security-Policy (AuthN/AuthZ, Versionierung, Error-Modell) explizit festlegen.",
-        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
-        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      "intro": "Es geht um SOAP (legacy) als Baustein im Quadranten \"Protocols & APIs\".",
+      "whyRing": "Dieser Punkt ist für neue Implementierungen nicht empfohlen und sollte nur kontrolliert im Bestand laufen.",
+      "risks": [
+        "Unklare API-Verträge und Security-Regeln führen zu Integrationsbrüchen und erhöhtem Betriebsaufwand."
+      ],
+      "do": [
+        "Bestandsnutzung nur mit Exit-Strategie und priorisiertem Ablöseplan fortführen.",
+        "Migrationspfad zu API-/Event-basierten Integrationsmustern aktiv planen."
+      ],
+      "dont": [
+        "Keine neuen Legacy-Kopplungen in Greenfield-Umfängen aufbauen."
       ],
       "sources": [
         "docs/research-notes-2026-02-21.md",
