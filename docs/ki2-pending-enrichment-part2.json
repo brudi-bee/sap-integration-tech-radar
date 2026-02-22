@@ -1,0 +1,222 @@
+{
+  "sheet": "Pending Enrichment (Part 2)",
+  "rows": [
+    {
+      "#": "32",
+      "Label": "Event-driven integration",
+      "Ring": "TRIAL",
+      "Quadrant": "Patterns & Architecture",
+      "Status": "✅ Enriched in Part 2"
+    },
+    {
+      "#": "33",
+      "Label": "Side-by-side extensibility",
+      "Ring": "ADOPT",
+      "Quadrant": "Patterns & Architecture",
+      "Status": "✅ Enriched in Part 2"
+    },
+    {
+      "#": "34",
+      "Label": "Circuit breaker pattern",
+      "Ring": "ADOPT",
+      "Quadrant": "Patterns & Architecture",
+      "Status": "✅ Enriched in Part 2"
+    },
+    {
+      "#": "35",
+      "Label": "Idempotent consumer pattern",
+      "Ring": "ADOPT",
+      "Quadrant": "Patterns & Architecture",
+      "Status": "✅ Enriched in Part 2"
+    },
+    {
+      "#": "36",
+      "Label": "Retry/backoff + dead-letter handling",
+      "Ring": "ADOPT",
+      "Quadrant": "Patterns & Architecture",
+      "Status": "✅ Enriched in Part 2"
+    },
+    {
+      "#": "37",
+      "Label": "Outbox pattern",
+      "Ring": "TRIAL",
+      "Quadrant": "Patterns & Architecture",
+      "Status": "✅ Enriched in Part 2"
+    },
+    {
+      "#": "38",
+      "Label": "Strangler pattern for legacy replacement",
+      "Ring": "ADOPT",
+      "Quadrant": "Patterns & Architecture",
+      "Status": "✅ Enriched in Part 2"
+    },
+    {
+      "#": "39",
+      "Label": "Event-driven architecture with CloudEvents envelope",
+      "Ring": "TRIAL",
+      "Quadrant": "Patterns & Architecture",
+      "Status": "✅ Enriched in Part 2"
+    },
+    {
+      "#": "40",
+      "Label": "Choreography over central orchestration (selective)",
+      "Ring": "TRIAL",
+      "Quadrant": "Patterns & Architecture",
+      "Status": "✅ Enriched in Part 2"
+    },
+    {
+      "#": "41",
+      "Label": "Canonical data model (lightweight)",
+      "Ring": "ASSESS",
+      "Quadrant": "Patterns & Architecture",
+      "Status": "✅ Enriched in Part 2"
+    },
+    {
+      "#": "42",
+      "Label": "CQRS (selective)",
+      "Ring": "ASSESS",
+      "Quadrant": "Patterns & Architecture",
+      "Status": "✅ Enriched in Part 2"
+    },
+    {
+      "#": "43",
+      "Label": "Direct point-to-point connections",
+      "Ring": "HOLD",
+      "Quadrant": "Patterns & Architecture",
+      "Status": "✅ Enriched in Part 2"
+    },
+    {
+      "#": "44",
+      "Label": "File-drop integrations (shared folder/manual polling)",
+      "Ring": "HOLD",
+      "Quadrant": "Patterns & Architecture",
+      "Status": "✅ Enriched in Part 2"
+    },
+    {
+      "#": "45",
+      "Label": "Direct DB integration",
+      "Ring": "HOLD",
+      "Quadrant": "Patterns & Architecture",
+      "Status": "✅ Enriched in Part 2"
+    },
+    {
+      "#": "46",
+      "Label": "REST/JSON",
+      "Ring": "ADOPT",
+      "Quadrant": "Protocols & APIs",
+      "Status": "✅ Enriched in Part 2"
+    },
+    {
+      "#": "47",
+      "Label": "OData v4",
+      "Ring": "ADOPT",
+      "Quadrant": "Protocols & APIs",
+      "Status": "✅ Enriched in Part 2"
+    },
+    {
+      "#": "48",
+      "Label": "OAuth2 / OIDC",
+      "Ring": "ADOPT",
+      "Quadrant": "Protocols & APIs",
+      "Status": "✅ Enriched in Part 2"
+    },
+    {
+      "#": "49",
+      "Label": "OpenAPI 3.x",
+      "Ring": "ADOPT",
+      "Quadrant": "Protocols & APIs",
+      "Status": "✅ Enriched in Part 2"
+    },
+    {
+      "#": "50",
+      "Label": "Webhooks with signature verification",
+      "Ring": "ADOPT",
+      "Quadrant": "Protocols & APIs",
+      "Status": "✅ Enriched in Part 2"
+    },
+    {
+      "#": "51",
+      "Label": "AsyncAPI",
+      "Ring": "TRIAL",
+      "Quadrant": "Protocols & APIs",
+      "Status": "✅ Enriched in Part 2"
+    },
+    {
+      "#": "52",
+      "Label": "CloudEvents",
+      "Ring": "TRIAL",
+      "Quadrant": "Protocols & APIs",
+      "Status": "✅ Enriched in Part 2"
+    },
+    {
+      "#": "53",
+      "Label": "AMQP 1.0",
+      "Ring": "ADOPT",
+      "Quadrant": "Protocols & APIs",
+      "Status": "✅ Enriched in Part 2"
+    },
+    {
+      "#": "54",
+      "Label": "MQTT (IoT/OT scenarios)",
+      "Ring": "ASSESS",
+      "Quadrant": "Protocols & APIs",
+      "Status": "✅ Enriched in Part 2"
+    },
+    {
+      "#": "55",
+      "Label": "GraphQL (BFF/aggregation only)",
+      "Ring": "ASSESS",
+      "Quadrant": "Protocols & APIs",
+      "Status": "✅ Enriched in Part 2"
+    },
+    {
+      "#": "56",
+      "Label": "gRPC (internal service-to-service)",
+      "Ring": "ASSESS",
+      "Quadrant": "Protocols & APIs",
+      "Status": "✅ Enriched in Part 2"
+    },
+    {
+      "#": "57",
+      "Label": "AVRO + Schema Registry",
+      "Ring": "ASSESS",
+      "Quadrant": "Protocols & APIs",
+      "Status": "✅ Enriched in Part 2"
+    },
+    {
+      "#": "58",
+      "Label": "EDI/AS2",
+      "Ring": "ASSESS",
+      "Quadrant": "Protocols & APIs",
+      "Status": "✅ Enriched in Part 2"
+    },
+    {
+      "#": "59",
+      "Label": "RFC/BAPI (remote)",
+      "Ring": "HOLD",
+      "Quadrant": "Protocols & APIs",
+      "Status": "✅ Enriched in Part 2"
+    },
+    {
+      "#": "60",
+      "Label": "SFTP (managed file transfer transition)",
+      "Ring": "ASSESS",
+      "Quadrant": "Protocols & APIs",
+      "Status": "✅ Enriched in Part 2"
+    },
+    {
+      "#": "61",
+      "Label": "New SOAP/WSDL interfaces",
+      "Ring": "HOLD",
+      "Quadrant": "Protocols & APIs",
+      "Status": "✅ Enriched in Part 2"
+    },
+    {
+      "#": "62",
+      "Label": "SOAP (legacy)",
+      "Ring": "HOLD",
+      "Quadrant": "Protocols & APIs",
+      "Status": "✅ Enriched in Part 2"
+    }
+  ]
+}

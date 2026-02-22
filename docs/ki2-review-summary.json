@@ -1,0 +1,179 @@
+{
+  "sheet": "Review Summary",
+  "rows": [
+    {
+      "🔴 TOP 15 CRITICAL GAPS": "Gap"
+    },
+    {
+      "🔴 TOP 15 CRITICAL GAPS": "Missing Schema Registry / AsyncAPI governance"
+    },
+    {
+      "🔴 TOP 15 CRITICAL GAPS": "OpenTelemetry adoption near zero"
+    },
+    {
+      "🔴 TOP 15 CRITICAL GAPS": "No EDA dead-letter-queue strategy"
+    },
+    {
+      "🔴 TOP 15 CRITICAL GAPS": "Citizen developer governance absent"
+    },
+    {
+      "🔴 TOP 15 CRITICAL GAPS": "Manual prod deployments still occurring"
+    },
+    {
+      "🔴 TOP 15 CRITICAL GAPS": "RFC/BAPI still used for new interfaces"
+    },
+    {
+      "🔴 TOP 15 CRITICAL GAPS": "PI/PO migration not roadmapped"
+    },
+    {
+      "🔴 TOP 15 CRITICAL GAPS": "No API versioning strategy enforced"
+    },
+    {
+      "🔴 TOP 15 CRITICAL GAPS": "Postman collections not in version control"
+    },
+    {
+      "🔴 TOP 15 CRITICAL GAPS": "No contract testing between CPI and consumers"
+    },
+    {
+      "🔴 TOP 15 CRITICAL GAPS": "SCC without HA in production"
+    },
+    {
+      "🔴 TOP 15 CRITICAL GAPS": "Secrets in IFlow properties or Git"
+    },
+    {
+      "🔴 TOP 15 CRITICAL GAPS": "No Terraform for BTP landscape provisioning"
+    },
+    {
+      "🔴 TOP 15 CRITICAL GAPS": "AsyncAPI not in governance process"
+    },
+    {
+      "🔴 TOP 15 CRITICAL GAPS": "No integration test environment stability"
+    },
+    {
+      "🔴 TOP 15 CRITICAL GAPS": "🔄 TOP 10 RING ADJUSTMENT PROPOSALS"
+    },
+    {
+      "🔴 TOP 15 CRITICAL GAPS": "Entry"
+    },
+    {
+      "🔴 TOP 15 CRITICAL GAPS": "SAP Event Mesh"
+    },
+    {
+      "🔴 TOP 15 CRITICAL GAPS": "SAP Integration Advisor"
+    },
+    {
+      "🔴 TOP 15 CRITICAL GAPS": "CI/CD for integration artifacts"
+    },
+    {
+      "🔴 TOP 15 CRITICAL GAPS": "Terraform for SAP BTP"
+    },
+    {
+      "🔴 TOP 15 CRITICAL GAPS": "Content transport via CTS+"
+    },
+    {
+      "🔴 TOP 15 CRITICAL GAPS": "SAP Open Connectors"
+    },
+    {
+      "🔴 TOP 15 CRITICAL GAPS": "SAP PI/PO"
+    },
+    {
+      "🔴 TOP 15 CRITICAL GAPS": "Direct DB integration"
+    },
+    {
+      "🔴 TOP 15 CRITICAL GAPS": "Manual prod changes"
+    },
+    {
+      "🔴 TOP 15 CRITICAL GAPS": "CloudEvents"
+    },
+    {
+      "🔴 TOP 15 CRITICAL GAPS": "⚠️ CROSS-CUTTING RISKS (Recurring Weaknesses)"
+    },
+    {
+      "🔴 TOP 15 CRITICAL GAPS": "Risk Theme"
+    },
+    {
+      "🔴 TOP 15 CRITICAL GAPS": "Governance Debt"
+    },
+    {
+      "🔴 TOP 15 CRITICAL GAPS": "Security Hygiene"
+    },
+    {
+      "🔴 TOP 15 CRITICAL GAPS": "Observability Gap"
+    },
+    {
+      "🔴 TOP 15 CRITICAL GAPS": "Vendor Lock-in Accumulation"
+    },
+    {
+      "🔴 TOP 15 CRITICAL GAPS": "PI/PO Migration Urgency"
+    },
+    {
+      "🔴 TOP 15 CRITICAL GAPS": "📅 PRIORITIZED ACTION PLAN (30 / 60 / 90 Days)"
+    },
+    {
+      "🔴 TOP 15 CRITICAL GAPS": "Phase"
+    },
+    {
+      "🔴 TOP 15 CRITICAL GAPS": "0–30 days"
+    },
+    {
+      "🔴 TOP 15 CRITICAL GAPS": "0–30 days"
+    },
+    {
+      "🔴 TOP 15 CRITICAL GAPS": "0–30 days"
+    },
+    {
+      "🔴 TOP 15 CRITICAL GAPS": "0–30 days"
+    },
+    {
+      "🔴 TOP 15 CRITICAL GAPS": "0–30 days"
+    },
+    {
+      "🔴 TOP 15 CRITICAL GAPS": "31–60 days"
+    },
+    {
+      "🔴 TOP 15 CRITICAL GAPS": "31–60 days"
+    },
+    {
+      "🔴 TOP 15 CRITICAL GAPS": "31–60 days"
+    },
+    {
+      "🔴 TOP 15 CRITICAL GAPS": "31–60 days"
+    },
+    {
+      "🔴 TOP 15 CRITICAL GAPS": "31–60 days"
+    },
+    {
+      "🔴 TOP 15 CRITICAL GAPS": "61–90 days"
+    },
+    {
+      "🔴 TOP 15 CRITICAL GAPS": "61–90 days"
+    },
+    {
+      "🔴 TOP 15 CRITICAL GAPS": "61–90 days"
+    },
+    {
+      "🔴 TOP 15 CRITICAL GAPS": "61–90 days"
+    },
+    {
+      "🔴 TOP 15 CRITICAL GAPS": "61–90 days"
+    },
+    {
+      "🔴 TOP 15 CRITICAL GAPS": "🔄 ADDITIONAL RING ADJUSTMENTS – PART 2 ENTRIES"
+    },
+    {
+      "🔴 TOP 15 CRITICAL GAPS": "Entry"
+    },
+    {
+      "🔴 TOP 15 CRITICAL GAPS": "Event-driven integration"
+    },
+    {
+      "🔴 TOP 15 CRITICAL GAPS": "Event-driven architecture with CloudEvents envelope"
+    },
+    {
+      "🔴 TOP 15 CRITICAL GAPS": "AsyncAPI"
+    },
+    {
+      "🔴 TOP 15 CRITICAL GAPS": "CloudEvents"
+    }
+  ]
+}
