@@ -1,83 +1,475 @@
 {
   "title": "SAP Integration Tech Radar",
   "quadrants": [
-    { "name": "Platforms" },
-    { "name": "Tooling & Ops" },
-    { "name": "Patterns & Architecture" },
-    { "name": "Protocols & APIs" }
+    {
+      "name": "Platforms"
+    },
+    {
+      "name": "Tooling & Ops"
+    },
+    {
+      "name": "Patterns & Architecture"
+    },
+    {
+      "name": "Protocols & APIs"
+    }
   ],
   "rings": [
-    { "name": "ADOPT", "color": "#5ba300" },
-    { "name": "TRIAL", "color": "#009eb0" },
-    { "name": "ASSESS", "color": "#c7ba00" },
-    { "name": "HOLD", "color": "#e09b96" }
+    {
+      "name": "ADOPT",
+      "color": "#5ba300"
+    },
+    {
+      "name": "TRIAL",
+      "color": "#009eb0"
+    },
+    {
+      "name": "ASSESS",
+      "color": "#c7ba00"
+    },
+    {
+      "name": "HOLD",
+      "color": "#e09b96"
+    }
   ],
   "entries": [
-    { "label": "SAP Cloud Integration (CI)", "quadrant": 0, "ring": 0, "moved": 0 },
-    { "label": "SAP API Management", "quadrant": 0, "ring": 0, "moved": 0 },
-    { "label": "SAP Event Mesh", "quadrant": 0, "ring": 1, "moved": 2 },
-    { "label": "SAP Advanced Event Mesh (AEM)", "quadrant": 0, "ring": 1, "moved": 2 },
-    { "label": "SAP Cloud Connector", "quadrant": 1, "ring": 0, "moved": 1 },
-    { "label": "SAP Integration Advisor", "quadrant": 0, "ring": 1, "moved": 1 },
-    { "label": "SAP Trading Partner Management", "quadrant": 0, "ring": 2, "moved": 1 },
-    { "label": "Edge Integration Cell", "quadrant": 0, "ring": 1, "moved": 1 },
-    { "label": "Kyma Runtime (for integration microservices)", "quadrant": 0, "ring": 1, "moved": 1 },
-    { "label": "SAP Build Process Automation", "quadrant": 0, "ring": 2, "moved": 1 },
-    { "label": "SAP Open Connectors", "quadrant": 0, "ring": 3, "moved": -1 },
-    { "label": "SAP PI/PO", "quadrant": 0, "ring": 3, "moved": -1 },
-
-    { "label": "Central logging + correlation IDs", "quadrant": 1, "ring": 0, "moved": 0 },
-    { "label": "CI/CD for integration artifacts", "quadrant": 1, "ring": 1, "moved": 2 },
-    { "label": "Secret handling via vault/KMS", "quadrant": 1, "ring": 0, "moved": 1 },
-    { "label": "OpenTelemetry", "quadrant": 1, "ring": 1, "moved": 1 },
-    { "label": "Contract testing for integrations", "quadrant": 1, "ring": 1, "moved": 1 },
-    { "label": "Terraform for SAP BTP", "quadrant": 1, "ring": 1, "moved": 1 },
-    { "label": "Cloud Integration Automation Tool", "quadrant": 1, "ring": 2, "moved": 1 },
-    { "label": "Third-party CPI DevOps suites (e.g., Figaf/Int4)", "quadrant": 1, "ring": 2, "moved": 1 },
-    { "label": "SAP Cloud Transport Management (CTMS) + Content Agent", "quadrant": 1, "ring": 0, "moved": 1 },
-    { "label": "Content transport via CTS+ (transition)", "quadrant": 1, "ring": 2, "moved": 0 },
-    { "label": "SAP Cloud ALM integration & exception monitoring", "quadrant": 1, "ring": 0, "moved": 1 },
-    { "label": "Cloud Integration central monitoring & alerting", "quadrant": 1, "ring": 0, "moved": 1 },
-    { "label": "Integration Assessment (ISA-M)", "quadrant": 1, "ring": 0, "moved": 1 },
-    { "label": "Postman/Bruno API test collections", "quadrant": 1, "ring": 0, "moved": 1 },
-    { "label": "SAP Application Interface Framework (AIF)", "quadrant": 1, "ring": 2, "moved": 0 },
-    { "label": "Manual prod changes", "quadrant": 1, "ring": 3, "moved": -1 },
-
-    { "label": "API-first", "quadrant": 2, "ring": 0, "moved": 0 },
-    { "label": "API-led connectivity (system/process/experience)", "quadrant": 2, "ring": 0, "moved": 1 },
-    { "label": "Contract-first with OpenAPI", "quadrant": 2, "ring": 0, "moved": 1 },
-    { "label": "Contract-first with AsyncAPI", "quadrant": 2, "ring": 1, "moved": 1 },
-    { "label": "Event-driven integration", "quadrant": 2, "ring": 1, "moved": 2 },
-    { "label": "Side-by-side extensibility", "quadrant": 2, "ring": 0, "moved": 1 },
-    { "label": "Circuit breaker pattern", "quadrant": 2, "ring": 0, "moved": 1 },
-    { "label": "Idempotent consumer pattern", "quadrant": 2, "ring": 0, "moved": 1 },
-    { "label": "Retry/backoff + dead-letter handling", "quadrant": 2, "ring": 0, "moved": 1 },
-    { "label": "Outbox pattern", "quadrant": 2, "ring": 1, "moved": 1 },
-    { "label": "Strangler pattern for legacy replacement", "quadrant": 2, "ring": 0, "moved": 1 },
-    { "label": "Event-driven architecture with CloudEvents envelope", "quadrant": 2, "ring": 1, "moved": 1 },
-    { "label": "Choreography over central orchestration (selective)", "quadrant": 2, "ring": 1, "moved": 1 },
-    { "label": "Canonical data model (lightweight)", "quadrant": 2, "ring": 2, "moved": 0 },
-    { "label": "CQRS (selective)", "quadrant": 2, "ring": 2, "moved": 1 },
-    { "label": "Direct point-to-point connections", "quadrant": 2, "ring": 3, "moved": -1 },
-    { "label": "File-drop integrations (shared folder/manual polling)", "quadrant": 2, "ring": 3, "moved": -1 },
-    { "label": "Direct DB integration", "quadrant": 2, "ring": 3, "moved": -1 },
-
-    { "label": "REST/JSON", "quadrant": 3, "ring": 0, "moved": 0 },
-    { "label": "OData v4", "quadrant": 3, "ring": 0, "moved": 0 },
-    { "label": "OAuth2 / OIDC", "quadrant": 3, "ring": 0, "moved": 0 },
-    { "label": "OpenAPI 3.x", "quadrant": 3, "ring": 0, "moved": 1 },
-    { "label": "Webhooks with signature verification", "quadrant": 3, "ring": 0, "moved": 1 },
-    { "label": "AsyncAPI", "quadrant": 3, "ring": 1, "moved": 2 },
-    { "label": "CloudEvents", "quadrant": 3, "ring": 1, "moved": 1 },
-    { "label": "AMQP 1.0", "quadrant": 3, "ring": 0, "moved": 1 },
-    { "label": "MQTT (IoT/OT scenarios)", "quadrant": 3, "ring": 2, "moved": 1 },
-    { "label": "GraphQL (BFF/aggregation only)", "quadrant": 3, "ring": 2, "moved": 1 },
-    { "label": "gRPC (internal service-to-service)", "quadrant": 3, "ring": 2, "moved": 1 },
-    { "label": "AVRO + Schema Registry", "quadrant": 3, "ring": 2, "moved": 1 },
-    { "label": "EDI/AS2", "quadrant": 3, "ring": 2, "moved": 0 },
-    { "label": "RFC/BAPI (remote)", "quadrant": 3, "ring": 3, "moved": -1 },
-    { "label": "SFTP (managed file transfer transition)", "quadrant": 3, "ring": 2, "moved": 0 },
-    { "label": "New SOAP/WSDL interfaces", "quadrant": 3, "ring": 3, "moved": -1 },
-    { "label": "SOAP (legacy)", "quadrant": 3, "ring": 3, "moved": -1 }
+    {
+      "label": "SAP Cloud Integration (CI)",
+      "quadrant": 0,
+      "ring": 0,
+      "moved": 0
+    },
+    {
+      "label": "SAP API Management",
+      "quadrant": 0,
+      "ring": 0,
+      "moved": 0
+    },
+    {
+      "label": "SAP Event Mesh",
+      "quadrant": 0,
+      "ring": 1,
+      "moved": 2
+    },
+    {
+      "label": "SAP Advanced Event Mesh (AEM)",
+      "quadrant": 0,
+      "ring": 1,
+      "moved": 2
+    },
+    {
+      "label": "SAP Cloud Connector",
+      "quadrant": 1,
+      "ring": 0,
+      "moved": 1
+    },
+    {
+      "label": "SAP Integration Advisor",
+      "quadrant": 0,
+      "ring": 1,
+      "moved": 1
+    },
+    {
+      "label": "SAP Trading Partner Management",
+      "quadrant": 0,
+      "ring": 2,
+      "moved": 1
+    },
+    {
+      "label": "Edge Integration Cell",
+      "quadrant": 0,
+      "ring": 1,
+      "moved": 1
+    },
+    {
+      "label": "Kyma Runtime (for integration microservices)",
+      "quadrant": 0,
+      "ring": 1,
+      "moved": 1
+    },
+    {
+      "label": "SAP Build Process Automation",
+      "quadrant": 0,
+      "ring": 2,
+      "moved": 1
+    },
+    {
+      "label": "SAP Open Connectors",
+      "quadrant": 0,
+      "ring": 3,
+      "moved": -1
+    },
+    {
+      "label": "SAP PI/PO",
+      "quadrant": 0,
+      "ring": 3,
+      "moved": -1
+    },
+    {
+      "label": "Central logging + correlation IDs",
+      "quadrant": 1,
+      "ring": 0,
+      "moved": 0
+    },
+    {
+      "label": "CI/CD for integration artifacts",
+      "quadrant": 1,
+      "ring": 1,
+      "moved": 2
+    },
+    {
+      "label": "Secret handling via vault/KMS",
+      "quadrant": 1,
+      "ring": 0,
+      "moved": 1
+    },
+    {
+      "label": "OpenTelemetry",
+      "quadrant": 1,
+      "ring": 1,
+      "moved": 1
+    },
+    {
+      "label": "Contract testing for integrations",
+      "quadrant": 1,
+      "ring": 1,
+      "moved": 1
+    },
+    {
+      "label": "Terraform for SAP BTP",
+      "quadrant": 1,
+      "ring": 1,
+      "moved": 1
+    },
+    {
+      "label": "Cloud Integration Automation Tool",
+      "quadrant": 1,
+      "ring": 2,
+      "moved": 1
+    },
+    {
+      "label": "Third-party CPI DevOps suites (e.g., Figaf/Int4)",
+      "quadrant": 1,
+      "ring": 2,
+      "moved": 1
+    },
+    {
+      "label": "SAP Cloud Transport Management (CTMS) + Content Agent",
+      "quadrant": 1,
+      "ring": 0,
+      "moved": 1
+    },
+    {
+      "label": "Content transport via CTS+ (transition)",
+      "quadrant": 1,
+      "ring": 2,
+      "moved": 0
+    },
+    {
+      "label": "SAP Cloud ALM integration & exception monitoring",
+      "quadrant": 1,
+      "ring": 0,
+      "moved": 1
+    },
+    {
+      "label": "Cloud Integration central monitoring & alerting",
+      "quadrant": 1,
+      "ring": 0,
+      "moved": 1
+    },
+    {
+      "label": "Integration Assessment (ISA-M)",
+      "quadrant": 1,
+      "ring": 0,
+      "moved": 1
+    },
+    {
+      "label": "Postman/Bruno API test collections",
+      "quadrant": 1,
+      "ring": 0,
+      "moved": 1
+    },
+    {
+      "label": "SAP Application Interface Framework (AIF)",
+      "quadrant": 1,
+      "ring": 2,
+      "moved": 0
+    },
+    {
+      "label": "Manual prod changes",
+      "quadrant": 1,
+      "ring": 3,
+      "moved": -1
+    },
+    {
+      "label": "API-first",
+      "quadrant": 2,
+      "ring": 0,
+      "moved": 0
+    },
+    {
+      "label": "API-led connectivity (system/process/experience)",
+      "quadrant": 2,
+      "ring": 0,
+      "moved": 1
+    },
+    {
+      "label": "Contract-first with OpenAPI",
+      "quadrant": 2,
+      "ring": 0,
+      "moved": 1
+    },
+    {
+      "label": "Contract-first with AsyncAPI",
+      "quadrant": 2,
+      "ring": 1,
+      "moved": 1
+    },
+    {
+      "label": "Event-driven integration",
+      "quadrant": 2,
+      "ring": 1,
+      "moved": 2
+    },
+    {
+      "label": "Side-by-side extensibility",
+      "quadrant": 2,
+      "ring": 0,
+      "moved": 1
+    },
+    {
+      "label": "Circuit breaker pattern",
+      "quadrant": 2,
+      "ring": 0,
+      "moved": 1
+    },
+    {
+      "label": "Idempotent consumer pattern",
+      "quadrant": 2,
+      "ring": 0,
+      "moved": 1
+    },
+    {
+      "label": "Retry/backoff + dead-letter handling",
+      "quadrant": 2,
+      "ring": 0,
+      "moved": 1
+    },
+    {
+      "label": "Outbox pattern",
+      "quadrant": 2,
+      "ring": 1,
+      "moved": 1
+    },
+    {
+      "label": "Strangler pattern for legacy replacement",
+      "quadrant": 2,
+      "ring": 0,
+      "moved": 1
+    },
+    {
+      "label": "Event-driven architecture with CloudEvents envelope",
+      "quadrant": 2,
+      "ring": 1,
+      "moved": 1
+    },
+    {
+      "label": "Choreography over central orchestration (selective)",
+      "quadrant": 2,
+      "ring": 1,
+      "moved": 1
+    },
+    {
+      "label": "Canonical data model (lightweight)",
+      "quadrant": 2,
+      "ring": 2,
+      "moved": 0
+    },
+    {
+      "label": "CQRS (selective)",
+      "quadrant": 2,
+      "ring": 2,
+      "moved": 1
+    },
+    {
+      "label": "Direct point-to-point connections",
+      "quadrant": 2,
+      "ring": 3,
+      "moved": -1
+    },
+    {
+      "label": "File-drop integrations (shared folder/manual polling)",
+      "quadrant": 2,
+      "ring": 3,
+      "moved": -1
+    },
+    {
+      "label": "Direct DB integration",
+      "quadrant": 2,
+      "ring": 3,
+      "moved": -1
+    },
+    {
+      "label": "REST/JSON",
+      "quadrant": 3,
+      "ring": 0,
+      "moved": 0
+    },
+    {
+      "label": "OData v4",
+      "quadrant": 3,
+      "ring": 0,
+      "moved": 0
+    },
+    {
+      "label": "OAuth2 / OIDC",
+      "quadrant": 3,
+      "ring": 0,
+      "moved": 0
+    },
+    {
+      "label": "OpenAPI 3.x",
+      "quadrant": 3,
+      "ring": 0,
+      "moved": 1
+    },
+    {
+      "label": "Webhooks with signature verification",
+      "quadrant": 3,
+      "ring": 0,
+      "moved": 1
+    },
+    {
+      "label": "AsyncAPI",
+      "quadrant": 3,
+      "ring": 1,
+      "moved": 2
+    },
+    {
+      "label": "CloudEvents",
+      "quadrant": 3,
+      "ring": 1,
+      "moved": 1
+    },
+    {
+      "label": "AMQP 1.0",
+      "quadrant": 3,
+      "ring": 0,
+      "moved": 1
+    },
+    {
+      "label": "MQTT (IoT/OT scenarios)",
+      "quadrant": 3,
+      "ring": 2,
+      "moved": 1
+    },
+    {
+      "label": "GraphQL (BFF/aggregation only)",
+      "quadrant": 3,
+      "ring": 2,
+      "moved": 1
+    },
+    {
+      "label": "gRPC (internal service-to-service)",
+      "quadrant": 3,
+      "ring": 2,
+      "moved": 1
+    },
+    {
+      "label": "AVRO + Schema Registry",
+      "quadrant": 3,
+      "ring": 2,
+      "moved": 1
+    },
+    {
+      "label": "EDI/AS2",
+      "quadrant": 3,
+      "ring": 2,
+      "moved": 0
+    },
+    {
+      "label": "RFC/BAPI (remote)",
+      "quadrant": 3,
+      "ring": 3,
+      "moved": -1
+    },
+    {
+      "label": "SFTP (managed file transfer transition)",
+      "quadrant": 3,
+      "ring": 2,
+      "moved": 0
+    },
+    {
+      "label": "New SOAP/WSDL interfaces",
+      "quadrant": 3,
+      "ring": 3,
+      "moved": -1
+    },
+    {
+      "label": "SOAP (legacy)",
+      "quadrant": 3,
+      "ring": 3,
+      "moved": -1
+    },
+    {
+      "label": "SAP BTP Private Link",
+      "quadrant": 1,
+      "ring": 0,
+      "moved": 2
+    },
+    {
+      "label": "SAP Build Code (CAP)",
+      "quadrant": 0,
+      "ring": 0,
+      "moved": 2
+    },
+    {
+      "label": "Principal Propagation",
+      "quadrant": 1,
+      "ring": 0,
+      "moved": 2
+    },
+    {
+      "label": "SAP Graph",
+      "quadrant": 0,
+      "ring": 0,
+      "moved": 2
+    },
+    {
+      "label": "Cloud Connector HA",
+      "quadrant": 1,
+      "ring": 0,
+      "moved": 2
+    },
+    {
+      "label": "OpenTelemetry (OTrEx)",
+      "quadrant": 1,
+      "ring": 0,
+      "moved": 2
+    },
+    {
+      "label": "BTP Resource Quota Monitoring",
+      "quadrant": 1,
+      "ring": 0,
+      "moved": 2
+    },
+    {
+      "label": "Semantic Versioning (SemVer)",
+      "quadrant": 1,
+      "ring": 0,
+      "moved": 2
+    },
+    {
+      "label": "SAP Datasphere Integration",
+      "quadrant": 0,
+      "ring": 0,
+      "moved": 2
+    },
+    {
+      "label": "Consumer-Driven Contract Testing",
+      "quadrant": 1,
+      "ring": 1,
+      "moved": 2
+    }
   ]
 }

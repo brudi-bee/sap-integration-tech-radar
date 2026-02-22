@@ -3564,6 +3564,376 @@
         "Do not use for new greenfield integrations.",
         "Do not use when API- or event-based alternatives are available."
       ]
+    },
+    {
+      "label": "SAP BTP Private Link",
+      "ring": "ADOPT",
+      "quadrant": "Tooling & Ops",
+      "intro_de": "Sichere Anbindung von Hyperscaler-Ressourcen (Azure/AWS) ohne öffentliche IP-Adressen.",
+      "intro_en": "Sichere Anbindung von Hyperscaler-Ressourcen (Azure/AWS) ohne öffentliche IP-Adressen.",
+      "whyRing_de": "Sicherheits-Grundlage für moderne Hybrid-Cloud Setups.",
+      "whyRing_en": "Sicherheits-Grundlage für moderne Hybrid-Cloud Setups.",
+      "risks_de": [
+        "Datenabfluss über das öffentliche Internet; Compliance-Verletzung."
+      ],
+      "risks_en": [
+        "Datenabfluss über das öffentliche Internet; Compliance-Verletzung."
+      ],
+      "do_de": [
+        "Private Endpoints auf Hyperscaler-Seite nutzen."
+      ],
+      "do_en": [
+        "Private Endpoints auf Hyperscaler-Seite nutzen."
+      ],
+      "dont_de": [
+        "Public IP Whitelisting als Dauerlösung."
+      ],
+      "dont_en": [
+        "Public IP Whitelisting als Dauerlösung."
+      ],
+      "whenNotToUse_de": [
+        "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
+      ],
+      "whenNotToUse_en": [
+        "Do not introduce this when value, operating model, and ownership are still unclear."
+      ],
+      "references": [],
+      "sources": [
+        "docs/proposed-new-entries.from-ki1.json"
+      ]
+    },
+    {
+      "label": "SAP Build Code (CAP)",
+      "ring": "ADOPT",
+      "quadrant": "Platforms",
+      "intro_de": "Standard Programmiermodell für Cloud-native Extensions. Nachfolger von Java/Node Pro-Code.",
+      "intro_en": "Standard Programmiermodell für Cloud-native Extensions. Nachfolger von Java/Node Pro-Code.",
+      "whyRing_de": "Zentraler Baustein für 'Clean Core' Strategie.",
+      "whyRing_en": "Zentraler Baustein für 'Clean Core' Strategie.",
+      "risks_de": [
+        "Wildwuchs an In-App Modifikationen."
+      ],
+      "risks_en": [
+        "Wildwuchs an In-App Modifikationen."
+      ],
+      "do_de": [
+        "Side-by-Side Extensions bevorzugen."
+      ],
+      "do_en": [
+        "Side-by-Side Extensions bevorzugen."
+      ],
+      "dont_de": [
+        "Logik direkt im S/4 Kern belassen."
+      ],
+      "dont_en": [
+        "Logik direkt im S/4 Kern belassen."
+      ],
+      "whenNotToUse_de": [
+        "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
+      ],
+      "whenNotToUse_en": [
+        "Do not introduce this when value, operating model, and ownership are still unclear."
+      ],
+      "references": [],
+      "sources": [
+        "docs/proposed-new-entries.from-ki1.json"
+      ]
+    },
+    {
+      "label": "Principal Propagation",
+      "ring": "ADOPT",
+      "quadrant": "Tooling & Ops",
+      "intro_de": "End-to-End Identitätsweitergabe vom User bis zum S/4-Backend.",
+      "intro_en": "End-to-End Identitätsweitergabe vom User bis zum S/4-Backend.",
+      "whyRing_de": "Essentiell für Auditability und Security.",
+      "whyRing_en": "Essentiell für Auditability und Security.",
+      "risks_de": [
+        "Verlust des User-Kontextes im Backend (Technischer User)."
+      ],
+      "risks_en": [
+        "Verlust des User-Kontextes im Backend (Technischer User)."
+      ],
+      "do_de": [
+        "OAuth2SAMLBearer Flow nutzen."
+      ],
+      "do_en": [
+        "OAuth2SAMLBearer Flow nutzen."
+      ],
+      "dont_de": [
+        "Static Credentials in Destinations."
+      ],
+      "dont_en": [
+        "Static Credentials in Destinations."
+      ],
+      "whenNotToUse_de": [
+        "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
+      ],
+      "whenNotToUse_en": [
+        "Do not introduce this when value, operating model, and ownership are still unclear."
+      ],
+      "references": [],
+      "sources": [
+        "docs/proposed-new-entries.from-ki1.json"
+      ]
+    },
+    {
+      "label": "SAP Graph",
+      "ring": "ADOPT",
+      "quadrant": "Platforms",
+      "intro_de": "Unified API Entrypoint für das gesamte SAP Portfolio (One Domain Model).",
+      "intro_en": "Unified API Entrypoint für das gesamte SAP Portfolio (One Domain Model).",
+      "whyRing_de": "Reduziert Komplexität für Frontend-Entwickler.",
+      "whyRing_en": "Reduziert Komplexität für Frontend-Entwickler.",
+      "risks_de": [
+        "Redundante Datenabfragen gegen verschiedene Backends."
+      ],
+      "risks_en": [
+        "Redundante Datenabfragen gegen verschiedene Backends."
+      ],
+      "do_de": [
+        "OData v4 standardisieren."
+      ],
+      "do_en": [
+        "OData v4 standardisieren."
+      ],
+      "dont_de": [
+        "Proprietäre API-Mapping-Layer bauen."
+      ],
+      "dont_en": [
+        "Proprietäre API-Mapping-Layer bauen."
+      ],
+      "whenNotToUse_de": [
+        "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
+      ],
+      "whenNotToUse_en": [
+        "Do not introduce this when value, operating model, and ownership are still unclear."
+      ],
+      "references": [],
+      "sources": [
+        "docs/proposed-new-entries.from-ki1.json"
+      ]
+    },
+    {
+      "label": "Cloud Connector HA",
+      "ring": "ADOPT",
+      "quadrant": "Tooling & Ops",
+      "intro_de": "Hochverfügbarkeits-Setup für den SAP Cloud Connector (Master/Shadow).",
+      "intro_en": "Hochverfügbarkeits-Setup für den SAP Cloud Connector (Master/Shadow).",
+      "whyRing_de": "Vermeidung eines Single-Point-of-Failure.",
+      "whyRing_en": "Vermeidung eines Single-Point-of-Failure.",
+      "risks_de": [
+        "Totalausfall der Hybrid-Integration bei Server-Reboot."
+      ],
+      "risks_en": [
+        "Totalausfall der Hybrid-Integration bei Server-Reboot."
+      ],
+      "do_de": [
+        "Shadow-Instanz in anderem Subnetz/Host betreiben."
+      ],
+      "do_en": [
+        "Shadow-Instanz in anderem Subnetz/Host betreiben."
+      ],
+      "dont_de": [
+        "Single-Instance Betrieb für Prod."
+      ],
+      "dont_en": [
+        "Single-Instance Betrieb für Prod."
+      ],
+      "whenNotToUse_de": [
+        "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
+      ],
+      "whenNotToUse_en": [
+        "Do not introduce this when value, operating model, and ownership are still unclear."
+      ],
+      "references": [],
+      "sources": [
+        "docs/proposed-new-entries.from-ki1.json"
+      ]
+    },
+    {
+      "label": "OpenTelemetry (OTrEx)",
+      "ring": "ADOPT",
+      "quadrant": "Tooling & Ops",
+      "intro_de": "Standardisierung von Traces, Metrics und Logs zur Cloud-weiten Analyse.",
+      "intro_en": "Standardisierung von Traces, Metrics und Logs zur Cloud-weiten Analyse.",
+      "whyRing_de": "Modernes Monitoring über Systemgrenzen hinweg.",
+      "whyRing_en": "Modernes Monitoring über Systemgrenzen hinweg.",
+      "risks_de": [
+        "Blindflug bei verteilten Microservices."
+      ],
+      "risks_en": [
+        "Blindflug bei verteilten Microservices."
+      ],
+      "do_de": [
+        "W3C Trace Context nutzen."
+      ],
+      "do_en": [
+        "W3C Trace Context nutzen."
+      ],
+      "dont_de": [
+        "Proprietäre Log-Formate ohne Korrelation."
+      ],
+      "dont_en": [
+        "Proprietäre Log-Formate ohne Korrelation."
+      ],
+      "whenNotToUse_de": [
+        "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
+      ],
+      "whenNotToUse_en": [
+        "Do not introduce this when value, operating model, and ownership are still unclear."
+      ],
+      "references": [],
+      "sources": [
+        "docs/proposed-new-entries.from-ki1.json"
+      ]
+    },
+    {
+      "label": "BTP Resource Quota Monitoring",
+      "ring": "ADOPT",
+      "quadrant": "Tooling & Ops",
+      "intro_de": "Automatisiertes Monitoring der Subaccount-Limits (Memory, Services).",
+      "intro_en": "Automatisiertes Monitoring der Subaccount-Limits (Memory, Services).",
+      "whyRing_de": "Operational Excellence & Stabilität.",
+      "whyRing_en": "Operational Excellence & Stabilität.",
+      "risks_de": [
+        "Plötzlicher Stop von Services bei Limit-Erreichung."
+      ],
+      "risks_en": [
+        "Plötzlicher Stop von Services bei Limit-Erreichung."
+      ],
+      "do_de": [
+        "Alert Notification Service (ANS) anbinden."
+      ],
+      "do_en": [
+        "Alert Notification Service (ANS) anbinden."
+      ],
+      "dont_de": [
+        "Limits manuell in der Cockpit-UI prüfen."
+      ],
+      "dont_en": [
+        "Limits manuell in der Cockpit-UI prüfen."
+      ],
+      "whenNotToUse_de": [
+        "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
+      ],
+      "whenNotToUse_en": [
+        "Do not introduce this when value, operating model, and ownership are still unclear."
+      ],
+      "references": [],
+      "sources": [
+        "docs/proposed-new-entries.from-ki1.json"
+      ]
+    },
+    {
+      "label": "Semantic Versioning (SemVer)",
+      "ring": "ADOPT",
+      "quadrant": "Tooling & Ops",
+      "intro_de": "Standard für die API-Versionierung (Major.Minor.Patch).",
+      "intro_en": "Standard für die API-Versionierung (Major.Minor.Patch).",
+      "whyRing_de": "Vermeidung von Breaking Changes.",
+      "whyRing_en": "Vermeidung von Breaking Changes.",
+      "risks_de": [
+        "Konsumenten-Apps stürzen nach Deployment ab."
+      ],
+      "risks_en": [
+        "Konsumenten-Apps stürzen nach Deployment ab."
+      ],
+      "do_de": [
+        "Breaking Change = Neue Major Version."
+      ],
+      "do_en": [
+        "Breaking Change = Neue Major Version."
+      ],
+      "dont_de": [
+        "APIs ohne Versions-Header im URL-Pfad."
+      ],
+      "dont_en": [
+        "APIs ohne Versions-Header im URL-Pfad."
+      ],
+      "whenNotToUse_de": [
+        "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
+      ],
+      "whenNotToUse_en": [
+        "Do not introduce this when value, operating model, and ownership are still unclear."
+      ],
+      "references": [],
+      "sources": [
+        "docs/proposed-new-entries.from-ki1.json"
+      ]
+    },
+    {
+      "label": "SAP Datasphere Integration",
+      "ring": "ADOPT",
+      "quadrant": "Platforms",
+      "intro_de": "Trennung von Daten-Integration (ETL/Virtuell) und Prozess-Integration.",
+      "intro_en": "Trennung von Daten-Integration (ETL/Virtuell) und Prozess-Integration.",
+      "whyRing_de": "Schutz der Prozess-Middleware vor Daten-Überlast.",
+      "whyRing_en": "Schutz der Prozess-Middleware vor Daten-Überlast.",
+      "risks_de": [
+        "Integration Suite Performance-Einbruch durch Massendaten-Moves."
+      ],
+      "risks_en": [
+        "Integration Suite Performance-Einbruch durch Massendaten-Moves."
+      ],
+      "do_de": [
+        "Data Sharing/Federation für Analytics."
+      ],
+      "do_en": [
+        "Data Sharing/Federation für Analytics."
+      ],
+      "dont_de": [
+        "SAP CI für Terabyte-Transfers nutzen."
+      ],
+      "dont_en": [
+        "SAP CI für Terabyte-Transfers nutzen."
+      ],
+      "whenNotToUse_de": [
+        "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
+      ],
+      "whenNotToUse_en": [
+        "Do not introduce this when value, operating model, and ownership are still unclear."
+      ],
+      "references": [],
+      "sources": [
+        "docs/proposed-new-entries.from-ki1.json"
+      ]
+    },
+    {
+      "label": "Consumer-Driven Contract Testing",
+      "ring": "TRIAL",
+      "quadrant": "Tooling & Ops",
+      "intro_de": "Testverfahren (z.B. mit Pact), bei dem Consumer die Erwartung an APIs definieren.",
+      "intro_en": "Testverfahren (z.B. mit Pact), bei dem Consumer die Erwartung an APIs definieren.",
+      "whyRing_de": "Sicherung der API-Stabilität in agilen Umfeldern.",
+      "whyRing_en": "Sicherung der API-Stabilität in agilen Umfeldern.",
+      "risks_de": [
+        "Unentdeckte Breaking Changes erst in Prod."
+      ],
+      "risks_en": [
+        "Unentdeckte Breaking Changes erst in Prod."
+      ],
+      "do_de": [
+        "Pact-Dateien in CI/CD einbinden."
+      ],
+      "do_en": [
+        "Pact-Dateien in CI/CD einbinden."
+      ],
+      "dont_de": [
+        "Sich allein auf manuelle Integrationstests verlassen."
+      ],
+      "dont_en": [
+        "Sich allein auf manuelle Integrationstests verlassen."
+      ],
+      "whenNotToUse_de": [
+        "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
+      ],
+      "whenNotToUse_en": [
+        "Do not introduce this when value, operating model, and ownership are still unclear."
+      ],
+      "references": [],
+      "sources": [
+        "docs/proposed-new-entries.from-ki1.json"
+      ]
     }
   ],
   "importedFrom": {
