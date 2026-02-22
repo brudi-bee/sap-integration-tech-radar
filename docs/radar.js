@@ -45,6 +45,12 @@ function radar_visualization(config) {
   config.footer_offset = config.footer_offset || { x: -155, y: 450 };
   config.legend_column_width = config.legend_column_width || 140
   config.legend_line_height = config.legend_line_height || 10
+  config.theme = config.theme || {
+    title: '#f3f7ff',
+    text: '#dce7ff',
+    muted: '#8fa7e6',
+    bubble: '#0b1f57'
+  };
 
   // custom random number generator, to make random sequence reproducible
   // source: https://stackoverflow.com/questions/521295
@@ -297,17 +303,18 @@ function radar_visualization(config) {
       .attr("class", "hover-underline")  // add class for hover effect
       .text(config.title)
       .style("font-family", config.font_family)
-      .style("font-size", "30")
+      .style("font-size", "44")
       .style("font-weight", "bold")
+      .style("fill", config.theme.title)
 
     // date
     radar
       .append("text")
-      .attr("transform", translate(config.title_offset.x, config.title_offset.y + 20))
+      .attr("transform", translate(config.title_offset.x, config.title_offset.y + 30))
       .text(config.date || "")
       .style("font-family", config.font_family)
-      .style("font-size", "14")
-      .style("fill", "#999")
+      .style("font-size", "20")
+      .style("fill", config.theme.muted)
 
     // footer
     radar.append("text")
@@ -315,7 +322,8 @@ function radar_visualization(config) {
       .text("▲ moved up     ▼ moved down     ★ new     ⬤ no change")
       .attr("xml:space", "preserve")
       .style("font-family", config.font_family)
-      .style("font-size", "12px");
+      .style("font-size", "13px")
+      .style("fill", config.theme.muted);
 
     // legend
     const legend = radar.append("g");
@@ -327,8 +335,10 @@ function radar_visualization(config) {
         ))
         .text(config.quadrants[quadrant].name)
         .style("font-family", config.font_family)
-        .style("font-size", "18px")
-        .style("font-weight", "bold");
+        .style("font-size", "38px")
+        .style("font-weight", "bold")
+        .style("fill", config.theme.title)
+        .style("opacity", 0.92);
       let previousLegendHeight = 0
       for (let ring = 0; ring < 4; ring++) {
         if (ring % 2 === 0) {
@@ -338,9 +348,10 @@ function radar_visualization(config) {
           .attr("transform", legend_transform(quadrant, ring, config.legend_column_width, null, previousLegendHeight))
           .text(config.rings[ring].name)
           .style("font-family", config.font_family)
-          .style("font-size", "12px")
+          .style("font-size", "24px")
           .style("font-weight", "bold")
-          .style("fill", config.rings[ring].color);
+          .style("fill", config.rings[ring].color)
+          .style("letter-spacing", "0.02em");
         legend.selectAll(".legend" + quadrant + ring)
           .data(segmented[quadrant][ring])
           .enter()
@@ -358,7 +369,9 @@ function radar_visualization(config) {
               .attr("id", function(d, i) { return "legendItem" + d.id; })
               .text(function(d) { return d.id + ". " + d.label; })
               .style("font-family", config.font_family)
-              .style("font-size", "11px")
+              .style("font-size", "15px")
+              .style("font-weight", "600")
+              .style("fill", config.theme.text)
               .on("mouseover", function(event, d) { showBubble(d); highlightLegendItem(d); })
               .on("mouseout", function(event, d) { hideBubble(d); unhighlightLegendItem(d); })
               .call(wrap_text)
@@ -427,9 +440,9 @@ function radar_visualization(config) {
     .style("pointer-events", "none")
     .style("user-select", "none");
   bubble.append("rect")
-    .attr("rx", 4)
-    .attr("ry", 4)
-    .style("fill", "#333");
+    .attr("rx", 6)
+    .attr("ry", 6)
+    .style("fill", config.theme.bubble);
   bubble.append("text")
     .style("font-family", config.font_family)
     .style("font-size", "10px")

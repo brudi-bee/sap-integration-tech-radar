@@ -7,8 +7,8 @@
   <title>SAP Integration Tech Radar</title>
 
   <script src="https://d3js.org/d3.v7.min.js"></script>
-  <script src="radar.js"></script>
-  <link rel="stylesheet" href="radar.css" />
+  <script src="radar.js?v=2026-02-22-4"></script>
+  <link rel="stylesheet" href="radar.css?v=2026-02-22-4" />
 </head>
 <body>
   <svg id="radar"></svg>
@@ -24,10 +24,10 @@
         }));
 
         const ringColors = {
-          ADOPT: '#5fd3ff',
-          TRIAL: '#3fa9ff',
-          ASSESS: '#2f78ff',
-          HOLD: '#1f4fd1'
+          ADOPT: '#72e4ff',
+          TRIAL: '#3fb5ff',
+          ASSESS: '#6b8dff',
+          HOLD: '#8f73ff'
         };
 
         const rings = (data.rings || []).map((r) => ({
@@ -39,14 +39,32 @@
           repo_url: 'https://github.com/brudi-bee/sap-integration-tech-radar',
           title: data.title || 'SAP Integration Tech Radar',
           date: data.date || '2026.02',
+          width: 1900,
+          height: 1180,
           quadrants: data.quadrants,
           rings,
           entries,
           colors: {
             background: '#07153b',
-            grid: '#2d64ff',
-            inactive: '#1a2f6b'
+            grid: '#3c74ff',
+            inactive: '#203873'
           },
+          theme: {
+            title: '#f2f7ff',
+            text: '#dbe7ff',
+            muted: '#8aa5e6',
+            bubble: '#0c2668'
+          },
+          legend_offset: [
+            { x: 560, y: 140 },
+            { x: -900, y: 140 },
+            { x: -900, y: -370 },
+            { x: 560, y: -370 }
+          ],
+          title_offset: { x: -900, y: -510 },
+          footer_offset: { x: -170, y: 545 },
+          legend_column_width: 250,
+          legend_line_height: 15,
           print_layout: true,
           links_in_new_tabs: false
         });

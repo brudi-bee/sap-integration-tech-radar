@@ -3,6 +3,13 @@
   const item = params.get('item');
 
   const ringNames = ['ADOPT', 'TRIAL', 'ASSESS', 'HOLD'];
+  const ringColors = {
+    ADOPT: { bg: 'rgba(114,228,255,.2)', border: 'rgba(114,228,255,.7)', text: '#bff3ff' },
+    TRIAL: { bg: 'rgba(63,181,255,.2)', border: 'rgba(63,181,255,.7)', text: '#b8e7ff' },
+    ASSESS: { bg: 'rgba(107,141,255,.2)', border: 'rgba(107,141,255,.7)', text: '#c9d6ff' },
+    HOLD: { bg: 'rgba(143,115,255,.2)', border: 'rgba(143,115,255,.7)', text: '#ddd2ff' }
+  };
+
   const ringHint = {
     ADOPT: 'Bewährt in produktiven SAP-Integrationsszenarien, mit klaren Betriebs- und Governance-Mustern.',
     TRIAL: 'Vielversprechend mit ersten belastbaren Erfahrungen. Sinnvoll für gezielte, gut begleitete Einsätze.',
@@ -35,8 +42,15 @@
   document.title = `${entry.label} · SAP Integration Radar`;
   document.getElementById('title').textContent = entry.label;
   document.getElementById('subtitle').textContent = 'SAP Integration Tech Radar – Detailansicht';
-  document.getElementById('ring').textContent = ring;
+  const ringEl = document.getElementById('ring');
+  ringEl.textContent = ring;
   document.getElementById('quadrant').textContent = quadrant;
+
+  if (ringColors[ring]) {
+    ringEl.style.background = ringColors[ring].bg;
+    ringEl.style.borderColor = ringColors[ring].border;
+    ringEl.style.color = ringColors[ring].text;
+  }
 
   const desc = domainHints[entry.label] || ringHint[ring] || 'Technologie/Pattern im Integrationskontext bewerten anhand Nutzen, Risiko und operativer Reife.';
   document.getElementById('desc').textContent = desc;
