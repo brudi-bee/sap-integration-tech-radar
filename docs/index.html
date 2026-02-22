@@ -7,74 +7,26 @@
   <title>SAP Integration Tech Radar</title>
 
   <script src="https://d3js.org/d3.v7.min.js"></script>
-  <script src="radar.js?v=2026-02-22-4"></script>
-  <link rel="stylesheet" href="radar.css?v=2026-02-22-4" />
+  <script src="radar.js?v=2026-02-22-5"></script>
+  <link rel="stylesheet" href="radar.css?v=2026-02-22-5" />
 </head>
 <body>
+  <div class="topbar">
+    <div>
+      <strong>SAP Integration Tech Radar</strong>
+      <span class="muted">· Dark / NTT-style</span>
+    </div>
+    <label class="switch">
+      <input id="presentation-toggle" type="checkbox" checked />
+      <span>Presentation mode</span>
+    </label>
+  </div>
+
   <svg id="radar"></svg>
 
-  <script>
-    fetch('./entries.json', { cache: 'no-store' })
-      .then(r => r.json())
-      .then(data => {
-        const entries = (data.entries || []).map((e) => ({
-          ...e,
-          active: e.active !== false,
-          link: e.link || `details.html?item=${encodeURIComponent(e.label)}`
-        }));
+  <div id="mobile-list" class="mobile-list" hidden></div>
 
-        const ringColors = {
-          ADOPT: '#72e4ff',
-          TRIAL: '#3fb5ff',
-          ASSESS: '#6b8dff',
-          HOLD: '#8f73ff'
-        };
-
-        const rings = (data.rings || []).map((r) => ({
-          ...r,
-          color: ringColors[r.name] || r.color
-        }));
-
-        radar_visualization({
-          repo_url: 'https://github.com/brudi-bee/sap-integration-tech-radar',
-          title: data.title || 'SAP Integration Tech Radar',
-          date: data.date || '2026.02',
-          width: 1900,
-          height: 1180,
-          quadrants: data.quadrants,
-          rings,
-          entries,
-          colors: {
-            background: '#07153b',
-            grid: '#3c74ff',
-            inactive: '#203873'
-          },
-          theme: {
-            title: '#f2f7ff',
-            text: '#dbe7ff',
-            muted: '#8aa5e6',
-            bubble: '#0c2668'
-          },
-          legend_offset: [
-            { x: 560, y: 140 },
-            { x: -900, y: 140 },
-            { x: -900, y: -370 },
-            { x: 560, y: -370 }
-          ],
-          title_offset: { x: -900, y: -510 },
-          footer_offset: { x: -170, y: 545 },
-          legend_column_width: 250,
-          legend_line_height: 15,
-          print_layout: true,
-          links_in_new_tabs: false
-        });
-      })
-      .catch((err) => {
-        console.error('Error loading entries.json', err);
-      });
-  </script>
-
-  <table>
+  <table class="info-panel" id="info-panel">
     <tr>
       <td>
         <h3>Was ist dieses Radar?</h3>
@@ -93,8 +45,8 @@
       <td>
         <h3>Nutzung</h3>
         <p>
-          Rechts/links neben den Quadranten findest du die nummerierte Liste. Klick auf einen Eintrag im Radar
-          oder in der Liste öffnet die Detailseite.
+          Desktop: nummerierte Liste neben den Quadranten; Klick öffnet Detailseite.<br/>
+          Mobile: kompakter Radar + strukturierte Liste unterhalb.
         </p>
         <p>
           <a href="https://github.com/brudi-bee/sap-integration-tech-radar">Repository</a> ·
@@ -103,5 +55,122 @@
       </td>
     </tr>
   </table>
+
+  <script>
+    const ringColors = {
+      ADOPT: '#72e4ff',
+      TRIAL: '#3fb5ff',
+      ASSESS: '#6b8dff',
+      HOLD: '#8f73ff'
+    };
+
+    const ringOrder = ['ADOPT', 'TRIAL', 'ASSESS', 'HOLD'];
+
+    function groupedMobileEntries(data, entries) {
+      const byQuadrant = new Map();
+      (data.quadrants || []).forEach((q, i) => byQuadrant.set(i, { name: q.name, items: [] }));
+
+      entries.forEach(e => byQuadrant.get(e.quadrant)?.items.push(e));
+
+      let html = '';
+      for (const [, q] of byQuadrant) {
+        html += `<section class="mobile-quadrant"><h3>${q.name}</h3>`;
+        for (const ringName of ringOrder) {
+          const ringIndex = ringOrder.indexOf(ringName);
+          const items = q.items.filter(i => i.ring === ringIndex).sort((a,b)=>a.label.localeCompare(b.label));
+          if (!items.length) continue;
+          html += `<h4 style="color:${ringColors[ringName]}">${ringName}</h4><ul>`;
+          items.forEach(i => {
+            html += `<li><a href="${i.link}">${i.label}</a></li>`;
+          });
+          html += `</ul>`;
+        }
+        html += `</section>`;
+      }
+      return html;
+    }
+
+    function renderRadar(data, presentationMode) {
+      const mobile = window.innerWidth <= 900;
+      const entries = (data.entries || []).map((e) => ({
+        ...e,
+        active: e.active !== false,
+        link: e.link || `details.html?item=${encodeURIComponent(e.label)}`
+      }));
+
+      const rings = (data.rings || []).map((r) => ({
+        ...r,
+        color: ringColors[r.name] || r.color
+      }));
+
+      document.querySelector('#radar').innerHTML = '';
+
+      radar_visualization({
+        repo_url: 'https://github.com/brudi-bee/sap-integration-tech-radar',
+        title: data.title || 'SAP Integration Tech Radar',
+        date: data.date || '2026.02',
+        width: mobile ? 1080 : (presentationMode ? 2000 : 1820),
+        height: mobile ? 980 : (presentationMode ? 1220 : 1120),
+        quadrants: data.quadrants,
+        rings,
+        entries,
+        colors: {
+          background: '#07153b',
+          grid: '#3c74ff',
+          inactive: '#203873'
+        },
+        theme: {
+          title: '#f2f7ff',
+          text: '#dbe7ff',
+          muted: '#8aa5e6',
+          bubble: '#0c2668'
+        },
+        legend_offset: mobile
+          ? [{x:520,y:120},{x:-840,y:120},{x:-840,y:-330},{x:520,y:-330}]
+          : [{ x: 560, y: 140 }, { x: -900, y: 140 }, { x: -900, y: -370 }, { x: 560, y: -370 }],
+        title_offset: mobile ? {x:-860,y:-470} : { x: -900, y: -510 },
+        footer_offset: mobile ? {x:-150,y:500} : { x: -170, y: 545 },
+        legend_column_width: mobile ? 210 : 250,
+        legend_line_height: mobile ? 14 : 15,
+        print_layout: !mobile,
+        links_in_new_tabs: false
+      });
+
+      const mobileList = document.getElementById('mobile-list');
+      const infoPanel = document.getElementById('info-panel');
+      if (mobile) {
+        mobileList.hidden = false;
+        mobileList.innerHTML = groupedMobileEntries(data, entries);
+        infoPanel.style.display = 'none';
+      } else {
+        mobileList.hidden = true;
+        mobileList.innerHTML = '';
+        infoPanel.style.display = '';
+      }
+
+      document.body.classList.toggle('presentation', !!presentationMode && !mobile);
+    }
+
+    let cachedData = null;
+    fetch('./entries.json', { cache: 'no-store' })
+      .then(r => r.json())
+      .then(data => {
+        cachedData = data;
+        const toggle = document.getElementById('presentation-toggle');
+        const saved = localStorage.getItem('radar.presentationMode');
+        if (saved === '0') toggle.checked = false;
+        renderRadar(cachedData, toggle.checked);
+
+        toggle.addEventListener('change', () => {
+          localStorage.setItem('radar.presentationMode', toggle.checked ? '1' : '0');
+          renderRadar(cachedData, toggle.checked);
+        });
+
+        window.addEventListener('resize', () => renderRadar(cachedData, toggle.checked));
+      })
+      .catch((err) => {
+        console.error('Error loading entries.json', err);
+      });
+  </script>
 </body>
 </html>

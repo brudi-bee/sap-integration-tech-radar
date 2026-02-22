@@ -8,65 +8,76 @@ body {
     linear-gradient(180deg, #0a1c4d 0%, #07153b 60%, #061131 100%);
 }
 
+.topbar {
+  width: min(1400px, calc(100% - 40px));
+  margin: 14px auto 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  color: #e5eeff;
+}
+
+.switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  color: #cfe0ff;
+}
+
+.muted { color: #96afe9; }
+
 #radar {
   display: block;
-  margin: 18px auto 0 auto;
+  margin: 14px auto 0 auto;
   border: 1px solid rgba(123, 159, 255, 0.35);
   border-radius: 14px;
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.38);
 }
 
-#radar text {
-  fill: #dbe7ff;
-}
+#radar text { fill: #dbe7ff; }
+#radar a text { fill: #e4eeff; }
+#radar .hover-underline:hover { text-decoration: underline; fill: #ffffff; }
 
-#radar a text {
-  fill: #e4eeff;
-}
+h3 { margin-top: 44px; color: #f3f7ff; }
+p, li, td { color: #d9e4ff; }
+li { margin: 18px 40px 0 0; }
 
-#radar .hover-underline:hover {
-  text-decoration: underline;
-  fill: #ffffff;
-}
-
-h3 {
-  margin-top: 44px;
-  color: #f3f7ff;
-}
-
-p,
-li,
-td {
-  color: #d9e4ff;
-}
-
-li {
-  margin: 18px 40px 0 0;
-}
-
-table {
+.info-panel {
   width: min(1400px, calc(100% - 40px));
   margin: 10px auto 0 auto;
 }
 
-td {
-  width: 50%;
-  vertical-align: top;
-  padding-right: 56px;
+td { width: 50%; vertical-align: top; padding-right: 56px; }
+a { color: #6ec6ff; }
+a:hover { color: #9ad9ff; }
+
+.mobile-list {
+  width: min(980px, calc(100% - 24px));
+  margin: 14px auto 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
 }
 
-a {
-  color: #6ec6ff;
+.mobile-quadrant {
+  background: rgba(13, 38, 102, .68);
+  border: 1px solid rgba(123, 159, 255, .35);
+  border-radius: 12px;
+  padding: 12px 14px;
 }
 
-a:hover {
-  color: #9ad9ff;
-}
+.mobile-quadrant h3 { margin: 6px 0 8px; font-size: 20px; }
+.mobile-quadrant h4 { margin: 10px 0 4px; }
+.mobile-quadrant ul { margin: 0; padding-left: 18px; }
+.mobile-quadrant li { margin: 4px 0; }
 
-.hover-underline {
-  text-decoration: none;
-}
+body.presentation .info-panel { opacity: .72; }
 
-.hover-underline:hover {
-  text-decoration: underline;
+@media (max-width: 900px) {
+  .topbar { width: calc(100% - 20px); margin-top: 10px; }
+  .topbar strong { font-size: 16px; }
+  .switch { font-size: 13px; }
+  #radar { border-radius: 10px; margin-top: 10px; }
 }
