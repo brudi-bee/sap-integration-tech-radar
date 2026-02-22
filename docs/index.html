@@ -1,99 +1,72 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="SAP Integration Tech Radar" />
   <title>SAP Integration Tech Radar</title>
-  <style>
-    :root{
-      --bg:#050b24;
-      --bg2:#0a1542;
-      --line:rgba(122,154,255,.28);
-      --text:#e8eeff;
-      --muted:#9fb3ff;
-      --card:rgba(17,31,84,.65);
-      --btn-border:rgba(138,164,255,.35);
-      --btn-bg:rgba(40,72,190,.26);
-      --btn-text:#dbe7ff;
-    }
 
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family:Inter,system-ui,Segoe UI,Roboto,sans-serif;
-      color:var(--text);
-      background:
-        radial-gradient(1200px 700px at 85% -10%, #1f49d5 0%, transparent 55%),
-        linear-gradient(180deg, var(--bg2) 0%, var(--bg) 55%);
-      min-height:100vh;
-    }
-
-    header{
-      padding:16px 18px;
-      border-bottom:1px solid var(--line);
-      display:flex;
-      justify-content:space-between;
-      gap:12px;
-      align-items:end;
-      position:sticky;
-      top:0;
-      backdrop-filter: blur(8px);
-      background:rgba(5,11,36,.72);
-      z-index:5;
-    }
-
-    h1{margin:0;font-size:22px;line-height:1.15}
-    .muted{color:var(--muted);font-size:13px;max-width:760px}
-    .wrap{max-width:1400px;margin:0 auto;padding:8px 8px 18px}
-
-    #radar{
-      width:100%;
-      height:auto;
-      display:block;
-      background:var(--card);
-      border:1px solid var(--line);
-      border-radius:14px;
-      box-shadow:0 16px 40px rgba(0,0,0,.35);
-    }
-
-    .bar{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
-    .btn{
-      border:1px solid var(--btn-border);
-      background:var(--btn-bg);
-      color:var(--btn-text);
-      border-radius:12px;
-      padding:8px 12px;
-      text-decoration:none;
-      font-size:13px;
-      font-weight:600;
-    }
-
-    @media (max-width: 720px){
-      h1{font-size:17px}
-      .muted{font-size:12px}
-      .wrap{padding:8px 6px 14px}
-      #radar{border-radius:10px}
-    }
-  </style>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="radar.js"></script>
+  <link rel="stylesheet" href="radar.css" />
 </head>
 <body>
-  <header>
-    <div>
-      <h1>SAP Integration Tech Radar</h1>
-      <div class="muted">Zalando-Tech-Radar-Basis, visualisiert im Dark/Future-Blue-Look für unterwegs und Team-Reviews.</div>
-    </div>
-    <div class="bar">
-      <a class="btn" href="https://github.com/brudi-bee/sap-integration-tech-radar" target="_blank" rel="noreferrer">Repo</a>
-      <a class="btn" href="entries.json" target="_blank" rel="noreferrer">Entries (JSON)</a>
-    </div>
-  </header>
+  <svg id="radar"></svg>
 
-  <div class="wrap">
-    <svg id="radar"></svg>
-  </div>
+  <script>
+    fetch('./entries.json', { cache: 'no-store' })
+      .then(r => r.json())
+      .then(data => {
+        const entries = (data.entries || []).map((e) => ({
+          ...e,
+          active: e.active !== false,
+          link: e.link || `details.html?item=${encodeURIComponent(e.label)}`
+        }));
 
-  <script src="https://d3js.org/d3.v4.min.js"></script>
-  <script src="https://zalando.github.io/tech-radar/release/radar-0.12.js"></script>
-  <script src="radar-config.js?v=2026-02-22-3"></script>
+        radar_visualization({
+          repo_url: 'https://github.com/brudi-bee/sap-integration-tech-radar',
+          title: data.title || 'SAP Integration Tech Radar',
+          date: data.date || '2026.02',
+          quadrants: data.quadrants,
+          rings: data.rings,
+          entries,
+          print_layout: true,
+          links_in_new_tabs: false
+        });
+      })
+      .catch((err) => {
+        console.error('Error loading entries.json', err);
+      });
+  </script>
+
+  <table>
+    <tr>
+      <td>
+        <h3>Was ist dieses Radar?</h3>
+        <p>
+          Das SAP Integration Tech Radar macht Integrations-Technologien und Architektur-Entscheidungen sichtbar.
+          Es hilft Teams bei der Auswahl für neue Vorhaben und bei der Einordnung bestehender Landschaften.
+        </p>
+
+        <ul>
+          <li><strong>ADOPT</strong> — Bewährt, skalierbar, klar empfohlen.</li>
+          <li><strong>TRIAL</strong> — Gute erste Erfahrungen, sinnvoll in Pilot-/Produktionsnähe.</li>
+          <li><strong>ASSESS</strong> — Spannend, aber mit Evaluierungsbedarf.</li>
+          <li><strong>HOLD</strong> — Für neue Implementierungen eher vermeiden.</li>
+        </ul>
+      </td>
+      <td>
+        <h3>Nutzung</h3>
+        <p>
+          Rechts/links neben den Quadranten findest du die nummerierte Liste. Klick auf einen Eintrag im Radar
+          oder in der Liste öffnet die Detailseite.
+        </p>
+        <p>
+          <a href="https://github.com/brudi-bee/sap-integration-tech-radar">Repository</a> ·
+          <a href="entries.json">Entries JSON</a>
+        </p>
+      </td>
+    </tr>
+  </table>
 </body>
 </html>

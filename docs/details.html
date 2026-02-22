@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Radar Detail</title>
+  <style>
+    body{font-family:Inter,system-ui,Arial,sans-serif;max-width:900px;margin:32px auto;padding:0 16px;line-height:1.55}
+    .muted{color:#666}
+    .tag{display:inline-block;padding:3px 10px;border-radius:999px;background:#eef3ff;margin-right:8px}
+    a{color:#1f4acc}
+    pre{background:#f7f8fb;padding:12px;border-radius:8px;overflow:auto}
+  </style>
+</head>
+<body>
+  <p><a href="./">← zurück zum Radar</a></p>
+  <h1 id="title">Radar Detail</h1>
+  <p class="muted" id="subtitle"></p>
+  <p>
+    <span class="tag" id="ring"></span>
+    <span class="tag" id="quadrant"></span>
+  </p>
+  <h3>Einordnung</h3>
+  <p id="desc"></p>
+  <h3>Empfohlene nächste Schritte</h3>
+  <ul id="actions"></ul>
+  <h3>Raw Entry</h3>
+  <pre id="raw"></pre>
+
+  <script src="details.js"></script>
+</body>
+</html>
