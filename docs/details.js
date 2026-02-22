@@ -57,6 +57,16 @@
     : ['Keine Einführung ohne abgestimmtes Betriebs- und Ownership-Modell.'];
   document.getElementById('dont-list').innerHTML = donts.map(a => `<li>${a}</li>`).join('');
 
+  const whenNot = detailItem?.whenNotToUse?.length
+    ? detailItem.whenNotToUse
+    : ['Nicht einsetzen, wenn Nutzen und Betriebsreife für den Kontext nicht klar belegt sind.'];
+  document.getElementById('when-not-list').innerHTML = whenNot.map(a => `<li>${a}</li>`).join('');
+
+  const refs = detailItem?.references?.length ? detailItem.references : [];
+  document.getElementById('refs-list').innerHTML = refs.length
+    ? refs.map(url => `<li><a href="${url}" target="_blank" rel="noreferrer">${url}</a></li>`).join('')
+    : '<li>Keine spezifischen Referenzen hinterlegt.</li>';
+
   document.getElementById('raw').textContent = JSON.stringify({
     ...entry,
     details: detailItem || null

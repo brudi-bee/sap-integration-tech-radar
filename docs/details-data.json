@@ -19,6 +19,12 @@
       "sources": [
         "docs/research-notes-2026-02-21.md",
         "docs/core-blips-v0.1.1.md"
+      ],
+      "references": [
+        "https://help.sap.com/docs/integration-suite/sap-integration-suite/cloud-integration"
+      ],
+      "whenNotToUse": [
+        "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
       ]
     },
     {
@@ -40,6 +46,12 @@
       "sources": [
         "docs/research-notes-2026-02-21.md",
         "docs/core-blips-v0.1.1.md"
+      ],
+      "references": [
+        "https://help.sap.com/docs/integration-suite/sap-integration-suite/api-management"
+      ],
+      "whenNotToUse": [
+        "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
       ]
     },
     {
@@ -62,6 +74,12 @@
       "sources": [
         "docs/research-notes-2026-02-21.md",
         "docs/core-blips-v0.1.1.md"
+      ],
+      "references": [
+        "https://help.sap.com/docs/event-mesh"
+      ],
+      "whenNotToUse": [
+        "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
       ]
     },
     {
@@ -84,6 +102,12 @@
       "sources": [
         "docs/research-notes-2026-02-21.md",
         "docs/core-blips-v0.1.1.md"
+      ],
+      "references": [
+        "https://help.pubsub.em.services.cloud.sap/"
+      ],
+      "whenNotToUse": [
+        "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
       ]
     },
     {
@@ -104,6 +128,12 @@
       "sources": [
         "docs/research-notes-2026-02-21.md",
         "docs/core-blips-v0.1.1.md"
+      ],
+      "references": [
+        "https://help.sap.com/docs/connectivity/sap-btp-connectivity-cf/cloud-connector"
+      ],
+      "whenNotToUse": [
+        "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
       ]
     },
     {
@@ -125,6 +155,12 @@
       "sources": [
         "docs/research-notes-2026-02-21.md",
         "docs/core-blips-v0.1.1.md"
+      ],
+      "references": [
+        "https://help.sap.com/docs/integration-suite/sap-integration-suite/integration-advisor"
+      ],
+      "whenNotToUse": [
+        "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
       ]
     },
     {
@@ -146,6 +182,12 @@
       "sources": [
         "docs/research-notes-2026-02-21.md",
         "docs/core-blips-v0.1.1.md"
+      ],
+      "references": [
+        "https://help.sap.com/docs/integration-suite/sap-integration-suite/trading-partner-management"
+      ],
+      "whenNotToUse": [
+        "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
       ]
     },
     {
@@ -167,6 +209,12 @@
       "sources": [
         "docs/research-notes-2026-02-21.md",
         "docs/core-blips-v0.1.1.md"
+      ],
+      "references": [
+        "https://help.sap.com/docs/integration-suite/sap-integration-suite/edge-integration-cell"
+      ],
+      "whenNotToUse": [
+        "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
       ]
     },
     {
@@ -188,6 +236,10 @@
       "sources": [
         "docs/research-notes-2026-02-21.md",
         "docs/core-blips-v0.1.1.md"
+      ],
+      "references": [],
+      "whenNotToUse": [
+        "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
       ]
     },
     {
@@ -209,6 +261,12 @@
       "sources": [
         "docs/research-notes-2026-02-21.md",
         "docs/core-blips-v0.1.1.md"
+      ],
+      "references": [
+        "https://help.sap.com/docs/build-process-automation"
+      ],
+      "whenNotToUse": [
+        "Nicht ohne abgestimmtes Governance- und Rollback-Modell einführen."
       ]
     },
     {
@@ -230,6 +288,12 @@
       "sources": [
         "docs/research-notes-2026-02-21.md",
         "docs/core-blips-v0.1.1.md"
+      ],
+      "references": [
+        "https://help.openconnectors.ext.hana.ondemand.com/home"
+      ],
+      "whenNotToUse": [
+        "Nicht für neue Greenfield-Integrationen verwenden."
       ]
     },
     {
@@ -251,6 +315,13 @@
       "sources": [
         "docs/research-notes-2026-02-21.md",
         "docs/core-blips-v0.1.1.md"
+      ],
+      "references": [
+        "https://pages.community.sap.com/topics/process-orchestration"
+      ],
+      "whenNotToUse": [
+        "Nicht für neue Greenfield-Integrationen verwenden.",
+        "Nicht einsetzen, wenn API- oder Event-basierte Alternativen verfügbar sind."
       ]
     },
     {
@@ -271,6 +342,10 @@
       "sources": [
         "docs/research-notes-2026-02-21.md",
         "docs/core-blips-v0.1.1.md"
+      ],
+      "references": [],
+      "whenNotToUse": [
+        "Nicht als „best effort“-Nebenaufgabe behandeln; Ownership und SLOs sind Pflicht."
       ]
     },
     {
@@ -292,6 +367,10 @@
       "sources": [
         "docs/research-notes-2026-02-21.md",
         "docs/core-blips-v0.1.1.md"
+      ],
+      "references": [],
+      "whenNotToUse": [
+        "Nicht ohne abgestimmtes Governance- und Rollback-Modell einführen."
       ]
     },
     {
@@ -312,6 +391,10 @@
       "sources": [
         "docs/research-notes-2026-02-21.md",
         "docs/core-blips-v0.1.1.md"
+      ],
+      "references": [],
+      "whenNotToUse": [
+        "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
       ]
     },
     {
@@ -333,6 +416,12 @@
       "sources": [
         "docs/research-notes-2026-02-21.md",
         "docs/core-blips-v0.1.1.md"
+      ],
+      "references": [
+        "https://opentelemetry.io/docs/"
+      ],
+      "whenNotToUse": [
+        "Nicht als „best effort“-Nebenaufgabe behandeln; Ownership und SLOs sind Pflicht."
       ]
     },
     {
@@ -354,6 +443,10 @@
       "sources": [
         "docs/research-notes-2026-02-21.md",
         "docs/core-blips-v0.1.1.md"
+      ],
+      "references": [],
+      "whenNotToUse": [
+        "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
       ]
     },
     {
@@ -375,6 +468,10 @@
       "sources": [
         "docs/research-notes-2026-02-21.md",
         "docs/core-blips-v0.1.1.md"
+      ],
+      "references": [],
+      "whenNotToUse": [
+        "Nicht ohne abgestimmtes Governance- und Rollback-Modell einführen."
       ]
     },
     {
@@ -396,6 +493,10 @@
       "sources": [
         "docs/research-notes-2026-02-21.md",
         "docs/core-blips-v0.1.1.md"
+      ],
+      "references": [],
+      "whenNotToUse": [
+        "Nicht ohne abgestimmtes Governance- und Rollback-Modell einführen."
       ]
     },
     {
@@ -417,6 +518,10 @@
       "sources": [
         "docs/research-notes-2026-02-21.md",
         "docs/core-blips-v0.1.1.md"
+      ],
+      "references": [],
+      "whenNotToUse": [
+        "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
       ]
     },
     {
@@ -437,6 +542,12 @@
       "sources": [
         "docs/research-notes-2026-02-21.md",
         "docs/core-blips-v0.1.1.md"
+      ],
+      "references": [
+        "https://help.sap.com/docs/transport-management-service"
+      ],
+      "whenNotToUse": [
+        "Nicht ohne abgestimmtes Governance- und Rollback-Modell einführen."
       ]
     },
     {
@@ -458,6 +569,10 @@
       "sources": [
         "docs/research-notes-2026-02-21.md",
         "docs/core-blips-v0.1.1.md"
+      ],
+      "references": [],
+      "whenNotToUse": [
+        "Nicht ohne abgestimmtes Governance- und Rollback-Modell einführen."
       ]
     },
     {
@@ -478,6 +593,12 @@
       "sources": [
         "docs/research-notes-2026-02-21.md",
         "docs/core-blips-v0.1.1.md"
+      ],
+      "references": [
+        "https://help.sap.com/docs/cloud-alm"
+      ],
+      "whenNotToUse": [
+        "Nicht als „best effort“-Nebenaufgabe behandeln; Ownership und SLOs sind Pflicht."
       ]
     },
     {
@@ -498,6 +619,10 @@
       "sources": [
         "docs/research-notes-2026-02-21.md",
         "docs/core-blips-v0.1.1.md"
+      ],
+      "references": [],
+      "whenNotToUse": [
+        "Nicht als „best effort“-Nebenaufgabe behandeln; Ownership und SLOs sind Pflicht."
       ]
     },
     {
@@ -518,6 +643,10 @@
       "sources": [
         "docs/research-notes-2026-02-21.md",
         "docs/core-blips-v0.1.1.md"
+      ],
+      "references": [],
+      "whenNotToUse": [
+        "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
       ]
     },
     {
@@ -539,6 +668,10 @@
       "sources": [
         "docs/research-notes-2026-02-21.md",
         "docs/core-blips-v0.1.1.md"
+      ],
+      "references": [],
+      "whenNotToUse": [
+        "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
       ]
     },
     {
@@ -560,6 +693,12 @@
       "sources": [
         "docs/research-notes-2026-02-21.md",
         "docs/core-blips-v0.1.1.md"
+      ],
+      "references": [
+        "https://help.sap.com/docs/SAP_APPLICATION_INTERFACE_FRAMEWORK"
+      ],
+      "whenNotToUse": [
+        "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
       ]
     },
     {
@@ -581,6 +720,10 @@
       "sources": [
         "docs/research-notes-2026-02-21.md",
         "docs/core-blips-v0.1.1.md"
+      ],
+      "references": [],
+      "whenNotToUse": [
+        "Nicht für neue Greenfield-Integrationen verwenden."
       ]
     },
     {
@@ -602,6 +745,10 @@
       "sources": [
         "docs/research-notes-2026-02-21.md",
         "docs/core-blips-v0.1.1.md"
+      ],
+      "references": [],
+      "whenNotToUse": [
+        "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
       ]
     },
     {
@@ -623,6 +770,10 @@
       "sources": [
         "docs/research-notes-2026-02-21.md",
         "docs/core-blips-v0.1.1.md"
+      ],
+      "references": [],
+      "whenNotToUse": [
+        "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
       ]
     },
     {
@@ -644,6 +795,12 @@
       "sources": [
         "docs/research-notes-2026-02-21.md",
         "docs/core-blips-v0.1.1.md"
+      ],
+      "references": [
+        "https://spec.openapis.org/oas/latest.html"
+      ],
+      "whenNotToUse": [
+        "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
       ]
     },
     {
@@ -667,6 +824,12 @@
       "sources": [
         "docs/research-notes-2026-02-21.md",
         "docs/core-blips-v0.1.1.md"
+      ],
+      "references": [
+        "https://www.asyncapi.com/docs"
+      ],
+      "whenNotToUse": [
+        "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
       ]
     },
     {
@@ -689,6 +852,10 @@
       "sources": [
         "docs/research-notes-2026-02-21.md",
         "docs/core-blips-v0.1.1.md"
+      ],
+      "references": [],
+      "whenNotToUse": [
+        "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
       ]
     },
     {
@@ -709,6 +876,10 @@
       "sources": [
         "docs/research-notes-2026-02-21.md",
         "docs/core-blips-v0.1.1.md"
+      ],
+      "references": [],
+      "whenNotToUse": [
+        "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
       ]
     },
     {
@@ -729,6 +900,10 @@
       "sources": [
         "docs/research-notes-2026-02-21.md",
         "docs/core-blips-v0.1.1.md"
+      ],
+      "references": [],
+      "whenNotToUse": [
+        "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
       ]
     },
     {
@@ -749,6 +924,10 @@
       "sources": [
         "docs/research-notes-2026-02-21.md",
         "docs/core-blips-v0.1.1.md"
+      ],
+      "references": [],
+      "whenNotToUse": [
+        "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
       ]
     },
     {
@@ -769,6 +948,10 @@
       "sources": [
         "docs/research-notes-2026-02-21.md",
         "docs/core-blips-v0.1.1.md"
+      ],
+      "references": [],
+      "whenNotToUse": [
+        "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
       ]
     },
     {
@@ -790,6 +973,10 @@
       "sources": [
         "docs/research-notes-2026-02-21.md",
         "docs/core-blips-v0.1.1.md"
+      ],
+      "references": [],
+      "whenNotToUse": [
+        "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
       ]
     },
     {
@@ -810,6 +997,10 @@
       "sources": [
         "docs/research-notes-2026-02-21.md",
         "docs/core-blips-v0.1.1.md"
+      ],
+      "references": [],
+      "whenNotToUse": [
+        "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
       ]
     },
     {
@@ -832,6 +1023,12 @@
       "sources": [
         "docs/research-notes-2026-02-21.md",
         "docs/core-blips-v0.1.1.md"
+      ],
+      "references": [
+        "https://cloudevents.io/"
+      ],
+      "whenNotToUse": [
+        "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
       ]
     },
     {
@@ -853,6 +1050,10 @@
       "sources": [
         "docs/research-notes-2026-02-21.md",
         "docs/core-blips-v0.1.1.md"
+      ],
+      "references": [],
+      "whenNotToUse": [
+        "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
       ]
     },
     {
@@ -874,6 +1075,10 @@
       "sources": [
         "docs/research-notes-2026-02-21.md",
         "docs/core-blips-v0.1.1.md"
+      ],
+      "references": [],
+      "whenNotToUse": [
+        "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
       ]
     },
     {
@@ -895,6 +1100,10 @@
       "sources": [
         "docs/research-notes-2026-02-21.md",
         "docs/core-blips-v0.1.1.md"
+      ],
+      "references": [],
+      "whenNotToUse": [
+        "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
       ]
     },
     {
@@ -916,6 +1125,11 @@
       "sources": [
         "docs/research-notes-2026-02-21.md",
         "docs/core-blips-v0.1.1.md"
+      ],
+      "references": [],
+      "whenNotToUse": [
+        "Nicht für neue Greenfield-Integrationen verwenden.",
+        "Nicht einsetzen, wenn API- oder Event-basierte Alternativen verfügbar sind."
       ]
     },
     {
@@ -939,6 +1153,11 @@
       "sources": [
         "docs/research-notes-2026-02-21.md",
         "docs/core-blips-v0.1.1.md"
+      ],
+      "references": [],
+      "whenNotToUse": [
+        "Nicht für neue Greenfield-Integrationen verwenden.",
+        "Nicht einsetzen, wenn API- oder Event-basierte Alternativen verfügbar sind."
       ]
     },
     {
@@ -960,6 +1179,11 @@
       "sources": [
         "docs/research-notes-2026-02-21.md",
         "docs/core-blips-v0.1.1.md"
+      ],
+      "references": [],
+      "whenNotToUse": [
+        "Nicht für neue Greenfield-Integrationen verwenden.",
+        "Nicht einsetzen, wenn API- oder Event-basierte Alternativen verfügbar sind."
       ]
     },
     {
@@ -981,6 +1205,10 @@
       "sources": [
         "docs/research-notes-2026-02-21.md",
         "docs/core-blips-v0.1.1.md"
+      ],
+      "references": [],
+      "whenNotToUse": [
+        "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
       ]
     },
     {
@@ -1002,6 +1230,10 @@
       "sources": [
         "docs/research-notes-2026-02-21.md",
         "docs/core-blips-v0.1.1.md"
+      ],
+      "references": [],
+      "whenNotToUse": [
+        "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
       ]
     },
     {
@@ -1023,6 +1255,13 @@
       "sources": [
         "docs/research-notes-2026-02-21.md",
         "docs/core-blips-v0.1.1.md"
+      ],
+      "references": [
+        "https://oauth.net/2/",
+        "https://openid.net/developers/how-connect-works/"
+      ],
+      "whenNotToUse": [
+        "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
       ]
     },
     {
@@ -1044,6 +1283,12 @@
       "sources": [
         "docs/research-notes-2026-02-21.md",
         "docs/core-blips-v0.1.1.md"
+      ],
+      "references": [
+        "https://spec.openapis.org/oas/latest.html"
+      ],
+      "whenNotToUse": [
+        "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
       ]
     },
     {
@@ -1064,6 +1309,10 @@
       "sources": [
         "docs/research-notes-2026-02-21.md",
         "docs/core-blips-v0.1.1.md"
+      ],
+      "references": [],
+      "whenNotToUse": [
+        "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
       ]
     },
     {
@@ -1087,6 +1336,12 @@
       "sources": [
         "docs/research-notes-2026-02-21.md",
         "docs/core-blips-v0.1.1.md"
+      ],
+      "references": [
+        "https://www.asyncapi.com/docs"
+      ],
+      "whenNotToUse": [
+        "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
       ]
     },
     {
@@ -1109,6 +1364,12 @@
       "sources": [
         "docs/research-notes-2026-02-21.md",
         "docs/core-blips-v0.1.1.md"
+      ],
+      "references": [
+        "https://cloudevents.io/"
+      ],
+      "whenNotToUse": [
+        "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
       ]
     },
     {
@@ -1130,6 +1391,12 @@
       "sources": [
         "docs/research-notes-2026-02-21.md",
         "docs/core-blips-v0.1.1.md"
+      ],
+      "references": [
+        "https://www.amqp.org/resources/specifications"
+      ],
+      "whenNotToUse": [
+        "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
       ]
     },
     {
@@ -1152,6 +1419,12 @@
       "sources": [
         "docs/research-notes-2026-02-21.md",
         "docs/core-blips-v0.1.1.md"
+      ],
+      "references": [
+        "https://mqtt.org/"
+      ],
+      "whenNotToUse": [
+        "Nicht für klassische Enterprise-Integration ohne IoT/OT-Anforderungen forcieren."
       ]
     },
     {
@@ -1174,6 +1447,12 @@
       "sources": [
         "docs/research-notes-2026-02-21.md",
         "docs/core-blips-v0.1.1.md"
+      ],
+      "references": [
+        "https://graphql.org/learn/"
+      ],
+      "whenNotToUse": [
+        "Nicht als generelles Ersatzprotokoll für alle Backend-Integrationen verwenden."
       ]
     },
     {
@@ -1196,6 +1475,12 @@
       "sources": [
         "docs/research-notes-2026-02-21.md",
         "docs/core-blips-v0.1.1.md"
+      ],
+      "references": [
+        "https://grpc.io/docs/"
+      ],
+      "whenNotToUse": [
+        "Nicht für externe, breit konsumierte Public APIs als Standard wählen."
       ]
     },
     {
@@ -1217,6 +1502,10 @@
       "sources": [
         "docs/research-notes-2026-02-21.md",
         "docs/core-blips-v0.1.1.md"
+      ],
+      "references": [],
+      "whenNotToUse": [
+        "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
       ]
     },
     {
@@ -1238,6 +1527,10 @@
       "sources": [
         "docs/research-notes-2026-02-21.md",
         "docs/core-blips-v0.1.1.md"
+      ],
+      "references": [],
+      "whenNotToUse": [
+        "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
       ]
     },
     {
@@ -1261,6 +1554,11 @@
       "sources": [
         "docs/research-notes-2026-02-21.md",
         "docs/core-blips-v0.1.1.md"
+      ],
+      "references": [],
+      "whenNotToUse": [
+        "Nicht für neue Greenfield-Integrationen verwenden.",
+        "Nicht einsetzen, wenn API- oder Event-basierte Alternativen verfügbar sind."
       ]
     },
     {
@@ -1282,6 +1580,10 @@
       "sources": [
         "docs/research-notes-2026-02-21.md",
         "docs/core-blips-v0.1.1.md"
+      ],
+      "references": [],
+      "whenNotToUse": [
+        "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
       ]
     },
     {
@@ -1303,6 +1605,11 @@
       "sources": [
         "docs/research-notes-2026-02-21.md",
         "docs/core-blips-v0.1.1.md"
+      ],
+      "references": [],
+      "whenNotToUse": [
+        "Nicht für neue Greenfield-Integrationen verwenden.",
+        "Nicht einsetzen, wenn API- oder Event-basierte Alternativen verfügbar sind."
       ]
     },
     {
@@ -1324,6 +1631,11 @@
       "sources": [
         "docs/research-notes-2026-02-21.md",
         "docs/core-blips-v0.1.1.md"
+      ],
+      "references": [],
+      "whenNotToUse": [
+        "Nicht für neue Greenfield-Integrationen verwenden.",
+        "Nicht einsetzen, wenn API- oder Event-basierte Alternativen verfügbar sind."
       ]
     }
   ]
