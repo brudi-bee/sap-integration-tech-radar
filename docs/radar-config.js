@@ -1,5 +1,5 @@
 (async function(){
-  const res = await fetch('./entries.json');
+  const res = await fetch('./entries.json', { cache: 'no-store' });
   const cfg = await res.json();
 
   // Future-blue palette / NTT-like dark vibe
@@ -32,6 +32,7 @@
     title: cfg.title || 'SAP Integration Tech Radar',
     quadrants: cfg.quadrants,
     rings,
+    // Keep interactive layout so legend/labels are rendered correctly.
     print_layout: false,
     links_in_new_tabs: true,
     entries: cfg.entries
