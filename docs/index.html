@@ -130,10 +130,11 @@
 
     function renderRadar(data, presentationMode) {
       const mobile = window.innerWidth <= 900;
+      const currentLang = document.getElementById('lang-switch')?.value || 'de';
       const entries = (data.entries || []).map((e) => ({
         ...e,
         active: e.active !== false,
-        link: e.link || `details.html?item=${encodeURIComponent(e.label)}`
+        link: e.link || `details.html?item=${encodeURIComponent(e.label)}&lang=${currentLang}`
       }));
 
       const rings = (data.rings || []).map((r) => ({
@@ -198,8 +199,13 @@
         const langSwitch = document.getElementById('lang-switch');
         const saved = localStorage.getItem('radar.presentationMode');
         const savedLang = localStorage.getItem('radar.lang');
+        const urlLang = new URLSearchParams(window.location.search).get('lang');
         if (saved === '0') toggle.checked = false;
-        if (savedLang === 'en' || savedLang === 'de') langSwitch.value = savedLang;
+        if (urlLang === 'en' || urlLang === 'de') {
+          langSwitch.value = urlLang;
+        } else if (savedLang === 'en' || savedLang === 'de') {
+          langSwitch.value = savedLang;
+        }
 
         function applyLanguage(lang) {
           const t = i18n[lang] || i18n.de;
@@ -227,6 +233,9 @@
         langSwitch.addEventListener('change', () => {
           localStorage.setItem('radar.lang', langSwitch.value);
           applyLanguage(langSwitch.value);
+          const u = new URL(window.location.href);
+          u.searchParams.set('lang', langSwitch.value);
+          window.history.replaceState({}, '', u.toString());
         });
 
         window.addEventListener('resize', () => renderRadar(cachedData, toggle.checked));

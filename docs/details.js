@@ -1,6 +1,7 @@
 (async function () {
   const params = new URLSearchParams(location.search);
   const item = params.get('item');
+  const urlLang = params.get('lang');
 
   const ringNames = ['ADOPT', 'TRIAL', 'ASSESS', 'HOLD'];
   const ringColors = {
@@ -64,7 +65,9 @@
 
   const langSwitch = document.getElementById('lang-switch');
   const savedLang = localStorage.getItem('radar.lang');
-  langSwitch.value = (savedLang === 'en' || savedLang === 'de') ? savedLang : 'de';
+  langSwitch.value = (urlLang === 'en' || urlLang === 'de')
+    ? urlLang
+    : ((savedLang === 'en' || savedLang === 'de') ? savedLang : 'de');
 
   function byLang(deVal, enVal, lang, fallback = '') {
     if (lang === 'en') return enVal ?? deVal ?? fallback;
@@ -79,6 +82,7 @@
 
     document.getElementById('lang-label').textContent = t.langLabel;
     document.getElementById('back-link').textContent = t.back;
+    document.getElementById('back-link').href = `./?lang=${lang}`;
     document.getElementById('h-intro').textContent = t.hIntro;
     document.getElementById('h-why').textContent = t.hWhy;
     document.getElementById('h-risks').textContent = t.hRisks;
@@ -131,6 +135,9 @@
   applyLanguage(langSwitch.value);
   langSwitch.addEventListener('change', () => {
     localStorage.setItem('radar.lang', langSwitch.value);
+    const u = new URL(window.location.href);
+    u.searchParams.set('lang', langSwitch.value);
+    window.history.replaceState({}, '', u.toString());
     applyLanguage(langSwitch.value);
   });
 })();
