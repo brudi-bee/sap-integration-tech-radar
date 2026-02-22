@@ -1,0 +1,930 @@
+{
+  "generatedAt": "2026-02-22",
+  "items": [
+    {
+      "label": "SAP Cloud Integration (CI)",
+      "ring": "ADOPT",
+      "quadrant": "Platforms",
+      "summary": "Zentrale iPaaS-Basis auf BTP für robuste API-/Event-nahe Integrationsflows.",
+      "actions": [
+        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
+        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      ],
+      "sources": [
+        "docs/research-notes-2026-02-21.md",
+        "docs/core-blips-v0.1.1.md"
+      ]
+    },
+    {
+      "label": "SAP API Management",
+      "ring": "ADOPT",
+      "quadrant": "Platforms",
+      "summary": "API-Security, Policies, Quotas und Developer Experience zentral steuern.",
+      "actions": [
+        "API-Vertrag und Security-Policy (AuthN/AuthZ, Versionierung, Error-Modell) explizit festlegen.",
+        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
+        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      ],
+      "sources": [
+        "docs/research-notes-2026-02-21.md",
+        "docs/core-blips-v0.1.1.md"
+      ]
+    },
+    {
+      "label": "SAP Event Mesh",
+      "ring": "TRIAL",
+      "quadrant": "Platforms",
+      "summary": "Asynchrone Entkopplung und resiliente Event-Verarbeitung für verteilte Prozesse.",
+      "actions": [
+        "Event-Schema, Delivery-Semantik (at-least-once/exactly-once) und DLQ-Strategie definieren.",
+        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
+        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      ],
+      "sources": [
+        "docs/research-notes-2026-02-21.md",
+        "docs/core-blips-v0.1.1.md"
+      ]
+    },
+    {
+      "label": "SAP Advanced Event Mesh (AEM)",
+      "ring": "TRIAL",
+      "quadrant": "Platforms",
+      "summary": "Erweiterte Event-Broker-Fähigkeiten für komplexe Eventing-Szenarien.",
+      "actions": [
+        "Event-Schema, Delivery-Semantik (at-least-once/exactly-once) und DLQ-Strategie definieren.",
+        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
+        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      ],
+      "sources": [
+        "docs/research-notes-2026-02-21.md",
+        "docs/core-blips-v0.1.1.md"
+      ]
+    },
+    {
+      "label": "SAP Cloud Connector",
+      "ring": "ADOPT",
+      "quadrant": "Tooling & Ops",
+      "summary": "Bewährt für produktive SAP-Integrationslandschaften; standardisieren und breit einsetzen. Kontext: Tooling & Ops.",
+      "actions": [
+        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
+        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      ],
+      "sources": [
+        "docs/research-notes-2026-02-21.md",
+        "docs/core-blips-v0.1.1.md"
+      ]
+    },
+    {
+      "label": "SAP Integration Advisor",
+      "ring": "TRIAL",
+      "quadrant": "Platforms",
+      "summary": "Sinnvoll in gezielten produktionsnahen Use-Cases mit klaren Guardrails. Kontext: Platforms.",
+      "actions": [
+        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
+        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      ],
+      "sources": [
+        "docs/research-notes-2026-02-21.md",
+        "docs/core-blips-v0.1.1.md"
+      ]
+    },
+    {
+      "label": "SAP Trading Partner Management",
+      "ring": "ASSESS",
+      "quadrant": "Platforms",
+      "summary": "Gezielt evaluieren (PoC/Spike), bevor breiter Einsatz entschieden wird. Kontext: Platforms.",
+      "actions": [
+        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
+        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      ],
+      "sources": [
+        "docs/research-notes-2026-02-21.md",
+        "docs/core-blips-v0.1.1.md"
+      ]
+    },
+    {
+      "label": "Edge Integration Cell",
+      "ring": "TRIAL",
+      "quadrant": "Platforms",
+      "summary": "Sinnvoll in gezielten produktionsnahen Use-Cases mit klaren Guardrails. Kontext: Platforms.",
+      "actions": [
+        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
+        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      ],
+      "sources": [
+        "docs/research-notes-2026-02-21.md",
+        "docs/core-blips-v0.1.1.md"
+      ]
+    },
+    {
+      "label": "Kyma Runtime (for integration microservices)",
+      "ring": "TRIAL",
+      "quadrant": "Platforms",
+      "summary": "Sinnvoll in gezielten produktionsnahen Use-Cases mit klaren Guardrails. Kontext: Platforms.",
+      "actions": [
+        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
+        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      ],
+      "sources": [
+        "docs/research-notes-2026-02-21.md",
+        "docs/core-blips-v0.1.1.md"
+      ]
+    },
+    {
+      "label": "SAP Build Process Automation",
+      "ring": "ASSESS",
+      "quadrant": "Platforms",
+      "summary": "Gezielt evaluieren (PoC/Spike), bevor breiter Einsatz entschieden wird. Kontext: Platforms.",
+      "actions": [
+        "Deployment- und Rollback-Strategie inklusive Compliance-Gates standardisieren.",
+        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
+        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      ],
+      "sources": [
+        "docs/research-notes-2026-02-21.md",
+        "docs/core-blips-v0.1.1.md"
+      ]
+    },
+    {
+      "label": "SAP Open Connectors",
+      "ring": "HOLD",
+      "quadrant": "Platforms",
+      "summary": "Für neue Implementierungen vermeiden; nur für Bestand mit Migrationspfad. Kontext: Platforms.",
+      "actions": [
+        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
+        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      ],
+      "sources": [
+        "docs/research-notes-2026-02-21.md",
+        "docs/core-blips-v0.1.1.md"
+      ]
+    },
+    {
+      "label": "SAP PI/PO",
+      "ring": "HOLD",
+      "quadrant": "Platforms",
+      "summary": "Legacy-Middleware; strategisch Richtung Integration Suite migrieren.",
+      "actions": [
+        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
+        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      ],
+      "sources": [
+        "docs/research-notes-2026-02-21.md",
+        "docs/core-blips-v0.1.1.md"
+      ]
+    },
+    {
+      "label": "Central logging + correlation IDs",
+      "ring": "ADOPT",
+      "quadrant": "Tooling & Ops",
+      "summary": "Bewährt für produktive SAP-Integrationslandschaften; standardisieren und breit einsetzen. Kontext: Tooling & Ops.",
+      "actions": [
+        "SLIs/SLOs und Alerting-Regeln je Integrationsfluss festschreiben.",
+        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
+        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      ],
+      "sources": [
+        "docs/research-notes-2026-02-21.md",
+        "docs/core-blips-v0.1.1.md"
+      ]
+    },
+    {
+      "label": "CI/CD for integration artifacts",
+      "ring": "TRIAL",
+      "quadrant": "Tooling & Ops",
+      "summary": "Sinnvoll in gezielten produktionsnahen Use-Cases mit klaren Guardrails. Kontext: Tooling & Ops.",
+      "actions": [
+        "Deployment- und Rollback-Strategie inklusive Compliance-Gates standardisieren.",
+        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
+        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      ],
+      "sources": [
+        "docs/research-notes-2026-02-21.md",
+        "docs/core-blips-v0.1.1.md"
+      ]
+    },
+    {
+      "label": "Secret handling via vault/KMS",
+      "ring": "ADOPT",
+      "quadrant": "Tooling & Ops",
+      "summary": "Bewährt für produktive SAP-Integrationslandschaften; standardisieren und breit einsetzen. Kontext: Tooling & Ops.",
+      "actions": [
+        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
+        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      ],
+      "sources": [
+        "docs/research-notes-2026-02-21.md",
+        "docs/core-blips-v0.1.1.md"
+      ]
+    },
+    {
+      "label": "OpenTelemetry",
+      "ring": "TRIAL",
+      "quadrant": "Tooling & Ops",
+      "summary": "E2E-Observability über Integrationspfade (Tracing/Metrics/Logs) priorisieren.",
+      "actions": [
+        "SLIs/SLOs und Alerting-Regeln je Integrationsfluss festschreiben.",
+        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
+        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      ],
+      "sources": [
+        "docs/research-notes-2026-02-21.md",
+        "docs/core-blips-v0.1.1.md"
+      ]
+    },
+    {
+      "label": "Contract testing for integrations",
+      "ring": "TRIAL",
+      "quadrant": "Tooling & Ops",
+      "summary": "Sinnvoll in gezielten produktionsnahen Use-Cases mit klaren Guardrails. Kontext: Tooling & Ops.",
+      "actions": [
+        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
+        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      ],
+      "sources": [
+        "docs/research-notes-2026-02-21.md",
+        "docs/core-blips-v0.1.1.md"
+      ]
+    },
+    {
+      "label": "Terraform for SAP BTP",
+      "ring": "TRIAL",
+      "quadrant": "Tooling & Ops",
+      "summary": "Sinnvoll in gezielten produktionsnahen Use-Cases mit klaren Guardrails. Kontext: Tooling & Ops.",
+      "actions": [
+        "Deployment- und Rollback-Strategie inklusive Compliance-Gates standardisieren.",
+        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
+        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      ],
+      "sources": [
+        "docs/research-notes-2026-02-21.md",
+        "docs/core-blips-v0.1.1.md"
+      ]
+    },
+    {
+      "label": "Cloud Integration Automation Tool",
+      "ring": "ASSESS",
+      "quadrant": "Tooling & Ops",
+      "summary": "Gezielt evaluieren (PoC/Spike), bevor breiter Einsatz entschieden wird. Kontext: Tooling & Ops.",
+      "actions": [
+        "Deployment- und Rollback-Strategie inklusive Compliance-Gates standardisieren.",
+        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
+        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      ],
+      "sources": [
+        "docs/research-notes-2026-02-21.md",
+        "docs/core-blips-v0.1.1.md"
+      ]
+    },
+    {
+      "label": "Third-party CPI DevOps suites (e.g., Figaf/Int4)",
+      "ring": "ASSESS",
+      "quadrant": "Tooling & Ops",
+      "summary": "Gezielt evaluieren (PoC/Spike), bevor breiter Einsatz entschieden wird. Kontext: Tooling & Ops.",
+      "actions": [
+        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
+        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      ],
+      "sources": [
+        "docs/research-notes-2026-02-21.md",
+        "docs/core-blips-v0.1.1.md"
+      ]
+    },
+    {
+      "label": "SAP Cloud Transport Management (CTMS) + Content Agent",
+      "ring": "ADOPT",
+      "quadrant": "Tooling & Ops",
+      "summary": "Bewährt für produktive SAP-Integrationslandschaften; standardisieren und breit einsetzen. Kontext: Tooling & Ops.",
+      "actions": [
+        "Deployment- und Rollback-Strategie inklusive Compliance-Gates standardisieren.",
+        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
+        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      ],
+      "sources": [
+        "docs/research-notes-2026-02-21.md",
+        "docs/core-blips-v0.1.1.md"
+      ]
+    },
+    {
+      "label": "Content transport via CTS+ (transition)",
+      "ring": "ASSESS",
+      "quadrant": "Tooling & Ops",
+      "summary": "Gezielt evaluieren (PoC/Spike), bevor breiter Einsatz entschieden wird. Kontext: Tooling & Ops.",
+      "actions": [
+        "Deployment- und Rollback-Strategie inklusive Compliance-Gates standardisieren.",
+        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
+        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      ],
+      "sources": [
+        "docs/research-notes-2026-02-21.md",
+        "docs/core-blips-v0.1.1.md"
+      ]
+    },
+    {
+      "label": "SAP Cloud ALM integration & exception monitoring",
+      "ring": "ADOPT",
+      "quadrant": "Tooling & Ops",
+      "summary": "Bewährt für produktive SAP-Integrationslandschaften; standardisieren und breit einsetzen. Kontext: Tooling & Ops.",
+      "actions": [
+        "SLIs/SLOs und Alerting-Regeln je Integrationsfluss festschreiben.",
+        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
+        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      ],
+      "sources": [
+        "docs/research-notes-2026-02-21.md",
+        "docs/core-blips-v0.1.1.md"
+      ]
+    },
+    {
+      "label": "Cloud Integration central monitoring & alerting",
+      "ring": "ADOPT",
+      "quadrant": "Tooling & Ops",
+      "summary": "Bewährt für produktive SAP-Integrationslandschaften; standardisieren und breit einsetzen. Kontext: Tooling & Ops.",
+      "actions": [
+        "SLIs/SLOs und Alerting-Regeln je Integrationsfluss festschreiben.",
+        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
+        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      ],
+      "sources": [
+        "docs/research-notes-2026-02-21.md",
+        "docs/core-blips-v0.1.1.md"
+      ]
+    },
+    {
+      "label": "Integration Assessment (ISA-M)",
+      "ring": "ADOPT",
+      "quadrant": "Tooling & Ops",
+      "summary": "Bewährt für produktive SAP-Integrationslandschaften; standardisieren und breit einsetzen. Kontext: Tooling & Ops.",
+      "actions": [
+        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
+        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      ],
+      "sources": [
+        "docs/research-notes-2026-02-21.md",
+        "docs/core-blips-v0.1.1.md"
+      ]
+    },
+    {
+      "label": "Postman/Bruno API test collections",
+      "ring": "ADOPT",
+      "quadrant": "Tooling & Ops",
+      "summary": "Bewährt für produktive SAP-Integrationslandschaften; standardisieren und breit einsetzen. Kontext: Tooling & Ops.",
+      "actions": [
+        "API-Vertrag und Security-Policy (AuthN/AuthZ, Versionierung, Error-Modell) explizit festlegen.",
+        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
+        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      ],
+      "sources": [
+        "docs/research-notes-2026-02-21.md",
+        "docs/core-blips-v0.1.1.md"
+      ]
+    },
+    {
+      "label": "SAP Application Interface Framework (AIF)",
+      "ring": "ASSESS",
+      "quadrant": "Tooling & Ops",
+      "summary": "Gezielt evaluieren (PoC/Spike), bevor breiter Einsatz entschieden wird. Kontext: Tooling & Ops.",
+      "actions": [
+        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
+        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      ],
+      "sources": [
+        "docs/research-notes-2026-02-21.md",
+        "docs/core-blips-v0.1.1.md"
+      ]
+    },
+    {
+      "label": "Manual prod changes",
+      "ring": "HOLD",
+      "quadrant": "Tooling & Ops",
+      "summary": "Änderungen nur über kontrollierte CI/CD-Pipelines und Freigaben.",
+      "actions": [
+        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
+        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      ],
+      "sources": [
+        "docs/research-notes-2026-02-21.md",
+        "docs/core-blips-v0.1.1.md"
+      ]
+    },
+    {
+      "label": "API-first",
+      "ring": "ADOPT",
+      "quadrant": "Patterns & Architecture",
+      "summary": "Bewährt für produktive SAP-Integrationslandschaften; standardisieren und breit einsetzen. Kontext: Patterns & Architecture.",
+      "actions": [
+        "API-Vertrag und Security-Policy (AuthN/AuthZ, Versionierung, Error-Modell) explizit festlegen.",
+        "Pattern nur dort anwenden, wo Komplexität/Nutzen klar nachweisbar ist.",
+        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
+        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      ],
+      "sources": [
+        "docs/research-notes-2026-02-21.md",
+        "docs/core-blips-v0.1.1.md"
+      ]
+    },
+    {
+      "label": "API-led connectivity (system/process/experience)",
+      "ring": "ADOPT",
+      "quadrant": "Patterns & Architecture",
+      "summary": "Bewährt für produktive SAP-Integrationslandschaften; standardisieren und breit einsetzen. Kontext: Patterns & Architecture.",
+      "actions": [
+        "API-Vertrag und Security-Policy (AuthN/AuthZ, Versionierung, Error-Modell) explizit festlegen.",
+        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
+        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      ],
+      "sources": [
+        "docs/research-notes-2026-02-21.md",
+        "docs/core-blips-v0.1.1.md"
+      ]
+    },
+    {
+      "label": "Contract-first with OpenAPI",
+      "ring": "ADOPT",
+      "quadrant": "Patterns & Architecture",
+      "summary": "Bewährt für produktive SAP-Integrationslandschaften; standardisieren und breit einsetzen. Kontext: Patterns & Architecture.",
+      "actions": [
+        "API-Vertrag und Security-Policy (AuthN/AuthZ, Versionierung, Error-Modell) explizit festlegen.",
+        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
+        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      ],
+      "sources": [
+        "docs/research-notes-2026-02-21.md",
+        "docs/core-blips-v0.1.1.md"
+      ]
+    },
+    {
+      "label": "Contract-first with AsyncAPI",
+      "ring": "TRIAL",
+      "quadrant": "Patterns & Architecture",
+      "summary": "Sinnvoll in gezielten produktionsnahen Use-Cases mit klaren Guardrails. Kontext: Patterns & Architecture.",
+      "actions": [
+        "API-Vertrag und Security-Policy (AuthN/AuthZ, Versionierung, Error-Modell) explizit festlegen.",
+        "Event-Schema, Delivery-Semantik (at-least-once/exactly-once) und DLQ-Strategie definieren.",
+        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
+        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      ],
+      "sources": [
+        "docs/research-notes-2026-02-21.md",
+        "docs/core-blips-v0.1.1.md"
+      ]
+    },
+    {
+      "label": "Event-driven integration",
+      "ring": "TRIAL",
+      "quadrant": "Patterns & Architecture",
+      "summary": "Sinnvoll in gezielten produktionsnahen Use-Cases mit klaren Guardrails. Kontext: Patterns & Architecture.",
+      "actions": [
+        "Event-Schema, Delivery-Semantik (at-least-once/exactly-once) und DLQ-Strategie definieren.",
+        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
+        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      ],
+      "sources": [
+        "docs/research-notes-2026-02-21.md",
+        "docs/core-blips-v0.1.1.md"
+      ]
+    },
+    {
+      "label": "Side-by-side extensibility",
+      "ring": "ADOPT",
+      "quadrant": "Patterns & Architecture",
+      "summary": "Bewährt für produktive SAP-Integrationslandschaften; standardisieren und breit einsetzen. Kontext: Patterns & Architecture.",
+      "actions": [
+        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
+        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      ],
+      "sources": [
+        "docs/research-notes-2026-02-21.md",
+        "docs/core-blips-v0.1.1.md"
+      ]
+    },
+    {
+      "label": "Circuit breaker pattern",
+      "ring": "ADOPT",
+      "quadrant": "Patterns & Architecture",
+      "summary": "Bewährt für produktive SAP-Integrationslandschaften; standardisieren und breit einsetzen. Kontext: Patterns & Architecture.",
+      "actions": [
+        "Pattern nur dort anwenden, wo Komplexität/Nutzen klar nachweisbar ist.",
+        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
+        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      ],
+      "sources": [
+        "docs/research-notes-2026-02-21.md",
+        "docs/core-blips-v0.1.1.md"
+      ]
+    },
+    {
+      "label": "Idempotent consumer pattern",
+      "ring": "ADOPT",
+      "quadrant": "Patterns & Architecture",
+      "summary": "Bewährt für produktive SAP-Integrationslandschaften; standardisieren und breit einsetzen. Kontext: Patterns & Architecture.",
+      "actions": [
+        "Pattern nur dort anwenden, wo Komplexität/Nutzen klar nachweisbar ist.",
+        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
+        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      ],
+      "sources": [
+        "docs/research-notes-2026-02-21.md",
+        "docs/core-blips-v0.1.1.md"
+      ]
+    },
+    {
+      "label": "Retry/backoff + dead-letter handling",
+      "ring": "ADOPT",
+      "quadrant": "Patterns & Architecture",
+      "summary": "Bewährt für produktive SAP-Integrationslandschaften; standardisieren und breit einsetzen. Kontext: Patterns & Architecture.",
+      "actions": [
+        "Pattern nur dort anwenden, wo Komplexität/Nutzen klar nachweisbar ist.",
+        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
+        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      ],
+      "sources": [
+        "docs/research-notes-2026-02-21.md",
+        "docs/core-blips-v0.1.1.md"
+      ]
+    },
+    {
+      "label": "Outbox pattern",
+      "ring": "TRIAL",
+      "quadrant": "Patterns & Architecture",
+      "summary": "Sinnvoll in gezielten produktionsnahen Use-Cases mit klaren Guardrails. Kontext: Patterns & Architecture.",
+      "actions": [
+        "Pattern nur dort anwenden, wo Komplexität/Nutzen klar nachweisbar ist.",
+        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
+        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      ],
+      "sources": [
+        "docs/research-notes-2026-02-21.md",
+        "docs/core-blips-v0.1.1.md"
+      ]
+    },
+    {
+      "label": "Strangler pattern for legacy replacement",
+      "ring": "ADOPT",
+      "quadrant": "Patterns & Architecture",
+      "summary": "Bewährt für produktive SAP-Integrationslandschaften; standardisieren und breit einsetzen. Kontext: Patterns & Architecture.",
+      "actions": [
+        "Pattern nur dort anwenden, wo Komplexität/Nutzen klar nachweisbar ist.",
+        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
+        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      ],
+      "sources": [
+        "docs/research-notes-2026-02-21.md",
+        "docs/core-blips-v0.1.1.md"
+      ]
+    },
+    {
+      "label": "Event-driven architecture with CloudEvents envelope",
+      "ring": "TRIAL",
+      "quadrant": "Patterns & Architecture",
+      "summary": "Sinnvoll in gezielten produktionsnahen Use-Cases mit klaren Guardrails. Kontext: Patterns & Architecture.",
+      "actions": [
+        "Event-Schema, Delivery-Semantik (at-least-once/exactly-once) und DLQ-Strategie definieren.",
+        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
+        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      ],
+      "sources": [
+        "docs/research-notes-2026-02-21.md",
+        "docs/core-blips-v0.1.1.md"
+      ]
+    },
+    {
+      "label": "Choreography over central orchestration (selective)",
+      "ring": "TRIAL",
+      "quadrant": "Patterns & Architecture",
+      "summary": "Sinnvoll in gezielten produktionsnahen Use-Cases mit klaren Guardrails. Kontext: Patterns & Architecture.",
+      "actions": [
+        "Pattern nur dort anwenden, wo Komplexität/Nutzen klar nachweisbar ist.",
+        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
+        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      ],
+      "sources": [
+        "docs/research-notes-2026-02-21.md",
+        "docs/core-blips-v0.1.1.md"
+      ]
+    },
+    {
+      "label": "Canonical data model (lightweight)",
+      "ring": "ASSESS",
+      "quadrant": "Patterns & Architecture",
+      "summary": "Gezielt evaluieren (PoC/Spike), bevor breiter Einsatz entschieden wird. Kontext: Patterns & Architecture.",
+      "actions": [
+        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
+        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      ],
+      "sources": [
+        "docs/research-notes-2026-02-21.md",
+        "docs/core-blips-v0.1.1.md"
+      ]
+    },
+    {
+      "label": "CQRS (selective)",
+      "ring": "ASSESS",
+      "quadrant": "Patterns & Architecture",
+      "summary": "Gezielt evaluieren (PoC/Spike), bevor breiter Einsatz entschieden wird. Kontext: Patterns & Architecture.",
+      "actions": [
+        "Pattern nur dort anwenden, wo Komplexität/Nutzen klar nachweisbar ist.",
+        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
+        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      ],
+      "sources": [
+        "docs/research-notes-2026-02-21.md",
+        "docs/core-blips-v0.1.1.md"
+      ]
+    },
+    {
+      "label": "Direct point-to-point connections",
+      "ring": "HOLD",
+      "quadrant": "Patterns & Architecture",
+      "summary": "Für neue Implementierungen vermeiden; nur für Bestand mit Migrationspfad. Kontext: Patterns & Architecture.",
+      "actions": [
+        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
+        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      ],
+      "sources": [
+        "docs/research-notes-2026-02-21.md",
+        "docs/core-blips-v0.1.1.md"
+      ]
+    },
+    {
+      "label": "File-drop integrations (shared folder/manual polling)",
+      "ring": "HOLD",
+      "quadrant": "Patterns & Architecture",
+      "summary": "Für neue Implementierungen vermeiden; nur für Bestand mit Migrationspfad. Kontext: Patterns & Architecture.",
+      "actions": [
+        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
+        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      ],
+      "sources": [
+        "docs/research-notes-2026-02-21.md",
+        "docs/core-blips-v0.1.1.md"
+      ]
+    },
+    {
+      "label": "Direct DB integration",
+      "ring": "HOLD",
+      "quadrant": "Patterns & Architecture",
+      "summary": "Für neue Implementierungen vermeiden; nur für Bestand mit Migrationspfad. Kontext: Patterns & Architecture.",
+      "actions": [
+        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
+        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      ],
+      "sources": [
+        "docs/research-notes-2026-02-21.md",
+        "docs/core-blips-v0.1.1.md"
+      ]
+    },
+    {
+      "label": "REST/JSON",
+      "ring": "ADOPT",
+      "quadrant": "Protocols & APIs",
+      "summary": "Bewährt für produktive SAP-Integrationslandschaften; standardisieren und breit einsetzen. Kontext: Protocols & APIs.",
+      "actions": [
+        "API-Vertrag und Security-Policy (AuthN/AuthZ, Versionierung, Error-Modell) explizit festlegen.",
+        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
+        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      ],
+      "sources": [
+        "docs/research-notes-2026-02-21.md",
+        "docs/core-blips-v0.1.1.md"
+      ]
+    },
+    {
+      "label": "OData v4",
+      "ring": "ADOPT",
+      "quadrant": "Protocols & APIs",
+      "summary": "Bewährt für produktive SAP-Integrationslandschaften; standardisieren und breit einsetzen. Kontext: Protocols & APIs.",
+      "actions": [
+        "API-Vertrag und Security-Policy (AuthN/AuthZ, Versionierung, Error-Modell) explizit festlegen.",
+        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
+        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      ],
+      "sources": [
+        "docs/research-notes-2026-02-21.md",
+        "docs/core-blips-v0.1.1.md"
+      ]
+    },
+    {
+      "label": "OAuth2 / OIDC",
+      "ring": "ADOPT",
+      "quadrant": "Protocols & APIs",
+      "summary": "Bewährt für produktive SAP-Integrationslandschaften; standardisieren und breit einsetzen. Kontext: Protocols & APIs.",
+      "actions": [
+        "API-Vertrag und Security-Policy (AuthN/AuthZ, Versionierung, Error-Modell) explizit festlegen.",
+        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
+        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      ],
+      "sources": [
+        "docs/research-notes-2026-02-21.md",
+        "docs/core-blips-v0.1.1.md"
+      ]
+    },
+    {
+      "label": "OpenAPI 3.x",
+      "ring": "ADOPT",
+      "quadrant": "Protocols & APIs",
+      "summary": "API-Verträge versioniert und reviewbar als verbindliche Schnittstellenbasis nutzen.",
+      "actions": [
+        "API-Vertrag und Security-Policy (AuthN/AuthZ, Versionierung, Error-Modell) explizit festlegen.",
+        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
+        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      ],
+      "sources": [
+        "docs/research-notes-2026-02-21.md",
+        "docs/core-blips-v0.1.1.md"
+      ]
+    },
+    {
+      "label": "Webhooks with signature verification",
+      "ring": "ADOPT",
+      "quadrant": "Protocols & APIs",
+      "summary": "Bewährt für produktive SAP-Integrationslandschaften; standardisieren und breit einsetzen. Kontext: Protocols & APIs.",
+      "actions": [
+        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
+        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      ],
+      "sources": [
+        "docs/research-notes-2026-02-21.md",
+        "docs/core-blips-v0.1.1.md"
+      ]
+    },
+    {
+      "label": "AsyncAPI",
+      "ring": "TRIAL",
+      "quadrant": "Protocols & APIs",
+      "summary": "Event-Verträge klar versionieren; besonders relevant bei Event Mesh/AEM.",
+      "actions": [
+        "API-Vertrag und Security-Policy (AuthN/AuthZ, Versionierung, Error-Modell) explizit festlegen.",
+        "Event-Schema, Delivery-Semantik (at-least-once/exactly-once) und DLQ-Strategie definieren.",
+        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
+        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      ],
+      "sources": [
+        "docs/research-notes-2026-02-21.md",
+        "docs/core-blips-v0.1.1.md"
+      ]
+    },
+    {
+      "label": "CloudEvents",
+      "ring": "TRIAL",
+      "quadrant": "Protocols & APIs",
+      "summary": "Standardisiertes Event-Enveloping für lose gekoppelte Integrationsarchitekturen.",
+      "actions": [
+        "Event-Schema, Delivery-Semantik (at-least-once/exactly-once) und DLQ-Strategie definieren.",
+        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
+        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      ],
+      "sources": [
+        "docs/research-notes-2026-02-21.md",
+        "docs/core-blips-v0.1.1.md"
+      ]
+    },
+    {
+      "label": "AMQP 1.0",
+      "ring": "ADOPT",
+      "quadrant": "Protocols & APIs",
+      "summary": "Bewährt für produktive SAP-Integrationslandschaften; standardisieren und breit einsetzen. Kontext: Protocols & APIs.",
+      "actions": [
+        "Event-Schema, Delivery-Semantik (at-least-once/exactly-once) und DLQ-Strategie definieren.",
+        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
+        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      ],
+      "sources": [
+        "docs/research-notes-2026-02-21.md",
+        "docs/core-blips-v0.1.1.md"
+      ]
+    },
+    {
+      "label": "MQTT (IoT/OT scenarios)",
+      "ring": "ASSESS",
+      "quadrant": "Protocols & APIs",
+      "summary": "Gezielt evaluieren (PoC/Spike), bevor breiter Einsatz entschieden wird. Kontext: Protocols & APIs.",
+      "actions": [
+        "Event-Schema, Delivery-Semantik (at-least-once/exactly-once) und DLQ-Strategie definieren.",
+        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
+        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      ],
+      "sources": [
+        "docs/research-notes-2026-02-21.md",
+        "docs/core-blips-v0.1.1.md"
+      ]
+    },
+    {
+      "label": "GraphQL (BFF/aggregation only)",
+      "ring": "ASSESS",
+      "quadrant": "Protocols & APIs",
+      "summary": "Gezielt evaluieren (PoC/Spike), bevor breiter Einsatz entschieden wird. Kontext: Protocols & APIs.",
+      "actions": [
+        "API-Vertrag und Security-Policy (AuthN/AuthZ, Versionierung, Error-Modell) explizit festlegen.",
+        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
+        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      ],
+      "sources": [
+        "docs/research-notes-2026-02-21.md",
+        "docs/core-blips-v0.1.1.md"
+      ]
+    },
+    {
+      "label": "gRPC (internal service-to-service)",
+      "ring": "ASSESS",
+      "quadrant": "Protocols & APIs",
+      "summary": "Gezielt evaluieren (PoC/Spike), bevor breiter Einsatz entschieden wird. Kontext: Protocols & APIs.",
+      "actions": [
+        "API-Vertrag und Security-Policy (AuthN/AuthZ, Versionierung, Error-Modell) explizit festlegen.",
+        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
+        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      ],
+      "sources": [
+        "docs/research-notes-2026-02-21.md",
+        "docs/core-blips-v0.1.1.md"
+      ]
+    },
+    {
+      "label": "AVRO + Schema Registry",
+      "ring": "ASSESS",
+      "quadrant": "Protocols & APIs",
+      "summary": "Gezielt evaluieren (PoC/Spike), bevor breiter Einsatz entschieden wird. Kontext: Protocols & APIs.",
+      "actions": [
+        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
+        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      ],
+      "sources": [
+        "docs/research-notes-2026-02-21.md",
+        "docs/core-blips-v0.1.1.md"
+      ]
+    },
+    {
+      "label": "EDI/AS2",
+      "ring": "ASSESS",
+      "quadrant": "Protocols & APIs",
+      "summary": "Gezielt evaluieren (PoC/Spike), bevor breiter Einsatz entschieden wird. Kontext: Protocols & APIs.",
+      "actions": [
+        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
+        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      ],
+      "sources": [
+        "docs/research-notes-2026-02-21.md",
+        "docs/core-blips-v0.1.1.md"
+      ]
+    },
+    {
+      "label": "RFC/BAPI (remote)",
+      "ring": "HOLD",
+      "quadrant": "Protocols & APIs",
+      "summary": "Nur kontrolliert für Legacy-Interop; neue Integrationen API/Event-basiert bauen.",
+      "actions": [
+        "API-Vertrag und Security-Policy (AuthN/AuthZ, Versionierung, Error-Modell) explizit festlegen.",
+        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
+        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      ],
+      "sources": [
+        "docs/research-notes-2026-02-21.md",
+        "docs/core-blips-v0.1.1.md"
+      ]
+    },
+    {
+      "label": "SFTP (managed file transfer transition)",
+      "ring": "ASSESS",
+      "quadrant": "Protocols & APIs",
+      "summary": "Gezielt evaluieren (PoC/Spike), bevor breiter Einsatz entschieden wird. Kontext: Protocols & APIs.",
+      "actions": [
+        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
+        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      ],
+      "sources": [
+        "docs/research-notes-2026-02-21.md",
+        "docs/core-blips-v0.1.1.md"
+      ]
+    },
+    {
+      "label": "New SOAP/WSDL interfaces",
+      "ring": "HOLD",
+      "quadrant": "Protocols & APIs",
+      "summary": "Keine neuen SOAP-Strecken aufbauen; REST/Event bevorzugen.",
+      "actions": [
+        "API-Vertrag und Security-Policy (AuthN/AuthZ, Versionierung, Error-Modell) explizit festlegen.",
+        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
+        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      ],
+      "sources": [
+        "docs/research-notes-2026-02-21.md",
+        "docs/core-blips-v0.1.1.md"
+      ]
+    },
+    {
+      "label": "SOAP (legacy)",
+      "ring": "HOLD",
+      "quadrant": "Protocols & APIs",
+      "summary": "Für neue Implementierungen vermeiden; nur für Bestand mit Migrationspfad. Kontext: Protocols & APIs.",
+      "actions": [
+        "API-Vertrag und Security-Policy (AuthN/AuthZ, Versionierung, Error-Modell) explizit festlegen.",
+        "Kleine Referenzimplementierung mit messbaren Erfolgskriterien durchführen.",
+        "Ownership (Team), Betriebsmodell und Runbook verbindlich dokumentieren."
+      ],
+      "sources": [
+        "docs/research-notes-2026-02-21.md",
+        "docs/core-blips-v0.1.1.md"
+      ]
+    }
+  ]
+}
