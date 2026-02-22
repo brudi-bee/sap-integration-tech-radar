@@ -10,6 +10,37 @@
     HOLD: { bg: 'rgba(143,115,255,.2)', border: 'rgba(143,115,255,.7)', text: '#ddd2ff' }
   };
 
+  const i18n = {
+    de: {
+      langLabel: 'Sprache',
+      back: '← zurück zum Radar',
+      subtitle: 'SAP Integration Tech Radar – Detailansicht',
+      hIntro: 'Worum geht es?',
+      hWhy: 'Einordnung',
+      hRisks: 'Relevante Risiken',
+      hDo: 'Do',
+      hDont: 'Don’t',
+      hWhenNot: 'Wann nicht verwenden?',
+      hRefs: 'Referenzen',
+      hRaw: 'Raw Entry',
+      noRefs: 'Keine spezifischen Referenzen hinterlegt.'
+    },
+    en: {
+      langLabel: 'Language',
+      back: '← back to radar',
+      subtitle: 'SAP Integration Tech Radar – detail view',
+      hIntro: 'What is this about?',
+      hWhy: 'Assessment',
+      hRisks: 'Relevant risks',
+      hDo: 'Do',
+      hDont: 'Don’t',
+      hWhenNot: 'When not to use',
+      hRefs: 'References',
+      hRaw: 'Raw entry',
+      noRefs: 'No specific references available.'
+    }
+  };
+
   const cfg = await (await fetch('./entries.json', { cache: 'no-store' })).json();
   const detailsData = await (await fetch('./details-data.json', { cache: 'no-store' })).json();
   const quadrants = (cfg.quadrants || []).map(q => q.name);
@@ -20,55 +51,86 @@
 
   const ring = ringNames[entry.ring] || `Ring ${entry.ring}`;
   const quadrant = quadrants[entry.quadrant] || `Quadrant ${entry.quadrant}`;
+  const detailItem = (detailsData.items || []).find(i => i.label === entry.label);
 
-  document.title = `${entry.label} · SAP Integration Radar`;
-  document.getElementById('title').textContent = entry.label;
-  document.getElementById('subtitle').textContent = 'SAP Integration Tech Radar – Detailansicht';
   const ringEl = document.getElementById('ring');
   ringEl.textContent = ring;
   document.getElementById('quadrant').textContent = quadrant;
-
   if (ringColors[ring]) {
     ringEl.style.background = ringColors[ring].bg;
     ringEl.style.borderColor = ringColors[ring].border;
     ringEl.style.color = ringColors[ring].text;
   }
 
-  const detailItem = (detailsData.items || []).find(i => i.label === entry.label);
+  const langSwitch = document.getElementById('lang-switch');
+  const savedLang = localStorage.getItem('radar.lang');
+  langSwitch.value = (savedLang === 'en' || savedLang === 'de') ? savedLang : 'de';
 
-  document.getElementById('intro').textContent = detailItem?.intro || `Es geht um ${entry.label} als Integrationsbaustein.`;
-  document.getElementById('why-ring').textContent = detailItem?.whyRing || 'Die Einordnung folgt dem erwarteten Nutzen-Risiko-Verhältnis für neue Implementierungen.';
+  function byLang(deVal, enVal, lang, fallback = '') {
+    if (lang === 'en') return enVal ?? deVal ?? fallback;
+    return deVal ?? enVal ?? fallback;
+  }
 
-  const risks = detailItem?.risks?.length
-    ? detailItem.risks
-    : ['Ohne klare Leitplanken steigt das Risiko inkonsistenter Integrationsmuster über Teams hinweg.'];
-  document.getElementById('risks').innerHTML = risks.map(r => `<li>${r}</li>`).join('');
+  function applyLanguage(lang) {
+    const t = i18n[lang] || i18n.de;
+    document.title = `${entry.label} · SAP Integration Radar`;
+    document.getElementById('title').textContent = entry.label;
+    document.getElementById('subtitle').textContent = t.subtitle;
 
-  const dos = detailItem?.do?.length
-    ? detailItem.do
-    : [
-        'Klare Success-Kriterien und Betriebsmetriken vor dem Rollout festlegen.',
-        'Scope und Ownership früh zwischen Architektur, Produkt und Betrieb abstimmen.'
-      ];
-  document.getElementById('do-list').innerHTML = dos.map(a => `<li>${a}</li>`).join('');
+    document.getElementById('lang-label').textContent = t.langLabel;
+    document.getElementById('back-link').textContent = t.back;
+    document.getElementById('h-intro').textContent = t.hIntro;
+    document.getElementById('h-why').textContent = t.hWhy;
+    document.getElementById('h-risks').textContent = t.hRisks;
+    document.getElementById('h-do').textContent = t.hDo;
+    document.getElementById('h-dont').textContent = t.hDont;
+    document.getElementById('h-when-not').textContent = t.hWhenNot;
+    document.getElementById('h-refs').textContent = t.hRefs;
+    document.getElementById('h-raw').textContent = t.hRaw;
 
-  const donts = detailItem?.dont?.length
-    ? detailItem.dont
-    : ['Keine Einführung ohne abgestimmtes Betriebs- und Ownership-Modell.'];
-  document.getElementById('dont-list').innerHTML = donts.map(a => `<li>${a}</li>`).join('');
+    document.getElementById('intro').textContent = byLang(
+      detailItem?.intro_de,
+      detailItem?.intro_en,
+      lang,
+      lang === 'en' ? `This item is about ${entry.label} in an integration context.` : `Es geht um ${entry.label} als Integrationsbaustein.`
+    );
 
-  const whenNot = detailItem?.whenNotToUse?.length
-    ? detailItem.whenNotToUse
-    : ['Nicht einsetzen, wenn Nutzen und Betriebsreife für den Kontext nicht klar belegt sind.'];
-  document.getElementById('when-not-list').innerHTML = whenNot.map(a => `<li>${a}</li>`).join('');
+    document.getElementById('why-ring').textContent = byLang(
+      detailItem?.whyRing_de,
+      detailItem?.whyRing_en,
+      lang,
+      lang === 'en'
+        ? 'This assessment reflects the expected value-risk ratio for new implementations.'
+        : 'Die Einordnung folgt dem erwarteten Nutzen-Risiko-Verhältnis für neue Implementierungen.'
+    );
 
-  const refs = detailItem?.references?.length ? detailItem.references : [];
-  document.getElementById('refs-list').innerHTML = refs.length
-    ? refs.map(url => `<li><a href="${url}" target="_blank" rel="noreferrer">${url}</a></li>`).join('')
-    : '<li>Keine spezifischen Referenzen hinterlegt.</li>';
+    const risks = byLang(detailItem?.risks_de, detailItem?.risks_en, lang, []);
+    document.getElementById('risks').innerHTML = (risks.length ? risks : [lang === 'en' ? 'Missing guardrails can lead to inconsistent integration patterns across teams.' : 'Ohne klare Leitplanken steigt das Risiko inkonsistenter Integrationsmuster über Teams hinweg.'])
+      .map(r => `<li>${r}</li>`).join('');
 
-  document.getElementById('raw').textContent = JSON.stringify({
-    ...entry,
-    details: detailItem || null
-  }, null, 2);
+    const dos = byLang(detailItem?.do_de, detailItem?.do_en, lang, []);
+    document.getElementById('do-list').innerHTML = (dos.length ? dos : [lang === 'en' ? 'Define success criteria and operating metrics before rollout.' : 'Klare Success-Kriterien und Betriebsmetriken vor dem Rollout festlegen.'])
+      .map(d => `<li>${d}</li>`).join('');
+
+    const donts = byLang(detailItem?.dont_de, detailItem?.dont_en, lang, []);
+    document.getElementById('dont-list').innerHTML = (donts.length ? donts : [lang === 'en' ? 'Do not adopt without an agreed operating model and ownership setup.' : 'Keine Einführung ohne abgestimmtes Betriebs- und Ownership-Modell.'])
+      .map(d => `<li>${d}</li>`).join('');
+
+    const whenNot = byLang(detailItem?.whenNotToUse_de, detailItem?.whenNotToUse_en, lang, []);
+    document.getElementById('when-not-list').innerHTML = (whenNot.length ? whenNot : [lang === 'en' ? 'Do not use if value and operational maturity are not clearly evidenced.' : 'Nicht einsetzen, wenn Nutzen und Betriebsreife für den Kontext nicht klar belegt sind.'])
+      .map(d => `<li>${d}</li>`).join('');
+
+    const refs = detailItem?.references || [];
+    document.getElementById('refs-list').innerHTML = refs.length
+      ? refs.map(url => `<li><a href="${url}" target="_blank" rel="noreferrer">${url}</a></li>`).join('')
+      : `<li>${t.noRefs}</li>`;
+
+    document.getElementById('raw').textContent = JSON.stringify({ ...entry, details: detailItem || null }, null, 2);
+  }
+
+  applyLanguage(langSwitch.value);
+  langSwitch.addEventListener('change', () => {
+    localStorage.setItem('radar.lang', langSwitch.value);
+    applyLanguage(langSwitch.value);
+  });
 })();

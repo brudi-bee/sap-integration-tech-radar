@@ -25,6 +25,34 @@
       ],
       "whenNotToUse": [
         "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
+      ],
+      "intro_de": "Es geht um eine SAP-spezifische Integrationsfähigkeit innerhalb der BTP-/ERP-Landschaft. Dieser Punkt beeinflusst sowohl fachliche Time-to-Value als auch den späteren Betriebsaufwand.",
+      "intro_en": "This item is about SAP-specific integration capability within a BTP/ERP landscape. It influences both business time-to-value and long-term operational effort.",
+      "whyRing_de": "Dieser Punkt ist operativ bewährt und für neue Integrationen die Standardwahl.",
+      "whyRing_en": "This item is operationally proven and should be the default choice for new integrations.",
+      "risks_de": [
+        "Fehlende klare Zuständigkeiten und Zielbilder führen zu inkonsistenten Umsetzungen zwischen Teams."
+      ],
+      "risks_en": [
+        "Fehlende klare Zuständigkeiten und Zielbilder führen zu inkonsistenten Umsetzungen zwischen Teams."
+      ],
+      "do_de": [
+        "Klare Success-Kriterien und Betriebsmetriken vor dem Rollout festlegen."
+      ],
+      "do_en": [
+        "Define clear success criteria and operating metrics before rollout."
+      ],
+      "dont_de": [
+        "Keine Einführung ohne abgestimmtes Betriebs- und Ownership-Modell."
+      ],
+      "dont_en": [
+        "Do not adopt without an agreed operating model and ownership setup."
+      ],
+      "whenNotToUse_de": [
+        "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
+      ],
+      "whenNotToUse_en": [
+        "Do not introduce this when value, operating model, and ownership are still unclear."
       ]
     },
     {
@@ -52,6 +80,36 @@
       ],
       "whenNotToUse": [
         "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
+      ],
+      "intro_de": "Es geht um die Definition und den stabilen Betrieb von Schnittstellenverträgen inklusive Security, Versionierung und Governance. Dieser Punkt beeinflusst direkt Entkopplung, Änderbarkeit und Integrationskosten über Teamgrenzen hinweg.",
+      "intro_en": "This item is about defining and running stable interface contracts, including security, versioning, and governance. It directly impacts decoupling, changeability, and integration cost across teams.",
+      "whyRing_de": "Dieser Punkt ist operativ bewährt und für neue Integrationen die Standardwahl.",
+      "whyRing_en": "This item is operationally proven and should be the default choice for new integrations.",
+      "risks_de": [
+        "Unklare API-Verträge und Security-Regeln führen zu Integrationsbrüchen und erhöhtem Betriebsaufwand."
+      ],
+      "risks_en": [
+        "Unklare API-Verträge und Security-Regeln führen zu Integrationsbrüchen und erhöhtem Betriebsaufwand."
+      ],
+      "do_de": [
+        "API-Vertrag inkl. Fehlercode-Modell und Versionierung verbindlich machen.",
+        "AuthN/AuthZ, Rate Limits und Secrets sauber über Policies steuern."
+      ],
+      "do_en": [
+        "Make API contracts, error models, and versioning mandatory.",
+        "Manage AuthN/AuthZ, rate limits, and secrets through explicit policies."
+      ],
+      "dont_de": [
+        "Keine stillen Breaking Changes ohne Migrationspfad einführen."
+      ],
+      "dont_en": [
+        "Do not introduce silent breaking changes without a migration path."
+      ],
+      "whenNotToUse_de": [
+        "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
+      ],
+      "whenNotToUse_en": [
+        "Do not introduce this when value, operating model, and ownership are still unclear."
       ]
     },
     {
@@ -80,6 +138,38 @@
       ],
       "whenNotToUse": [
         "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
+      ],
+      "intro_de": "Es geht um event-getriebene Integrationsmuster mit asynchroner Kopplung und resilienter Zustellung. Dieser Punkt bestimmt, wie robust Systeme bei Last, Ausfällen und fachlicher Entkopplung zusammenarbeiten.",
+      "intro_en": "This item is about event-driven integration with asynchronous coupling and resilient delivery. It determines how robust systems remain under load, failures, and cross-domain decoupling.",
+      "whyRing_de": "Dieser Punkt ist vielversprechend, sollte aber gezielt und mit klaren Guardrails eingesetzt werden.",
+      "whyRing_en": "This item is promising but should be introduced selectively with clear guardrails.",
+      "risks_de": [
+        "Unklare Zustellsemantik oder fehlende DLQ/Retry-Strategien erzeugen schwer reproduzierbare Fehlerbilder."
+      ],
+      "risks_en": [
+        "Unklare Zustellsemantik oder fehlende DLQ/Retry-Strategien erzeugen schwer reproduzierbare Fehlerbilder."
+      ],
+      "do_de": [
+        "Einsatz auf wenige, geeignete Domänen begrenzen und Ergebnisse systematisch auswerten.",
+        "Schemas versionieren und Consumer-Kompatibilität explizit testen.",
+        "Retry/Backoff, DLQ und Reprocessing-Runbook definieren."
+      ],
+      "do_en": [
+        "Einsatz auf wenige, geeignete Domänen begrenzen und Ergebnisse systematisch auswerten.",
+        "Schemas versionieren und Consumer-Kompatibilität explizit testen.",
+        "Retry/Backoff, DLQ und Reprocessing-Runbook definieren."
+      ],
+      "dont_de": [
+        "Keine Events ohne Ownership und fachliche Idempotenz veröffentlichen."
+      ],
+      "dont_en": [
+        "Do not publish events without clear ownership and business idempotency."
+      ],
+      "whenNotToUse_de": [
+        "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
+      ],
+      "whenNotToUse_en": [
+        "Do not introduce this when value, operating model, and ownership are still unclear."
       ]
     },
     {
@@ -108,6 +198,38 @@
       ],
       "whenNotToUse": [
         "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
+      ],
+      "intro_de": "Es geht um event-getriebene Integrationsmuster mit asynchroner Kopplung und resilienter Zustellung. Dieser Punkt bestimmt, wie robust Systeme bei Last, Ausfällen und fachlicher Entkopplung zusammenarbeiten.",
+      "intro_en": "This item is about event-driven integration with asynchronous coupling and resilient delivery. It determines how robust systems remain under load, failures, and cross-domain decoupling.",
+      "whyRing_de": "Dieser Punkt ist vielversprechend, sollte aber gezielt und mit klaren Guardrails eingesetzt werden.",
+      "whyRing_en": "This item is promising but should be introduced selectively with clear guardrails.",
+      "risks_de": [
+        "Unklare Zustellsemantik oder fehlende DLQ/Retry-Strategien erzeugen schwer reproduzierbare Fehlerbilder."
+      ],
+      "risks_en": [
+        "Unklare Zustellsemantik oder fehlende DLQ/Retry-Strategien erzeugen schwer reproduzierbare Fehlerbilder."
+      ],
+      "do_de": [
+        "Einsatz auf wenige, geeignete Domänen begrenzen und Ergebnisse systematisch auswerten.",
+        "Schemas versionieren und Consumer-Kompatibilität explizit testen.",
+        "Retry/Backoff, DLQ und Reprocessing-Runbook definieren."
+      ],
+      "do_en": [
+        "Einsatz auf wenige, geeignete Domänen begrenzen und Ergebnisse systematisch auswerten.",
+        "Schemas versionieren und Consumer-Kompatibilität explizit testen.",
+        "Retry/Backoff, DLQ und Reprocessing-Runbook definieren."
+      ],
+      "dont_de": [
+        "Keine Events ohne Ownership und fachliche Idempotenz veröffentlichen."
+      ],
+      "dont_en": [
+        "Do not publish events without clear ownership and business idempotency."
+      ],
+      "whenNotToUse_de": [
+        "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
+      ],
+      "whenNotToUse_en": [
+        "Do not introduce this when value, operating model, and ownership are still unclear."
       ]
     },
     {
@@ -134,6 +256,34 @@
       ],
       "whenNotToUse": [
         "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
+      ],
+      "intro_de": "Es geht um eine SAP-spezifische Integrationsfähigkeit innerhalb der BTP-/ERP-Landschaft. Dieser Punkt beeinflusst sowohl fachliche Time-to-Value als auch den späteren Betriebsaufwand.",
+      "intro_en": "This item is about SAP-specific integration capability within a BTP/ERP landscape. It influences both business time-to-value and long-term operational effort.",
+      "whyRing_de": "Dieser Punkt ist operativ bewährt und für neue Integrationen die Standardwahl.",
+      "whyRing_en": "This item is operationally proven and should be the default choice for new integrations.",
+      "risks_de": [
+        "Fehlende klare Zuständigkeiten und Zielbilder führen zu inkonsistenten Umsetzungen zwischen Teams."
+      ],
+      "risks_en": [
+        "Fehlende klare Zuständigkeiten und Zielbilder führen zu inkonsistenten Umsetzungen zwischen Teams."
+      ],
+      "do_de": [
+        "Klare Success-Kriterien und Betriebsmetriken vor dem Rollout festlegen."
+      ],
+      "do_en": [
+        "Define clear success criteria and operating metrics before rollout."
+      ],
+      "dont_de": [
+        "Keine Einführung ohne abgestimmtes Betriebs- und Ownership-Modell."
+      ],
+      "dont_en": [
+        "Do not adopt without an agreed operating model and ownership setup."
+      ],
+      "whenNotToUse_de": [
+        "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
+      ],
+      "whenNotToUse_en": [
+        "Do not introduce this when value, operating model, and ownership are still unclear."
       ]
     },
     {
@@ -161,6 +311,36 @@
       ],
       "whenNotToUse": [
         "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
+      ],
+      "intro_de": "Es geht um eine SAP-spezifische Integrationsfähigkeit innerhalb der BTP-/ERP-Landschaft. Dieser Punkt beeinflusst sowohl fachliche Time-to-Value als auch den späteren Betriebsaufwand.",
+      "intro_en": "This item is about SAP-specific integration capability within a BTP/ERP landscape. It influences both business time-to-value and long-term operational effort.",
+      "whyRing_de": "Dieser Punkt ist vielversprechend, sollte aber gezielt und mit klaren Guardrails eingesetzt werden.",
+      "whyRing_en": "This item is promising but should be introduced selectively with clear guardrails.",
+      "risks_de": [
+        "Fehlende klare Zuständigkeiten und Zielbilder führen zu inkonsistenten Umsetzungen zwischen Teams."
+      ],
+      "risks_en": [
+        "Fehlende klare Zuständigkeiten und Zielbilder führen zu inkonsistenten Umsetzungen zwischen Teams."
+      ],
+      "do_de": [
+        "Einsatz auf wenige, geeignete Domänen begrenzen und Ergebnisse systematisch auswerten.",
+        "Klare Success-Kriterien und Betriebsmetriken vor dem Rollout festlegen."
+      ],
+      "do_en": [
+        "Einsatz auf wenige, geeignete Domänen begrenzen und Ergebnisse systematisch auswerten.",
+        "Define clear success criteria and operating metrics before rollout."
+      ],
+      "dont_de": [
+        "Keine Einführung ohne abgestimmtes Betriebs- und Ownership-Modell."
+      ],
+      "dont_en": [
+        "Do not adopt without an agreed operating model and ownership setup."
+      ],
+      "whenNotToUse_de": [
+        "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
+      ],
+      "whenNotToUse_en": [
+        "Do not introduce this when value, operating model, and ownership are still unclear."
       ]
     },
     {
@@ -188,6 +368,36 @@
       ],
       "whenNotToUse": [
         "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
+      ],
+      "intro_de": "Es geht um eine SAP-spezifische Integrationsfähigkeit innerhalb der BTP-/ERP-Landschaft. Dieser Punkt beeinflusst sowohl fachliche Time-to-Value als auch den späteren Betriebsaufwand.",
+      "intro_en": "This item is about SAP-specific integration capability within a BTP/ERP landscape. It influences both business time-to-value and long-term operational effort.",
+      "whyRing_de": "Dieser Punkt hat Potenzial, braucht aber vor breiter Nutzung noch strukturierte Validierung.",
+      "whyRing_en": "This item has potential but requires structured validation before broader adoption.",
+      "risks_de": [
+        "Fehlende klare Zuständigkeiten und Zielbilder führen zu inkonsistenten Umsetzungen zwischen Teams."
+      ],
+      "risks_en": [
+        "Fehlende klare Zuständigkeiten und Zielbilder führen zu inkonsistenten Umsetzungen zwischen Teams."
+      ],
+      "do_de": [
+        "Zeitlich begrenzten PoC mit klarer Go/No-Go-Entscheidung durchführen.",
+        "Klare Success-Kriterien und Betriebsmetriken vor dem Rollout festlegen."
+      ],
+      "do_en": [
+        "Zeitlich begrenzten PoC mit klarer Go/No-Go-Entscheidung durchführen.",
+        "Define clear success criteria and operating metrics before rollout."
+      ],
+      "dont_de": [
+        "Keine Einführung ohne abgestimmtes Betriebs- und Ownership-Modell."
+      ],
+      "dont_en": [
+        "Do not adopt without an agreed operating model and ownership setup."
+      ],
+      "whenNotToUse_de": [
+        "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
+      ],
+      "whenNotToUse_en": [
+        "Do not introduce this when value, operating model, and ownership are still unclear."
       ]
     },
     {
@@ -215,6 +425,36 @@
       ],
       "whenNotToUse": [
         "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
+      ],
+      "intro_de": "Es geht um Edge Integration Cell als Integrationsbaustein mit direktem Einfluss auf Architektur- und Betriebsentscheidungen.",
+      "intro_en": "This item is about Edge Integration Cell as an integration building block with direct impact on architecture and operations decisions.",
+      "whyRing_de": "Dieser Punkt ist vielversprechend, sollte aber gezielt und mit klaren Guardrails eingesetzt werden.",
+      "whyRing_en": "This item is promising but should be introduced selectively with clear guardrails.",
+      "risks_de": [
+        "Fehlende klare Zuständigkeiten und Zielbilder führen zu inkonsistenten Umsetzungen zwischen Teams."
+      ],
+      "risks_en": [
+        "Fehlende klare Zuständigkeiten und Zielbilder führen zu inkonsistenten Umsetzungen zwischen Teams."
+      ],
+      "do_de": [
+        "Einsatz auf wenige, geeignete Domänen begrenzen und Ergebnisse systematisch auswerten.",
+        "Klare Success-Kriterien und Betriebsmetriken vor dem Rollout festlegen."
+      ],
+      "do_en": [
+        "Einsatz auf wenige, geeignete Domänen begrenzen und Ergebnisse systematisch auswerten.",
+        "Define clear success criteria and operating metrics before rollout."
+      ],
+      "dont_de": [
+        "Keine Einführung ohne abgestimmtes Betriebs- und Ownership-Modell."
+      ],
+      "dont_en": [
+        "Do not adopt without an agreed operating model and ownership setup."
+      ],
+      "whenNotToUse_de": [
+        "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
+      ],
+      "whenNotToUse_en": [
+        "Do not introduce this when value, operating model, and ownership are still unclear."
       ]
     },
     {
@@ -240,6 +480,36 @@
       "references": [],
       "whenNotToUse": [
         "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
+      ],
+      "intro_de": "Es geht um Kyma Runtime (for integration microservices) als Integrationsbaustein mit direktem Einfluss auf Architektur- und Betriebsentscheidungen.",
+      "intro_en": "This item is about Kyma Runtime (for integration microservices) as an integration building block with direct impact on architecture and operations decisions.",
+      "whyRing_de": "Dieser Punkt ist vielversprechend, sollte aber gezielt und mit klaren Guardrails eingesetzt werden.",
+      "whyRing_en": "This item is promising but should be introduced selectively with clear guardrails.",
+      "risks_de": [
+        "Fehlende klare Zuständigkeiten und Zielbilder führen zu inkonsistenten Umsetzungen zwischen Teams."
+      ],
+      "risks_en": [
+        "Fehlende klare Zuständigkeiten und Zielbilder führen zu inkonsistenten Umsetzungen zwischen Teams."
+      ],
+      "do_de": [
+        "Einsatz auf wenige, geeignete Domänen begrenzen und Ergebnisse systematisch auswerten.",
+        "Klare Success-Kriterien und Betriebsmetriken vor dem Rollout festlegen."
+      ],
+      "do_en": [
+        "Einsatz auf wenige, geeignete Domänen begrenzen und Ergebnisse systematisch auswerten.",
+        "Define clear success criteria and operating metrics before rollout."
+      ],
+      "dont_de": [
+        "Keine Einführung ohne abgestimmtes Betriebs- und Ownership-Modell."
+      ],
+      "dont_en": [
+        "Do not adopt without an agreed operating model and ownership setup."
+      ],
+      "whenNotToUse_de": [
+        "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
+      ],
+      "whenNotToUse_en": [
+        "Do not introduce this when value, operating model, and ownership are still unclear."
       ]
     },
     {
@@ -266,6 +536,36 @@
         "https://help.sap.com/docs/build-process-automation"
       ],
       "whenNotToUse": [
+        "Nicht ohne abgestimmtes Governance- und Rollback-Modell einführen."
+      ],
+      "intro_de": "Es geht um die zuverlässige Bereitstellung und Steuerung von Integrationsartefakten über Umgebungen hinweg. Dieser Punkt wirkt direkt auf Änderungsqualität, Auditierbarkeit und Release-Geschwindigkeit.",
+      "intro_en": "This item is about reliable delivery and control of integration artifacts across environments. It directly affects change quality, auditability, and release speed.",
+      "whyRing_de": "Dieser Punkt hat Potenzial, braucht aber vor breiter Nutzung noch strukturierte Validierung.",
+      "whyRing_en": "This item has potential but requires structured validation before broader adoption.",
+      "risks_de": [
+        "Schwache Deployment-Governance erhöht Change-Risiko und Audit-Aufwand."
+      ],
+      "risks_en": [
+        "Schwache Deployment-Governance erhöht Change-Risiko und Audit-Aufwand."
+      ],
+      "do_de": [
+        "Zeitlich begrenzten PoC mit klarer Go/No-Go-Entscheidung durchführen.",
+        "Changes über Pipeline mit Freigaben, Checks und Rollback-Plan ausrollen."
+      ],
+      "do_en": [
+        "Zeitlich begrenzten PoC mit klarer Go/No-Go-Entscheidung durchführen.",
+        "Changes über Pipeline mit Freigaben, Checks und Rollback-Plan ausrollen."
+      ],
+      "dont_de": [
+        "Keine direkten Prod-Änderungen außerhalb des definierten Change-Prozesses."
+      ],
+      "dont_en": [
+        "Keine direkten Prod-Änderungen außerhalb des definierten Change-Prozesses."
+      ],
+      "whenNotToUse_de": [
+        "Nicht ohne abgestimmtes Governance- und Rollback-Modell einführen."
+      ],
+      "whenNotToUse_en": [
         "Nicht ohne abgestimmtes Governance- und Rollback-Modell einführen."
       ]
     },
@@ -294,6 +594,36 @@
       ],
       "whenNotToUse": [
         "Nicht für neue Greenfield-Integrationen verwenden."
+      ],
+      "intro_de": "Es geht um eine SAP-spezifische Integrationsfähigkeit innerhalb der BTP-/ERP-Landschaft. Dieser Punkt beeinflusst sowohl fachliche Time-to-Value als auch den späteren Betriebsaufwand.",
+      "intro_en": "This item is about SAP-specific integration capability within a BTP/ERP landscape. It influences both business time-to-value and long-term operational effort.",
+      "whyRing_de": "Dieser Punkt ist für neue Implementierungen nicht empfohlen und sollte nur kontrolliert im Bestand laufen.",
+      "whyRing_en": "This item is not recommended for new implementations and should be contained in legacy scope only.",
+      "risks_de": [
+        "Fehlende klare Zuständigkeiten und Zielbilder führen zu inkonsistenten Umsetzungen zwischen Teams."
+      ],
+      "risks_en": [
+        "Fehlende klare Zuständigkeiten und Zielbilder führen zu inkonsistenten Umsetzungen zwischen Teams."
+      ],
+      "do_de": [
+        "Bestandsnutzung nur mit Exit-Strategie und priorisiertem Ablöseplan fortführen.",
+        "Klare Success-Kriterien und Betriebsmetriken vor dem Rollout festlegen."
+      ],
+      "do_en": [
+        "Bestandsnutzung nur mit Exit-Strategie und priorisiertem Ablöseplan fortführen.",
+        "Define clear success criteria and operating metrics before rollout."
+      ],
+      "dont_de": [
+        "Keine Einführung ohne abgestimmtes Betriebs- und Ownership-Modell."
+      ],
+      "dont_en": [
+        "Do not adopt without an agreed operating model and ownership setup."
+      ],
+      "whenNotToUse_de": [
+        "Nicht für neue Greenfield-Integrationen verwenden."
+      ],
+      "whenNotToUse_en": [
+        "Do not use for new greenfield integrations."
       ]
     },
     {
@@ -322,6 +652,38 @@
       "whenNotToUse": [
         "Nicht für neue Greenfield-Integrationen verwenden.",
         "Nicht einsetzen, wenn API- oder Event-basierte Alternativen verfügbar sind."
+      ],
+      "intro_de": "Es geht um eine SAP-spezifische Integrationsfähigkeit innerhalb der BTP-/ERP-Landschaft. Dieser Punkt beeinflusst sowohl fachliche Time-to-Value als auch den späteren Betriebsaufwand.",
+      "intro_en": "This item is about SAP-specific integration capability within a BTP/ERP landscape. It influences both business time-to-value and long-term operational effort.",
+      "whyRing_de": "Dieser Punkt ist für neue Implementierungen nicht empfohlen und sollte nur kontrolliert im Bestand laufen.",
+      "whyRing_en": "This item is not recommended for new implementations and should be contained in legacy scope only.",
+      "risks_de": [
+        "Fehlende klare Zuständigkeiten und Zielbilder führen zu inkonsistenten Umsetzungen zwischen Teams."
+      ],
+      "risks_en": [
+        "Fehlende klare Zuständigkeiten und Zielbilder führen zu inkonsistenten Umsetzungen zwischen Teams."
+      ],
+      "do_de": [
+        "Bestandsnutzung nur mit Exit-Strategie und priorisiertem Ablöseplan fortführen.",
+        "Migrationspfad zu API-/Event-basierten Integrationsmustern aktiv planen."
+      ],
+      "do_en": [
+        "Bestandsnutzung nur mit Exit-Strategie und priorisiertem Ablöseplan fortführen.",
+        "Migrationspfad zu API-/Event-basierten Integrationsmustern aktiv planen."
+      ],
+      "dont_de": [
+        "Keine neuen Legacy-Kopplungen in Greenfield-Umfängen aufbauen."
+      ],
+      "dont_en": [
+        "Keine neuen Legacy-Kopplungen in Greenfield-Umfängen aufbauen."
+      ],
+      "whenNotToUse_de": [
+        "Nicht für neue Greenfield-Integrationen verwenden.",
+        "Nicht einsetzen, wenn API- oder Event-basierte Alternativen verfügbar sind."
+      ],
+      "whenNotToUse_en": [
+        "Do not use for new greenfield integrations.",
+        "Do not use when API- or event-based alternatives are available."
       ]
     },
     {
@@ -345,6 +707,34 @@
       ],
       "references": [],
       "whenNotToUse": [
+        "Nicht als „best effort“-Nebenaufgabe behandeln; Ownership und SLOs sind Pflicht."
+      ],
+      "intro_de": "Es geht um Beobachtbarkeit und Betriebssicherheit in End-to-End-Integrationsketten. Dieser Punkt entscheidet, wie schnell Ursachen erkannt und Incidents nachhaltig behoben werden können.",
+      "intro_en": "This item is about observability and operational safety across end-to-end integration chains. It determines how quickly root causes are detected and incidents are resolved sustainably.",
+      "whyRing_de": "Dieser Punkt ist operativ bewährt und für neue Integrationen die Standardwahl.",
+      "whyRing_en": "This item is operationally proven and should be the default choice for new integrations.",
+      "risks_de": [
+        "Fehlende End-to-End-Sichtbarkeit verlängert Incident-Zeiten und erschwert Ursachenanalyse."
+      ],
+      "risks_en": [
+        "Fehlende End-to-End-Sichtbarkeit verlängert Incident-Zeiten und erschwert Ursachenanalyse."
+      ],
+      "do_de": [
+        "Klare Success-Kriterien und Betriebsmetriken vor dem Rollout festlegen."
+      ],
+      "do_en": [
+        "Define clear success criteria and operating metrics before rollout."
+      ],
+      "dont_de": [
+        "Keine Einführung ohne abgestimmtes Betriebs- und Ownership-Modell."
+      ],
+      "dont_en": [
+        "Do not adopt without an agreed operating model and ownership setup."
+      ],
+      "whenNotToUse_de": [
+        "Nicht als „best effort“-Nebenaufgabe behandeln; Ownership und SLOs sind Pflicht."
+      ],
+      "whenNotToUse_en": [
         "Nicht als „best effort“-Nebenaufgabe behandeln; Ownership und SLOs sind Pflicht."
       ]
     },
@@ -371,6 +761,36 @@
       "references": [],
       "whenNotToUse": [
         "Nicht ohne abgestimmtes Governance- und Rollback-Modell einführen."
+      ],
+      "intro_de": "Es geht um die zuverlässige Bereitstellung und Steuerung von Integrationsartefakten über Umgebungen hinweg. Dieser Punkt wirkt direkt auf Änderungsqualität, Auditierbarkeit und Release-Geschwindigkeit.",
+      "intro_en": "This item is about reliable delivery and control of integration artifacts across environments. It directly affects change quality, auditability, and release speed.",
+      "whyRing_de": "Dieser Punkt ist vielversprechend, sollte aber gezielt und mit klaren Guardrails eingesetzt werden.",
+      "whyRing_en": "This item is promising but should be introduced selectively with clear guardrails.",
+      "risks_de": [
+        "Schwache Deployment-Governance erhöht Change-Risiko und Audit-Aufwand."
+      ],
+      "risks_en": [
+        "Schwache Deployment-Governance erhöht Change-Risiko und Audit-Aufwand."
+      ],
+      "do_de": [
+        "Einsatz auf wenige, geeignete Domänen begrenzen und Ergebnisse systematisch auswerten.",
+        "Changes über Pipeline mit Freigaben, Checks und Rollback-Plan ausrollen."
+      ],
+      "do_en": [
+        "Einsatz auf wenige, geeignete Domänen begrenzen und Ergebnisse systematisch auswerten.",
+        "Changes über Pipeline mit Freigaben, Checks und Rollback-Plan ausrollen."
+      ],
+      "dont_de": [
+        "Keine direkten Prod-Änderungen außerhalb des definierten Change-Prozesses."
+      ],
+      "dont_en": [
+        "Keine direkten Prod-Änderungen außerhalb des definierten Change-Prozesses."
+      ],
+      "whenNotToUse_de": [
+        "Nicht ohne abgestimmtes Governance- und Rollback-Modell einführen."
+      ],
+      "whenNotToUse_en": [
+        "Nicht ohne abgestimmtes Governance- und Rollback-Modell einführen."
       ]
     },
     {
@@ -395,6 +815,34 @@
       "references": [],
       "whenNotToUse": [
         "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
+      ],
+      "intro_de": "Es geht um Secret handling via vault/KMS als Integrationsbaustein mit direktem Einfluss auf Architektur- und Betriebsentscheidungen.",
+      "intro_en": "This item is about Secret handling via vault/KMS as an integration building block with direct impact on architecture and operations decisions.",
+      "whyRing_de": "Dieser Punkt ist operativ bewährt und für neue Integrationen die Standardwahl.",
+      "whyRing_en": "This item is operationally proven and should be the default choice for new integrations.",
+      "risks_de": [
+        "Fehlende klare Zuständigkeiten und Zielbilder führen zu inkonsistenten Umsetzungen zwischen Teams."
+      ],
+      "risks_en": [
+        "Fehlende klare Zuständigkeiten und Zielbilder führen zu inkonsistenten Umsetzungen zwischen Teams."
+      ],
+      "do_de": [
+        "Klare Success-Kriterien und Betriebsmetriken vor dem Rollout festlegen."
+      ],
+      "do_en": [
+        "Define clear success criteria and operating metrics before rollout."
+      ],
+      "dont_de": [
+        "Keine Einführung ohne abgestimmtes Betriebs- und Ownership-Modell."
+      ],
+      "dont_en": [
+        "Do not adopt without an agreed operating model and ownership setup."
+      ],
+      "whenNotToUse_de": [
+        "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
+      ],
+      "whenNotToUse_en": [
+        "Do not introduce this when value, operating model, and ownership are still unclear."
       ]
     },
     {
@@ -422,6 +870,36 @@
       ],
       "whenNotToUse": [
         "Nicht als „best effort“-Nebenaufgabe behandeln; Ownership und SLOs sind Pflicht."
+      ],
+      "intro_de": "Es geht um Beobachtbarkeit und Betriebssicherheit in End-to-End-Integrationsketten. Dieser Punkt entscheidet, wie schnell Ursachen erkannt und Incidents nachhaltig behoben werden können.",
+      "intro_en": "This item is about observability and operational safety across end-to-end integration chains. It determines how quickly root causes are detected and incidents are resolved sustainably.",
+      "whyRing_de": "Dieser Punkt ist vielversprechend, sollte aber gezielt und mit klaren Guardrails eingesetzt werden.",
+      "whyRing_en": "This item is promising but should be introduced selectively with clear guardrails.",
+      "risks_de": [
+        "Fehlende End-to-End-Sichtbarkeit verlängert Incident-Zeiten und erschwert Ursachenanalyse."
+      ],
+      "risks_en": [
+        "Fehlende End-to-End-Sichtbarkeit verlängert Incident-Zeiten und erschwert Ursachenanalyse."
+      ],
+      "do_de": [
+        "Einsatz auf wenige, geeignete Domänen begrenzen und Ergebnisse systematisch auswerten.",
+        "Klare Success-Kriterien und Betriebsmetriken vor dem Rollout festlegen."
+      ],
+      "do_en": [
+        "Einsatz auf wenige, geeignete Domänen begrenzen und Ergebnisse systematisch auswerten.",
+        "Define clear success criteria and operating metrics before rollout."
+      ],
+      "dont_de": [
+        "Keine Einführung ohne abgestimmtes Betriebs- und Ownership-Modell."
+      ],
+      "dont_en": [
+        "Do not adopt without an agreed operating model and ownership setup."
+      ],
+      "whenNotToUse_de": [
+        "Nicht als „best effort“-Nebenaufgabe behandeln; Ownership und SLOs sind Pflicht."
+      ],
+      "whenNotToUse_en": [
+        "Nicht als „best effort“-Nebenaufgabe behandeln; Ownership und SLOs sind Pflicht."
       ]
     },
     {
@@ -447,6 +925,36 @@
       "references": [],
       "whenNotToUse": [
         "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
+      ],
+      "intro_de": "Es geht um Contract testing for integrations als Integrationsbaustein mit direktem Einfluss auf Architektur- und Betriebsentscheidungen.",
+      "intro_en": "This item is about Contract testing for integrations as an integration building block with direct impact on architecture and operations decisions.",
+      "whyRing_de": "Dieser Punkt ist vielversprechend, sollte aber gezielt und mit klaren Guardrails eingesetzt werden.",
+      "whyRing_en": "This item is promising but should be introduced selectively with clear guardrails.",
+      "risks_de": [
+        "Fehlende klare Zuständigkeiten und Zielbilder führen zu inkonsistenten Umsetzungen zwischen Teams."
+      ],
+      "risks_en": [
+        "Fehlende klare Zuständigkeiten und Zielbilder führen zu inkonsistenten Umsetzungen zwischen Teams."
+      ],
+      "do_de": [
+        "Einsatz auf wenige, geeignete Domänen begrenzen und Ergebnisse systematisch auswerten.",
+        "Klare Success-Kriterien und Betriebsmetriken vor dem Rollout festlegen."
+      ],
+      "do_en": [
+        "Einsatz auf wenige, geeignete Domänen begrenzen und Ergebnisse systematisch auswerten.",
+        "Define clear success criteria and operating metrics before rollout."
+      ],
+      "dont_de": [
+        "Keine Einführung ohne abgestimmtes Betriebs- und Ownership-Modell."
+      ],
+      "dont_en": [
+        "Do not adopt without an agreed operating model and ownership setup."
+      ],
+      "whenNotToUse_de": [
+        "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
+      ],
+      "whenNotToUse_en": [
+        "Do not introduce this when value, operating model, and ownership are still unclear."
       ]
     },
     {
@@ -471,6 +979,36 @@
       ],
       "references": [],
       "whenNotToUse": [
+        "Nicht ohne abgestimmtes Governance- und Rollback-Modell einführen."
+      ],
+      "intro_de": "Es geht um die zuverlässige Bereitstellung und Steuerung von Integrationsartefakten über Umgebungen hinweg. Dieser Punkt wirkt direkt auf Änderungsqualität, Auditierbarkeit und Release-Geschwindigkeit.",
+      "intro_en": "This item is about reliable delivery and control of integration artifacts across environments. It directly affects change quality, auditability, and release speed.",
+      "whyRing_de": "Dieser Punkt ist vielversprechend, sollte aber gezielt und mit klaren Guardrails eingesetzt werden.",
+      "whyRing_en": "This item is promising but should be introduced selectively with clear guardrails.",
+      "risks_de": [
+        "Schwache Deployment-Governance erhöht Change-Risiko und Audit-Aufwand."
+      ],
+      "risks_en": [
+        "Schwache Deployment-Governance erhöht Change-Risiko und Audit-Aufwand."
+      ],
+      "do_de": [
+        "Einsatz auf wenige, geeignete Domänen begrenzen und Ergebnisse systematisch auswerten.",
+        "Changes über Pipeline mit Freigaben, Checks und Rollback-Plan ausrollen."
+      ],
+      "do_en": [
+        "Einsatz auf wenige, geeignete Domänen begrenzen und Ergebnisse systematisch auswerten.",
+        "Changes über Pipeline mit Freigaben, Checks und Rollback-Plan ausrollen."
+      ],
+      "dont_de": [
+        "Keine direkten Prod-Änderungen außerhalb des definierten Change-Prozesses."
+      ],
+      "dont_en": [
+        "Keine direkten Prod-Änderungen außerhalb des definierten Change-Prozesses."
+      ],
+      "whenNotToUse_de": [
+        "Nicht ohne abgestimmtes Governance- und Rollback-Modell einführen."
+      ],
+      "whenNotToUse_en": [
         "Nicht ohne abgestimmtes Governance- und Rollback-Modell einführen."
       ]
     },
@@ -497,6 +1035,36 @@
       "references": [],
       "whenNotToUse": [
         "Nicht ohne abgestimmtes Governance- und Rollback-Modell einführen."
+      ],
+      "intro_de": "Es geht um die zuverlässige Bereitstellung und Steuerung von Integrationsartefakten über Umgebungen hinweg. Dieser Punkt wirkt direkt auf Änderungsqualität, Auditierbarkeit und Release-Geschwindigkeit.",
+      "intro_en": "This item is about reliable delivery and control of integration artifacts across environments. It directly affects change quality, auditability, and release speed.",
+      "whyRing_de": "Dieser Punkt hat Potenzial, braucht aber vor breiter Nutzung noch strukturierte Validierung.",
+      "whyRing_en": "This item has potential but requires structured validation before broader adoption.",
+      "risks_de": [
+        "Schwache Deployment-Governance erhöht Change-Risiko und Audit-Aufwand."
+      ],
+      "risks_en": [
+        "Schwache Deployment-Governance erhöht Change-Risiko und Audit-Aufwand."
+      ],
+      "do_de": [
+        "Zeitlich begrenzten PoC mit klarer Go/No-Go-Entscheidung durchführen.",
+        "Changes über Pipeline mit Freigaben, Checks und Rollback-Plan ausrollen."
+      ],
+      "do_en": [
+        "Zeitlich begrenzten PoC mit klarer Go/No-Go-Entscheidung durchführen.",
+        "Changes über Pipeline mit Freigaben, Checks und Rollback-Plan ausrollen."
+      ],
+      "dont_de": [
+        "Keine direkten Prod-Änderungen außerhalb des definierten Change-Prozesses."
+      ],
+      "dont_en": [
+        "Keine direkten Prod-Änderungen außerhalb des definierten Change-Prozesses."
+      ],
+      "whenNotToUse_de": [
+        "Nicht ohne abgestimmtes Governance- und Rollback-Modell einführen."
+      ],
+      "whenNotToUse_en": [
+        "Nicht ohne abgestimmtes Governance- und Rollback-Modell einführen."
       ]
     },
     {
@@ -522,6 +1090,36 @@
       "references": [],
       "whenNotToUse": [
         "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
+      ],
+      "intro_de": "Es geht um Third-party CPI DevOps suites (e.g., Figaf/Int4) als Integrationsbaustein mit direktem Einfluss auf Architektur- und Betriebsentscheidungen.",
+      "intro_en": "This item is about Third-party CPI DevOps suites (e.g., Figaf/Int4) as an integration building block with direct impact on architecture and operations decisions.",
+      "whyRing_de": "Dieser Punkt hat Potenzial, braucht aber vor breiter Nutzung noch strukturierte Validierung.",
+      "whyRing_en": "This item has potential but requires structured validation before broader adoption.",
+      "risks_de": [
+        "Fehlende klare Zuständigkeiten und Zielbilder führen zu inkonsistenten Umsetzungen zwischen Teams."
+      ],
+      "risks_en": [
+        "Fehlende klare Zuständigkeiten und Zielbilder führen zu inkonsistenten Umsetzungen zwischen Teams."
+      ],
+      "do_de": [
+        "Zeitlich begrenzten PoC mit klarer Go/No-Go-Entscheidung durchführen.",
+        "Klare Success-Kriterien und Betriebsmetriken vor dem Rollout festlegen."
+      ],
+      "do_en": [
+        "Zeitlich begrenzten PoC mit klarer Go/No-Go-Entscheidung durchführen.",
+        "Define clear success criteria and operating metrics before rollout."
+      ],
+      "dont_de": [
+        "Keine Einführung ohne abgestimmtes Betriebs- und Ownership-Modell."
+      ],
+      "dont_en": [
+        "Do not adopt without an agreed operating model and ownership setup."
+      ],
+      "whenNotToUse_de": [
+        "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
+      ],
+      "whenNotToUse_en": [
+        "Do not introduce this when value, operating model, and ownership are still unclear."
       ]
     },
     {
@@ -548,6 +1146,34 @@
       ],
       "whenNotToUse": [
         "Nicht ohne abgestimmtes Governance- und Rollback-Modell einführen."
+      ],
+      "intro_de": "Es geht um die zuverlässige Bereitstellung und Steuerung von Integrationsartefakten über Umgebungen hinweg. Dieser Punkt wirkt direkt auf Änderungsqualität, Auditierbarkeit und Release-Geschwindigkeit.",
+      "intro_en": "This item is about reliable delivery and control of integration artifacts across environments. It directly affects change quality, auditability, and release speed.",
+      "whyRing_de": "Dieser Punkt ist operativ bewährt und für neue Integrationen die Standardwahl.",
+      "whyRing_en": "This item is operationally proven and should be the default choice for new integrations.",
+      "risks_de": [
+        "Schwache Deployment-Governance erhöht Change-Risiko und Audit-Aufwand."
+      ],
+      "risks_en": [
+        "Schwache Deployment-Governance erhöht Change-Risiko und Audit-Aufwand."
+      ],
+      "do_de": [
+        "Changes über Pipeline mit Freigaben, Checks und Rollback-Plan ausrollen."
+      ],
+      "do_en": [
+        "Changes über Pipeline mit Freigaben, Checks und Rollback-Plan ausrollen."
+      ],
+      "dont_de": [
+        "Keine direkten Prod-Änderungen außerhalb des definierten Change-Prozesses."
+      ],
+      "dont_en": [
+        "Keine direkten Prod-Änderungen außerhalb des definierten Change-Prozesses."
+      ],
+      "whenNotToUse_de": [
+        "Nicht ohne abgestimmtes Governance- und Rollback-Modell einführen."
+      ],
+      "whenNotToUse_en": [
+        "Nicht ohne abgestimmtes Governance- und Rollback-Modell einführen."
       ]
     },
     {
@@ -572,6 +1198,36 @@
       ],
       "references": [],
       "whenNotToUse": [
+        "Nicht ohne abgestimmtes Governance- und Rollback-Modell einführen."
+      ],
+      "intro_de": "Es geht um die zuverlässige Bereitstellung und Steuerung von Integrationsartefakten über Umgebungen hinweg. Dieser Punkt wirkt direkt auf Änderungsqualität, Auditierbarkeit und Release-Geschwindigkeit.",
+      "intro_en": "This item is about reliable delivery and control of integration artifacts across environments. It directly affects change quality, auditability, and release speed.",
+      "whyRing_de": "Dieser Punkt hat Potenzial, braucht aber vor breiter Nutzung noch strukturierte Validierung.",
+      "whyRing_en": "This item has potential but requires structured validation before broader adoption.",
+      "risks_de": [
+        "Schwache Deployment-Governance erhöht Change-Risiko und Audit-Aufwand."
+      ],
+      "risks_en": [
+        "Schwache Deployment-Governance erhöht Change-Risiko und Audit-Aufwand."
+      ],
+      "do_de": [
+        "Zeitlich begrenzten PoC mit klarer Go/No-Go-Entscheidung durchführen.",
+        "Changes über Pipeline mit Freigaben, Checks und Rollback-Plan ausrollen."
+      ],
+      "do_en": [
+        "Zeitlich begrenzten PoC mit klarer Go/No-Go-Entscheidung durchführen.",
+        "Changes über Pipeline mit Freigaben, Checks und Rollback-Plan ausrollen."
+      ],
+      "dont_de": [
+        "Keine direkten Prod-Änderungen außerhalb des definierten Change-Prozesses."
+      ],
+      "dont_en": [
+        "Keine direkten Prod-Änderungen außerhalb des definierten Change-Prozesses."
+      ],
+      "whenNotToUse_de": [
+        "Nicht ohne abgestimmtes Governance- und Rollback-Modell einführen."
+      ],
+      "whenNotToUse_en": [
         "Nicht ohne abgestimmtes Governance- und Rollback-Modell einführen."
       ]
     },
@@ -599,6 +1255,34 @@
       ],
       "whenNotToUse": [
         "Nicht als „best effort“-Nebenaufgabe behandeln; Ownership und SLOs sind Pflicht."
+      ],
+      "intro_de": "Es geht um Beobachtbarkeit und Betriebssicherheit in End-to-End-Integrationsketten. Dieser Punkt entscheidet, wie schnell Ursachen erkannt und Incidents nachhaltig behoben werden können.",
+      "intro_en": "This item is about observability and operational safety across end-to-end integration chains. It determines how quickly root causes are detected and incidents are resolved sustainably.",
+      "whyRing_de": "Dieser Punkt ist operativ bewährt und für neue Integrationen die Standardwahl.",
+      "whyRing_en": "This item is operationally proven and should be the default choice for new integrations.",
+      "risks_de": [
+        "Fehlende End-to-End-Sichtbarkeit verlängert Incident-Zeiten und erschwert Ursachenanalyse."
+      ],
+      "risks_en": [
+        "Fehlende End-to-End-Sichtbarkeit verlängert Incident-Zeiten und erschwert Ursachenanalyse."
+      ],
+      "do_de": [
+        "Klare Success-Kriterien und Betriebsmetriken vor dem Rollout festlegen."
+      ],
+      "do_en": [
+        "Define clear success criteria and operating metrics before rollout."
+      ],
+      "dont_de": [
+        "Keine Einführung ohne abgestimmtes Betriebs- und Ownership-Modell."
+      ],
+      "dont_en": [
+        "Do not adopt without an agreed operating model and ownership setup."
+      ],
+      "whenNotToUse_de": [
+        "Nicht als „best effort“-Nebenaufgabe behandeln; Ownership und SLOs sind Pflicht."
+      ],
+      "whenNotToUse_en": [
+        "Nicht als „best effort“-Nebenaufgabe behandeln; Ownership und SLOs sind Pflicht."
       ]
     },
     {
@@ -622,6 +1306,34 @@
       ],
       "references": [],
       "whenNotToUse": [
+        "Nicht als „best effort“-Nebenaufgabe behandeln; Ownership und SLOs sind Pflicht."
+      ],
+      "intro_de": "Es geht um Beobachtbarkeit und Betriebssicherheit in End-to-End-Integrationsketten. Dieser Punkt entscheidet, wie schnell Ursachen erkannt und Incidents nachhaltig behoben werden können.",
+      "intro_en": "This item is about observability and operational safety across end-to-end integration chains. It determines how quickly root causes are detected and incidents are resolved sustainably.",
+      "whyRing_de": "Dieser Punkt ist operativ bewährt und für neue Integrationen die Standardwahl.",
+      "whyRing_en": "This item is operationally proven and should be the default choice for new integrations.",
+      "risks_de": [
+        "Fehlende End-to-End-Sichtbarkeit verlängert Incident-Zeiten und erschwert Ursachenanalyse."
+      ],
+      "risks_en": [
+        "Fehlende End-to-End-Sichtbarkeit verlängert Incident-Zeiten und erschwert Ursachenanalyse."
+      ],
+      "do_de": [
+        "Klare Success-Kriterien und Betriebsmetriken vor dem Rollout festlegen."
+      ],
+      "do_en": [
+        "Define clear success criteria and operating metrics before rollout."
+      ],
+      "dont_de": [
+        "Keine Einführung ohne abgestimmtes Betriebs- und Ownership-Modell."
+      ],
+      "dont_en": [
+        "Do not adopt without an agreed operating model and ownership setup."
+      ],
+      "whenNotToUse_de": [
+        "Nicht als „best effort“-Nebenaufgabe behandeln; Ownership und SLOs sind Pflicht."
+      ],
+      "whenNotToUse_en": [
         "Nicht als „best effort“-Nebenaufgabe behandeln; Ownership und SLOs sind Pflicht."
       ]
     },
@@ -647,6 +1359,34 @@
       "references": [],
       "whenNotToUse": [
         "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
+      ],
+      "intro_de": "Es geht um Integration Assessment (ISA-M) als Integrationsbaustein mit direktem Einfluss auf Architektur- und Betriebsentscheidungen.",
+      "intro_en": "This item is about Integration Assessment (ISA-M) as an integration building block with direct impact on architecture and operations decisions.",
+      "whyRing_de": "Dieser Punkt ist operativ bewährt und für neue Integrationen die Standardwahl.",
+      "whyRing_en": "This item is operationally proven and should be the default choice for new integrations.",
+      "risks_de": [
+        "Fehlende klare Zuständigkeiten und Zielbilder führen zu inkonsistenten Umsetzungen zwischen Teams."
+      ],
+      "risks_en": [
+        "Fehlende klare Zuständigkeiten und Zielbilder führen zu inkonsistenten Umsetzungen zwischen Teams."
+      ],
+      "do_de": [
+        "Klare Success-Kriterien und Betriebsmetriken vor dem Rollout festlegen."
+      ],
+      "do_en": [
+        "Define clear success criteria and operating metrics before rollout."
+      ],
+      "dont_de": [
+        "Keine Einführung ohne abgestimmtes Betriebs- und Ownership-Modell."
+      ],
+      "dont_en": [
+        "Do not adopt without an agreed operating model and ownership setup."
+      ],
+      "whenNotToUse_de": [
+        "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
+      ],
+      "whenNotToUse_en": [
+        "Do not introduce this when value, operating model, and ownership are still unclear."
       ]
     },
     {
@@ -672,6 +1412,36 @@
       "references": [],
       "whenNotToUse": [
         "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
+      ],
+      "intro_de": "Es geht um die Definition und den stabilen Betrieb von Schnittstellenverträgen inklusive Security, Versionierung und Governance. Dieser Punkt beeinflusst direkt Entkopplung, Änderbarkeit und Integrationskosten über Teamgrenzen hinweg.",
+      "intro_en": "This item is about defining and running stable interface contracts, including security, versioning, and governance. It directly impacts decoupling, changeability, and integration cost across teams.",
+      "whyRing_de": "Dieser Punkt ist operativ bewährt und für neue Integrationen die Standardwahl.",
+      "whyRing_en": "This item is operationally proven and should be the default choice for new integrations.",
+      "risks_de": [
+        "Unklare API-Verträge und Security-Regeln führen zu Integrationsbrüchen und erhöhtem Betriebsaufwand."
+      ],
+      "risks_en": [
+        "Unklare API-Verträge und Security-Regeln führen zu Integrationsbrüchen und erhöhtem Betriebsaufwand."
+      ],
+      "do_de": [
+        "API-Vertrag inkl. Fehlercode-Modell und Versionierung verbindlich machen.",
+        "AuthN/AuthZ, Rate Limits und Secrets sauber über Policies steuern."
+      ],
+      "do_en": [
+        "Make API contracts, error models, and versioning mandatory.",
+        "Manage AuthN/AuthZ, rate limits, and secrets through explicit policies."
+      ],
+      "dont_de": [
+        "Keine stillen Breaking Changes ohne Migrationspfad einführen."
+      ],
+      "dont_en": [
+        "Do not introduce silent breaking changes without a migration path."
+      ],
+      "whenNotToUse_de": [
+        "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
+      ],
+      "whenNotToUse_en": [
+        "Do not introduce this when value, operating model, and ownership are still unclear."
       ]
     },
     {
@@ -699,6 +1469,36 @@
       ],
       "whenNotToUse": [
         "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
+      ],
+      "intro_de": "Es geht um eine SAP-spezifische Integrationsfähigkeit innerhalb der BTP-/ERP-Landschaft. Dieser Punkt beeinflusst sowohl fachliche Time-to-Value als auch den späteren Betriebsaufwand.",
+      "intro_en": "This item is about SAP-specific integration capability within a BTP/ERP landscape. It influences both business time-to-value and long-term operational effort.",
+      "whyRing_de": "Dieser Punkt hat Potenzial, braucht aber vor breiter Nutzung noch strukturierte Validierung.",
+      "whyRing_en": "This item has potential but requires structured validation before broader adoption.",
+      "risks_de": [
+        "Fehlende klare Zuständigkeiten und Zielbilder führen zu inkonsistenten Umsetzungen zwischen Teams."
+      ],
+      "risks_en": [
+        "Fehlende klare Zuständigkeiten und Zielbilder führen zu inkonsistenten Umsetzungen zwischen Teams."
+      ],
+      "do_de": [
+        "Zeitlich begrenzten PoC mit klarer Go/No-Go-Entscheidung durchführen.",
+        "Klare Success-Kriterien und Betriebsmetriken vor dem Rollout festlegen."
+      ],
+      "do_en": [
+        "Zeitlich begrenzten PoC mit klarer Go/No-Go-Entscheidung durchführen.",
+        "Define clear success criteria and operating metrics before rollout."
+      ],
+      "dont_de": [
+        "Keine Einführung ohne abgestimmtes Betriebs- und Ownership-Modell."
+      ],
+      "dont_en": [
+        "Do not adopt without an agreed operating model and ownership setup."
+      ],
+      "whenNotToUse_de": [
+        "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
+      ],
+      "whenNotToUse_en": [
+        "Do not introduce this when value, operating model, and ownership are still unclear."
       ]
     },
     {
@@ -724,6 +1524,36 @@
       "references": [],
       "whenNotToUse": [
         "Nicht für neue Greenfield-Integrationen verwenden."
+      ],
+      "intro_de": "Es geht um die zuverlässige Bereitstellung und Steuerung von Integrationsartefakten über Umgebungen hinweg. Dieser Punkt wirkt direkt auf Änderungsqualität, Auditierbarkeit und Release-Geschwindigkeit.",
+      "intro_en": "This item is about reliable delivery and control of integration artifacts across environments. It directly affects change quality, auditability, and release speed.",
+      "whyRing_de": "Dieser Punkt ist für neue Implementierungen nicht empfohlen und sollte nur kontrolliert im Bestand laufen.",
+      "whyRing_en": "This item is not recommended for new implementations and should be contained in legacy scope only.",
+      "risks_de": [
+        "Fehlende klare Zuständigkeiten und Zielbilder führen zu inkonsistenten Umsetzungen zwischen Teams."
+      ],
+      "risks_en": [
+        "Fehlende klare Zuständigkeiten und Zielbilder führen zu inkonsistenten Umsetzungen zwischen Teams."
+      ],
+      "do_de": [
+        "Bestandsnutzung nur mit Exit-Strategie und priorisiertem Ablöseplan fortführen.",
+        "Changes über Pipeline mit Freigaben, Checks und Rollback-Plan ausrollen."
+      ],
+      "do_en": [
+        "Bestandsnutzung nur mit Exit-Strategie und priorisiertem Ablöseplan fortführen.",
+        "Changes über Pipeline mit Freigaben, Checks und Rollback-Plan ausrollen."
+      ],
+      "dont_de": [
+        "Keine direkten Prod-Änderungen außerhalb des definierten Change-Prozesses."
+      ],
+      "dont_en": [
+        "Keine direkten Prod-Änderungen außerhalb des definierten Change-Prozesses."
+      ],
+      "whenNotToUse_de": [
+        "Nicht für neue Greenfield-Integrationen verwenden."
+      ],
+      "whenNotToUse_en": [
+        "Do not use for new greenfield integrations."
       ]
     },
     {
@@ -749,6 +1579,36 @@
       "references": [],
       "whenNotToUse": [
         "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
+      ],
+      "intro_de": "Es geht um die Definition und den stabilen Betrieb von Schnittstellenverträgen inklusive Security, Versionierung und Governance. Dieser Punkt beeinflusst direkt Entkopplung, Änderbarkeit und Integrationskosten über Teamgrenzen hinweg.",
+      "intro_en": "This item is about defining and running stable interface contracts, including security, versioning, and governance. It directly impacts decoupling, changeability, and integration cost across teams.",
+      "whyRing_de": "Dieser Punkt ist operativ bewährt und für neue Integrationen die Standardwahl.",
+      "whyRing_en": "This item is operationally proven and should be the default choice for new integrations.",
+      "risks_de": [
+        "Unklare API-Verträge und Security-Regeln führen zu Integrationsbrüchen und erhöhtem Betriebsaufwand."
+      ],
+      "risks_en": [
+        "Unklare API-Verträge und Security-Regeln führen zu Integrationsbrüchen und erhöhtem Betriebsaufwand."
+      ],
+      "do_de": [
+        "API-Vertrag inkl. Fehlercode-Modell und Versionierung verbindlich machen.",
+        "AuthN/AuthZ, Rate Limits und Secrets sauber über Policies steuern."
+      ],
+      "do_en": [
+        "Make API contracts, error models, and versioning mandatory.",
+        "Manage AuthN/AuthZ, rate limits, and secrets through explicit policies."
+      ],
+      "dont_de": [
+        "Keine stillen Breaking Changes ohne Migrationspfad einführen."
+      ],
+      "dont_en": [
+        "Do not introduce silent breaking changes without a migration path."
+      ],
+      "whenNotToUse_de": [
+        "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
+      ],
+      "whenNotToUse_en": [
+        "Do not introduce this when value, operating model, and ownership are still unclear."
       ]
     },
     {
@@ -774,6 +1634,36 @@
       "references": [],
       "whenNotToUse": [
         "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
+      ],
+      "intro_de": "Es geht um die Definition und den stabilen Betrieb von Schnittstellenverträgen inklusive Security, Versionierung und Governance. Dieser Punkt beeinflusst direkt Entkopplung, Änderbarkeit und Integrationskosten über Teamgrenzen hinweg.",
+      "intro_en": "This item is about defining and running stable interface contracts, including security, versioning, and governance. It directly impacts decoupling, changeability, and integration cost across teams.",
+      "whyRing_de": "Dieser Punkt ist operativ bewährt und für neue Integrationen die Standardwahl.",
+      "whyRing_en": "This item is operationally proven and should be the default choice for new integrations.",
+      "risks_de": [
+        "Unklare API-Verträge und Security-Regeln führen zu Integrationsbrüchen und erhöhtem Betriebsaufwand."
+      ],
+      "risks_en": [
+        "Unklare API-Verträge und Security-Regeln führen zu Integrationsbrüchen und erhöhtem Betriebsaufwand."
+      ],
+      "do_de": [
+        "API-Vertrag inkl. Fehlercode-Modell und Versionierung verbindlich machen.",
+        "AuthN/AuthZ, Rate Limits und Secrets sauber über Policies steuern."
+      ],
+      "do_en": [
+        "Make API contracts, error models, and versioning mandatory.",
+        "Manage AuthN/AuthZ, rate limits, and secrets through explicit policies."
+      ],
+      "dont_de": [
+        "Keine stillen Breaking Changes ohne Migrationspfad einführen."
+      ],
+      "dont_en": [
+        "Do not introduce silent breaking changes without a migration path."
+      ],
+      "whenNotToUse_de": [
+        "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
+      ],
+      "whenNotToUse_en": [
+        "Do not introduce this when value, operating model, and ownership are still unclear."
       ]
     },
     {
@@ -801,6 +1691,36 @@
       ],
       "whenNotToUse": [
         "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
+      ],
+      "intro_de": "Es geht um die Definition und den stabilen Betrieb von Schnittstellenverträgen inklusive Security, Versionierung und Governance. Dieser Punkt beeinflusst direkt Entkopplung, Änderbarkeit und Integrationskosten über Teamgrenzen hinweg.",
+      "intro_en": "This item is about defining and running stable interface contracts, including security, versioning, and governance. It directly impacts decoupling, changeability, and integration cost across teams.",
+      "whyRing_de": "Dieser Punkt ist operativ bewährt und für neue Integrationen die Standardwahl.",
+      "whyRing_en": "This item is operationally proven and should be the default choice for new integrations.",
+      "risks_de": [
+        "Unklare API-Verträge und Security-Regeln führen zu Integrationsbrüchen und erhöhtem Betriebsaufwand."
+      ],
+      "risks_en": [
+        "Unklare API-Verträge und Security-Regeln führen zu Integrationsbrüchen und erhöhtem Betriebsaufwand."
+      ],
+      "do_de": [
+        "API-Vertrag inkl. Fehlercode-Modell und Versionierung verbindlich machen.",
+        "AuthN/AuthZ, Rate Limits und Secrets sauber über Policies steuern."
+      ],
+      "do_en": [
+        "Make API contracts, error models, and versioning mandatory.",
+        "Manage AuthN/AuthZ, rate limits, and secrets through explicit policies."
+      ],
+      "dont_de": [
+        "Keine stillen Breaking Changes ohne Migrationspfad einführen."
+      ],
+      "dont_en": [
+        "Do not introduce silent breaking changes without a migration path."
+      ],
+      "whenNotToUse_de": [
+        "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
+      ],
+      "whenNotToUse_en": [
+        "Do not introduce this when value, operating model, and ownership are still unclear."
       ]
     },
     {
@@ -830,6 +1750,40 @@
       ],
       "whenNotToUse": [
         "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
+      ],
+      "intro_de": "Es geht um die Definition und den stabilen Betrieb von Schnittstellenverträgen inklusive Security, Versionierung und Governance. Dieser Punkt beeinflusst direkt Entkopplung, Änderbarkeit und Integrationskosten über Teamgrenzen hinweg.",
+      "intro_en": "This item is about defining and running stable interface contracts, including security, versioning, and governance. It directly impacts decoupling, changeability, and integration cost across teams.",
+      "whyRing_de": "Dieser Punkt ist vielversprechend, sollte aber gezielt und mit klaren Guardrails eingesetzt werden.",
+      "whyRing_en": "This item is promising but should be introduced selectively with clear guardrails.",
+      "risks_de": [
+        "Unklare Zustellsemantik oder fehlende DLQ/Retry-Strategien erzeugen schwer reproduzierbare Fehlerbilder."
+      ],
+      "risks_en": [
+        "Unklare Zustellsemantik oder fehlende DLQ/Retry-Strategien erzeugen schwer reproduzierbare Fehlerbilder."
+      ],
+      "do_de": [
+        "Einsatz auf wenige, geeignete Domänen begrenzen und Ergebnisse systematisch auswerten.",
+        "Schemas versionieren und Consumer-Kompatibilität explizit testen.",
+        "Retry/Backoff, DLQ und Reprocessing-Runbook definieren."
+      ],
+      "do_en": [
+        "Einsatz auf wenige, geeignete Domänen begrenzen und Ergebnisse systematisch auswerten.",
+        "Schemas versionieren und Consumer-Kompatibilität explizit testen.",
+        "Retry/Backoff, DLQ und Reprocessing-Runbook definieren."
+      ],
+      "dont_de": [
+        "Keine Events ohne Ownership und fachliche Idempotenz veröffentlichen.",
+        "Keine stillen Breaking Changes ohne Migrationspfad einführen."
+      ],
+      "dont_en": [
+        "Do not publish events without clear ownership and business idempotency.",
+        "Do not introduce silent breaking changes without a migration path."
+      ],
+      "whenNotToUse_de": [
+        "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
+      ],
+      "whenNotToUse_en": [
+        "Do not introduce this when value, operating model, and ownership are still unclear."
       ]
     },
     {
@@ -856,6 +1810,38 @@
       "references": [],
       "whenNotToUse": [
         "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
+      ],
+      "intro_de": "Es geht um event-getriebene Integrationsmuster mit asynchroner Kopplung und resilienter Zustellung. Dieser Punkt bestimmt, wie robust Systeme bei Last, Ausfällen und fachlicher Entkopplung zusammenarbeiten.",
+      "intro_en": "This item is about event-driven integration with asynchronous coupling and resilient delivery. It determines how robust systems remain under load, failures, and cross-domain decoupling.",
+      "whyRing_de": "Dieser Punkt ist vielversprechend, sollte aber gezielt und mit klaren Guardrails eingesetzt werden.",
+      "whyRing_en": "This item is promising but should be introduced selectively with clear guardrails.",
+      "risks_de": [
+        "Unklare Zustellsemantik oder fehlende DLQ/Retry-Strategien erzeugen schwer reproduzierbare Fehlerbilder."
+      ],
+      "risks_en": [
+        "Unklare Zustellsemantik oder fehlende DLQ/Retry-Strategien erzeugen schwer reproduzierbare Fehlerbilder."
+      ],
+      "do_de": [
+        "Einsatz auf wenige, geeignete Domänen begrenzen und Ergebnisse systematisch auswerten.",
+        "Schemas versionieren und Consumer-Kompatibilität explizit testen.",
+        "Retry/Backoff, DLQ und Reprocessing-Runbook definieren."
+      ],
+      "do_en": [
+        "Einsatz auf wenige, geeignete Domänen begrenzen und Ergebnisse systematisch auswerten.",
+        "Schemas versionieren und Consumer-Kompatibilität explizit testen.",
+        "Retry/Backoff, DLQ und Reprocessing-Runbook definieren."
+      ],
+      "dont_de": [
+        "Keine Events ohne Ownership und fachliche Idempotenz veröffentlichen."
+      ],
+      "dont_en": [
+        "Do not publish events without clear ownership and business idempotency."
+      ],
+      "whenNotToUse_de": [
+        "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
+      ],
+      "whenNotToUse_en": [
+        "Do not introduce this when value, operating model, and ownership are still unclear."
       ]
     },
     {
@@ -880,6 +1866,34 @@
       "references": [],
       "whenNotToUse": [
         "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
+      ],
+      "intro_de": "Es geht um Side-by-side extensibility als Integrationsbaustein mit direktem Einfluss auf Architektur- und Betriebsentscheidungen.",
+      "intro_en": "This item is about Side-by-side extensibility as an integration building block with direct impact on architecture and operations decisions.",
+      "whyRing_de": "Dieser Punkt ist operativ bewährt und für neue Integrationen die Standardwahl.",
+      "whyRing_en": "This item is operationally proven and should be the default choice for new integrations.",
+      "risks_de": [
+        "Fehlende klare Zuständigkeiten und Zielbilder führen zu inkonsistenten Umsetzungen zwischen Teams."
+      ],
+      "risks_en": [
+        "Fehlende klare Zuständigkeiten und Zielbilder führen zu inkonsistenten Umsetzungen zwischen Teams."
+      ],
+      "do_de": [
+        "Klare Success-Kriterien und Betriebsmetriken vor dem Rollout festlegen."
+      ],
+      "do_en": [
+        "Define clear success criteria and operating metrics before rollout."
+      ],
+      "dont_de": [
+        "Keine Einführung ohne abgestimmtes Betriebs- und Ownership-Modell."
+      ],
+      "dont_en": [
+        "Do not adopt without an agreed operating model and ownership setup."
+      ],
+      "whenNotToUse_de": [
+        "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
+      ],
+      "whenNotToUse_en": [
+        "Do not introduce this when value, operating model, and ownership are still unclear."
       ]
     },
     {
@@ -904,6 +1918,34 @@
       "references": [],
       "whenNotToUse": [
         "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
+      ],
+      "intro_de": "Es geht um Architekturprinzipien, die Integrationslandschaften skalierbar und evolvierbar machen. Dieser Punkt prägt langfristig Komplexität, Wartbarkeit und Teamautonomie.",
+      "intro_en": "This item is about architecture principles that keep integration landscapes scalable and evolvable. It shapes long-term complexity, maintainability, and team autonomy.",
+      "whyRing_de": "Dieser Punkt ist operativ bewährt und für neue Integrationen die Standardwahl.",
+      "whyRing_en": "This item is operationally proven and should be the default choice for new integrations.",
+      "risks_de": [
+        "Falsch eingesetzte Architektur-Pattern erhöhen Komplexität ohne proportionalen Nutzen."
+      ],
+      "risks_en": [
+        "Falsch eingesetzte Architektur-Pattern erhöhen Komplexität ohne proportionalen Nutzen."
+      ],
+      "do_de": [
+        "Klare Success-Kriterien und Betriebsmetriken vor dem Rollout festlegen."
+      ],
+      "do_en": [
+        "Define clear success criteria and operating metrics before rollout."
+      ],
+      "dont_de": [
+        "Keine Einführung ohne abgestimmtes Betriebs- und Ownership-Modell."
+      ],
+      "dont_en": [
+        "Do not adopt without an agreed operating model and ownership setup."
+      ],
+      "whenNotToUse_de": [
+        "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
+      ],
+      "whenNotToUse_en": [
+        "Do not introduce this when value, operating model, and ownership are still unclear."
       ]
     },
     {
@@ -928,6 +1970,34 @@
       "references": [],
       "whenNotToUse": [
         "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
+      ],
+      "intro_de": "Es geht um Architekturprinzipien, die Integrationslandschaften skalierbar und evolvierbar machen. Dieser Punkt prägt langfristig Komplexität, Wartbarkeit und Teamautonomie.",
+      "intro_en": "This item is about architecture principles that keep integration landscapes scalable and evolvable. It shapes long-term complexity, maintainability, and team autonomy.",
+      "whyRing_de": "Dieser Punkt ist operativ bewährt und für neue Integrationen die Standardwahl.",
+      "whyRing_en": "This item is operationally proven and should be the default choice for new integrations.",
+      "risks_de": [
+        "Falsch eingesetzte Architektur-Pattern erhöhen Komplexität ohne proportionalen Nutzen."
+      ],
+      "risks_en": [
+        "Falsch eingesetzte Architektur-Pattern erhöhen Komplexität ohne proportionalen Nutzen."
+      ],
+      "do_de": [
+        "Klare Success-Kriterien und Betriebsmetriken vor dem Rollout festlegen."
+      ],
+      "do_en": [
+        "Define clear success criteria and operating metrics before rollout."
+      ],
+      "dont_de": [
+        "Keine Einführung ohne abgestimmtes Betriebs- und Ownership-Modell."
+      ],
+      "dont_en": [
+        "Do not adopt without an agreed operating model and ownership setup."
+      ],
+      "whenNotToUse_de": [
+        "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
+      ],
+      "whenNotToUse_en": [
+        "Do not introduce this when value, operating model, and ownership are still unclear."
       ]
     },
     {
@@ -952,6 +2022,34 @@
       "references": [],
       "whenNotToUse": [
         "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
+      ],
+      "intro_de": "Es geht um Architekturprinzipien, die Integrationslandschaften skalierbar und evolvierbar machen. Dieser Punkt prägt langfristig Komplexität, Wartbarkeit und Teamautonomie.",
+      "intro_en": "This item is about architecture principles that keep integration landscapes scalable and evolvable. It shapes long-term complexity, maintainability, and team autonomy.",
+      "whyRing_de": "Dieser Punkt ist operativ bewährt und für neue Integrationen die Standardwahl.",
+      "whyRing_en": "This item is operationally proven and should be the default choice for new integrations.",
+      "risks_de": [
+        "Falsch eingesetzte Architektur-Pattern erhöhen Komplexität ohne proportionalen Nutzen."
+      ],
+      "risks_en": [
+        "Falsch eingesetzte Architektur-Pattern erhöhen Komplexität ohne proportionalen Nutzen."
+      ],
+      "do_de": [
+        "Klare Success-Kriterien und Betriebsmetriken vor dem Rollout festlegen."
+      ],
+      "do_en": [
+        "Define clear success criteria and operating metrics before rollout."
+      ],
+      "dont_de": [
+        "Keine Einführung ohne abgestimmtes Betriebs- und Ownership-Modell."
+      ],
+      "dont_en": [
+        "Do not adopt without an agreed operating model and ownership setup."
+      ],
+      "whenNotToUse_de": [
+        "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
+      ],
+      "whenNotToUse_en": [
+        "Do not introduce this when value, operating model, and ownership are still unclear."
       ]
     },
     {
@@ -977,6 +2075,36 @@
       "references": [],
       "whenNotToUse": [
         "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
+      ],
+      "intro_de": "Es geht um Architekturprinzipien, die Integrationslandschaften skalierbar und evolvierbar machen. Dieser Punkt prägt langfristig Komplexität, Wartbarkeit und Teamautonomie.",
+      "intro_en": "This item is about architecture principles that keep integration landscapes scalable and evolvable. It shapes long-term complexity, maintainability, and team autonomy.",
+      "whyRing_de": "Dieser Punkt ist vielversprechend, sollte aber gezielt und mit klaren Guardrails eingesetzt werden.",
+      "whyRing_en": "This item is promising but should be introduced selectively with clear guardrails.",
+      "risks_de": [
+        "Falsch eingesetzte Architektur-Pattern erhöhen Komplexität ohne proportionalen Nutzen."
+      ],
+      "risks_en": [
+        "Falsch eingesetzte Architektur-Pattern erhöhen Komplexität ohne proportionalen Nutzen."
+      ],
+      "do_de": [
+        "Einsatz auf wenige, geeignete Domänen begrenzen und Ergebnisse systematisch auswerten.",
+        "Klare Success-Kriterien und Betriebsmetriken vor dem Rollout festlegen."
+      ],
+      "do_en": [
+        "Einsatz auf wenige, geeignete Domänen begrenzen und Ergebnisse systematisch auswerten.",
+        "Define clear success criteria and operating metrics before rollout."
+      ],
+      "dont_de": [
+        "Keine Einführung ohne abgestimmtes Betriebs- und Ownership-Modell."
+      ],
+      "dont_en": [
+        "Do not adopt without an agreed operating model and ownership setup."
+      ],
+      "whenNotToUse_de": [
+        "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
+      ],
+      "whenNotToUse_en": [
+        "Do not introduce this when value, operating model, and ownership are still unclear."
       ]
     },
     {
@@ -1001,6 +2129,34 @@
       "references": [],
       "whenNotToUse": [
         "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
+      ],
+      "intro_de": "Es geht um Architekturprinzipien, die Integrationslandschaften skalierbar und evolvierbar machen. Dieser Punkt prägt langfristig Komplexität, Wartbarkeit und Teamautonomie.",
+      "intro_en": "This item is about architecture principles that keep integration landscapes scalable and evolvable. It shapes long-term complexity, maintainability, and team autonomy.",
+      "whyRing_de": "Dieser Punkt ist operativ bewährt und für neue Integrationen die Standardwahl.",
+      "whyRing_en": "This item is operationally proven and should be the default choice for new integrations.",
+      "risks_de": [
+        "Falsch eingesetzte Architektur-Pattern erhöhen Komplexität ohne proportionalen Nutzen."
+      ],
+      "risks_en": [
+        "Falsch eingesetzte Architektur-Pattern erhöhen Komplexität ohne proportionalen Nutzen."
+      ],
+      "do_de": [
+        "Klare Success-Kriterien und Betriebsmetriken vor dem Rollout festlegen."
+      ],
+      "do_en": [
+        "Define clear success criteria and operating metrics before rollout."
+      ],
+      "dont_de": [
+        "Keine Einführung ohne abgestimmtes Betriebs- und Ownership-Modell."
+      ],
+      "dont_en": [
+        "Do not adopt without an agreed operating model and ownership setup."
+      ],
+      "whenNotToUse_de": [
+        "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
+      ],
+      "whenNotToUse_en": [
+        "Do not introduce this when value, operating model, and ownership are still unclear."
       ]
     },
     {
@@ -1029,6 +2185,38 @@
       ],
       "whenNotToUse": [
         "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
+      ],
+      "intro_de": "Es geht um event-getriebene Integrationsmuster mit asynchroner Kopplung und resilienter Zustellung. Dieser Punkt bestimmt, wie robust Systeme bei Last, Ausfällen und fachlicher Entkopplung zusammenarbeiten.",
+      "intro_en": "This item is about event-driven integration with asynchronous coupling and resilient delivery. It determines how robust systems remain under load, failures, and cross-domain decoupling.",
+      "whyRing_de": "Dieser Punkt ist vielversprechend, sollte aber gezielt und mit klaren Guardrails eingesetzt werden.",
+      "whyRing_en": "This item is promising but should be introduced selectively with clear guardrails.",
+      "risks_de": [
+        "Unklare Zustellsemantik oder fehlende DLQ/Retry-Strategien erzeugen schwer reproduzierbare Fehlerbilder."
+      ],
+      "risks_en": [
+        "Unklare Zustellsemantik oder fehlende DLQ/Retry-Strategien erzeugen schwer reproduzierbare Fehlerbilder."
+      ],
+      "do_de": [
+        "Einsatz auf wenige, geeignete Domänen begrenzen und Ergebnisse systematisch auswerten.",
+        "Schemas versionieren und Consumer-Kompatibilität explizit testen.",
+        "Retry/Backoff, DLQ und Reprocessing-Runbook definieren."
+      ],
+      "do_en": [
+        "Einsatz auf wenige, geeignete Domänen begrenzen und Ergebnisse systematisch auswerten.",
+        "Schemas versionieren und Consumer-Kompatibilität explizit testen.",
+        "Retry/Backoff, DLQ und Reprocessing-Runbook definieren."
+      ],
+      "dont_de": [
+        "Keine Events ohne Ownership und fachliche Idempotenz veröffentlichen."
+      ],
+      "dont_en": [
+        "Do not publish events without clear ownership and business idempotency."
+      ],
+      "whenNotToUse_de": [
+        "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
+      ],
+      "whenNotToUse_en": [
+        "Do not introduce this when value, operating model, and ownership are still unclear."
       ]
     },
     {
@@ -1054,6 +2242,36 @@
       "references": [],
       "whenNotToUse": [
         "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
+      ],
+      "intro_de": "Es geht um Architekturprinzipien, die Integrationslandschaften skalierbar und evolvierbar machen. Dieser Punkt prägt langfristig Komplexität, Wartbarkeit und Teamautonomie.",
+      "intro_en": "This item is about architecture principles that keep integration landscapes scalable and evolvable. It shapes long-term complexity, maintainability, and team autonomy.",
+      "whyRing_de": "Dieser Punkt ist vielversprechend, sollte aber gezielt und mit klaren Guardrails eingesetzt werden.",
+      "whyRing_en": "This item is promising but should be introduced selectively with clear guardrails.",
+      "risks_de": [
+        "Falsch eingesetzte Architektur-Pattern erhöhen Komplexität ohne proportionalen Nutzen."
+      ],
+      "risks_en": [
+        "Falsch eingesetzte Architektur-Pattern erhöhen Komplexität ohne proportionalen Nutzen."
+      ],
+      "do_de": [
+        "Einsatz auf wenige, geeignete Domänen begrenzen und Ergebnisse systematisch auswerten.",
+        "Klare Success-Kriterien und Betriebsmetriken vor dem Rollout festlegen."
+      ],
+      "do_en": [
+        "Einsatz auf wenige, geeignete Domänen begrenzen und Ergebnisse systematisch auswerten.",
+        "Define clear success criteria and operating metrics before rollout."
+      ],
+      "dont_de": [
+        "Keine Einführung ohne abgestimmtes Betriebs- und Ownership-Modell."
+      ],
+      "dont_en": [
+        "Do not adopt without an agreed operating model and ownership setup."
+      ],
+      "whenNotToUse_de": [
+        "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
+      ],
+      "whenNotToUse_en": [
+        "Do not introduce this when value, operating model, and ownership are still unclear."
       ]
     },
     {
@@ -1079,6 +2297,36 @@
       "references": [],
       "whenNotToUse": [
         "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
+      ],
+      "intro_de": "Es geht um Architekturprinzipien, die Integrationslandschaften skalierbar und evolvierbar machen. Dieser Punkt prägt langfristig Komplexität, Wartbarkeit und Teamautonomie.",
+      "intro_en": "This item is about architecture principles that keep integration landscapes scalable and evolvable. It shapes long-term complexity, maintainability, and team autonomy.",
+      "whyRing_de": "Dieser Punkt hat Potenzial, braucht aber vor breiter Nutzung noch strukturierte Validierung.",
+      "whyRing_en": "This item has potential but requires structured validation before broader adoption.",
+      "risks_de": [
+        "Falsch eingesetzte Architektur-Pattern erhöhen Komplexität ohne proportionalen Nutzen."
+      ],
+      "risks_en": [
+        "Falsch eingesetzte Architektur-Pattern erhöhen Komplexität ohne proportionalen Nutzen."
+      ],
+      "do_de": [
+        "Zeitlich begrenzten PoC mit klarer Go/No-Go-Entscheidung durchführen.",
+        "Klare Success-Kriterien und Betriebsmetriken vor dem Rollout festlegen."
+      ],
+      "do_en": [
+        "Zeitlich begrenzten PoC mit klarer Go/No-Go-Entscheidung durchführen.",
+        "Define clear success criteria and operating metrics before rollout."
+      ],
+      "dont_de": [
+        "Keine Einführung ohne abgestimmtes Betriebs- und Ownership-Modell."
+      ],
+      "dont_en": [
+        "Do not adopt without an agreed operating model and ownership setup."
+      ],
+      "whenNotToUse_de": [
+        "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
+      ],
+      "whenNotToUse_en": [
+        "Do not introduce this when value, operating model, and ownership are still unclear."
       ]
     },
     {
@@ -1104,6 +2352,36 @@
       "references": [],
       "whenNotToUse": [
         "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
+      ],
+      "intro_de": "Es geht um Architekturprinzipien, die Integrationslandschaften skalierbar und evolvierbar machen. Dieser Punkt prägt langfristig Komplexität, Wartbarkeit und Teamautonomie.",
+      "intro_en": "This item is about architecture principles that keep integration landscapes scalable and evolvable. It shapes long-term complexity, maintainability, and team autonomy.",
+      "whyRing_de": "Dieser Punkt hat Potenzial, braucht aber vor breiter Nutzung noch strukturierte Validierung.",
+      "whyRing_en": "This item has potential but requires structured validation before broader adoption.",
+      "risks_de": [
+        "Falsch eingesetzte Architektur-Pattern erhöhen Komplexität ohne proportionalen Nutzen."
+      ],
+      "risks_en": [
+        "Falsch eingesetzte Architektur-Pattern erhöhen Komplexität ohne proportionalen Nutzen."
+      ],
+      "do_de": [
+        "Zeitlich begrenzten PoC mit klarer Go/No-Go-Entscheidung durchführen.",
+        "Klare Success-Kriterien und Betriebsmetriken vor dem Rollout festlegen."
+      ],
+      "do_en": [
+        "Zeitlich begrenzten PoC mit klarer Go/No-Go-Entscheidung durchführen.",
+        "Define clear success criteria and operating metrics before rollout."
+      ],
+      "dont_de": [
+        "Keine Einführung ohne abgestimmtes Betriebs- und Ownership-Modell."
+      ],
+      "dont_en": [
+        "Do not adopt without an agreed operating model and ownership setup."
+      ],
+      "whenNotToUse_de": [
+        "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
+      ],
+      "whenNotToUse_en": [
+        "Do not introduce this when value, operating model, and ownership are still unclear."
       ]
     },
     {
@@ -1130,6 +2408,38 @@
       "whenNotToUse": [
         "Nicht für neue Greenfield-Integrationen verwenden.",
         "Nicht einsetzen, wenn API- oder Event-basierte Alternativen verfügbar sind."
+      ],
+      "intro_de": "Es geht um Direct point-to-point connections als Integrationsbaustein mit direktem Einfluss auf Architektur- und Betriebsentscheidungen.",
+      "intro_en": "This item is about Direct point-to-point connections as an integration building block with direct impact on architecture and operations decisions.",
+      "whyRing_de": "Dieser Punkt ist für neue Implementierungen nicht empfohlen und sollte nur kontrolliert im Bestand laufen.",
+      "whyRing_en": "This item is not recommended for new implementations and should be contained in legacy scope only.",
+      "risks_de": [
+        "Fehlende klare Zuständigkeiten und Zielbilder führen zu inkonsistenten Umsetzungen zwischen Teams."
+      ],
+      "risks_en": [
+        "Fehlende klare Zuständigkeiten und Zielbilder führen zu inkonsistenten Umsetzungen zwischen Teams."
+      ],
+      "do_de": [
+        "Bestandsnutzung nur mit Exit-Strategie und priorisiertem Ablöseplan fortführen.",
+        "Migrationspfad zu API-/Event-basierten Integrationsmustern aktiv planen."
+      ],
+      "do_en": [
+        "Bestandsnutzung nur mit Exit-Strategie und priorisiertem Ablöseplan fortführen.",
+        "Migrationspfad zu API-/Event-basierten Integrationsmustern aktiv planen."
+      ],
+      "dont_de": [
+        "Keine neuen Legacy-Kopplungen in Greenfield-Umfängen aufbauen."
+      ],
+      "dont_en": [
+        "Keine neuen Legacy-Kopplungen in Greenfield-Umfängen aufbauen."
+      ],
+      "whenNotToUse_de": [
+        "Nicht für neue Greenfield-Integrationen verwenden.",
+        "Nicht einsetzen, wenn API- oder Event-basierte Alternativen verfügbar sind."
+      ],
+      "whenNotToUse_en": [
+        "Do not use for new greenfield integrations.",
+        "Do not use when API- or event-based alternatives are available."
       ]
     },
     {
@@ -1158,6 +2468,42 @@
       "whenNotToUse": [
         "Nicht für neue Greenfield-Integrationen verwenden.",
         "Nicht einsetzen, wenn API- oder Event-basierte Alternativen verfügbar sind."
+      ],
+      "intro_de": "Es geht um die zuverlässige Bereitstellung und Steuerung von Integrationsartefakten über Umgebungen hinweg. Dieser Punkt wirkt direkt auf Änderungsqualität, Auditierbarkeit und Release-Geschwindigkeit.",
+      "intro_en": "This item is about reliable delivery and control of integration artifacts across environments. It directly affects change quality, auditability, and release speed.",
+      "whyRing_de": "Dieser Punkt ist für neue Implementierungen nicht empfohlen und sollte nur kontrolliert im Bestand laufen.",
+      "whyRing_en": "This item is not recommended for new implementations and should be contained in legacy scope only.",
+      "risks_de": [
+        "Fehlende klare Zuständigkeiten und Zielbilder führen zu inkonsistenten Umsetzungen zwischen Teams."
+      ],
+      "risks_en": [
+        "Fehlende klare Zuständigkeiten und Zielbilder führen zu inkonsistenten Umsetzungen zwischen Teams."
+      ],
+      "do_de": [
+        "Bestandsnutzung nur mit Exit-Strategie und priorisiertem Ablöseplan fortführen.",
+        "Changes über Pipeline mit Freigaben, Checks und Rollback-Plan ausrollen.",
+        "Migrationspfad zu API-/Event-basierten Integrationsmustern aktiv planen."
+      ],
+      "do_en": [
+        "Bestandsnutzung nur mit Exit-Strategie und priorisiertem Ablöseplan fortführen.",
+        "Changes über Pipeline mit Freigaben, Checks und Rollback-Plan ausrollen.",
+        "Migrationspfad zu API-/Event-basierten Integrationsmustern aktiv planen."
+      ],
+      "dont_de": [
+        "Keine direkten Prod-Änderungen außerhalb des definierten Change-Prozesses.",
+        "Keine neuen Legacy-Kopplungen in Greenfield-Umfängen aufbauen."
+      ],
+      "dont_en": [
+        "Keine direkten Prod-Änderungen außerhalb des definierten Change-Prozesses.",
+        "Keine neuen Legacy-Kopplungen in Greenfield-Umfängen aufbauen."
+      ],
+      "whenNotToUse_de": [
+        "Nicht für neue Greenfield-Integrationen verwenden.",
+        "Nicht einsetzen, wenn API- oder Event-basierte Alternativen verfügbar sind."
+      ],
+      "whenNotToUse_en": [
+        "Do not use for new greenfield integrations.",
+        "Do not use when API- or event-based alternatives are available."
       ]
     },
     {
@@ -1184,6 +2530,38 @@
       "whenNotToUse": [
         "Nicht für neue Greenfield-Integrationen verwenden.",
         "Nicht einsetzen, wenn API- oder Event-basierte Alternativen verfügbar sind."
+      ],
+      "intro_de": "Es geht um Direct DB integration als Integrationsbaustein mit direktem Einfluss auf Architektur- und Betriebsentscheidungen.",
+      "intro_en": "This item is about Direct DB integration as an integration building block with direct impact on architecture and operations decisions.",
+      "whyRing_de": "Dieser Punkt ist für neue Implementierungen nicht empfohlen und sollte nur kontrolliert im Bestand laufen.",
+      "whyRing_en": "This item is not recommended for new implementations and should be contained in legacy scope only.",
+      "risks_de": [
+        "Fehlende klare Zuständigkeiten und Zielbilder führen zu inkonsistenten Umsetzungen zwischen Teams."
+      ],
+      "risks_en": [
+        "Fehlende klare Zuständigkeiten und Zielbilder führen zu inkonsistenten Umsetzungen zwischen Teams."
+      ],
+      "do_de": [
+        "Bestandsnutzung nur mit Exit-Strategie und priorisiertem Ablöseplan fortführen.",
+        "Migrationspfad zu API-/Event-basierten Integrationsmustern aktiv planen."
+      ],
+      "do_en": [
+        "Bestandsnutzung nur mit Exit-Strategie und priorisiertem Ablöseplan fortführen.",
+        "Migrationspfad zu API-/Event-basierten Integrationsmustern aktiv planen."
+      ],
+      "dont_de": [
+        "Keine neuen Legacy-Kopplungen in Greenfield-Umfängen aufbauen."
+      ],
+      "dont_en": [
+        "Keine neuen Legacy-Kopplungen in Greenfield-Umfängen aufbauen."
+      ],
+      "whenNotToUse_de": [
+        "Nicht für neue Greenfield-Integrationen verwenden.",
+        "Nicht einsetzen, wenn API- oder Event-basierte Alternativen verfügbar sind."
+      ],
+      "whenNotToUse_en": [
+        "Do not use for new greenfield integrations.",
+        "Do not use when API- or event-based alternatives are available."
       ]
     },
     {
@@ -1209,6 +2587,36 @@
       "references": [],
       "whenNotToUse": [
         "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
+      ],
+      "intro_de": "Es geht um die Definition und den stabilen Betrieb von Schnittstellenverträgen inklusive Security, Versionierung und Governance. Dieser Punkt beeinflusst direkt Entkopplung, Änderbarkeit und Integrationskosten über Teamgrenzen hinweg.",
+      "intro_en": "This item is about defining and running stable interface contracts, including security, versioning, and governance. It directly impacts decoupling, changeability, and integration cost across teams.",
+      "whyRing_de": "Dieser Punkt ist operativ bewährt und für neue Integrationen die Standardwahl.",
+      "whyRing_en": "This item is operationally proven and should be the default choice for new integrations.",
+      "risks_de": [
+        "Unklare API-Verträge und Security-Regeln führen zu Integrationsbrüchen und erhöhtem Betriebsaufwand."
+      ],
+      "risks_en": [
+        "Unklare API-Verträge und Security-Regeln führen zu Integrationsbrüchen und erhöhtem Betriebsaufwand."
+      ],
+      "do_de": [
+        "API-Vertrag inkl. Fehlercode-Modell und Versionierung verbindlich machen.",
+        "AuthN/AuthZ, Rate Limits und Secrets sauber über Policies steuern."
+      ],
+      "do_en": [
+        "Make API contracts, error models, and versioning mandatory.",
+        "Manage AuthN/AuthZ, rate limits, and secrets through explicit policies."
+      ],
+      "dont_de": [
+        "Keine stillen Breaking Changes ohne Migrationspfad einführen."
+      ],
+      "dont_en": [
+        "Do not introduce silent breaking changes without a migration path."
+      ],
+      "whenNotToUse_de": [
+        "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
+      ],
+      "whenNotToUse_en": [
+        "Do not introduce this when value, operating model, and ownership are still unclear."
       ]
     },
     {
@@ -1234,6 +2642,36 @@
       "references": [],
       "whenNotToUse": [
         "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
+      ],
+      "intro_de": "Es geht um die Definition und den stabilen Betrieb von Schnittstellenverträgen inklusive Security, Versionierung und Governance. Dieser Punkt beeinflusst direkt Entkopplung, Änderbarkeit und Integrationskosten über Teamgrenzen hinweg.",
+      "intro_en": "This item is about defining and running stable interface contracts, including security, versioning, and governance. It directly impacts decoupling, changeability, and integration cost across teams.",
+      "whyRing_de": "Dieser Punkt ist operativ bewährt und für neue Integrationen die Standardwahl.",
+      "whyRing_en": "This item is operationally proven and should be the default choice for new integrations.",
+      "risks_de": [
+        "Unklare API-Verträge und Security-Regeln führen zu Integrationsbrüchen und erhöhtem Betriebsaufwand."
+      ],
+      "risks_en": [
+        "Unklare API-Verträge und Security-Regeln führen zu Integrationsbrüchen und erhöhtem Betriebsaufwand."
+      ],
+      "do_de": [
+        "API-Vertrag inkl. Fehlercode-Modell und Versionierung verbindlich machen.",
+        "AuthN/AuthZ, Rate Limits und Secrets sauber über Policies steuern."
+      ],
+      "do_en": [
+        "Make API contracts, error models, and versioning mandatory.",
+        "Manage AuthN/AuthZ, rate limits, and secrets through explicit policies."
+      ],
+      "dont_de": [
+        "Keine stillen Breaking Changes ohne Migrationspfad einführen."
+      ],
+      "dont_en": [
+        "Do not introduce silent breaking changes without a migration path."
+      ],
+      "whenNotToUse_de": [
+        "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
+      ],
+      "whenNotToUse_en": [
+        "Do not introduce this when value, operating model, and ownership are still unclear."
       ]
     },
     {
@@ -1262,6 +2700,36 @@
       ],
       "whenNotToUse": [
         "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
+      ],
+      "intro_de": "Es geht um die Definition und den stabilen Betrieb von Schnittstellenverträgen inklusive Security, Versionierung und Governance. Dieser Punkt beeinflusst direkt Entkopplung, Änderbarkeit und Integrationskosten über Teamgrenzen hinweg.",
+      "intro_en": "This item is about defining and running stable interface contracts, including security, versioning, and governance. It directly impacts decoupling, changeability, and integration cost across teams.",
+      "whyRing_de": "Dieser Punkt ist operativ bewährt und für neue Integrationen die Standardwahl.",
+      "whyRing_en": "This item is operationally proven and should be the default choice for new integrations.",
+      "risks_de": [
+        "Unklare API-Verträge und Security-Regeln führen zu Integrationsbrüchen und erhöhtem Betriebsaufwand."
+      ],
+      "risks_en": [
+        "Unklare API-Verträge und Security-Regeln führen zu Integrationsbrüchen und erhöhtem Betriebsaufwand."
+      ],
+      "do_de": [
+        "API-Vertrag inkl. Fehlercode-Modell und Versionierung verbindlich machen.",
+        "AuthN/AuthZ, Rate Limits und Secrets sauber über Policies steuern."
+      ],
+      "do_en": [
+        "Make API contracts, error models, and versioning mandatory.",
+        "Manage AuthN/AuthZ, rate limits, and secrets through explicit policies."
+      ],
+      "dont_de": [
+        "Keine stillen Breaking Changes ohne Migrationspfad einführen."
+      ],
+      "dont_en": [
+        "Do not introduce silent breaking changes without a migration path."
+      ],
+      "whenNotToUse_de": [
+        "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
+      ],
+      "whenNotToUse_en": [
+        "Do not introduce this when value, operating model, and ownership are still unclear."
       ]
     },
     {
@@ -1289,6 +2757,36 @@
       ],
       "whenNotToUse": [
         "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
+      ],
+      "intro_de": "Es geht um die Definition und den stabilen Betrieb von Schnittstellenverträgen inklusive Security, Versionierung und Governance. Dieser Punkt beeinflusst direkt Entkopplung, Änderbarkeit und Integrationskosten über Teamgrenzen hinweg.",
+      "intro_en": "This item is about defining and running stable interface contracts, including security, versioning, and governance. It directly impacts decoupling, changeability, and integration cost across teams.",
+      "whyRing_de": "Dieser Punkt ist operativ bewährt und für neue Integrationen die Standardwahl.",
+      "whyRing_en": "This item is operationally proven and should be the default choice for new integrations.",
+      "risks_de": [
+        "Unklare API-Verträge und Security-Regeln führen zu Integrationsbrüchen und erhöhtem Betriebsaufwand."
+      ],
+      "risks_en": [
+        "Unklare API-Verträge und Security-Regeln führen zu Integrationsbrüchen und erhöhtem Betriebsaufwand."
+      ],
+      "do_de": [
+        "API-Vertrag inkl. Fehlercode-Modell und Versionierung verbindlich machen.",
+        "AuthN/AuthZ, Rate Limits und Secrets sauber über Policies steuern."
+      ],
+      "do_en": [
+        "Make API contracts, error models, and versioning mandatory.",
+        "Manage AuthN/AuthZ, rate limits, and secrets through explicit policies."
+      ],
+      "dont_de": [
+        "Keine stillen Breaking Changes ohne Migrationspfad einführen."
+      ],
+      "dont_en": [
+        "Do not introduce silent breaking changes without a migration path."
+      ],
+      "whenNotToUse_de": [
+        "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
+      ],
+      "whenNotToUse_en": [
+        "Do not introduce this when value, operating model, and ownership are still unclear."
       ]
     },
     {
@@ -1313,6 +2811,34 @@
       "references": [],
       "whenNotToUse": [
         "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
+      ],
+      "intro_de": "Es geht um Webhooks with signature verification als Integrationsbaustein mit direktem Einfluss auf Architektur- und Betriebsentscheidungen.",
+      "intro_en": "This item is about Webhooks with signature verification as an integration building block with direct impact on architecture and operations decisions.",
+      "whyRing_de": "Dieser Punkt ist operativ bewährt und für neue Integrationen die Standardwahl.",
+      "whyRing_en": "This item is operationally proven and should be the default choice for new integrations.",
+      "risks_de": [
+        "Fehlende klare Zuständigkeiten und Zielbilder führen zu inkonsistenten Umsetzungen zwischen Teams."
+      ],
+      "risks_en": [
+        "Fehlende klare Zuständigkeiten und Zielbilder führen zu inkonsistenten Umsetzungen zwischen Teams."
+      ],
+      "do_de": [
+        "Klare Success-Kriterien und Betriebsmetriken vor dem Rollout festlegen."
+      ],
+      "do_en": [
+        "Define clear success criteria and operating metrics before rollout."
+      ],
+      "dont_de": [
+        "Keine Einführung ohne abgestimmtes Betriebs- und Ownership-Modell."
+      ],
+      "dont_en": [
+        "Do not adopt without an agreed operating model and ownership setup."
+      ],
+      "whenNotToUse_de": [
+        "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
+      ],
+      "whenNotToUse_en": [
+        "Do not introduce this when value, operating model, and ownership are still unclear."
       ]
     },
     {
@@ -1342,6 +2868,40 @@
       ],
       "whenNotToUse": [
         "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
+      ],
+      "intro_de": "Es geht um die Definition und den stabilen Betrieb von Schnittstellenverträgen inklusive Security, Versionierung und Governance. Dieser Punkt beeinflusst direkt Entkopplung, Änderbarkeit und Integrationskosten über Teamgrenzen hinweg.",
+      "intro_en": "This item is about defining and running stable interface contracts, including security, versioning, and governance. It directly impacts decoupling, changeability, and integration cost across teams.",
+      "whyRing_de": "Dieser Punkt ist vielversprechend, sollte aber gezielt und mit klaren Guardrails eingesetzt werden.",
+      "whyRing_en": "This item is promising but should be introduced selectively with clear guardrails.",
+      "risks_de": [
+        "Unklare Zustellsemantik oder fehlende DLQ/Retry-Strategien erzeugen schwer reproduzierbare Fehlerbilder."
+      ],
+      "risks_en": [
+        "Unklare Zustellsemantik oder fehlende DLQ/Retry-Strategien erzeugen schwer reproduzierbare Fehlerbilder."
+      ],
+      "do_de": [
+        "Einsatz auf wenige, geeignete Domänen begrenzen und Ergebnisse systematisch auswerten.",
+        "Schemas versionieren und Consumer-Kompatibilität explizit testen.",
+        "Retry/Backoff, DLQ und Reprocessing-Runbook definieren."
+      ],
+      "do_en": [
+        "Einsatz auf wenige, geeignete Domänen begrenzen und Ergebnisse systematisch auswerten.",
+        "Schemas versionieren und Consumer-Kompatibilität explizit testen.",
+        "Retry/Backoff, DLQ und Reprocessing-Runbook definieren."
+      ],
+      "dont_de": [
+        "Keine Events ohne Ownership und fachliche Idempotenz veröffentlichen.",
+        "Keine stillen Breaking Changes ohne Migrationspfad einführen."
+      ],
+      "dont_en": [
+        "Do not publish events without clear ownership and business idempotency.",
+        "Do not introduce silent breaking changes without a migration path."
+      ],
+      "whenNotToUse_de": [
+        "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
+      ],
+      "whenNotToUse_en": [
+        "Do not introduce this when value, operating model, and ownership are still unclear."
       ]
     },
     {
@@ -1370,6 +2930,38 @@
       ],
       "whenNotToUse": [
         "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
+      ],
+      "intro_de": "Es geht um event-getriebene Integrationsmuster mit asynchroner Kopplung und resilienter Zustellung. Dieser Punkt bestimmt, wie robust Systeme bei Last, Ausfällen und fachlicher Entkopplung zusammenarbeiten.",
+      "intro_en": "This item is about event-driven integration with asynchronous coupling and resilient delivery. It determines how robust systems remain under load, failures, and cross-domain decoupling.",
+      "whyRing_de": "Dieser Punkt ist vielversprechend, sollte aber gezielt und mit klaren Guardrails eingesetzt werden.",
+      "whyRing_en": "This item is promising but should be introduced selectively with clear guardrails.",
+      "risks_de": [
+        "Unklare Zustellsemantik oder fehlende DLQ/Retry-Strategien erzeugen schwer reproduzierbare Fehlerbilder."
+      ],
+      "risks_en": [
+        "Unklare Zustellsemantik oder fehlende DLQ/Retry-Strategien erzeugen schwer reproduzierbare Fehlerbilder."
+      ],
+      "do_de": [
+        "Einsatz auf wenige, geeignete Domänen begrenzen und Ergebnisse systematisch auswerten.",
+        "Schemas versionieren und Consumer-Kompatibilität explizit testen.",
+        "Retry/Backoff, DLQ und Reprocessing-Runbook definieren."
+      ],
+      "do_en": [
+        "Einsatz auf wenige, geeignete Domänen begrenzen und Ergebnisse systematisch auswerten.",
+        "Schemas versionieren und Consumer-Kompatibilität explizit testen.",
+        "Retry/Backoff, DLQ und Reprocessing-Runbook definieren."
+      ],
+      "dont_de": [
+        "Keine Events ohne Ownership und fachliche Idempotenz veröffentlichen."
+      ],
+      "dont_en": [
+        "Do not publish events without clear ownership and business idempotency."
+      ],
+      "whenNotToUse_de": [
+        "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
+      ],
+      "whenNotToUse_en": [
+        "Do not introduce this when value, operating model, and ownership are still unclear."
       ]
     },
     {
@@ -1397,6 +2989,36 @@
       ],
       "whenNotToUse": [
         "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
+      ],
+      "intro_de": "Es geht um event-getriebene Integrationsmuster mit asynchroner Kopplung und resilienter Zustellung. Dieser Punkt bestimmt, wie robust Systeme bei Last, Ausfällen und fachlicher Entkopplung zusammenarbeiten.",
+      "intro_en": "This item is about event-driven integration with asynchronous coupling and resilient delivery. It determines how robust systems remain under load, failures, and cross-domain decoupling.",
+      "whyRing_de": "Dieser Punkt ist operativ bewährt und für neue Integrationen die Standardwahl.",
+      "whyRing_en": "This item is operationally proven and should be the default choice for new integrations.",
+      "risks_de": [
+        "Unklare Zustellsemantik oder fehlende DLQ/Retry-Strategien erzeugen schwer reproduzierbare Fehlerbilder."
+      ],
+      "risks_en": [
+        "Unklare Zustellsemantik oder fehlende DLQ/Retry-Strategien erzeugen schwer reproduzierbare Fehlerbilder."
+      ],
+      "do_de": [
+        "Schemas versionieren und Consumer-Kompatibilität explizit testen.",
+        "Retry/Backoff, DLQ und Reprocessing-Runbook definieren."
+      ],
+      "do_en": [
+        "Schemas versionieren und Consumer-Kompatibilität explizit testen.",
+        "Retry/Backoff, DLQ und Reprocessing-Runbook definieren."
+      ],
+      "dont_de": [
+        "Keine Events ohne Ownership und fachliche Idempotenz veröffentlichen."
+      ],
+      "dont_en": [
+        "Do not publish events without clear ownership and business idempotency."
+      ],
+      "whenNotToUse_de": [
+        "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
+      ],
+      "whenNotToUse_en": [
+        "Do not introduce this when value, operating model, and ownership are still unclear."
       ]
     },
     {
@@ -1424,6 +3046,38 @@
         "https://mqtt.org/"
       ],
       "whenNotToUse": [
+        "Nicht für klassische Enterprise-Integration ohne IoT/OT-Anforderungen forcieren."
+      ],
+      "intro_de": "Es geht um event-getriebene Integrationsmuster mit asynchroner Kopplung und resilienter Zustellung. Dieser Punkt bestimmt, wie robust Systeme bei Last, Ausfällen und fachlicher Entkopplung zusammenarbeiten.",
+      "intro_en": "This item is about event-driven integration with asynchronous coupling and resilient delivery. It determines how robust systems remain under load, failures, and cross-domain decoupling.",
+      "whyRing_de": "Dieser Punkt hat Potenzial, braucht aber vor breiter Nutzung noch strukturierte Validierung.",
+      "whyRing_en": "This item has potential but requires structured validation before broader adoption.",
+      "risks_de": [
+        "Unklare Zustellsemantik oder fehlende DLQ/Retry-Strategien erzeugen schwer reproduzierbare Fehlerbilder."
+      ],
+      "risks_en": [
+        "Unklare Zustellsemantik oder fehlende DLQ/Retry-Strategien erzeugen schwer reproduzierbare Fehlerbilder."
+      ],
+      "do_de": [
+        "Zeitlich begrenzten PoC mit klarer Go/No-Go-Entscheidung durchführen.",
+        "Schemas versionieren und Consumer-Kompatibilität explizit testen.",
+        "Retry/Backoff, DLQ und Reprocessing-Runbook definieren."
+      ],
+      "do_en": [
+        "Zeitlich begrenzten PoC mit klarer Go/No-Go-Entscheidung durchführen.",
+        "Schemas versionieren und Consumer-Kompatibilität explizit testen.",
+        "Retry/Backoff, DLQ und Reprocessing-Runbook definieren."
+      ],
+      "dont_de": [
+        "Keine Events ohne Ownership und fachliche Idempotenz veröffentlichen."
+      ],
+      "dont_en": [
+        "Do not publish events without clear ownership and business idempotency."
+      ],
+      "whenNotToUse_de": [
+        "Nicht für klassische Enterprise-Integration ohne IoT/OT-Anforderungen forcieren."
+      ],
+      "whenNotToUse_en": [
         "Nicht für klassische Enterprise-Integration ohne IoT/OT-Anforderungen forcieren."
       ]
     },
@@ -1453,6 +3107,38 @@
       ],
       "whenNotToUse": [
         "Nicht als generelles Ersatzprotokoll für alle Backend-Integrationen verwenden."
+      ],
+      "intro_de": "Es geht um die Definition und den stabilen Betrieb von Schnittstellenverträgen inklusive Security, Versionierung und Governance. Dieser Punkt beeinflusst direkt Entkopplung, Änderbarkeit und Integrationskosten über Teamgrenzen hinweg.",
+      "intro_en": "This item is about defining and running stable interface contracts, including security, versioning, and governance. It directly impacts decoupling, changeability, and integration cost across teams.",
+      "whyRing_de": "Dieser Punkt hat Potenzial, braucht aber vor breiter Nutzung noch strukturierte Validierung.",
+      "whyRing_en": "This item has potential but requires structured validation before broader adoption.",
+      "risks_de": [
+        "Unklare API-Verträge und Security-Regeln führen zu Integrationsbrüchen und erhöhtem Betriebsaufwand."
+      ],
+      "risks_en": [
+        "Unklare API-Verträge und Security-Regeln führen zu Integrationsbrüchen und erhöhtem Betriebsaufwand."
+      ],
+      "do_de": [
+        "Zeitlich begrenzten PoC mit klarer Go/No-Go-Entscheidung durchführen.",
+        "API-Vertrag inkl. Fehlercode-Modell und Versionierung verbindlich machen.",
+        "AuthN/AuthZ, Rate Limits und Secrets sauber über Policies steuern."
+      ],
+      "do_en": [
+        "Zeitlich begrenzten PoC mit klarer Go/No-Go-Entscheidung durchführen.",
+        "Make API contracts, error models, and versioning mandatory.",
+        "Manage AuthN/AuthZ, rate limits, and secrets through explicit policies."
+      ],
+      "dont_de": [
+        "Keine stillen Breaking Changes ohne Migrationspfad einführen."
+      ],
+      "dont_en": [
+        "Do not introduce silent breaking changes without a migration path."
+      ],
+      "whenNotToUse_de": [
+        "Nicht als generelles Ersatzprotokoll für alle Backend-Integrationen verwenden."
+      ],
+      "whenNotToUse_en": [
+        "Nicht als generelles Ersatzprotokoll für alle Backend-Integrationen verwenden."
       ]
     },
     {
@@ -1481,6 +3167,38 @@
       ],
       "whenNotToUse": [
         "Nicht für externe, breit konsumierte Public APIs als Standard wählen."
+      ],
+      "intro_de": "Es geht um die Definition und den stabilen Betrieb von Schnittstellenverträgen inklusive Security, Versionierung und Governance. Dieser Punkt beeinflusst direkt Entkopplung, Änderbarkeit und Integrationskosten über Teamgrenzen hinweg.",
+      "intro_en": "This item is about defining and running stable interface contracts, including security, versioning, and governance. It directly impacts decoupling, changeability, and integration cost across teams.",
+      "whyRing_de": "Dieser Punkt hat Potenzial, braucht aber vor breiter Nutzung noch strukturierte Validierung.",
+      "whyRing_en": "This item has potential but requires structured validation before broader adoption.",
+      "risks_de": [
+        "Unklare API-Verträge und Security-Regeln führen zu Integrationsbrüchen und erhöhtem Betriebsaufwand."
+      ],
+      "risks_en": [
+        "Unklare API-Verträge und Security-Regeln führen zu Integrationsbrüchen und erhöhtem Betriebsaufwand."
+      ],
+      "do_de": [
+        "Zeitlich begrenzten PoC mit klarer Go/No-Go-Entscheidung durchführen.",
+        "API-Vertrag inkl. Fehlercode-Modell und Versionierung verbindlich machen.",
+        "AuthN/AuthZ, Rate Limits und Secrets sauber über Policies steuern."
+      ],
+      "do_en": [
+        "Zeitlich begrenzten PoC mit klarer Go/No-Go-Entscheidung durchführen.",
+        "Make API contracts, error models, and versioning mandatory.",
+        "Manage AuthN/AuthZ, rate limits, and secrets through explicit policies."
+      ],
+      "dont_de": [
+        "Keine stillen Breaking Changes ohne Migrationspfad einführen."
+      ],
+      "dont_en": [
+        "Do not introduce silent breaking changes without a migration path."
+      ],
+      "whenNotToUse_de": [
+        "Nicht für externe, breit konsumierte Public APIs als Standard wählen."
+      ],
+      "whenNotToUse_en": [
+        "Nicht für externe, breit konsumierte Public APIs als Standard wählen."
       ]
     },
     {
@@ -1506,6 +3224,36 @@
       "references": [],
       "whenNotToUse": [
         "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
+      ],
+      "intro_de": "Es geht um AVRO + Schema Registry als Integrationsbaustein mit direktem Einfluss auf Architektur- und Betriebsentscheidungen.",
+      "intro_en": "This item is about AVRO + Schema Registry as an integration building block with direct impact on architecture and operations decisions.",
+      "whyRing_de": "Dieser Punkt hat Potenzial, braucht aber vor breiter Nutzung noch strukturierte Validierung.",
+      "whyRing_en": "This item has potential but requires structured validation before broader adoption.",
+      "risks_de": [
+        "Fehlende klare Zuständigkeiten und Zielbilder führen zu inkonsistenten Umsetzungen zwischen Teams."
+      ],
+      "risks_en": [
+        "Fehlende klare Zuständigkeiten und Zielbilder führen zu inkonsistenten Umsetzungen zwischen Teams."
+      ],
+      "do_de": [
+        "Zeitlich begrenzten PoC mit klarer Go/No-Go-Entscheidung durchführen.",
+        "Klare Success-Kriterien und Betriebsmetriken vor dem Rollout festlegen."
+      ],
+      "do_en": [
+        "Zeitlich begrenzten PoC mit klarer Go/No-Go-Entscheidung durchführen.",
+        "Define clear success criteria and operating metrics before rollout."
+      ],
+      "dont_de": [
+        "Keine Einführung ohne abgestimmtes Betriebs- und Ownership-Modell."
+      ],
+      "dont_en": [
+        "Do not adopt without an agreed operating model and ownership setup."
+      ],
+      "whenNotToUse_de": [
+        "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
+      ],
+      "whenNotToUse_en": [
+        "Do not introduce this when value, operating model, and ownership are still unclear."
       ]
     },
     {
@@ -1531,6 +3279,36 @@
       "references": [],
       "whenNotToUse": [
         "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
+      ],
+      "intro_de": "Es geht um EDI/AS2 als Integrationsbaustein mit direktem Einfluss auf Architektur- und Betriebsentscheidungen.",
+      "intro_en": "This item is about EDI/AS2 as an integration building block with direct impact on architecture and operations decisions.",
+      "whyRing_de": "Dieser Punkt hat Potenzial, braucht aber vor breiter Nutzung noch strukturierte Validierung.",
+      "whyRing_en": "This item has potential but requires structured validation before broader adoption.",
+      "risks_de": [
+        "Fehlende klare Zuständigkeiten und Zielbilder führen zu inkonsistenten Umsetzungen zwischen Teams."
+      ],
+      "risks_en": [
+        "Fehlende klare Zuständigkeiten und Zielbilder führen zu inkonsistenten Umsetzungen zwischen Teams."
+      ],
+      "do_de": [
+        "Zeitlich begrenzten PoC mit klarer Go/No-Go-Entscheidung durchführen.",
+        "Klare Success-Kriterien und Betriebsmetriken vor dem Rollout festlegen."
+      ],
+      "do_en": [
+        "Zeitlich begrenzten PoC mit klarer Go/No-Go-Entscheidung durchführen.",
+        "Define clear success criteria and operating metrics before rollout."
+      ],
+      "dont_de": [
+        "Keine Einführung ohne abgestimmtes Betriebs- und Ownership-Modell."
+      ],
+      "dont_en": [
+        "Do not adopt without an agreed operating model and ownership setup."
+      ],
+      "whenNotToUse_de": [
+        "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
+      ],
+      "whenNotToUse_en": [
+        "Do not introduce this when value, operating model, and ownership are still unclear."
       ]
     },
     {
@@ -1559,6 +3337,42 @@
       "whenNotToUse": [
         "Nicht für neue Greenfield-Integrationen verwenden.",
         "Nicht einsetzen, wenn API- oder Event-basierte Alternativen verfügbar sind."
+      ],
+      "intro_de": "Es geht um die Definition und den stabilen Betrieb von Schnittstellenverträgen inklusive Security, Versionierung und Governance. Dieser Punkt beeinflusst direkt Entkopplung, Änderbarkeit und Integrationskosten über Teamgrenzen hinweg.",
+      "intro_en": "This item is about defining and running stable interface contracts, including security, versioning, and governance. It directly impacts decoupling, changeability, and integration cost across teams.",
+      "whyRing_de": "Dieser Punkt ist für neue Implementierungen nicht empfohlen und sollte nur kontrolliert im Bestand laufen.",
+      "whyRing_en": "This item is not recommended for new implementations and should be contained in legacy scope only.",
+      "risks_de": [
+        "Unklare API-Verträge und Security-Regeln führen zu Integrationsbrüchen und erhöhtem Betriebsaufwand."
+      ],
+      "risks_en": [
+        "Unklare API-Verträge und Security-Regeln führen zu Integrationsbrüchen und erhöhtem Betriebsaufwand."
+      ],
+      "do_de": [
+        "Bestandsnutzung nur mit Exit-Strategie und priorisiertem Ablöseplan fortführen.",
+        "API-Vertrag inkl. Fehlercode-Modell und Versionierung verbindlich machen.",
+        "AuthN/AuthZ, Rate Limits und Secrets sauber über Policies steuern."
+      ],
+      "do_en": [
+        "Bestandsnutzung nur mit Exit-Strategie und priorisiertem Ablöseplan fortführen.",
+        "Make API contracts, error models, and versioning mandatory.",
+        "Manage AuthN/AuthZ, rate limits, and secrets through explicit policies."
+      ],
+      "dont_de": [
+        "Keine stillen Breaking Changes ohne Migrationspfad einführen.",
+        "Keine neuen Legacy-Kopplungen in Greenfield-Umfängen aufbauen."
+      ],
+      "dont_en": [
+        "Do not introduce silent breaking changes without a migration path.",
+        "Keine neuen Legacy-Kopplungen in Greenfield-Umfängen aufbauen."
+      ],
+      "whenNotToUse_de": [
+        "Nicht für neue Greenfield-Integrationen verwenden.",
+        "Nicht einsetzen, wenn API- oder Event-basierte Alternativen verfügbar sind."
+      ],
+      "whenNotToUse_en": [
+        "Do not use for new greenfield integrations.",
+        "Do not use when API- or event-based alternatives are available."
       ]
     },
     {
@@ -1584,6 +3398,36 @@
       "references": [],
       "whenNotToUse": [
         "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
+      ],
+      "intro_de": "Es geht um SFTP (managed file transfer transition) als Integrationsbaustein mit direktem Einfluss auf Architektur- und Betriebsentscheidungen.",
+      "intro_en": "This item is about SFTP (managed file transfer transition) as an integration building block with direct impact on architecture and operations decisions.",
+      "whyRing_de": "Dieser Punkt hat Potenzial, braucht aber vor breiter Nutzung noch strukturierte Validierung.",
+      "whyRing_en": "This item has potential but requires structured validation before broader adoption.",
+      "risks_de": [
+        "Fehlende klare Zuständigkeiten und Zielbilder führen zu inkonsistenten Umsetzungen zwischen Teams."
+      ],
+      "risks_en": [
+        "Fehlende klare Zuständigkeiten und Zielbilder führen zu inkonsistenten Umsetzungen zwischen Teams."
+      ],
+      "do_de": [
+        "Zeitlich begrenzten PoC mit klarer Go/No-Go-Entscheidung durchführen.",
+        "Klare Success-Kriterien und Betriebsmetriken vor dem Rollout festlegen."
+      ],
+      "do_en": [
+        "Zeitlich begrenzten PoC mit klarer Go/No-Go-Entscheidung durchführen.",
+        "Define clear success criteria and operating metrics before rollout."
+      ],
+      "dont_de": [
+        "Keine Einführung ohne abgestimmtes Betriebs- und Ownership-Modell."
+      ],
+      "dont_en": [
+        "Do not adopt without an agreed operating model and ownership setup."
+      ],
+      "whenNotToUse_de": [
+        "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
+      ],
+      "whenNotToUse_en": [
+        "Do not introduce this when value, operating model, and ownership are still unclear."
       ]
     },
     {
@@ -1610,6 +3454,38 @@
       "whenNotToUse": [
         "Nicht für neue Greenfield-Integrationen verwenden.",
         "Nicht einsetzen, wenn API- oder Event-basierte Alternativen verfügbar sind."
+      ],
+      "intro_de": "Es geht um New SOAP/WSDL interfaces als Integrationsbaustein mit direktem Einfluss auf Architektur- und Betriebsentscheidungen.",
+      "intro_en": "This item is about New SOAP/WSDL interfaces as an integration building block with direct impact on architecture and operations decisions.",
+      "whyRing_de": "Dieser Punkt ist für neue Implementierungen nicht empfohlen und sollte nur kontrolliert im Bestand laufen.",
+      "whyRing_en": "This item is not recommended for new implementations and should be contained in legacy scope only.",
+      "risks_de": [
+        "Unklare API-Verträge und Security-Regeln führen zu Integrationsbrüchen und erhöhtem Betriebsaufwand."
+      ],
+      "risks_en": [
+        "Unklare API-Verträge und Security-Regeln führen zu Integrationsbrüchen und erhöhtem Betriebsaufwand."
+      ],
+      "do_de": [
+        "Bestandsnutzung nur mit Exit-Strategie und priorisiertem Ablöseplan fortführen.",
+        "Migrationspfad zu API-/Event-basierten Integrationsmustern aktiv planen."
+      ],
+      "do_en": [
+        "Bestandsnutzung nur mit Exit-Strategie und priorisiertem Ablöseplan fortführen.",
+        "Migrationspfad zu API-/Event-basierten Integrationsmustern aktiv planen."
+      ],
+      "dont_de": [
+        "Keine neuen Legacy-Kopplungen in Greenfield-Umfängen aufbauen."
+      ],
+      "dont_en": [
+        "Keine neuen Legacy-Kopplungen in Greenfield-Umfängen aufbauen."
+      ],
+      "whenNotToUse_de": [
+        "Nicht für neue Greenfield-Integrationen verwenden.",
+        "Nicht einsetzen, wenn API- oder Event-basierte Alternativen verfügbar sind."
+      ],
+      "whenNotToUse_en": [
+        "Do not use for new greenfield integrations.",
+        "Do not use when API- or event-based alternatives are available."
       ]
     },
     {
@@ -1636,6 +3512,38 @@
       "whenNotToUse": [
         "Nicht für neue Greenfield-Integrationen verwenden.",
         "Nicht einsetzen, wenn API- oder Event-basierte Alternativen verfügbar sind."
+      ],
+      "intro_de": "Es geht um SOAP (legacy) als Integrationsbaustein mit direktem Einfluss auf Architektur- und Betriebsentscheidungen.",
+      "intro_en": "This item is about SOAP (legacy) as an integration building block with direct impact on architecture and operations decisions.",
+      "whyRing_de": "Dieser Punkt ist für neue Implementierungen nicht empfohlen und sollte nur kontrolliert im Bestand laufen.",
+      "whyRing_en": "This item is not recommended for new implementations and should be contained in legacy scope only.",
+      "risks_de": [
+        "Unklare API-Verträge und Security-Regeln führen zu Integrationsbrüchen und erhöhtem Betriebsaufwand."
+      ],
+      "risks_en": [
+        "Unklare API-Verträge und Security-Regeln führen zu Integrationsbrüchen und erhöhtem Betriebsaufwand."
+      ],
+      "do_de": [
+        "Bestandsnutzung nur mit Exit-Strategie und priorisiertem Ablöseplan fortführen.",
+        "Migrationspfad zu API-/Event-basierten Integrationsmustern aktiv planen."
+      ],
+      "do_en": [
+        "Bestandsnutzung nur mit Exit-Strategie und priorisiertem Ablöseplan fortführen.",
+        "Migrationspfad zu API-/Event-basierten Integrationsmustern aktiv planen."
+      ],
+      "dont_de": [
+        "Keine neuen Legacy-Kopplungen in Greenfield-Umfängen aufbauen."
+      ],
+      "dont_en": [
+        "Keine neuen Legacy-Kopplungen in Greenfield-Umfängen aufbauen."
+      ],
+      "whenNotToUse_de": [
+        "Nicht für neue Greenfield-Integrationen verwenden.",
+        "Nicht einsetzen, wenn API- oder Event-basierte Alternativen verfügbar sind."
+      ],
+      "whenNotToUse_en": [
+        "Do not use for new greenfield integrations.",
+        "Do not use when API- or event-based alternatives are available."
       ]
     }
   ]
