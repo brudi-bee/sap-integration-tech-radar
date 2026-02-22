@@ -23,13 +23,30 @@
           link: e.link || `details.html?item=${encodeURIComponent(e.label)}`
         }));
 
+        const ringColors = {
+          ADOPT: '#5fd3ff',
+          TRIAL: '#3fa9ff',
+          ASSESS: '#2f78ff',
+          HOLD: '#1f4fd1'
+        };
+
+        const rings = (data.rings || []).map((r) => ({
+          ...r,
+          color: ringColors[r.name] || r.color
+        }));
+
         radar_visualization({
           repo_url: 'https://github.com/brudi-bee/sap-integration-tech-radar',
           title: data.title || 'SAP Integration Tech Radar',
           date: data.date || '2026.02',
           quadrants: data.quadrants,
-          rings: data.rings,
+          rings,
           entries,
+          colors: {
+            background: '#07153b',
+            grid: '#2d64ff',
+            inactive: '#1a2f6b'
+          },
           print_layout: true,
           links_in_new_tabs: false
         });
