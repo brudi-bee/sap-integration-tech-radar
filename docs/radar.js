@@ -272,7 +272,7 @@ function radar_visualization(config) {
         .style("fill", config.rings[i].color)
         .style("opacity", 0.35)
         .style("font-family", config.font_family)
-        .style("font-size", "42px")
+        .style("font-size", "34px")
         .style("font-weight", "bold")
         .style("pointer-events", "none")
         .style("user-select", "none");
@@ -303,7 +303,7 @@ function radar_visualization(config) {
       .attr("class", "hover-underline")  // add class for hover effect
       .text(config.title)
       .style("font-family", config.font_family)
-      .style("font-size", "44")
+      .style("font-size", "30")
       .style("font-weight", "bold")
       .style("fill", config.theme.title)
 
@@ -313,7 +313,7 @@ function radar_visualization(config) {
       .attr("transform", translate(config.title_offset.x, config.title_offset.y + 30))
       .text(config.date || "")
       .style("font-family", config.font_family)
-      .style("font-size", "20")
+      .style("font-size", "16")
       .style("fill", config.theme.muted)
 
     // footer
@@ -335,7 +335,7 @@ function radar_visualization(config) {
         ))
         .text(config.quadrants[quadrant].name)
         .style("font-family", config.font_family)
-        .style("font-size", "38px")
+        .style("font-size", "18px")
         .style("font-weight", "bold")
         .style("fill", config.theme.title)
         .style("opacity", 0.92);
@@ -348,7 +348,7 @@ function radar_visualization(config) {
           .attr("transform", legend_transform(quadrant, ring, config.legend_column_width, null, previousLegendHeight))
           .text(config.rings[ring].name)
           .style("font-family", config.font_family)
-          .style("font-size", "24px")
+          .style("font-size", "12px")
           .style("font-weight", "bold")
           .style("fill", config.rings[ring].color)
           .style("letter-spacing", "0.02em");
@@ -369,7 +369,7 @@ function radar_visualization(config) {
               .attr("id", function(d, i) { return "legendItem" + d.id; })
               .text(function(d) { return d.id + ". " + d.label; })
               .style("font-family", config.font_family)
-              .style("font-size", "15px")
+              .style("font-size", "12px")
               .style("font-weight", "600")
               .style("fill", config.theme.text)
               .on("mouseover", function(event, d) { showBubble(d); highlightLegendItem(d); })

@@ -7,14 +7,14 @@
   <title>SAP Integration Tech Radar</title>
 
   <script src="https://d3js.org/d3.v7.min.js"></script>
-  <script src="radar.js?v=2026-02-22-5"></script>
-  <link rel="stylesheet" href="radar.css?v=2026-02-22-5" />
+  <script src="radar.js?v=2026-02-22-6"></script>
+  <link rel="stylesheet" href="radar.css?v=2026-02-22-6" />
 </head>
 <body>
   <div class="topbar">
     <div>
       <strong>SAP Integration Tech Radar</strong>
-      <span class="muted">· Dark / NTT-style</span>
+      <span class="muted">· Dark theme</span>
     </div>
     <label class="switch">
       <input id="presentation-toggle" type="checkbox" checked />
@@ -109,8 +109,8 @@
         repo_url: 'https://github.com/brudi-bee/sap-integration-tech-radar',
         title: data.title || 'SAP Integration Tech Radar',
         date: data.date || '2026.02',
-        width: mobile ? 1080 : (presentationMode ? 2000 : 1820),
-        height: mobile ? 980 : (presentationMode ? 1220 : 1120),
+        width: mobile ? 1080 : (presentationMode ? 1600 : 1450),
+        height: mobile ? 980 : (presentationMode ? 1080 : 1000),
         quadrants: data.quadrants,
         rings,
         entries,
@@ -127,11 +127,11 @@
         },
         legend_offset: mobile
           ? [{x:520,y:120},{x:-840,y:120},{x:-840,y:-330},{x:520,y:-330}]
-          : [{ x: 560, y: 140 }, { x: -900, y: 140 }, { x: -900, y: -370 }, { x: 560, y: -370 }],
-        title_offset: mobile ? {x:-860,y:-470} : { x: -900, y: -510 },
-        footer_offset: mobile ? {x:-150,y:500} : { x: -170, y: 545 },
-        legend_column_width: mobile ? 210 : 250,
-        legend_line_height: mobile ? 14 : 15,
+          : [{ x: 450, y: 90 }, { x: -675, y: 90 }, { x: -675, y: -310 }, { x: 450, y: -310 }],
+        title_offset: mobile ? {x:-860,y:-470} : { x: -675, y: -420 },
+        footer_offset: mobile ? {x:-150,y:500} : { x: -155, y: 450 },
+        legend_column_width: mobile ? 210 : 140,
+        legend_line_height: mobile ? 14 : 10,
         print_layout: !mobile,
         links_in_new_tabs: false
       });
