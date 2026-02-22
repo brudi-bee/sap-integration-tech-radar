@@ -21,35 +21,38 @@
         "docs/core-blips-v0.1.1.md"
       ],
       "references": [
-        "https://help.sap.com/docs/integration-suite/sap-integration-suite/cloud-integration"
+        "https://help.sap.com/docs/integration-suite"
       ],
       "whenNotToUse": [
         "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
       ],
-      "intro_de": "Es geht um eine SAP-spezifische Integrationsfähigkeit innerhalb der BTP-/ERP-Landschaft. Dieser Punkt beeinflusst sowohl fachliche Time-to-Value als auch den späteren Betriebsaufwand.",
+      "intro_de": "Zentraler iPaaS zur Orchestrierung und Transformation von Business-Prozessen (A2A/B2B). Fokus auf Message-Processing und Adaption.",
       "intro_en": "This item is about SAP-specific integration capability within a BTP/ERP landscape. It influences both business time-to-value and long-term operational effort.",
-      "whyRing_de": "Dieser Punkt ist operativ bewährt und für neue Integrationen die Standardwahl.",
+      "whyRing_de": "Strategischer Standard für prozessuale Integration in SAP-Landschaften.",
       "whyRing_en": "This item is operationally proven and should be the default choice for new integrations.",
       "risks_de": [
-        "Fehlende klare Zuständigkeiten und Zielbilder führen zu inkonsistenten Umsetzungen zwischen Teams."
+        "Groovy-Spaghetti; Memory-Overload bei großen Payloads (>100MB) ohne Streaming; Vendor Lock-in durch proprietäre Adapter."
       ],
       "risks_en": [
         "Fehlende klare Zuständigkeiten und Zielbilder führen zu inkonsistenten Umsetzungen zwischen Teams."
       ],
       "do_de": [
-        "Klare Success-Kriterien und Betriebsmetriken vor dem Rollout festlegen."
+        "Streaming nutzen.",
+        "Business-Logik in CAP/Backend lassen.",
+        "Externalisierte Parameter nutzen."
       ],
       "do_en": [
         "Define clear success criteria and operating metrics before rollout."
       ],
       "dont_de": [
-        "Keine Einführung ohne abgestimmtes Betriebs- und Ownership-Modell."
+        "Passwörter hardcoden.",
+        "CI als Datenbank-Ersatz missbrauchen."
       ],
       "dont_en": [
         "Do not adopt without an agreed operating model and ownership setup."
       ],
       "whenNotToUse_de": [
-        "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
+        "Ultra-Low-Latency (<50ms) oder reines Data-ETL (Datasphere nutzen)."
       ],
       "whenNotToUse_en": [
         "Do not introduce this when value, operating model, and ownership are still unclear."
@@ -76,31 +79,33 @@
         "docs/core-blips-v0.1.1.md"
       ],
       "references": [
-        "https://help.sap.com/docs/integration-suite/sap-integration-suite/api-management"
+        "https://help.sap.com/docs/integration-suite"
       ],
       "whenNotToUse": [
         "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
       ],
-      "intro_de": "Es geht um die Definition und den stabilen Betrieb von Schnittstellenverträgen inklusive Security, Versionierung und Governance. Dieser Punkt beeinflusst direkt Entkopplung, Änderbarkeit und Integrationskosten über Teamgrenzen hinweg.",
+      "intro_de": "Governance- und Security-Layer zur Exponierung und Überwachung von Schnittstellen. Trennung von Provider und Consumer.",
       "intro_en": "This item is about defining and running stable interface contracts, including security, versioning, and governance. It directly impacts decoupling, changeability, and integration cost across teams.",
       "whyRing_de": "Dieser Punkt ist operativ bewährt und für neue Integrationen die Standardwahl.",
       "whyRing_en": "This item is operationally proven and should be the default choice for new integrations.",
       "risks_de": [
-        "Unklare API-Verträge und Security-Regeln führen zu Integrationsbrüchen und erhöhtem Betriebsaufwand."
+        "Single Point of Failure; Policy-Overhead; Fehlendes Rate-Limiting führt zu Backend-DDoS."
       ],
       "risks_en": [
         "Unklare API-Verträge und Security-Regeln führen zu Integrationsbrüchen und erhöhtem Betriebsaufwand."
       ],
       "do_de": [
-        "API-Vertrag inkl. Fehlercode-Modell und Versionierung verbindlich machen.",
-        "AuthN/AuthZ, Rate Limits und Secrets sauber über Policies steuern."
+        "OAuth2/OIDC erzwingen.",
+        "Spike Arrest Policies nutzen.",
+        "API-First mit OpenAPI."
       ],
       "do_en": [
         "Make API contracts, error models, and versioning mandatory.",
         "Manage AuthN/AuthZ, rate limits, and secrets through explicit policies."
       ],
       "dont_de": [
-        "Keine stillen Breaking Changes ohne Migrationspfad einführen."
+        "Breaking Changes ohne Versionierung.",
+        "Geschäftslogik in JS-Policies."
       ],
       "dont_en": [
         "Do not introduce silent breaking changes without a migration path."
@@ -199,7 +204,7 @@
       "whenNotToUse": [
         "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
       ],
-      "intro_de": "Es geht um event-getriebene Integrationsmuster mit asynchroner Kopplung und resilienter Zustellung. Dieser Punkt bestimmt, wie robust Systeme bei Last, Ausfällen und fachlicher Entkopplung zusammenarbeiten.",
+      "intro_de": "Enterprise-Grade Event-Broker für Event-driven Architectures (EDA) über Cloud-Grenzen hinweg.",
       "intro_en": "This item is about event-driven integration with asynchronous coupling and resilient delivery. It determines how robust systems remain under load, failures, and cross-domain decoupling.",
       "whyRing_de": "Dieser Punkt ist vielversprechend, sollte aber gezielt und mit klaren Guardrails eingesetzt werden.",
       "whyRing_en": "This item is promising but should be introduced selectively with clear guardrails.",
@@ -210,9 +215,8 @@
         "Unklare Zustellsemantik oder fehlende DLQ/Retry-Strategien erzeugen schwer reproduzierbare Fehlerbilder."
       ],
       "do_de": [
-        "Einsatz auf wenige, geeignete Domänen begrenzen und Ergebnisse systematisch auswerten.",
-        "Schemas versionieren und Consumer-Kompatibilität explizit testen.",
-        "Retry/Backoff, DLQ und Reprocessing-Runbook definieren."
+        "CloudEvents Standard nutzen.",
+        "Dynamic Message Routing (DMR) für Multi-Region."
       ],
       "do_en": [
         "Einsatz auf wenige, geeignete Domänen begrenzen und Ergebnisse systematisch auswerten.",
@@ -220,7 +224,7 @@
         "Retry/Backoff, DLQ und Reprocessing-Runbook definieren."
       ],
       "dont_de": [
-        "Keine Events ohne Ownership und fachliche Idempotenz veröffentlichen."
+        "Große Payloads im Event verschicken (Claim-Check nutzen)."
       ],
       "dont_en": [
         "Do not publish events without clear ownership and business idempotency."
@@ -230,7 +234,8 @@
       ],
       "whenNotToUse_en": [
         "Do not introduce this when value, operating model, and ownership are still unclear."
-      ]
+      ],
+      "ringChangeSuggestion": "ADOPT"
     },
     {
       "label": "SAP Cloud Connector",
@@ -653,7 +658,7 @@
         "Nicht für neue Greenfield-Integrationen verwenden.",
         "Nicht einsetzen, wenn API- oder Event-basierte Alternativen verfügbar sind."
       ],
-      "intro_de": "Es geht um eine SAP-spezifische Integrationsfähigkeit innerhalb der BTP-/ERP-Landschaft. Dieser Punkt beeinflusst sowohl fachliche Time-to-Value als auch den späteren Betriebsaufwand.",
+      "intro_de": "Legacy On-Premise Middleware. Wartungsmodus.",
       "intro_en": "This item is about SAP-specific integration capability within a BTP/ERP landscape. It influences both business time-to-value and long-term operational effort.",
       "whyRing_de": "Dieser Punkt ist für neue Implementierungen nicht empfohlen und sollte nur kontrolliert im Bestand laufen.",
       "whyRing_en": "This item is not recommended for new implementations and should be contained in legacy scope only.",
@@ -664,15 +669,16 @@
         "Fehlende klare Zuständigkeiten und Zielbilder führen zu inkonsistenten Umsetzungen zwischen Teams."
       ],
       "do_de": [
-        "Bestandsnutzung nur mit Exit-Strategie und priorisiertem Ablöseplan fortführen.",
-        "Migrationspfad zu API-/Event-basierten Integrationsmustern aktiv planen."
+        "Migrations-Assessment (ISA-M) starten.",
+        "Nur kritische Bugfixes."
       ],
       "do_en": [
         "Bestandsnutzung nur mit Exit-Strategie und priorisiertem Ablöseplan fortführen.",
         "Migrationspfad zu API-/Event-basierten Integrationsmustern aktiv planen."
       ],
       "dont_de": [
-        "Keine neuen Legacy-Kopplungen in Greenfield-Umfängen aufbauen."
+        "Neue Flows auf PI/PO bauen.",
+        "Komplexe Java-Eigenentwicklungen."
       ],
       "dont_en": [
         "Keine neuen Legacy-Kopplungen in Greenfield-Umfängen aufbauen."
@@ -684,7 +690,9 @@
       "whenNotToUse_en": [
         "Do not use for new greenfield integrations.",
         "Do not use when API- or event-based alternatives are available."
-      ]
+      ],
+      "ringChangeSuggestion": "HOLD",
+      "changeRationale": "End-of-Life (2027/2030). Jede neue Investition erzeugt technische Schulden."
     },
     {
       "label": "Central logging + correlation IDs",
@@ -1032,36 +1040,40 @@
         "docs/research-notes-2026-02-21.md",
         "docs/core-blips-v0.1.1.md"
       ],
-      "references": [],
+      "references": [
+        "https://help.sap.com/docs/integration-suite"
+      ],
       "whenNotToUse": [
         "Nicht ohne abgestimmtes Governance- und Rollback-Modell einführen."
       ],
-      "intro_de": "Es geht um die zuverlässige Bereitstellung und Steuerung von Integrationsartefakten über Umgebungen hinweg. Dieser Punkt wirkt direkt auf Änderungsqualität, Auditierbarkeit und Release-Geschwindigkeit.",
+      "intro_de": "Zentraler iPaaS zur Orchestrierung und Transformation von Business-Prozessen (A2A/B2B). Fokus auf Message-Processing und Adaption.",
       "intro_en": "This item is about reliable delivery and control of integration artifacts across environments. It directly affects change quality, auditability, and release speed.",
-      "whyRing_de": "Dieser Punkt hat Potenzial, braucht aber vor breiter Nutzung noch strukturierte Validierung.",
+      "whyRing_de": "Strategischer Standard für prozessuale Integration in SAP-Landschaften.",
       "whyRing_en": "This item has potential but requires structured validation before broader adoption.",
       "risks_de": [
-        "Schwache Deployment-Governance erhöht Change-Risiko und Audit-Aufwand."
+        "Groovy-Spaghetti; Memory-Overload bei großen Payloads (>100MB) ohne Streaming; Vendor Lock-in durch proprietäre Adapter."
       ],
       "risks_en": [
         "Schwache Deployment-Governance erhöht Change-Risiko und Audit-Aufwand."
       ],
       "do_de": [
-        "Zeitlich begrenzten PoC mit klarer Go/No-Go-Entscheidung durchführen.",
-        "Changes über Pipeline mit Freigaben, Checks und Rollback-Plan ausrollen."
+        "Streaming nutzen.",
+        "Business-Logik in CAP/Backend lassen.",
+        "Externalisierte Parameter nutzen."
       ],
       "do_en": [
         "Zeitlich begrenzten PoC mit klarer Go/No-Go-Entscheidung durchführen.",
         "Changes über Pipeline mit Freigaben, Checks und Rollback-Plan ausrollen."
       ],
       "dont_de": [
-        "Keine direkten Prod-Änderungen außerhalb des definierten Change-Prozesses."
+        "Passwörter hardcoden.",
+        "CI als Datenbank-Ersatz missbrauchen."
       ],
       "dont_en": [
         "Keine direkten Prod-Änderungen außerhalb des definierten Change-Prozesses."
       ],
       "whenNotToUse_de": [
-        "Nicht ohne abgestimmtes Governance- und Rollback-Modell einführen."
+        "Ultra-Low-Latency (<50ms) oder reines Data-ETL (Datasphere nutzen)."
       ],
       "whenNotToUse_en": [
         "Nicht ohne abgestimmtes Governance- und Rollback-Modell einführen."
@@ -1304,34 +1316,39 @@
         "docs/research-notes-2026-02-21.md",
         "docs/core-blips-v0.1.1.md"
       ],
-      "references": [],
+      "references": [
+        "https://help.sap.com/docs/integration-suite"
+      ],
       "whenNotToUse": [
         "Nicht als „best effort“-Nebenaufgabe behandeln; Ownership und SLOs sind Pflicht."
       ],
-      "intro_de": "Es geht um Beobachtbarkeit und Betriebssicherheit in End-to-End-Integrationsketten. Dieser Punkt entscheidet, wie schnell Ursachen erkannt und Incidents nachhaltig behoben werden können.",
+      "intro_de": "Zentraler iPaaS zur Orchestrierung und Transformation von Business-Prozessen (A2A/B2B). Fokus auf Message-Processing und Adaption.",
       "intro_en": "This item is about observability and operational safety across end-to-end integration chains. It determines how quickly root causes are detected and incidents are resolved sustainably.",
-      "whyRing_de": "Dieser Punkt ist operativ bewährt und für neue Integrationen die Standardwahl.",
+      "whyRing_de": "Strategischer Standard für prozessuale Integration in SAP-Landschaften.",
       "whyRing_en": "This item is operationally proven and should be the default choice for new integrations.",
       "risks_de": [
-        "Fehlende End-to-End-Sichtbarkeit verlängert Incident-Zeiten und erschwert Ursachenanalyse."
+        "Groovy-Spaghetti; Memory-Overload bei großen Payloads (>100MB) ohne Streaming; Vendor Lock-in durch proprietäre Adapter."
       ],
       "risks_en": [
         "Fehlende End-to-End-Sichtbarkeit verlängert Incident-Zeiten und erschwert Ursachenanalyse."
       ],
       "do_de": [
-        "Klare Success-Kriterien und Betriebsmetriken vor dem Rollout festlegen."
+        "Streaming nutzen.",
+        "Business-Logik in CAP/Backend lassen.",
+        "Externalisierte Parameter nutzen."
       ],
       "do_en": [
         "Define clear success criteria and operating metrics before rollout."
       ],
       "dont_de": [
-        "Keine Einführung ohne abgestimmtes Betriebs- und Ownership-Modell."
+        "Passwörter hardcoden.",
+        "CI als Datenbank-Ersatz missbrauchen."
       ],
       "dont_en": [
         "Do not adopt without an agreed operating model and ownership setup."
       ],
       "whenNotToUse_de": [
-        "Nicht als „best effort“-Nebenaufgabe behandeln; Ownership und SLOs sind Pflicht."
+        "Ultra-Low-Latency (<50ms) oder reines Data-ETL (Datasphere nutzen)."
       ],
       "whenNotToUse_en": [
         "Nicht als „best effort“-Nebenaufgabe behandeln; Ownership und SLOs sind Pflicht."
@@ -1554,7 +1571,9 @@
       ],
       "whenNotToUse_en": [
         "Do not use for new greenfield integrations."
-      ]
+      ],
+      "ringChangeSuggestion": "HOLD",
+      "changeRationale": "Compliance-Verstoß; Fehlende Revisionssicherheit und hohes Rollback-Risiko."
     },
     {
       "label": "API-first",
@@ -3546,5 +3565,9 @@
         "Do not use when API- or event-based alternatives are available."
       ]
     }
-  ]
+  ],
+  "importedFrom": {
+    "source": "/home/christian/.openclaw/workspace/tmp/results/SAP_BTP_Integration_Radar_Revised_2026.xlsx",
+    "updatedAt": "2026-02-22"
+  }
 }
