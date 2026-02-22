@@ -17,6 +17,11 @@
 
   const isMobile = window.innerWidth <= 720;
 
+  const entries = (cfg.entries || []).map(e => ({
+    ...e,
+    active: e.active !== false
+  }));
+
   radar_visualization({
     repo_url: 'https://github.com/brudi-bee/sap-integration-tech-radar',
     svg_id: 'radar',
@@ -35,7 +40,7 @@
     // Keep interactive layout so legend/labels are rendered correctly.
     print_layout: false,
     links_in_new_tabs: true,
-    entries: cfg.entries
+    entries
   });
 
   // Improve readability on dark background after render
