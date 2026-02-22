@@ -118,7 +118,7 @@
     },
     {
       "label": "SAP Event Mesh",
-      "ring": "TRIAL",
+      "ring": "ADOPT",
       "quadrant": "Platforms",
       "intro": "Es geht um asynchrone, event-getriebene Kopplung zwischen Systemen mit robuster Entkopplung.",
       "whyRing": "Dieser Punkt ist vielversprechend, sollte aber gezielt und mit klaren Guardrails eingesetzt werden.",
@@ -179,7 +179,7 @@
     },
     {
       "label": "SAP Advanced Event Mesh (AEM)",
-      "ring": "TRIAL",
+      "ring": "ADOPT",
       "quadrant": "Platforms",
       "intro": "Es geht um erweiterte Event-Broker-Fähigkeiten für komplexere Enterprise-Eventing-Topologien.",
       "whyRing": "Dieser Punkt ist vielversprechend, sollte aber gezielt und mit klaren Guardrails eingesetzt werden.",
@@ -295,7 +295,7 @@
     },
     {
       "label": "SAP Integration Advisor",
-      "ring": "TRIAL",
+      "ring": "ADOPT",
       "quadrant": "Platforms",
       "intro": "Es geht um SAP Integration Advisor als Baustein im Quadranten \"Platforms\".",
       "whyRing": "Dieser Punkt ist vielversprechend, sollte aber gezielt und mit klaren Guardrails eingesetzt werden.",
@@ -753,7 +753,7 @@
     },
     {
       "label": "CI/CD for integration artifacts",
-      "ring": "TRIAL",
+      "ring": "ADOPT",
       "quadrant": "Tooling & Ops",
       "intro": "Es geht um CI/CD for integration artifacts als Baustein im Quadranten \"Tooling & Ops\".",
       "whyRing": "Dieser Punkt ist vielversprechend, sollte aber gezielt und mit klaren Guardrails eingesetzt werden.",
@@ -983,7 +983,7 @@
     },
     {
       "label": "Terraform for SAP BTP",
-      "ring": "TRIAL",
+      "ring": "ADOPT",
       "quadrant": "Tooling & Ops",
       "intro": "Es geht um Terraform for SAP BTP als Baustein im Quadranten \"Tooling & Ops\".",
       "whyRing": "Dieser Punkt ist vielversprechend, sollte aber gezielt und mit klaren Guardrails eingesetzt werden.",
@@ -1211,7 +1211,7 @@
     },
     {
       "label": "Content transport via CTS+ (transition)",
-      "ring": "ASSESS",
+      "ring": "HOLD",
       "quadrant": "Tooling & Ops",
       "intro": "Es geht um Content transport via CTS+ (transition) als Baustein im Quadranten \"Tooling & Ops\".",
       "whyRing": "Dieser Punkt hat Potenzial, braucht aber vor breiter Nutzung noch strukturierte Validierung.",
@@ -1841,7 +1841,7 @@
     },
     {
       "label": "Event-driven integration",
-      "ring": "TRIAL",
+      "ring": "ADOPT",
       "quadrant": "Patterns & Architecture",
       "intro": "Es geht um Event-driven integration als Baustein im Quadranten \"Patterns & Architecture\".",
       "whyRing": "Dieser Punkt ist vielversprechend, sollte aber gezielt und mit klaren Guardrails eingesetzt werden.",
@@ -2241,7 +2241,7 @@
     },
     {
       "label": "Event-driven architecture with CloudEvents envelope",
-      "ring": "TRIAL",
+      "ring": "ADOPT",
       "quadrant": "Patterns & Architecture",
       "intro": "Es geht um Event-driven architecture with CloudEvents envelope als Baustein im Quadranten \"Patterns & Architecture\".",
       "whyRing": "Dieser Punkt ist vielversprechend, sollte aber gezielt und mit klaren Guardrails eingesetzt werden.",
@@ -2941,7 +2941,7 @@
     },
     {
       "label": "AsyncAPI",
-      "ring": "TRIAL",
+      "ring": "ADOPT",
       "quadrant": "Protocols & APIs",
       "intro": "Es geht um AsyncAPI als Baustein im Quadranten \"Protocols & APIs\".",
       "whyRing": "Dieser Punkt ist vielversprechend, sollte aber gezielt und mit klaren Guardrails eingesetzt werden.",
@@ -3005,7 +3005,7 @@
     },
     {
       "label": "CloudEvents",
-      "ring": "TRIAL",
+      "ring": "ADOPT",
       "quadrant": "Protocols & APIs",
       "intro": "Es geht um CloudEvents als Baustein im Quadranten \"Protocols & APIs\".",
       "whyRing": "Dieser Punkt ist vielversprechend, sollte aber gezielt und mit klaren Guardrails eingesetzt werden.",

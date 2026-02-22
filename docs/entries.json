@@ -48,13 +48,13 @@
     {
       "label": "SAP Event Mesh",
       "quadrant": 0,
-      "ring": 1,
+      "ring": 0,
       "moved": 2
     },
     {
       "label": "SAP Advanced Event Mesh (AEM)",
       "quadrant": 0,
-      "ring": 1,
+      "ring": 0,
       "moved": 2
     },
     {
@@ -66,7 +66,7 @@
     {
       "label": "SAP Integration Advisor",
       "quadrant": 0,
-      "ring": 1,
+      "ring": 0,
       "moved": 1
     },
     {
@@ -114,7 +114,7 @@
     {
       "label": "CI/CD for integration artifacts",
       "quadrant": 1,
-      "ring": 1,
+      "ring": 0,
       "moved": 2
     },
     {
@@ -138,7 +138,7 @@
     {
       "label": "Terraform for SAP BTP",
       "quadrant": 1,
-      "ring": 1,
+      "ring": 0,
       "moved": 1
     },
     {
@@ -162,7 +162,7 @@
     {
       "label": "Content transport via CTS+ (transition)",
       "quadrant": 1,
-      "ring": 2,
+      "ring": 3,
       "moved": 0
     },
     {
@@ -228,7 +228,7 @@
     {
       "label": "Event-driven integration",
       "quadrant": 2,
-      "ring": 1,
+      "ring": 0,
       "moved": 2
     },
     {
@@ -270,7 +270,7 @@
     {
       "label": "Event-driven architecture with CloudEvents envelope",
       "quadrant": 2,
-      "ring": 1,
+      "ring": 0,
       "moved": 1
     },
     {
@@ -342,13 +342,13 @@
     {
       "label": "AsyncAPI",
       "quadrant": 3,
-      "ring": 1,
+      "ring": 0,
       "moved": 2
     },
     {
       "label": "CloudEvents",
       "quadrant": 3,
-      "ring": 1,
+      "ring": 0,
       "moved": 1
     },
     {
