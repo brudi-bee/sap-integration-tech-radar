@@ -38,6 +38,8 @@ body {
 
 #radar text { fill: #dbe7ff; }
 #radar a text { fill: #e4eeff; }
+/* keep ring labels visually crisp on dark background */
+#radar .legend text { text-shadow: 0 0 0 transparent; }
 #radar .hover-underline:hover { text-decoration: underline; fill: #ffffff; }
 
 h3 { margin-top: 44px; color: #f3f7ff; }

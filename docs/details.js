@@ -5,10 +5,10 @@
 
   const ringNames = ['ADOPT', 'TRIAL', 'ASSESS', 'HOLD'];
   const ringColors = {
-    ADOPT: { bg: 'rgba(114,228,255,.2)', border: 'rgba(114,228,255,.7)', text: '#bff3ff' },
-    TRIAL: { bg: 'rgba(63,181,255,.2)', border: 'rgba(63,181,255,.7)', text: '#b8e7ff' },
-    ASSESS: { bg: 'rgba(107,141,255,.2)', border: 'rgba(107,141,255,.7)', text: '#c9d6ff' },
-    HOLD: { bg: 'rgba(143,115,255,.2)', border: 'rgba(143,115,255,.7)', text: '#ddd2ff' }
+    ADOPT: { bg: 'rgba(34,211,238,.20)', border: 'rgba(34,211,238,.70)', text: '#bff8ff' },
+    TRIAL: { bg: 'rgba(59,130,246,.20)', border: 'rgba(59,130,246,.70)', text: '#cfe3ff' },
+    ASSESS: { bg: 'rgba(245,158,11,.20)', border: 'rgba(245,158,11,.70)', text: '#ffe1ad' },
+    HOLD: { bg: 'rgba(239,68,68,.20)', border: 'rgba(239,68,68,.70)', text: '#ffc9c9' }
   };
 
   const i18n = {
