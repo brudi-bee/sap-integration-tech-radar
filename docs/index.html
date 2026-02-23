@@ -178,7 +178,8 @@
               { x: 450, y: -310 + centerCompY }
             ],
         title_offset: mobile ? {x:-860,y:-470} : { x: -675, y: -420 + centerCompY },
-        footer_offset: mobile ? {x:-150,y:500} : { x: -155, y: 450 + centerCompY },
+        // Keep status legend near bottom edge on desktop
+        footer_offset: mobile ? {x:-150,y:500} : { x: -155, y: 450 - centerCompY },
         legend_column_width: mobile ? 210 : 140,
         legend_line_height: mobile ? 14 : 10,
         print_layout: !mobile,
