@@ -128,13 +128,17 @@
 
       // Dynamic desktop sizing in a bounded range
       const desktopWidth = Math.max(1450, Math.min(1750, window.innerWidth - 60));
-      const desktopHeight = Math.max(1000, Math.min(1320, window.innerHeight + 120));
 
       const entries = (data.entries || []).map((e) => ({
         ...e,
         active: e.active !== false,
         link: e.link || `details.html?item=${encodeURIComponent(e.label)}&lang=${currentLang}`
       }));
+
+      // Keep top compact; only grow height downward when entry count increases
+      const baseEntryCount = 52;
+      const extraEntries = Math.max(0, entries.length - baseEntryCount);
+      const desktopHeight = Math.max(1000, Math.min(1320, 1000 + extraEntries * 10));
 
       const rings = (data.rings || []).map((r) => ({
         ...r,
