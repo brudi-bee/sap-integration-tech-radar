@@ -387,7 +387,12 @@ function radar_visualization(config) {
 
     text.each(function() {
       const textElement = d3.select(this);
-      const words = textElement.text().split(" ");
+      const normalized = textElement.text()
+        .replace(/\//g, '/ ')
+        .replace(/-/g, '- ')
+        .replace(/\s+/g, ' ')
+        .trim();
+      const words = normalized.split(" ");
       let line = [];
 
       // Use '|' at the end of the string so that spaces are not trimmed during rendering.

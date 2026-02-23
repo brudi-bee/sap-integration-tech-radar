@@ -82,7 +82,7 @@
       "moved": 1
     },
     {
-      "label": "Kyma Runtime (for integration microservices)",
+      "label": "Kyma Runtime (integration microservices)",
       "quadrant": 0,
       "ring": 2,
       "moved": 1
@@ -148,13 +148,13 @@
       "moved": 1
     },
     {
-      "label": "Third-party CPI DevOps suites (e.g., Figaf/Int4)",
+      "label": "CPI DevOps suites (e.g., Figaf/Int4)",
       "quadrant": 1,
       "ring": 2,
       "moved": 1
     },
     {
-      "label": "SAP Cloud Transport Management (CTMS) + Content Agent",
+      "label": "SAP CTMS + Content Agent",
       "quadrant": 1,
       "ring": 0,
       "moved": 1
@@ -166,13 +166,13 @@
       "moved": 0
     },
     {
-      "label": "SAP Cloud ALM integration & exception monitoring",
+      "label": "SAP Cloud ALM monitoring",
       "quadrant": 1,
       "ring": 0,
       "moved": 1
     },
     {
-      "label": "Cloud Integration central monitoring & alerting",
+      "label": "CI monitoring & alerting",
       "quadrant": 1,
       "ring": 0,
       "moved": 1
@@ -208,7 +208,7 @@
       "moved": 0
     },
     {
-      "label": "API-led connectivity (system/process/experience)",
+      "label": "API-led connectivity (sys/proc/exp)",
       "quadrant": 2,
       "ring": 0,
       "moved": 1
@@ -268,13 +268,13 @@
       "moved": 1
     },
     {
-      "label": "Event-driven architecture with CloudEvents envelope",
+      "label": "Event architecture with CloudEvents envelope",
       "quadrant": 2,
       "ring": 1,
       "moved": 1
     },
     {
-      "label": "Choreography over central orchestration (selective)",
+      "label": "Choreography over orchestration (selective)",
       "quadrant": 2,
       "ring": 1,
       "moved": 1
@@ -298,7 +298,7 @@
       "moved": -1
     },
     {
-      "label": "File-drop integrations (shared folder/manual polling)",
+      "label": "File-drop integrations (folder/manual polling)",
       "quadrant": 2,
       "ring": 3,
       "moved": -1
