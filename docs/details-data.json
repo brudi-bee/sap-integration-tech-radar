@@ -868,7 +868,7 @@
     },
     {
       "label": "OpenTelemetry",
-      "ring": "TRIAL",
+      "ring": "ADOPT",
       "quadrant": "Tooling & Ops",
       "intro": "Es geht um durchgängige Observability über Integrationsflüsse mit Traces, Metrics und Logs.",
       "whyRing": "Dieser Punkt ist vielversprechend, sollte aber gezielt und mit klaren Guardrails eingesetzt werden.",
@@ -922,11 +922,12 @@
       "whenNotToUse_en": [
         "When SAP Cloud ALM already provides sufficient observability coverage and no cross-system tracing is required."
       ],
-      "confidence": "Medium"
+      "confidence": "Medium",
+      "ringChangeAppliedFrom": "KI3"
     },
     {
       "label": "Contract testing for integrations",
-      "ring": "TRIAL",
+      "ring": "ADOPT",
       "quadrant": "Tooling & Ops",
       "intro": "Es geht um Contract testing for integrations als Baustein im Quadranten \"Tooling & Ops\".",
       "whyRing": "Dieser Punkt ist vielversprechend, sollte aber gezielt und mit klaren Guardrails eingesetzt werden.",
@@ -979,7 +980,8 @@
       "whenNotToUse_en": [
         "When APIs are stable and without regular changes (legacy systems without further development). When no CI/CD pipeline exists to integrate tests into."
       ],
-      "confidence": "Medium"
+      "confidence": "Medium",
+      "ringChangeAppliedFrom": "KI3"
     },
     {
       "label": "Terraform for SAP BTP",

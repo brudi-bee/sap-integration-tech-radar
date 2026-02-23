@@ -126,13 +126,13 @@
     {
       "label": "OpenTelemetry",
       "quadrant": 1,
-      "ring": 1,
+      "ring": 0,
       "moved": 1
     },
     {
       "label": "Contract testing for integrations",
       "quadrant": 1,
-      "ring": 1,
+      "ring": 0,
       "moved": 1
     },
     {
