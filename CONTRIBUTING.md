@@ -29,9 +29,16 @@ Nutze dafür das Issue Template: `.github/ISSUE_TEMPLATE/ring-change.md`
 - Legacy explizit markieren, wenn nötig (z. B. `SOAP (legacy)`)
 - Abkürzungen beim ersten Auftreten ausschreiben
 
+## Review & Merge Process
+
+- Änderungen kommen per **Issue + Pull Request**.
+- Vorschläge werden zuerst fachlich gesichtet (Architektur + Betrieb + Governance).
+- Merge erst nach Review/Freigabe (mindestens 1 Review).
+- Keine direkten inhaltlichen Änderungen auf `main` ohne Review.
+
 ## Release process (lightweight)
 
-- Mergen in `main` bei konsensfähiger Änderung
+- Mergen in `main` nach erfolgreichem Review
 - Quartalsweise Snapshot in `CHANGELOG.md`
 - Bei kritischen EOL/Security-Themen: außerplanmäßiger Patch-Release
 

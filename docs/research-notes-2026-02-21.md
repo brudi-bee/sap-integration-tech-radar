@@ -23,7 +23,7 @@ Kurzer Research-Snapshot zur Einordnung von Radar-Inhalten.
 - **OpenTelemetry auf ASSESS**: klarer Standardtrend, aber im SAP-Integrationsbetrieb oft noch heterogen umgesetzt.
 - **Contract Testing auf TRIAL**: hoher Nutzen für robuste Schnittstellen, organisatorisch/technisch nicht überall sofort reif.
 
-## Ergänzung aus externer KI-Research-Runde (konsolidiert)
+## Ergänzung aus externer Research-Runde (konsolidiert)
 
 Übernommen/ergänzt ins Radar (mit konservativer Einordnung):
 
@@ -34,7 +34,7 @@ Kurzer Research-Snapshot zur Einordnung von Radar-Inhalten.
 
 Bewusst nicht 1:1 übernommen wurden zu aggressive Ring-Entscheidungen (z. B. pauschal ADOPT für alle Plattform-/Tooling-Themen), um Team- und Landschaftsabhängigkeiten abzubilden.
 
-## Ergänzung aus zweiter KI-Research-Runde (2025-Orientierung)
+## Ergänzung aus zweiter Research-Runde (2025-Orientierung)
 
 Zusätzlich übernommen:
 - **CPI content transport management (ADOPT)**
@@ -49,7 +49,7 @@ Nicht in den Kernradar übernommen (vorerst):
 - breite iPaaS-Vendorvergleiche (z. B. MuleSoft/Azure) als Standardblips im SAP-zentrierten Baseline-Radar.
   Diese bleiben eher Kontext-/Architekturentscheidungen je Unternehmenslandschaft.
 
-## Ergänzung aus dritter KI-Research-Runde (2025 Fokus)
+## Ergänzung aus dritter Research-Runde (2025 Fokus)
 
 Übernommen/angepasst:
 - **SAP Advanced Event Mesh (AEM)** von ASSESS auf **TRIAL** angehoben
@@ -62,7 +62,7 @@ Bestätigt (bereits im Radar vorhanden):
 - Edge Integration Cell und Kyma Runtime als ASSESS
 - API Management + Cloud Integration als ADOPT
 
-## Ergänzung aus vierter KI-Research-Runde (Tooling/Ops Vertiefung)
+## Ergänzung aus vierter Research-Runde (Tooling/Ops Vertiefung)
 
 Übernommen/angepasst:
 - **SAP Build Process Automation** auf **ASSESS** (statt TRIAL), da Nutzen stark Governance-abhängig
@@ -74,7 +74,7 @@ Bestätigt (bereits im Radar vorhanden):
 - **SAP Cloud Connector** als Tooling/Ops-Standard auf **ADOPT** eingeordnet
 - **API-led connectivity** als Pattern auf **ADOPT** ergänzt
 
-## Ergänzung aus fünfter KI-Research-Runde (Patterns/Protocols Vertiefung)
+## Ergänzung aus fünfter Research-Runde (Patterns/Protocols Vertiefung)
 
 Übernommen/angepasst:
 - **Strangler pattern** von TRIAL auf **ADOPT** angehoben

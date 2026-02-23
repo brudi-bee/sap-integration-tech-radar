@@ -320,12 +320,12 @@
       "whenNotToUse": [
         "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
       ],
-      "intro_de": "SAP Integration Advisor (IA) ist ein KI-gestütztes B2B/EDI-Mapping-Werkzeug innerhalb der SAP Integration Suite. Es nutzt ML-basierte Mapping-Vorschläge und eine Community-Library aus Message Implementation Guidelines (MIGs) für Standards wie EDIFACT, X12, SAP IDoc und UN/CEFACT. IA generiert deploybare XSLT-Mappings und reduziert den manuellen Mapping-Aufwand in EDI-Projekten nachweislich.",
+      "intro_de": "SAP Integration Advisor (IA) ist ein ML-gestütztes B2B/EDI-Mapping-Werkzeug innerhalb der SAP Integration Suite. Es nutzt ML-basierte Mapping-Vorschläge und eine Community-Library aus Message Implementation Guidelines (MIGs) für Standards wie EDIFACT, X12, SAP IDoc und UN/CEFACT. IA generiert deploybare XSLT-Mappings und reduziert den manuellen Mapping-Aufwand in EDI-Projekten nachweislich.",
       "intro_en": "SAP Integration Advisor (IA) is an AI-assisted B2B/EDI mapping tool within the SAP Integration Suite. It uses ML-based mapping suggestions and a community library of Message Implementation Guidelines (MIGs) for standards such as EDIFACT, X12, SAP IDoc, and UN/CEFACT. IA generates deployable XSLT mappings and measurably reduces manual mapping effort in EDI projects.",
       "whyRing_de": "Für Organisationen mit B2B/EDI-Volumen (>10 Handelspartner, standardisierte Formate) ist IA ein erheblicher Effizienzgewinn. Der TRIAL-Status reflektiert, dass initialer Invest in MIG-Design und Community-Library-Governance notwendig ist – nicht mangelnde Reife.",
       "whyRing_en": "For organizations with B2B/EDI volume (>10 trading partners, standardized formats), IA offers significant efficiency gains. TRIAL status reflects that initial investment in MIG design and community library governance is required – not a lack of maturity.",
       "risks_de": [
-        "MIG-Pflege ohne dedizierten Owner führt zu veralteten Mapping-Templates. KI-Vorschläge müssen fachlich validiert werden – kein automatisches Ergebnis. Generiertes XSLT kann für Non-Standard-Felder manuelles Nacharbeiten erfordern. Vendor-Abhängigkeit: MIGs sind BTP-spezifisch und nicht portabel."
+        "MIG-Pflege ohne dedizierten Owner führt zu veralteten Mapping-Templates. Vorschläge müssen fachlich validiert werden – kein automatisches Ergebnis. Generiertes XSLT kann für Non-Standard-Felder manuelles Nacharbeiten erfordern. Vendor-Abhängigkeit: MIGs sind BTP-spezifisch und nicht portabel."
       ],
       "risks_en": [
         "MIG maintenance without a dedicated owner leads to outdated mapping templates. AI suggestions must be validated by domain experts – no automatic result. Generated XSLT may require manual rework for non-standard fields. Vendor dependency: MIGs are BTP-specific and not portable."
@@ -923,7 +923,7 @@
         "When SAP Cloud ALM already provides sufficient observability coverage and no cross-system tracing is required."
       ],
       "confidence": "Medium",
-      "ringChangeAppliedFrom": "KI3"
+      "ringChangeAppliedFrom": "review-round-3"
     },
     {
       "label": "Contract testing for integrations",
@@ -981,7 +981,7 @@
         "When APIs are stable and without regular changes (legacy systems without further development). When no CI/CD pipeline exists to integrate tests into."
       ],
       "confidence": "Medium",
-      "ringChangeAppliedFrom": "KI3"
+      "ringChangeAppliedFrom": "review-round-3"
     },
     {
       "label": "Terraform for SAP BTP",
@@ -3687,7 +3687,7 @@
       ],
       "references": [],
       "sources": [
-        "docs/proposed-new-entries.from-ki1.json"
+        "docs/proposed-new-entries-review-round-1.json"
       ]
     },
     {
@@ -3724,7 +3724,7 @@
       ],
       "references": [],
       "sources": [
-        "docs/proposed-new-entries.from-ki1.json"
+        "docs/proposed-new-entries-review-round-1.json"
       ]
     },
     {
@@ -3761,7 +3761,7 @@
       ],
       "references": [],
       "sources": [
-        "docs/proposed-new-entries.from-ki1.json"
+        "docs/proposed-new-entries-review-round-1.json"
       ]
     },
     {
@@ -3798,7 +3798,7 @@
       ],
       "references": [],
       "sources": [
-        "docs/proposed-new-entries.from-ki1.json"
+        "docs/proposed-new-entries-review-round-1.json"
       ]
     },
     {
@@ -3835,7 +3835,7 @@
       ],
       "references": [],
       "sources": [
-        "docs/proposed-new-entries.from-ki1.json"
+        "docs/proposed-new-entries-review-round-1.json"
       ]
     },
     {
@@ -3872,7 +3872,7 @@
       ],
       "references": [],
       "sources": [
-        "docs/proposed-new-entries.from-ki1.json"
+        "docs/proposed-new-entries-review-round-1.json"
       ]
     },
     {
@@ -3909,7 +3909,7 @@
       ],
       "references": [],
       "sources": [
-        "docs/proposed-new-entries.from-ki1.json"
+        "docs/proposed-new-entries-review-round-1.json"
       ]
     },
     {
@@ -3946,7 +3946,7 @@
       ],
       "references": [],
       "sources": [
-        "docs/proposed-new-entries.from-ki1.json"
+        "docs/proposed-new-entries-review-round-1.json"
       ]
     },
     {
@@ -3983,7 +3983,7 @@
       ],
       "references": [],
       "sources": [
-        "docs/proposed-new-entries.from-ki1.json"
+        "docs/proposed-new-entries-review-round-1.json"
       ]
     },
     {
@@ -4020,13 +4020,13 @@
       ],
       "references": [],
       "sources": [
-        "docs/proposed-new-entries.from-ki1.json"
+        "docs/proposed-new-entries-review-round-1.json"
       ]
     }
   ],
   "importedFrom": {
     "source": "/home/christian/.openclaw/workspace/tmp/results/SAP_Integration_TechRadar_FINAL.xlsx",
     "updatedAt": "2026-02-22",
-    "importBatch": "ki2"
+    "importBatch": "review-round-2"
   }
 }

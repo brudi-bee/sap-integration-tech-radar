@@ -13,7 +13,7 @@
       "initialDont_de": [
         "Public IP Whitelisting als Dauerlösung."
       ],
-      "source": "KI-Review-1"
+      "source": "review-round-1"
     },
     {
       "label": "SAP Build Code (CAP)",
@@ -28,7 +28,7 @@
       "initialDont_de": [
         "Logik direkt im S/4 Kern belassen."
       ],
-      "source": "KI-Review-1"
+      "source": "review-round-1"
     },
     {
       "label": "Principal Propagation",
@@ -43,7 +43,7 @@
       "initialDont_de": [
         "Static Credentials in Destinations."
       ],
-      "source": "KI-Review-1"
+      "source": "review-round-1"
     },
     {
       "label": "SAP Graph",
@@ -58,7 +58,7 @@
       "initialDont_de": [
         "Proprietäre API-Mapping-Layer bauen."
       ],
-      "source": "KI-Review-1"
+      "source": "review-round-1"
     },
     {
       "label": "Cloud Connector HA",
@@ -73,7 +73,7 @@
       "initialDont_de": [
         "Single-Instance Betrieb für Prod."
       ],
-      "source": "KI-Review-1"
+      "source": "review-round-1"
     },
     {
       "label": "OpenTelemetry (OTrEx)",
@@ -88,7 +88,7 @@
       "initialDont_de": [
         "Proprietäre Log-Formate ohne Korrelation."
       ],
-      "source": "KI-Review-1"
+      "source": "review-round-1"
     },
     {
       "label": "BTP Resource Quota Monitoring",
@@ -103,7 +103,7 @@
       "initialDont_de": [
         "Limits manuell in der Cockpit-UI prüfen."
       ],
-      "source": "KI-Review-1"
+      "source": "review-round-1"
     },
     {
       "label": "Semantic Versioning (SemVer)",
@@ -118,7 +118,7 @@
       "initialDont_de": [
         "APIs ohne Versions-Header im URL-Pfad."
       ],
-      "source": "KI-Review-1"
+      "source": "review-round-1"
     },
     {
       "label": "SAP Datasphere Integration",
@@ -133,7 +133,7 @@
       "initialDont_de": [
         "SAP CI für Terabyte-Transfers nutzen."
       ],
-      "source": "KI-Review-1"
+      "source": "review-round-1"
     },
     {
       "label": "Consumer-Driven Contract Testing",
@@ -148,7 +148,7 @@
       "initialDont_de": [
         "Sich allein auf manuelle Integrationstests verlassen."
       ],
-      "source": "KI-Review-1"
+      "source": "review-round-1"
     }
   ]
 }

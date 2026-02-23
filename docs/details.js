@@ -24,7 +24,8 @@
       hWhenNot: 'Wann nicht verwenden?',
       hRefs: 'Referenzen',
       hRaw: 'Raw Entry',
-      noRefs: 'Keine spezifischen Referenzen hinterlegt.'
+      noRefs: 'Keine spezifischen Referenzen hinterlegt.',
+      confidence: 'Konfidenz'
     },
     en: {
       langLabel: 'Language',
@@ -38,7 +39,8 @@
       hWhenNot: 'When not to use',
       hRefs: 'References',
       hRaw: 'Raw entry',
-      noRefs: 'No specific references available.'
+      noRefs: 'No specific references available.',
+      confidence: 'Confidence'
     }
   };
 
@@ -55,6 +57,7 @@
   const detailItem = (detailsData.items || []).find(i => i.label === entry.label);
 
   const ringEl = document.getElementById('ring');
+  const confidenceEl = document.getElementById('confidence');
   ringEl.textContent = ring;
   document.getElementById('quadrant').textContent = quadrant;
   if (ringColors[ring]) {
@@ -91,6 +94,28 @@
     document.getElementById('h-when-not').textContent = t.hWhenNot;
     document.getElementById('h-refs').textContent = t.hRefs;
     document.getElementById('h-raw').textContent = t.hRaw;
+
+    const confidence = (detailItem?.confidence || '').trim();
+    if (confidence) {
+      confidenceEl.textContent = `${t.confidence}: ${confidence}`;
+      const c = confidence.toLowerCase();
+      if (c === 'high') {
+        confidenceEl.style.background = 'rgba(34,197,94,.20)';
+        confidenceEl.style.borderColor = 'rgba(34,197,94,.70)';
+        confidenceEl.style.color = '#bbf7d0';
+      } else if (c === 'medium') {
+        confidenceEl.style.background = 'rgba(245,158,11,.20)';
+        confidenceEl.style.borderColor = 'rgba(245,158,11,.70)';
+        confidenceEl.style.color = '#fde68a';
+      } else {
+        confidenceEl.style.background = 'rgba(239,68,68,.20)';
+        confidenceEl.style.borderColor = 'rgba(239,68,68,.70)';
+        confidenceEl.style.color = '#fecaca';
+      }
+      confidenceEl.style.display = 'inline-block';
+    } else {
+      confidenceEl.style.display = 'none';
+    }
 
     document.getElementById('intro').textContent = byLang(
       detailItem?.intro_de,
