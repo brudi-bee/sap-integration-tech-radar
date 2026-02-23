@@ -354,7 +354,7 @@
     },
     {
       "label": "SAP Trading Partner Management",
-      "ring": "ASSESS",
+      "ring": "TRIAL",
       "quadrant": "Platforms",
       "intro": "Es geht um SAP Trading Partner Management als Baustein im Quadranten \"Platforms\".",
       "whyRing": "Dieser Punkt hat Potenzial, braucht aber vor breiter Nutzung noch strukturierte Validierung.",
@@ -380,8 +380,8 @@
       ],
       "intro_de": "SAP Trading Partner Management (TPM) ist eine BTP-Komponente zur zentralen Verwaltung von B2B-Handelspartnerkonfigurationen, Kommunikationskanälen (AS2, SFTP, REST) und Agreement-Management. TPM integriert mit SAP Integration Advisor (MIGs) und CPI für durchgängige B2B-Prozesse ohne manuelle Einzelkonfigurationen pro Partner.",
       "intro_en": "SAP Trading Partner Management (TPM) is a BTP component for centrally managing B2B trading partner configurations, communication channels (AS2, SFTP, REST), and agreement management. TPM integrates with SAP Integration Advisor (MIGs) and CPI for end-to-end B2B processes without manual per-partner configuration.",
-      "whyRing_de": "Relevant ab ~20 Handelspartnern mit heterogenen Kommunikationsprotokollen. ASSESS korrekt: Plattform ist noch nicht in breiter Produktivnutzung; Integration mit IA und CPI reift kontinuierlich; Community-Erfahrung noch begrenzt. Gezielte Pilotevaluation empfohlen.",
-      "whyRing_en": "Relevant for ~20+ trading partners with heterogeneous communication protocols. ASSESS is correct: platform is not yet in broad production use; integration with IA and CPI is continuously maturing; community experience still limited. Targeted pilot evaluation recommended.",
+      "whyRing_de": "Dieser Punkt ist vielversprechend, sollte aber gezielt und mit klaren Guardrails eingesetzt werden.",
+      "whyRing_en": "This item is promising but should be introduced selectively with clear guardrails.",
       "risks_de": [
         "Geringe Marktdurchdringung bedeutet wenig Erfahrungsberichte und Community-Wissen. Integration mit bestehenden B2B-Gateways (Seeburger, OpenText) erfordert individuelle Prüfung. Migrationspfad von bestehenden Partnerkonfigurationen ist aufwändig und riskant."
       ],
@@ -410,7 +410,7 @@
     },
     {
       "label": "Edge Integration Cell",
-      "ring": "TRIAL",
+      "ring": "ASSESS",
       "quadrant": "Platforms",
       "intro": "Es geht um Edge Integration Cell als Baustein im Quadranten \"Platforms\".",
       "whyRing": "Dieser Punkt ist vielversprechend, sollte aber gezielt und mit klaren Guardrails eingesetzt werden.",
@@ -437,8 +437,8 @@
       ],
       "intro_de": "Die Edge Integration Cell (EIC) ist eine SAP-verwaltete Kubernetes-basierte Laufzeit für CPI-IFlows, die auf kundeneigener Infrastruktur (On-Premise oder Private Cloud) deployed wird. Datenverarbeitung findet lokal statt ohne Cloud-Transit. Richtet sich an Szenarien mit Datensouveränitätsanforderungen (DSGVO, Branchenregulatorik), latenzempfindlichen Integrationen oder Offline-fähigen Edge-Szenarien.",
       "intro_en": "The Edge Integration Cell (EIC) is an SAP-managed Kubernetes-based runtime for CPI IFlows deployed on customer-owned infrastructure (on-premise or private cloud). Data processing occurs locally without cloud transit. Targets scenarios with data sovereignty requirements (GDPR, industry regulation), latency-sensitive integrations, or offline-capable edge scenarios.",
-      "whyRing_de": "Strategisch wichtig für Branchen mit strikten Datenlokalisierungsanforderungen (Healthcare, Public Sector, regulierte Finanzbranche). TRIAL korrekt: Kubernetes-Betriebskompetenz zwingend, Feature-Parität mit Cloud-CPI noch nicht vollständig, Kundenbasis noch begrenzt.",
-      "whyRing_en": "Strategically important for industries with strict data localization requirements (healthcare, public sector, regulated finance). TRIAL is correct: Kubernetes operational competency is mandatory, feature parity with cloud CPI not yet complete, customer base still limited.",
+      "whyRing_de": "Dieser Punkt hat Potenzial, braucht aber vor breiter Nutzung noch strukturierte Validierung.",
+      "whyRing_en": "This item has potential but requires structured validation before broader adoption.",
       "risks_de": [
         "Kubernetes-Betrieb (Cluster-Management, Upgrades, Zertifikatspflege) erheblicher Zusatzaufwand. SAP EIC-Update-Zyklen müssen aktiv verfolgt und zeitnah angewendet werden. Feature-Gaps gegenüber Cloud-CPI (nicht alle Adapter verfügbar). Monitoring und Alerting erfordern separate Konfiguration vs. Cloud-CPI."
       ],
