@@ -1099,7 +1099,7 @@
       "confidence": "Medium"
     },
     {
-      "label": "Third-party CPI DevOps suites (e.g., Figaf/Int4)",
+      "label": "CPI DevOps suites (Figaf/Int4)",
       "ring": "ASSESS",
       "quadrant": "Tooling & Ops",
       "intro": "Es geht um Third-party CPI DevOps suites (e.g., Figaf/Int4) als Baustein im Quadranten \"Tooling & Ops\".",
@@ -1780,7 +1780,7 @@
       "confidence": "High"
     },
     {
-      "label": "Contract-first with AsyncAPI",
+      "label": "AsyncAPI contract-first",
       "ring": "TRIAL",
       "quadrant": "Patterns & Architecture",
       "intro": "Es geht um Contract-first with AsyncAPI als Baustein im Quadranten \"Patterns & Architecture\".",
@@ -1960,7 +1960,7 @@
       "confidence": "High"
     },
     {
-      "label": "Circuit breaker pattern",
+      "label": "Circuit breaker",
       "ring": "ADOPT",
       "quadrant": "Patterns & Architecture",
       "intro": "Es geht um Circuit breaker pattern als Baustein im Quadranten \"Patterns & Architecture\".",
@@ -2242,7 +2242,7 @@
       "confidence": "High"
     },
     {
-      "label": "Event-driven architecture with CloudEvents envelope",
+      "label": "CloudEvents envelope",
       "ring": "ADOPT",
       "quadrant": "Patterns & Architecture",
       "intro": "Es geht um Event-driven architecture with CloudEvents envelope als Baustein im Quadranten \"Patterns & Architecture\".",
@@ -2303,7 +2303,7 @@
       "confidence": "High"
     },
     {
-      "label": "Choreography over central orchestration (selective)",
+      "label": "Choreography over orchestration (selective)",
       "ring": "TRIAL",
       "quadrant": "Patterns & Architecture",
       "intro": "Es geht um Choreography over central orchestration (selective) als Baustein im Quadranten \"Patterns & Architecture\".",
@@ -2360,7 +2360,7 @@
       "confidence": "Medium"
     },
     {
-      "label": "Canonical data model (lightweight)",
+      "label": "Canonical model (lightweight)",
       "ring": "ASSESS",
       "quadrant": "Patterns & Architecture",
       "intro": "Es geht um Canonical data model (lightweight) als Baustein im Quadranten \"Patterns & Architecture\".",
@@ -3186,7 +3186,7 @@
       "confidence": "Medium"
     },
     {
-      "label": "GraphQL (BFF/aggregation only)",
+      "label": "GraphQL (BFF only)",
       "ring": "ASSESS",
       "quadrant": "Protocols & APIs",
       "intro": "Es geht um GraphQL (BFF/aggregation only) als Baustein im Quadranten \"Protocols & APIs\".",
@@ -3245,7 +3245,7 @@
       "confidence": "Medium"
     },
     {
-      "label": "gRPC (internal service-to-service)",
+      "label": "gRPC (internal S2S)",
       "ring": "ASSESS",
       "quadrant": "Protocols & APIs",
       "intro": "Es geht um gRPC (internal service-to-service) als Baustein im Quadranten \"Protocols & APIs\".",
@@ -3479,7 +3479,7 @@
       "confidence": "High"
     },
     {
-      "label": "SFTP (managed file transfer transition)",
+      "label": "SFTP (MFT transition)",
       "ring": "ASSESS",
       "quadrant": "Protocols & APIs",
       "intro": "Es geht um SFTP (managed file transfer transition) als Baustein im Quadranten \"Protocols & APIs\".",

@@ -220,7 +220,7 @@
       "moved": 1
     },
     {
-      "label": "Contract-first with AsyncAPI",
+      "label": "AsyncAPI contract-first",
       "quadrant": 2,
       "ring": 1,
       "moved": 1
@@ -238,7 +238,7 @@
       "moved": 1
     },
     {
-      "label": "Circuit breaker pattern",
+      "label": "Circuit breaker",
       "quadrant": 2,
       "ring": 0,
       "moved": 1
@@ -280,7 +280,7 @@
       "moved": 1
     },
     {
-      "label": "Canonical data model (lightweight)",
+      "label": "Canonical model (lightweight)",
       "quadrant": 2,
       "ring": 2,
       "moved": 0
@@ -364,13 +364,13 @@
       "moved": 1
     },
     {
-      "label": "GraphQL (BFF/aggregation only)",
+      "label": "GraphQL (BFF only)",
       "quadrant": 3,
       "ring": 2,
       "moved": 1
     },
     {
-      "label": "gRPC (internal service-to-service)",
+      "label": "gRPC (internal S2S)",
       "quadrant": 3,
       "ring": 2,
       "moved": 1
@@ -394,7 +394,7 @@
       "moved": -1
     },
     {
-      "label": "SFTP (managed file transfer transition)",
+      "label": "SFTP (MFT transition)",
       "quadrant": 3,
       "ring": 2,
       "moved": 0
