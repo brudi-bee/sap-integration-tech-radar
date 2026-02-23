@@ -18,10 +18,6 @@
     </div>
     <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;">
       <label class="switch">
-        <input id="presentation-toggle" type="checkbox" checked />
-        <span id="presentation-label">Presentation mode</span>
-      </label>
-      <label class="switch">
         <span id="lang-label">Sprache</span>
         <select id="lang-switch" style="background:#13327a;color:#eef4ff;border:1px solid rgba(160,188,255,.36);border-radius:8px;padding:3px 8px;">
           <option value="de">DE</option>
@@ -78,7 +74,6 @@
     const i18n = {
       de: {
         topMuted: '· Dark theme',
-        presentation: 'Presentation mode',
         langLabel: 'Sprache',
         aboutTitle: 'Was ist dieses Radar?',
         aboutText: 'Das SAP Integration Tech Radar macht Integrations-Technologien und Architektur-Entscheidungen sichtbar. Es hilft Teams bei der Auswahl für neue Vorhaben und bei der Einordnung bestehender Landschaften.',
@@ -91,7 +86,6 @@
       },
       en: {
         topMuted: '· Dark theme',
-        presentation: 'Presentation mode',
         langLabel: 'Language',
         aboutTitle: 'What is this radar?',
         aboutText: 'The SAP Integration Tech Radar makes integration technologies and architecture decisions visible. It helps teams choose options for new initiatives and assess existing landscapes.',
@@ -128,7 +122,7 @@
       return html;
     }
 
-    function renderRadar(data, presentationMode) {
+    function renderRadar(data) {
       const mobile = window.innerWidth <= 900;
       const currentLang = document.getElementById('lang-switch')?.value || 'de';
       const entries = (data.entries || []).map((e) => ({
@@ -148,8 +142,8 @@
         repo_url: 'https://github.com/brudi-bee/sap-integration-tech-radar',
         title: data.title || 'SAP Integration Tech Radar',
         date: data.date || '2026.02',
-        width: mobile ? 1080 : (presentationMode ? 1600 : 1450),
-        height: mobile ? 980 : (presentationMode ? 1080 : 1000),
+        width: mobile ? 1080 : 1450,
+        height: mobile ? 980 : 1000,
         quadrants: data.quadrants,
         rings,
         entries,
@@ -187,7 +181,6 @@
         infoPanel.style.display = '';
       }
 
-      document.body.classList.toggle('presentation', !!presentationMode && !mobile);
     }
 
     let cachedData = null;
@@ -195,12 +188,9 @@
       .then(r => r.json())
       .then(data => {
         cachedData = data;
-        const toggle = document.getElementById('presentation-toggle');
         const langSwitch = document.getElementById('lang-switch');
-        const saved = localStorage.getItem('radar.presentationMode');
         const savedLang = localStorage.getItem('radar.lang');
         const urlLang = new URLSearchParams(window.location.search).get('lang');
-        if (saved === '0') toggle.checked = false;
         if (urlLang === 'en' || urlLang === 'de') {
           langSwitch.value = urlLang;
         } else if (savedLang === 'en' || savedLang === 'de') {
@@ -210,7 +200,6 @@
         function applyLanguage(lang) {
           const t = i18n[lang] || i18n.de;
           document.getElementById('top-muted').textContent = t.topMuted;
-          document.getElementById('presentation-label').textContent = t.presentation;
           document.getElementById('lang-label').textContent = t.langLabel;
           document.getElementById('about-title').textContent = t.aboutTitle;
           document.getElementById('about-text').textContent = t.aboutText;
@@ -223,12 +212,7 @@
         }
 
         applyLanguage(langSwitch.value);
-        renderRadar(cachedData, toggle.checked);
-
-        toggle.addEventListener('change', () => {
-          localStorage.setItem('radar.presentationMode', toggle.checked ? '1' : '0');
-          renderRadar(cachedData, toggle.checked);
-        });
+        renderRadar(cachedData);
 
         langSwitch.addEventListener('change', () => {
           localStorage.setItem('radar.lang', langSwitch.value);
@@ -238,7 +222,7 @@
           window.history.replaceState({}, '', u.toString());
         });
 
-        window.addEventListener('resize', () => renderRadar(cachedData, toggle.checked));
+        window.addEventListener('resize', () => renderRadar(cachedData));
       })
       .catch((err) => {
         console.error('Error loading entries.json', err);

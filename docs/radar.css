@@ -75,7 +75,7 @@ a:hover { color: #9ad9ff; }
 .mobile-quadrant ul { margin: 0; padding-left: 18px; }
 .mobile-quadrant li { margin: 4px 0; }
 
-body.presentation .info-panel { opacity: .72; }
+/* presentation mode removed */
 
 @media (max-width: 900px) {
   .topbar { width: calc(100% - 20px); margin-top: 10px; }
