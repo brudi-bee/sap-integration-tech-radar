@@ -125,6 +125,11 @@
     function renderRadar(data) {
       const mobile = window.innerWidth <= 900;
       const currentLang = document.getElementById('lang-switch')?.value || 'de';
+
+      // Dynamic desktop sizing in a bounded range
+      const desktopWidth = Math.max(1450, Math.min(1750, window.innerWidth - 60));
+      const desktopHeight = Math.max(1000, Math.min(1320, window.innerHeight + 120));
+
       const entries = (data.entries || []).map((e) => ({
         ...e,
         active: e.active !== false,
@@ -142,8 +147,8 @@
         repo_url: 'https://github.com/brudi-bee/sap-integration-tech-radar',
         title: data.title || 'SAP Integration Tech Radar',
         date: data.date || '2026.02',
-        width: mobile ? 1080 : 1500,
-        height: mobile ? 980 : 1160,
+        width: mobile ? 1080 : desktopWidth,
+        height: mobile ? 980 : desktopHeight,
         quadrants: data.quadrants,
         rings,
         entries,
