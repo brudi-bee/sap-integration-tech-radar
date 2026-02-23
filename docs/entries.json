@@ -48,13 +48,13 @@
     {
       "label": "SAP Event Mesh",
       "quadrant": 0,
-      "ring": 0,
+      "ring": 1,
       "moved": 2
     },
     {
       "label": "SAP Advanced Event Mesh (AEM)",
       "quadrant": 0,
-      "ring": 0,
+      "ring": 1,
       "moved": 2
     },
     {
@@ -84,7 +84,7 @@
     {
       "label": "Kyma Runtime (for integration microservices)",
       "quadrant": 0,
-      "ring": 1,
+      "ring": 2,
       "moved": 1
     },
     {
@@ -126,19 +126,19 @@
     {
       "label": "OpenTelemetry",
       "quadrant": 1,
-      "ring": 0,
+      "ring": 1,
       "moved": 1
     },
     {
       "label": "Contract testing for integrations",
       "quadrant": 1,
-      "ring": 0,
+      "ring": 1,
       "moved": 1
     },
     {
       "label": "Terraform for SAP BTP",
       "quadrant": 1,
-      "ring": 0,
+      "ring": 1,
       "moved": 1
     },
     {
@@ -162,7 +162,7 @@
     {
       "label": "Content transport via CTS+ (transition)",
       "quadrant": 1,
-      "ring": 3,
+      "ring": 2,
       "moved": 0
     },
     {
@@ -228,7 +228,7 @@
     {
       "label": "Event-driven integration",
       "quadrant": 2,
-      "ring": 0,
+      "ring": 1,
       "moved": 2
     },
     {
@@ -270,7 +270,7 @@
     {
       "label": "Event-driven architecture with CloudEvents envelope",
       "quadrant": 2,
-      "ring": 0,
+      "ring": 1,
       "moved": 1
     },
     {
@@ -342,13 +342,13 @@
     {
       "label": "AsyncAPI",
       "quadrant": 3,
-      "ring": 0,
+      "ring": 1,
       "moved": 2
     },
     {
       "label": "CloudEvents",
       "quadrant": 3,
-      "ring": 0,
+      "ring": 1,
       "moved": 1
     },
     {
@@ -444,7 +444,7 @@
     {
       "label": "OpenTelemetry (OTrEx)",
       "quadrant": 1,
-      "ring": 0,
+      "ring": 1,
       "moved": 2
     },
     {

@@ -50,4 +50,24 @@
     #radar a text { fill: #dce7ff; }
   `;
   document.head.appendChild(style);
+
+  // Localize common Zalando legend labels to German
+  const deMap = new Map([
+    ['moved up', 'aufgestiegen'],
+    ['moved down', 'abgestiegen'],
+    ['no change', 'unverändert'],
+    ['new', 'neu']
+  ]);
+
+  const localizeLegend = () => {
+    document.querySelectorAll('#radar text').forEach((el) => {
+      const raw = (el.textContent || '').trim();
+      const key = raw.toLowerCase();
+      if (deMap.has(key)) el.textContent = deMap.get(key);
+    });
+  };
+
+  // run twice to catch async paint timing
+  localizeLegend();
+  setTimeout(localizeLegend, 250);
 })();

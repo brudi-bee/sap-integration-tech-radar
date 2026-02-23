@@ -45,16 +45,18 @@ Einträge werden anhand dieser Kriterien eingestuft:
 - Contribution guide: `CONTRIBUTING.md`
 - PR checklist: `.github/pull_request_template.md`
 
-## Current highlights (v0.1)
+## Current highlights (v0.1.1 draft)
 
 - **SAP Cloud Integration (CI)** → ADOPT
   - Default-Wahl für iFlow-basierte Integrationen im SAP/BTP-Kontext.
-- **SAP Advanced Event Mesh (AEM)** → ASSESS
-  - starkes Potenzial für Event-Backbones, aber nicht in jedem Team/Landschaft sofort sinnvoll.
+- **SAP Event Mesh** → TRIAL
+  - guter Einstieg in event-getriebene Architektur, aber mit plan-/featureabhängigen Einschränkungen (z. B. Quoten/Constraints je Service-Plan).
+- **SAP Advanced Event Mesh (AEM)** → TRIAL
+  - sinnvoll bei größerer Event-Domänenzahl und höherem Governance-/Monitoring-Bedarf; nicht in jedem Team sofort nötig.
+- **Monitoring-Hinweis für Eventing**
+  - reines Broker-Monitoring reicht nicht: zusätzlich End-to-End-Korrelation, DLQ/Reprocessing und zentrale Alerts (z. B. Cloud ALM + CI Monitoring) etablieren.
 - **Direct point-to-point connections** → HOLD
   - kurzfristig verführerisch, langfristig hohe Kopplung und Wartungsrisiko.
-- **SAP AIF** → ASSESS (Tooling & Ops)
-  - wertvoll für Monitoring/Fehlerhandling in passenden S/4-Szenarien, aber nicht als universeller Default.
 
 ## Repository layout
 

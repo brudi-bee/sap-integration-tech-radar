@@ -5,6 +5,7 @@ Diese Version konsolidiert mehrere externe Research-Runden und schärft den Rada
 
 ## Highlights
 - Eventing und Observability klarer eingeordnet:
+  - SAP Event Mesh auf **TRIAL** (inkl. Hinweis auf plan-/featureabhängige Einschränkungen)
   - SAP Advanced Event Mesh (AEM) auf **TRIAL**
   - OpenTelemetry auf **TRIAL**
 - Tooling/Ops deutlich gestärkt:
@@ -23,6 +24,8 @@ Diese Version konsolidiert mehrere externe Research-Runden und schärft den Rada
 - Legacy-Grenzen klarer:
   - New SOAP/WSDL interfaces auf **HOLD**
   - File-drop integrations auf **HOLD**
+- Eventing-Betrieb geschärft:
+  - Monitoring nicht nur auf Broker-Ebene, sondern End-to-End (Korrelation, DLQ, Reprocessing, Alerting)
 
 ## Cleanup
 - Doppelung bei Content-Transport reduziert (CTMS/Content Agent als primärer Blip).
