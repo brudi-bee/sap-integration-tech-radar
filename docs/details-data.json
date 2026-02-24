@@ -2050,45 +2050,60 @@
       "ring": "ASSESS",
       "quadrant": "Patterns & Architecture",
       "sources": [
-        "https://martinfowler.com/bliki/CQRS.html"
+        "https://martinfowler.com/bliki/CQRS.html",
+        "user-research-refinement-2026-02-24"
       ],
       "references": [
         "https://martinfowler.com/bliki/CQRS.html",
-        "https://www.enterpriseintegrationpatterns.com",
-        "https://help.sap.com/docs/hana-cloud"
+        "https://cap.cloud.sap/docs/",
+        "https://help.sap.com/docs/SAP_S4HANA_CLOUD"
       ],
       "confidence": "Medium",
       "i18n": {
         "de": {
-          "intro": "Command Query Responsibility Segregation (CQRS) trennt Lese- und Schreiboperationen auf getrennte Modelle/Datenspeicher. Im SAP-Integrationskontext: S/4HANA als Write-System (Transaktionen über OData v4), ein separates Read-Modell (SAP HANA Cloud, ElasticSearch) für komplexe Abfragen und Reporting. Relevant wenn Query-Last das transaktionale System belastet oder Aggregationen über mehrere SAP-Systeme erforderlich.",
-          "whyRing": "ASSESS korrekt: CQRS ist mächtiges Pattern, erzeugt aber erhebliche Komplexität (Eventual Consistency zwischen Write- und Read-Modell, Synchronisierungs-Pipeline). Nur einsetzen wenn Leselast oder Abfragekomplexität nachweisbar das Schreibsystem belastet.",
+          "intro": "CQRS trennt Schreib- und Lesemodell und ist im SAP-Kontext selektiv sinnvoll, wenn analytische/aggregierte Abfragen das transaktionale System entkoppeln sollen.",
+          "whyRing": "ASSESS, weil CQRS starke Komplexität bringt (Synchronisation, Konsistenz, Betrieb) und nur bei klaren Last-/Domänenanforderungen gerechtfertigt ist.",
           "risks": [
-            "Eventual Consistency: Read-Modell hinkt Write-Modell nach (Sekunden bis Minuten). Synchronisierungs-Pipeline (CPI-Event-Flow oder CDC) als zusätzlicher Fehlerbereich. Entwicklungs- und Testkomplexität steigt erheblich."
+            "Eventual Consistency kann Fachprozesse irritieren.",
+            "Doppelte Modellpflege erhöht Entwicklungs- und Betriebsaufwand.",
+            "Fehlende Ownership zwischen Write- und Read-Modell."
           ],
           "do": [
-            "Konkreten Leistungsnachweis führen bevor CQRS eingeführt wird (messbare Query-Last). Change Events (S/4HANA Business Events) als Synchronisierungstrigger nutzen. Read-Modell in SAP HANA Cloud oder Datenpipeline (BTP Data Intelligence) aufbauen. Klare Inkonsistenz-Fenster und deren Akzeptabilität mit Fachbereich abstimmen."
+            "Nur auf klar identifizierte Hotspots mit hoher Read-Last anwenden.",
+            "Konsistenzregeln und Aktualisierungs-SLAs explizit definieren.",
+            "Read-Model separat monitoren (Lag, Freshness, Query-Errors)."
           ],
           "dont": [
-            "Keine Einführung ohne abgestimmtes Betriebs- und Ownership-Modell."
+            "Nicht als Default-Architektur für Standardintegrationen nutzen.",
+            "Keine CQRS-Einführung ohne eindeutige Domänengrenzen.",
+            "Keine stillschweigende Inkonsistenz ohne Business-Abnahme."
           ],
           "whenNotToUse": [
-            "Wenn Leselast das Schreibsystem nicht nachweisbar belastet. Wenn starke Konsistenz (Strong Consistency) zwischen Lesen und Schreiben erforderlich."
+            "Nicht verwenden bei einfachen CRUD-Szenarien.",
+            "Nicht verwenden, wenn Team/Operations nicht für zusätzliche Komplexität bereit sind."
           ]
         },
         "en": {
-          "intro": "Command Query Responsibility Segregation (CQRS) separates read and write operations onto separate models/data stores. In the SAP integration context: S/4HANA as write system (transactions via OData v4), a separate read model (SAP HANA Cloud, ElasticSearch) for complex queries and reporting. Relevant when query load burdens the transactional system or aggregations across multiple SAP systems are required.",
-          "whyRing": "ASSESS is correct: CQRS is a powerful pattern but creates significant complexity (eventual consistency between write and read model, synchronization pipeline). Use only when read load or query complexity demonstrably burdens the write system.",
+          "intro": "CQRS separates write and read models and is selectively useful in SAP contexts when analytical/aggregated reads must be decoupled from transactional systems.",
+          "whyRing": "ASSESS because CQRS adds significant complexity (sync, consistency, operations) and should only be used for clear load/domain constraints.",
           "risks": [
-            "Eventual consistency: read model lags behind write model (seconds to minutes). Synchronization pipeline (CPI event flow or CDC) as an additional failure domain. Development and test complexity increases significantly."
+            "Eventual consistency can confuse business processes.",
+            "Dual model maintenance increases engineering and ops overhead.",
+            "Ownership gaps between write and read sides."
           ],
           "do": [
-            "Provide concrete performance evidence before introducing CQRS (measurable query load). Use change events (S/4HANA Business Events) as synchronization triggers. Build read model in SAP HANA Cloud or data pipeline (BTP Data Intelligence). Agree on clear inconsistency windows and their acceptability with business stakeholders."
+            "Apply only to explicit read-heavy hotspots.",
+            "Define consistency rules and freshness SLAs.",
+            "Monitor read model lag/freshness/query errors."
           ],
           "dont": [
-            "Do not adopt without an agreed operating model and ownership setup."
+            "Do not use CQRS as default architecture.",
+            "Do not introduce CQRS without clear domain boundaries.",
+            "Do not accept implicit inconsistency without business sign-off."
           ],
           "whenNotToUse": [
-            "When read load does not demonstrably burden the write system. When strong consistency between reads and writes is required."
+            "Avoid for simple CRUD scenarios.",
+            "Avoid when team/operations are not ready for added complexity."
           ]
         }
       }
