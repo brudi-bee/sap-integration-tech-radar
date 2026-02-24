@@ -77,6 +77,18 @@
     return deVal ?? enVal ?? fallback;
   }
 
+  function detailValue(field, lang, fallback = '') {
+    const i18nField = detailItem?.i18n?.[lang]?.[field];
+    const i18nFallback = detailItem?.i18n?.[lang === 'en' ? 'de' : 'en']?.[field];
+    if (i18nField !== undefined && i18nField !== null) return i18nField;
+    if (i18nFallback !== undefined && i18nFallback !== null) return i18nFallback;
+
+    const legacyDe = detailItem?.[`${field}_de`];
+    const legacyEn = detailItem?.[`${field}_en`];
+    const legacyBase = detailItem?.[field];
+    return byLang(legacyDe ?? legacyBase, legacyEn ?? legacyBase, lang, fallback);
+  }
+
   function applyLanguage(lang) {
     const t = i18n[lang] || i18n.de;
     document.title = `${entry.label} · SAP Integration Radar`;
@@ -117,35 +129,33 @@
       confidenceEl.style.display = 'none';
     }
 
-    document.getElementById('intro').textContent = byLang(
-      detailItem?.intro_de,
-      detailItem?.intro_en,
+    document.getElementById('intro').textContent = detailValue(
+      'intro',
       lang,
       lang === 'en' ? `This item is about ${entry.label} in an integration context.` : `Es geht um ${entry.label} als Integrationsbaustein.`
     );
 
-    document.getElementById('why-ring').textContent = byLang(
-      detailItem?.whyRing_de,
-      detailItem?.whyRing_en,
+    document.getElementById('why-ring').textContent = detailValue(
+      'whyRing',
       lang,
       lang === 'en'
         ? 'This assessment reflects the expected value-risk ratio for new implementations.'
         : 'Die Einordnung folgt dem erwarteten Nutzen-Risiko-Verhältnis für neue Implementierungen.'
     );
 
-    const risks = byLang(detailItem?.risks_de, detailItem?.risks_en, lang, []);
+    const risks = detailValue('risks', lang, []);
     document.getElementById('risks').innerHTML = (risks.length ? risks : [lang === 'en' ? 'Missing guardrails can lead to inconsistent integration patterns across teams.' : 'Ohne klare Leitplanken steigt das Risiko inkonsistenter Integrationsmuster über Teams hinweg.'])
       .map(r => `<li>${r}</li>`).join('');
 
-    const dos = byLang(detailItem?.do_de, detailItem?.do_en, lang, []);
+    const dos = detailValue('do', lang, []);
     document.getElementById('do-list').innerHTML = (dos.length ? dos : [lang === 'en' ? 'Define success criteria and operating metrics before rollout.' : 'Klare Success-Kriterien und Betriebsmetriken vor dem Rollout festlegen.'])
       .map(d => `<li>${d}</li>`).join('');
 
-    const donts = byLang(detailItem?.dont_de, detailItem?.dont_en, lang, []);
+    const donts = detailValue('dont', lang, []);
     document.getElementById('dont-list').innerHTML = (donts.length ? donts : [lang === 'en' ? 'Do not adopt without an agreed operating model and ownership setup.' : 'Keine Einführung ohne abgestimmtes Betriebs- und Ownership-Modell.'])
       .map(d => `<li>${d}</li>`).join('');
 
-    const whenNot = byLang(detailItem?.whenNotToUse_de, detailItem?.whenNotToUse_en, lang, []);
+    const whenNot = detailValue('whenNotToUse', lang, []);
     document.getElementById('when-not-list').innerHTML = (whenNot.length ? whenNot : [lang === 'en' ? 'Do not use if value and operational maturity are not clearly evidenced.' : 'Nicht einsetzen, wenn Nutzen und Betriebsreife für den Kontext nicht klar belegt sind.'])
       .map(d => `<li>${d}</li>`).join('');
 

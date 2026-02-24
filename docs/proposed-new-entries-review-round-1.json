@@ -4,151 +4,261 @@
       "label": "SAP BTP Private Link",
       "suggestedQuadrant": "Infrastructure",
       "suggestedRing": "ADOPT",
-      "intro_de": "Sichere Anbindung von Hyperscaler-Ressourcen (Azure/AWS) ohne öffentliche IP-Adressen.",
-      "whyMissing_de": "Sicherheits-Grundlage für moderne Hybrid-Cloud Setups.",
-      "riskIfIgnored_de": "Datenabfluss über das öffentliche Internet; Compliance-Verletzung.",
-      "initialDo_de": [
-        "Private Endpoints auf Hyperscaler-Seite nutzen."
-      ],
-      "initialDont_de": [
-        "Public IP Whitelisting als Dauerlösung."
-      ],
-      "source": "review-round-1"
+      "source": "review-round-1",
+      "i18n": {
+        "de": {
+          "intro": "Sichere Anbindung von Hyperscaler-Ressourcen (Azure/AWS) ohne öffentliche IP-Adressen.",
+          "whyMissing": "Sicherheits-Grundlage für moderne Hybrid-Cloud Setups.",
+          "riskIfIgnored": "Datenabfluss über das öffentliche Internet; Compliance-Verletzung.",
+          "initialDo": [
+            "Private Endpoints auf Hyperscaler-Seite nutzen."
+          ],
+          "initialDont": [
+            "Public IP Whitelisting als Dauerlösung."
+          ]
+        },
+        "en": {
+          "intro": null,
+          "whyMissing": null,
+          "riskIfIgnored": null,
+          "initialDo": [],
+          "initialDont": []
+        }
+      }
     },
     {
       "label": "SAP Build Code (CAP)",
       "suggestedQuadrant": "Platforms",
       "suggestedRing": "ADOPT",
-      "intro_de": "Standard Programmiermodell für Cloud-native Extensions. Nachfolger von Java/Node Pro-Code.",
-      "whyMissing_de": "Zentraler Baustein für 'Clean Core' Strategie.",
-      "riskIfIgnored_de": "Wildwuchs an In-App Modifikationen.",
-      "initialDo_de": [
-        "Side-by-Side Extensions bevorzugen."
-      ],
-      "initialDont_de": [
-        "Logik direkt im S/4 Kern belassen."
-      ],
-      "source": "review-round-1"
+      "source": "review-round-1",
+      "i18n": {
+        "de": {
+          "intro": "Standard Programmiermodell für Cloud-native Extensions. Nachfolger von Java/Node Pro-Code.",
+          "whyMissing": "Zentraler Baustein für 'Clean Core' Strategie.",
+          "riskIfIgnored": "Wildwuchs an In-App Modifikationen.",
+          "initialDo": [
+            "Side-by-Side Extensions bevorzugen."
+          ],
+          "initialDont": [
+            "Logik direkt im S/4 Kern belassen."
+          ]
+        },
+        "en": {
+          "intro": null,
+          "whyMissing": null,
+          "riskIfIgnored": null,
+          "initialDo": [],
+          "initialDont": []
+        }
+      }
     },
     {
       "label": "Principal Propagation",
       "suggestedQuadrant": "Security",
       "suggestedRing": "ADOPT",
-      "intro_de": "End-to-End Identitätsweitergabe vom User bis zum S/4-Backend.",
-      "whyMissing_de": "Essentiell für Auditability und Security.",
-      "riskIfIgnored_de": "Verlust des User-Kontextes im Backend (Technischer User).",
-      "initialDo_de": [
-        "OAuth2SAMLBearer Flow nutzen."
-      ],
-      "initialDont_de": [
-        "Static Credentials in Destinations."
-      ],
-      "source": "review-round-1"
+      "source": "review-round-1",
+      "i18n": {
+        "de": {
+          "intro": "End-to-End Identitätsweitergabe vom User bis zum S/4-Backend.",
+          "whyMissing": "Essentiell für Auditability und Security.",
+          "riskIfIgnored": "Verlust des User-Kontextes im Backend (Technischer User).",
+          "initialDo": [
+            "OAuth2SAMLBearer Flow nutzen."
+          ],
+          "initialDont": [
+            "Static Credentials in Destinations."
+          ]
+        },
+        "en": {
+          "intro": null,
+          "whyMissing": null,
+          "riskIfIgnored": null,
+          "initialDo": [],
+          "initialDont": []
+        }
+      }
     },
     {
       "label": "SAP Graph",
       "suggestedQuadrant": "Platforms",
       "suggestedRing": "ADOPT",
-      "intro_de": "Unified API Entrypoint für das gesamte SAP Portfolio (One Domain Model).",
-      "whyMissing_de": "Reduziert Komplexität für Frontend-Entwickler.",
-      "riskIfIgnored_de": "Redundante Datenabfragen gegen verschiedene Backends.",
-      "initialDo_de": [
-        "OData v4 standardisieren."
-      ],
-      "initialDont_de": [
-        "Proprietäre API-Mapping-Layer bauen."
-      ],
-      "source": "review-round-1"
+      "source": "review-round-1",
+      "i18n": {
+        "de": {
+          "intro": "Unified API Entrypoint für das gesamte SAP Portfolio (One Domain Model).",
+          "whyMissing": "Reduziert Komplexität für Frontend-Entwickler.",
+          "riskIfIgnored": "Redundante Datenabfragen gegen verschiedene Backends.",
+          "initialDo": [
+            "OData v4 standardisieren."
+          ],
+          "initialDont": [
+            "Proprietäre API-Mapping-Layer bauen."
+          ]
+        },
+        "en": {
+          "intro": null,
+          "whyMissing": null,
+          "riskIfIgnored": null,
+          "initialDo": [],
+          "initialDont": []
+        }
+      }
     },
     {
       "label": "Cloud Connector HA",
       "suggestedQuadrant": "Infrastructure",
       "suggestedRing": "ADOPT",
-      "intro_de": "Hochverfügbarkeits-Setup für den SAP Cloud Connector (Master/Shadow).",
-      "whyMissing_de": "Vermeidung eines Single-Point-of-Failure.",
-      "riskIfIgnored_de": "Totalausfall der Hybrid-Integration bei Server-Reboot.",
-      "initialDo_de": [
-        "Shadow-Instanz in anderem Subnetz/Host betreiben."
-      ],
-      "initialDont_de": [
-        "Single-Instance Betrieb für Prod."
-      ],
-      "source": "review-round-1"
+      "source": "review-round-1",
+      "i18n": {
+        "de": {
+          "intro": "Hochverfügbarkeits-Setup für den SAP Cloud Connector (Master/Shadow).",
+          "whyMissing": "Vermeidung eines Single-Point-of-Failure.",
+          "riskIfIgnored": "Totalausfall der Hybrid-Integration bei Server-Reboot.",
+          "initialDo": [
+            "Shadow-Instanz in anderem Subnetz/Host betreiben."
+          ],
+          "initialDont": [
+            "Single-Instance Betrieb für Prod."
+          ]
+        },
+        "en": {
+          "intro": null,
+          "whyMissing": null,
+          "riskIfIgnored": null,
+          "initialDo": [],
+          "initialDont": []
+        }
+      }
     },
     {
       "label": "OpenTelemetry (OTrEx)",
       "suggestedQuadrant": "Observability",
       "suggestedRing": "ADOPT",
-      "intro_de": "Standardisierung von Traces, Metrics und Logs zur Cloud-weiten Analyse.",
-      "whyMissing_de": "Modernes Monitoring über Systemgrenzen hinweg.",
-      "riskIfIgnored_de": "Blindflug bei verteilten Microservices.",
-      "initialDo_de": [
-        "W3C Trace Context nutzen."
-      ],
-      "initialDont_de": [
-        "Proprietäre Log-Formate ohne Korrelation."
-      ],
-      "source": "review-round-1"
+      "source": "review-round-1",
+      "i18n": {
+        "de": {
+          "intro": "Standardisierung von Traces, Metrics und Logs zur Cloud-weiten Analyse.",
+          "whyMissing": "Modernes Monitoring über Systemgrenzen hinweg.",
+          "riskIfIgnored": "Blindflug bei verteilten Microservices.",
+          "initialDo": [
+            "W3C Trace Context nutzen."
+          ],
+          "initialDont": [
+            "Proprietäre Log-Formate ohne Korrelation."
+          ]
+        },
+        "en": {
+          "intro": null,
+          "whyMissing": null,
+          "riskIfIgnored": null,
+          "initialDo": [],
+          "initialDont": []
+        }
+      }
     },
     {
       "label": "BTP Resource Quota Monitoring",
       "suggestedQuadrant": "Governance",
       "suggestedRing": "ADOPT",
-      "intro_de": "Automatisiertes Monitoring der Subaccount-Limits (Memory, Services).",
-      "whyMissing_de": "Operational Excellence & Stabilität.",
-      "riskIfIgnored_de": "Plötzlicher Stop von Services bei Limit-Erreichung.",
-      "initialDo_de": [
-        "Alert Notification Service (ANS) anbinden."
-      ],
-      "initialDont_de": [
-        "Limits manuell in der Cockpit-UI prüfen."
-      ],
-      "source": "review-round-1"
+      "source": "review-round-1",
+      "i18n": {
+        "de": {
+          "intro": "Automatisiertes Monitoring der Subaccount-Limits (Memory, Services).",
+          "whyMissing": "Operational Excellence & Stabilität.",
+          "riskIfIgnored": "Plötzlicher Stop von Services bei Limit-Erreichung.",
+          "initialDo": [
+            "Alert Notification Service (ANS) anbinden."
+          ],
+          "initialDont": [
+            "Limits manuell in der Cockpit-UI prüfen."
+          ]
+        },
+        "en": {
+          "intro": null,
+          "whyMissing": null,
+          "riskIfIgnored": null,
+          "initialDo": [],
+          "initialDont": []
+        }
+      }
     },
     {
       "label": "Semantic Versioning (SemVer)",
       "suggestedQuadrant": "Governance",
       "suggestedRing": "ADOPT",
-      "intro_de": "Standard für die API-Versionierung (Major.Minor.Patch).",
-      "whyMissing_de": "Vermeidung von Breaking Changes.",
-      "riskIfIgnored_de": "Konsumenten-Apps stürzen nach Deployment ab.",
-      "initialDo_de": [
-        "Breaking Change = Neue Major Version."
-      ],
-      "initialDont_de": [
-        "APIs ohne Versions-Header im URL-Pfad."
-      ],
-      "source": "review-round-1"
+      "source": "review-round-1",
+      "i18n": {
+        "de": {
+          "intro": "Standard für die API-Versionierung (Major.Minor.Patch).",
+          "whyMissing": "Vermeidung von Breaking Changes.",
+          "riskIfIgnored": "Konsumenten-Apps stürzen nach Deployment ab.",
+          "initialDo": [
+            "Breaking Change = Neue Major Version."
+          ],
+          "initialDont": [
+            "APIs ohne Versions-Header im URL-Pfad."
+          ]
+        },
+        "en": {
+          "intro": null,
+          "whyMissing": null,
+          "riskIfIgnored": null,
+          "initialDo": [],
+          "initialDont": []
+        }
+      }
     },
     {
       "label": "SAP Datasphere Integration",
       "suggestedQuadrant": "Platforms",
       "suggestedRing": "ADOPT",
-      "intro_de": "Trennung von Daten-Integration (ETL/Virtuell) und Prozess-Integration.",
-      "whyMissing_de": "Schutz der Prozess-Middleware vor Daten-Überlast.",
-      "riskIfIgnored_de": "Integration Suite Performance-Einbruch durch Massendaten-Moves.",
-      "initialDo_de": [
-        "Data Sharing/Federation für Analytics."
-      ],
-      "initialDont_de": [
-        "SAP CI für Terabyte-Transfers nutzen."
-      ],
-      "source": "review-round-1"
+      "source": "review-round-1",
+      "i18n": {
+        "de": {
+          "intro": "Trennung von Daten-Integration (ETL/Virtuell) und Prozess-Integration.",
+          "whyMissing": "Schutz der Prozess-Middleware vor Daten-Überlast.",
+          "riskIfIgnored": "Integration Suite Performance-Einbruch durch Massendaten-Moves.",
+          "initialDo": [
+            "Data Sharing/Federation für Analytics."
+          ],
+          "initialDont": [
+            "SAP CI für Terabyte-Transfers nutzen."
+          ]
+        },
+        "en": {
+          "intro": null,
+          "whyMissing": null,
+          "riskIfIgnored": null,
+          "initialDo": [],
+          "initialDont": []
+        }
+      }
     },
     {
       "label": "Consumer-Driven Contract Testing",
       "suggestedQuadrant": "Tools",
       "suggestedRing": "TRIAL",
-      "intro_de": "Testverfahren (z.B. mit Pact), bei dem Consumer die Erwartung an APIs definieren.",
-      "whyMissing_de": "Sicherung der API-Stabilität in agilen Umfeldern.",
-      "riskIfIgnored_de": "Unentdeckte Breaking Changes erst in Prod.",
-      "initialDo_de": [
-        "Pact-Dateien in CI/CD einbinden."
-      ],
-      "initialDont_de": [
-        "Sich allein auf manuelle Integrationstests verlassen."
-      ],
-      "source": "review-round-1"
+      "source": "review-round-1",
+      "i18n": {
+        "de": {
+          "intro": "Testverfahren (z.B. mit Pact), bei dem Consumer die Erwartung an APIs definieren.",
+          "whyMissing": "Sicherung der API-Stabilität in agilen Umfeldern.",
+          "riskIfIgnored": "Unentdeckte Breaking Changes erst in Prod.",
+          "initialDo": [
+            "Pact-Dateien in CI/CD einbinden."
+          ],
+          "initialDont": [
+            "Sich allein auf manuelle Integrationstests verlassen."
+          ]
+        },
+        "en": {
+          "intro": null,
+          "whyMissing": null,
+          "riskIfIgnored": null,
+          "initialDo": [],
+          "initialDont": []
+        }
+      }
     }
   ]
 }
