@@ -63,10 +63,15 @@
   const confidenceEl = document.getElementById('confidence');
   ringEl.textContent = ring;
   document.getElementById('quadrant').textContent = quadrant;
-  if (ringColors[ring]) {
-    ringEl.style.background = ringColors[ring].bg;
-    ringEl.style.borderColor = ringColors[ring].border;
-    ringEl.style.color = ringColors[ring].text;
+
+  function applyRingTagTheme() {
+    const isLight = (themeSwitch.value || 'dark') === 'light';
+    if (ringColors[ring]) {
+      ringEl.style.background = ringColors[ring].bg;
+      ringEl.style.borderColor = ringColors[ring].border;
+      // In light theme use strong text contrast for readability
+      ringEl.style.color = isLight ? '#1f3470' : ringColors[ring].text;
+    }
   }
 
   const langSwitch = document.getElementById('lang-switch');
@@ -84,6 +89,7 @@
     : ((savedTheme === 'light' || savedTheme === 'dark') ? savedTheme : 'dark');
 
   document.body.setAttribute('data-theme', themeSwitch.value);
+  applyRingTagTheme();
 
   function byLang(deVal, enVal, lang, fallback = '') {
     if (lang === 'en') return enVal ?? deVal ?? fallback;
@@ -180,6 +186,7 @@
       : `<li>${t.noRefs}</li>`;
 
     document.getElementById('raw').textContent = JSON.stringify({ ...entry, details: detailItem || null }, null, 2);
+    applyRingTagTheme();
   }
 
   applyLanguage(langSwitch.value);
