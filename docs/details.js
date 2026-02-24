@@ -2,6 +2,7 @@
   const params = new URLSearchParams(location.search);
   const item = params.get('item');
   const urlLang = params.get('lang');
+  const urlTheme = params.get('theme');
 
   const ringNames = ['ADOPT', 'TRIAL', 'ASSESS', 'HOLD'];
   const ringColors = {
@@ -13,6 +14,7 @@
 
   const i18n = {
     de: {
+      themeLabel: 'Theme',
       langLabel: 'Sprache',
       back: '← zurück zum Radar',
       subtitle: 'SAP Integration Tech Radar – Detailansicht',
@@ -28,6 +30,7 @@
       confidence: 'Konfidenz'
     },
     en: {
+      themeLabel: 'Theme',
       langLabel: 'Language',
       back: '← back to radar',
       subtitle: 'SAP Integration Tech Radar – detail view',
@@ -67,10 +70,20 @@
   }
 
   const langSwitch = document.getElementById('lang-switch');
+  const themeSwitch = document.getElementById('theme-switch');
+
   const savedLang = localStorage.getItem('radar.lang');
+  const savedTheme = localStorage.getItem('radar.theme');
+
   langSwitch.value = (urlLang === 'en' || urlLang === 'de')
     ? urlLang
     : ((savedLang === 'en' || savedLang === 'de') ? savedLang : 'de');
+
+  themeSwitch.value = (urlTheme === 'light' || urlTheme === 'dark')
+    ? urlTheme
+    : ((savedTheme === 'light' || savedTheme === 'dark') ? savedTheme : 'dark');
+
+  document.body.setAttribute('data-theme', themeSwitch.value);
 
   function byLang(deVal, enVal, lang, fallback = '') {
     if (lang === 'en') return enVal ?? deVal ?? fallback;
@@ -95,9 +108,11 @@
     document.getElementById('title').textContent = entry.label;
     document.getElementById('subtitle').textContent = t.subtitle;
 
+    document.getElementById('theme-label').textContent = t.themeLabel;
     document.getElementById('lang-label').textContent = t.langLabel;
     document.getElementById('back-link').textContent = t.back;
-    document.getElementById('back-link').href = `./?lang=${lang}`;
+    const currentTheme = themeSwitch.value || 'dark';
+    document.getElementById('back-link').href = `./?lang=${lang}&theme=${currentTheme}`;
     document.getElementById('h-intro').textContent = t.hIntro;
     document.getElementById('h-why').textContent = t.hWhy;
     document.getElementById('h-risks').textContent = t.hRisks;
@@ -172,6 +187,17 @@
     localStorage.setItem('radar.lang', langSwitch.value);
     const u = new URL(window.location.href);
     u.searchParams.set('lang', langSwitch.value);
+    u.searchParams.set('theme', themeSwitch.value || 'dark');
+    window.history.replaceState({}, '', u.toString());
+    applyLanguage(langSwitch.value);
+  });
+
+  themeSwitch.addEventListener('change', () => {
+    localStorage.setItem('radar.theme', themeSwitch.value);
+    document.body.setAttribute('data-theme', themeSwitch.value);
+    const u = new URL(window.location.href);
+    u.searchParams.set('theme', themeSwitch.value);
+    u.searchParams.set('lang', langSwitch.value || 'de');
     window.history.replaceState({}, '', u.toString());
     applyLanguage(langSwitch.value);
   });

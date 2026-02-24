@@ -482,14 +482,26 @@ function radar_visualization(config) {
 
   function highlightLegendItem(d) {
     var legendItem = document.getElementById("legendItem" + d.id);
-    legendItem.setAttribute("filter", "url(#solid)");
-    legendItem.setAttribute("fill", "white");
+    if (!legendItem) return;
+
+    var isLight = document.body && document.body.getAttribute('data-theme') === 'light';
+    if (isLight) {
+      legendItem.removeAttribute("filter");
+      legendItem.setAttribute("fill", "#0f3ea7");
+      legendItem.style.fontWeight = "700";
+    } else {
+      legendItem.setAttribute("filter", "url(#solid)");
+      legendItem.setAttribute("fill", "white");
+      legendItem.style.fontWeight = "700";
+    }
   }
 
   function unhighlightLegendItem(d) {
     var legendItem = document.getElementById("legendItem" + d.id);
+    if (!legendItem) return;
     legendItem.removeAttribute("filter");
     legendItem.removeAttribute("fill");
+    legendItem.style.fontWeight = "600";
   }
 
   // draw blips on radar

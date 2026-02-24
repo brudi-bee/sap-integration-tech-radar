@@ -142,7 +142,7 @@
       const entries = (data.entries || []).map((e) => ({
         ...e,
         active: e.active !== false,
-        link: e.link || `details.html?item=${encodeURIComponent(e.label)}&lang=${currentLang}`
+        link: e.link || `details.html?item=${encodeURIComponent(e.label)}&lang=${currentLang}&theme=${currentTheme}`
       }));
 
       // Keep top compact; grow height for longer lists, but compensate vertical centering

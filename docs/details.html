@@ -23,29 +23,54 @@
         linear-gradient(180deg, var(--bg2), var(--bg));
       min-height:100vh;
     }
+    body[data-theme="light"]{
+      color:#1f2f66;
+      background:
+        radial-gradient(900px 500px at 90% -20%, #d7e4ff 0%, transparent 55%),
+        linear-gradient(180deg, #f8fbff, #ebf2ff);
+    }
     .wrap{max-width:980px;margin:28px auto;padding:0 18px}
     .card{background:rgba(13,38,102,.68);border:1px solid var(--line);border-radius:14px;padding:22px 22px 18px}
+    body[data-theme="light"] .card{background:rgba(255,255,255,.9);border-color:rgba(101,136,219,.35)}
     h1{margin:8px 0 6px 0;font-size:34px;line-height:1.15}
     h3{margin-top:24px;color:#f3f7ff}
+    body[data-theme="light"] h3{color:#1f3470}
     .muted{color:var(--muted)}
+    body[data-theme="light"] .muted{color:#5f78b9}
     .tags{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0 4px}
     .tag{display:inline-block;padding:6px 12px;border-radius:999px;background:#15357f;color:#eef4ff;font-weight:600;border:1px solid rgba(160,188,255,.36)}
+    body[data-theme="light"] .tag{background:#eaf1ff;color:#1f3470;border-color:rgba(101,136,219,.35)}
     a{color:var(--link)}
+    body[data-theme="light"] a{color:#2c5fc4}
     pre{background:rgba(4,11,31,.45);border:1px solid rgba(120,152,240,.3);padding:12px;border-radius:10px;overflow:auto;color:#d7e3ff}
+    body[data-theme="light"] pre{background:#f4f7ff;border-color:rgba(101,136,219,.35);color:#2b3f79}
     li{margin:8px 0}
+    body[data-theme="light"] #theme-wrap,
+    body[data-theme="light"] #lang-wrap{color:#2f4c92!important}
+    body[data-theme="light"] #theme-switch,
+    body[data-theme="light"] #lang-switch{background:#fff!important;color:#1f3470!important;border:1px solid rgba(76,117,206,.35)!important}
   </style>
 </head>
 <body>
   <div class="wrap">
     <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;">
       <p><a id="back-link" href="./">← zurück zum Radar</a></p>
-      <label style="display:inline-flex;gap:8px;align-items:center;color:#cfe0ff;">
-        <span id="lang-label">Sprache</span>
-        <select id="lang-switch" style="background:#13327a;color:#eef4ff;border:1px solid rgba(160,188,255,.36);border-radius:8px;padding:4px 8px;">
-          <option value="de">DE</option>
-          <option value="en">EN</option>
-        </select>
-      </label>
+      <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;">
+        <label style="display:inline-flex;gap:8px;align-items:center;color:#cfe0ff;" id="theme-wrap">
+          <span id="theme-label">Theme</span>
+          <select id="theme-switch" style="background:#13327a;color:#eef4ff;border:1px solid rgba(160,188,255,.36);border-radius:8px;padding:4px 8px;">
+            <option value="dark">Dark</option>
+            <option value="light">Light</option>
+          </select>
+        </label>
+        <label style="display:inline-flex;gap:8px;align-items:center;color:#cfe0ff;" id="lang-wrap">
+          <span id="lang-label">Sprache</span>
+          <select id="lang-switch" style="background:#13327a;color:#eef4ff;border:1px solid rgba(160,188,255,.36);border-radius:8px;padding:4px 8px;">
+            <option value="de">DE</option>
+            <option value="en">EN</option>
+          </select>
+        </label>
+      </div>
     </div>
     <div class="card">
       <h1 id="title">Radar Detail</h1>
