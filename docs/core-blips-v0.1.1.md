@@ -1,6 +1,7 @@
 # Core Blips (v0.1.1 draft)
 
 Fokusliste für Teams, die nicht mit allen Blips gleichzeitig starten wollen.
+Diese Liste ist auf den aktuellen Stand von `docs/entries.json` nachgezogen.
 
 ## Platforms
 - SAP Cloud Integration (CI) — **ADOPT**

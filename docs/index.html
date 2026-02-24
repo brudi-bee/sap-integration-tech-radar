@@ -18,8 +18,15 @@
     </div>
     <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;">
       <label class="switch">
+        <span id="theme-label">Theme</span>
+        <select id="theme-switch" class="control-select">
+          <option value="dark">Dark</option>
+          <option value="light">Light</option>
+        </select>
+      </label>
+      <label class="switch">
         <span id="lang-label">Sprache</span>
-        <select id="lang-switch" style="background:#13327a;color:#eef4ff;border:1px solid rgba(160,188,255,.36);border-radius:8px;padding:3px 8px;">
+        <select id="lang-switch" class="control-select">
           <option value="de">DE</option>
           <option value="en">EN</option>
         </select>
@@ -73,7 +80,8 @@
 
     const i18n = {
       de: {
-        topMuted: '· Dark theme',
+        topMuted: '· Zalando Radar Basis',
+        themeLabel: 'Theme',
         langLabel: 'Sprache',
         aboutTitle: 'Was ist dieses Radar?',
         aboutText: 'Das SAP Integration Tech Radar macht Integrations-Technologien und Architektur-Entscheidungen sichtbar. Es hilft Teams bei der Auswahl für neue Vorhaben und bei der Einordnung bestehender Landschaften.',
@@ -85,7 +93,8 @@
         usageText: 'Desktop: nummerierte Liste neben den Quadranten; Klick öffnet Detailseite.<br/>Mobile: kompakter Radar + strukturierte Liste unterhalb.'
       },
       en: {
-        topMuted: '· Dark theme',
+        topMuted: '· Based on Zalando Tech Radar',
+        themeLabel: 'Theme',
         langLabel: 'Language',
         aboutTitle: 'What is this radar?',
         aboutText: 'The SAP Integration Tech Radar makes integration technologies and architecture decisions visible. It helps teams choose options for new initiatives and assess existing landscapes.',
@@ -125,6 +134,7 @@
     function renderRadar(data) {
       const mobile = window.innerWidth <= 900;
       const currentLang = document.getElementById('lang-switch')?.value || 'de';
+      const currentTheme = document.getElementById('theme-switch')?.value || 'dark';
 
       // Dynamic desktop sizing in a bounded range
       const desktopWidth = Math.max(1450, Math.min(1750, window.innerWidth - 60));
@@ -149,6 +159,16 @@
 
       document.querySelector('#radar').innerHTML = '';
 
+      const viz = currentTheme === 'light'
+        ? {
+            colors: { background: '#f6f9ff', grid: '#9bb6ff', inactive: '#d9e4ff' },
+            theme: { title: '#0d1b4d', text: '#1f2f66', muted: '#5e76b8', bubble: '#e9f0ff' }
+          }
+        : {
+            colors: { background: '#07153b', grid: '#3c74ff', inactive: '#203873' },
+            theme: { title: '#f2f7ff', text: '#dbe7ff', muted: '#8aa5e6', bubble: '#0c2668' }
+          };
+
       radar_visualization({
         repo_url: 'https://github.com/brudi-bee/sap-integration-tech-radar',
         title: data.title || 'SAP Integration Tech Radar',
@@ -158,17 +178,8 @@
         quadrants: data.quadrants,
         rings,
         entries,
-        colors: {
-          background: '#07153b',
-          grid: '#3c74ff',
-          inactive: '#203873'
-        },
-        theme: {
-          title: '#f2f7ff',
-          text: '#dbe7ff',
-          muted: '#8aa5e6',
-          bubble: '#0c2668'
-        },
+        colors: viz.colors,
+        theme: viz.theme,
         legend_offset: mobile
           ? [{x:520,y:120},{x:-840,y:120},{x:-840,y:-330},{x:520,y:-330}]
           : [
@@ -206,17 +217,35 @@
       .then(data => {
         cachedData = data;
         const langSwitch = document.getElementById('lang-switch');
+        const themeSwitch = document.getElementById('theme-switch');
+
+        const params = new URLSearchParams(window.location.search);
         const savedLang = localStorage.getItem('radar.lang');
-        const urlLang = new URLSearchParams(window.location.search).get('lang');
+        const savedTheme = localStorage.getItem('radar.theme');
+        const urlLang = params.get('lang');
+        const urlTheme = params.get('theme');
+
         if (urlLang === 'en' || urlLang === 'de') {
           langSwitch.value = urlLang;
         } else if (savedLang === 'en' || savedLang === 'de') {
           langSwitch.value = savedLang;
         }
 
+        // default is dark unless explicitly overridden
+        if (urlTheme === 'light' || urlTheme === 'dark') {
+          themeSwitch.value = urlTheme;
+        } else if (savedTheme === 'light' || savedTheme === 'dark') {
+          themeSwitch.value = savedTheme;
+        } else {
+          themeSwitch.value = 'dark';
+        }
+
+        document.body.setAttribute('data-theme', themeSwitch.value);
+
         function applyLanguage(lang) {
           const t = i18n[lang] || i18n.de;
           document.getElementById('top-muted').textContent = t.topMuted;
+          document.getElementById('theme-label').textContent = t.themeLabel;
           document.getElementById('lang-label').textContent = t.langLabel;
           document.getElementById('about-title').textContent = t.aboutTitle;
           document.getElementById('about-text').textContent = t.aboutText;
@@ -237,6 +266,16 @@
           const u = new URL(window.location.href);
           u.searchParams.set('lang', langSwitch.value);
           window.history.replaceState({}, '', u.toString());
+          renderRadar(cachedData);
+        });
+
+        themeSwitch.addEventListener('change', () => {
+          localStorage.setItem('radar.theme', themeSwitch.value);
+          document.body.setAttribute('data-theme', themeSwitch.value);
+          const u = new URL(window.location.href);
+          u.searchParams.set('theme', themeSwitch.value);
+          window.history.replaceState({}, '', u.toString());
+          renderRadar(cachedData);
         });
 
         window.addEventListener('resize', () => renderRadar(cachedData));

@@ -1,0 +1,35 @@
+{
+  "title": "SAP Integration Tech Radar - Core Blips v0.1.1 (draft)",
+  "source": "derived from docs/entries.json (current state)",
+  "blips": [
+    { "label": "SAP Cloud Integration (CI)", "quadrant": "Platforms", "ring": "ADOPT" },
+    { "label": "SAP API Management", "quadrant": "Platforms", "ring": "ADOPT" },
+    { "label": "SAP Event Mesh", "quadrant": "Platforms", "ring": "TRIAL" },
+    { "label": "SAP Advanced Event Mesh (AEM)", "quadrant": "Platforms", "ring": "TRIAL" },
+    { "label": "Edge Integration Cell", "quadrant": "Platforms", "ring": "ASSESS" },
+    { "label": "SAP PI/PO", "quadrant": "Platforms", "ring": "HOLD" },
+
+    { "label": "SAP Cloud ALM integration & exception monitoring", "quadrant": "Tooling & Ops", "ring": "ADOPT" },
+    { "label": "Cloud Integration central monitoring & alerting", "quadrant": "Tooling & Ops", "ring": "ADOPT" },
+    { "label": "SAP Cloud Transport Management (CTMS) + Content Agent", "quadrant": "Tooling & Ops", "ring": "ADOPT" },
+    { "label": "Integration Assessment (ISA-M)", "quadrant": "Tooling & Ops", "ring": "ADOPT" },
+    { "label": "OpenTelemetry", "quadrant": "Tooling & Ops", "ring": "TRIAL" },
+    { "label": "Manual prod changes", "quadrant": "Tooling & Ops", "ring": "HOLD" },
+
+    { "label": "API-first", "quadrant": "Patterns & Architecture", "ring": "ADOPT" },
+    { "label": "API-led connectivity (system/process/experience)", "quadrant": "Patterns & Architecture", "ring": "ADOPT" },
+    { "label": "Contract-first with OpenAPI", "quadrant": "Patterns & Architecture", "ring": "ADOPT" },
+    { "label": "Strangler pattern for legacy replacement", "quadrant": "Patterns & Architecture", "ring": "ADOPT" },
+    { "label": "Event-driven integration", "quadrant": "Patterns & Architecture", "ring": "TRIAL" },
+    { "label": "Contract-first with AsyncAPI", "quadrant": "Patterns & Architecture", "ring": "TRIAL" },
+    { "label": "Direct point-to-point connections", "quadrant": "Patterns & Architecture", "ring": "HOLD" },
+
+    { "label": "OData v4", "quadrant": "Protocols & APIs", "ring": "ADOPT" },
+    { "label": "OAuth2 / OIDC", "quadrant": "Protocols & APIs", "ring": "ADOPT" },
+    { "label": "OpenAPI 3.x", "quadrant": "Protocols & APIs", "ring": "ADOPT" },
+    { "label": "AMQP 1.0", "quadrant": "Protocols & APIs", "ring": "ADOPT" },
+    { "label": "AsyncAPI", "quadrant": "Protocols & APIs", "ring": "TRIAL" },
+    { "label": "RFC/BAPI (remote)", "quadrant": "Protocols & APIs", "ring": "HOLD" },
+    { "label": "New SOAP/WSDL interfaces", "quadrant": "Protocols & APIs", "ring": "HOLD" }
+  ]
+}

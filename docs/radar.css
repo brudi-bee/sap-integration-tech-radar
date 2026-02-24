@@ -8,6 +8,13 @@ body {
     linear-gradient(180deg, #0a1c4d 0%, #07153b 60%, #061131 100%);
 }
 
+body[data-theme="light"] {
+  color: #1c2c58;
+  background:
+    radial-gradient(1200px 700px at 85% -10%, #d7e4ff 0%, transparent 55%),
+    linear-gradient(180deg, #f8fbff 0%, #eef4ff 60%, #e8f1ff 100%);
+}
+
 .topbar {
   width: min(1400px, calc(100% - 40px));
   margin: 14px auto 0 auto;
@@ -26,7 +33,24 @@ body {
   color: #cfe0ff;
 }
 
+.control-select {
+  background: #13327a;
+  color: #eef4ff;
+  border: 1px solid rgba(160, 188, 255, 0.36);
+  border-radius: 8px;
+  padding: 3px 8px;
+}
+
 .muted { color: #96afe9; }
+
+body[data-theme="light"] .topbar { color: #1f3470; }
+body[data-theme="light"] .switch { color: #2f4c92; }
+body[data-theme="light"] .muted { color: #5f78b9; }
+body[data-theme="light"] .control-select {
+  background: #ffffff;
+  color: #1f3470;
+  border: 1px solid rgba(76, 117, 206, 0.35);
+}
 
 #radar {
   display: block;
@@ -38,6 +62,13 @@ body {
 
 #radar text { fill: #dbe7ff; }
 #radar a text { fill: #e4eeff; }
+
+body[data-theme="light"] #radar {
+  border-color: rgba(101, 136, 219, 0.4);
+  box-shadow: 0 10px 26px rgba(35, 61, 120, 0.16);
+}
+body[data-theme="light"] #radar text { fill: #1f2f66; }
+body[data-theme="light"] #radar a text { fill: #29458a; }
 /* keep ring labels visually crisp on dark background */
 #radar .legend text { text-shadow: 0 0 0 transparent; }
 #radar .hover-underline:hover { text-decoration: underline; fill: #ffffff; }
@@ -45,6 +76,11 @@ body {
 h3 { margin-top: 44px; color: #f3f7ff; }
 p, li, td { color: #d9e4ff; }
 li { margin: 18px 40px 0 0; }
+
+body[data-theme="light"] h3 { color: #1f3470; }
+body[data-theme="light"] p,
+body[data-theme="light"] li,
+body[data-theme="light"] td { color: #334f8f; }
 
 .info-panel {
   width: min(1400px, calc(100% - 40px));
@@ -54,6 +90,9 @@ li { margin: 18px 40px 0 0; }
 td { width: 50%; vertical-align: top; padding-right: 56px; }
 a { color: #6ec6ff; }
 a:hover { color: #9ad9ff; }
+
+body[data-theme="light"] a { color: #2c5fc4; }
+body[data-theme="light"] a:hover { color: #4a7ce0; }
 
 .mobile-list {
   width: min(980px, calc(100% - 24px));
@@ -68,6 +107,11 @@ a:hover { color: #9ad9ff; }
   border: 1px solid rgba(123, 159, 255, .35);
   border-radius: 12px;
   padding: 12px 14px;
+}
+
+body[data-theme="light"] .mobile-quadrant {
+  background: rgba(255, 255, 255, 0.86);
+  border: 1px solid rgba(101, 136, 219, 0.35);
 }
 
 .mobile-quadrant h3 { margin: 6px 0 8px; font-size: 20px; }
