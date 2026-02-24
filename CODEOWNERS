@@ -1,0 +1,5 @@
+# Adjust owners to your internal GitLab usernames/groups
+
+/docs/* @architecture-team @integration-platform-team
+/scripts/* @integration-platform-team
+/.gitlab-ci.yml @devops-team

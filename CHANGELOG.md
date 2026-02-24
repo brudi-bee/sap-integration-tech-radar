@@ -22,6 +22,20 @@ Alle relevanten Änderungen am SAP Integration Tech Radar.
 ### Changed
 - README mit klarer Versionsreferenz und Governance-Links ergänzt
 
+## [0.1.1] - 2026-02-24
+
+### Added
+- Einheitliches Content-Schema dokumentiert: `docs/CONTENT_SCHEMA.md`
+- Ready-for-use Checkliste ergänzt: `docs/READY_CHECKLIST.md`
+- Validator-Script für Content-Schema ergänzt: `scripts/validate_radar_content.py`
+- GitLab-Migrationsleitfaden ergänzt: `docs/GITLAB_MIGRATION.md`
+
+### Changed
+- `details-data.json` vollständig auf `i18n.de` / `i18n.en` normalisiert
+- Detail-Renderer (`docs/details.js`) auf neues Schema umgestellt (mit Legacy-Fallback)
+- Pages-Deploy blockt jetzt bei ungültigem Content-Schema
+- Verbleibende generische Einträge durch KI-Enrichment ersetzt (u. a. TPM, Edge Integration Cell)
+
 ## [0.1.0] - 2026-02-16
 
 ### Added

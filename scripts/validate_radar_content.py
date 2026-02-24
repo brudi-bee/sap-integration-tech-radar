@@ -1,12 +1,15 @@
 #!/usr/bin/env python3
 """Validate SAP Integration Tech Radar content JSON files.
 
-Usage:
-  python3 scripts/validate_radar_content.py
+Modes:
+- default: schema validation (blocking)
+- --warn-content: content quality warnings (non-blocking unless --strict-content)
+- --strict-content: treat content warnings as errors
 """
 
 from __future__ import annotations
 
+import argparse
 import json
 import sys
 from pathlib import Path
@@ -19,6 +22,19 @@ DETAILS_FILE = DOCS / "details-data.json"
 PROPOSED_FILE = DOCS / "proposed-new-entries-review-round-1.json"
 
 LEGACY_SUFFIXES = ("_de", "_en")
+
+GENERIC_PHRASES = {
+    "de": {
+        "Dieser Punkt ist vielversprechend, sollte aber gezielt und mit klaren Guardrails eingesetzt werden.",
+        "Dieser Punkt hat Potenzial, braucht aber vor breiter Nutzung noch strukturierte Validierung.",
+        "Dieser Punkt ist operativ bewährt und für neue Integrationen die Standardwahl.",
+    },
+    "en": {
+        "This item is promising but should be introduced selectively with clear guardrails.",
+        "This item has potential but requires structured validation before broader adoption.",
+        "This item is operationally proven and should be the default choice for new integrations.",
+    },
+}
 
 
 class ValidationError(Exception):
@@ -77,8 +93,7 @@ def validate_i18n_block(i18n: Any, path: str, fields: dict[str, str]) -> None:
                 raise RuntimeError(f"Unknown field kind: {kind}")
 
 
-def validate_details() -> None:
-    data = load_json(DETAILS_FILE)
+def validate_details(data: dict[str, Any]) -> None:
     require(isinstance(data, dict), "details-data.json root must be an object")
     require(isinstance(data.get("items"), list), "details-data.json.items must be a list")
 
@@ -117,8 +132,7 @@ def validate_details() -> None:
         )
 
 
-def validate_proposed() -> None:
-    data = load_json(PROPOSED_FILE)
+def validate_proposed(data: dict[str, Any]) -> None:
     require(isinstance(data, dict), "proposed-new-entries-review-round-1.json root must be an object")
     require(isinstance(data.get("items"), list), "proposed-new-entries-review-round-1.json.items must be a list")
 
@@ -145,15 +159,64 @@ def validate_proposed() -> None:
         )
 
 
+def content_warnings(details_data: dict[str, Any]) -> list[str]:
+    warnings: list[str] = []
+    items = details_data.get("items", [])
+
+    for idx, item in enumerate(items):
+        label = item.get("label", f"item#{idx}")
+        i18n = item.get("i18n", {})
+        for lang in ("de", "en"):
+            block = i18n.get(lang, {})
+            why = (block.get("whyRing") or "").strip()
+            if why in GENERIC_PHRASES[lang]:
+                warnings.append(f"{label}: {lang}.whyRing looks generic")
+
+            intro = (block.get("intro") or "").strip()
+            if len(intro) < 80:
+                warnings.append(f"{label}: {lang}.intro is very short (<80 chars)")
+
+            for list_field in ("risks", "do", "dont", "whenNotToUse"):
+                arr = block.get(list_field) or []
+                if len(arr) == 0:
+                    warnings.append(f"{label}: {lang}.{list_field} is empty")
+
+        refs = item.get("references") or []
+        if len(refs) == 0:
+            warnings.append(f"{label}: references missing")
+
+    return warnings
+
+
 def main() -> int:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--warn-content", action="store_true", help="Run non-blocking content-quality checks")
+    parser.add_argument("--strict-content", action="store_true", help="Fail when content warnings are found")
+    args = parser.parse_args()
+
     try:
-        validate_details()
-        validate_proposed()
+        details = load_json(DETAILS_FILE)
+        proposed = load_json(PROPOSED_FILE)
+        validate_details(details)
+        validate_proposed(proposed)
     except ValidationError as e:
         print(f"❌ Validation failed: {e}")
         return 1
 
-    print("✅ Radar content validation passed")
+    print("✅ Radar content schema validation passed")
+
+    if args.warn_content or args.strict_content:
+        warns = content_warnings(details)
+        if warns:
+            print("\n⚠️ Content warnings:")
+            for w in warns:
+                print(f"- {w}")
+            if args.strict_content:
+                print("\n❌ strict-content enabled: failing due to warnings")
+                return 2
+        else:
+            print("✅ No content warnings")
+
     return 0
 
 

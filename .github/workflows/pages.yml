@@ -26,6 +26,9 @@ jobs:
       - name: Validate radar content schema
         run: python3 scripts/validate_radar_content.py
 
+      - name: Content quality warnings (non-blocking)
+        run: python3 scripts/validate_radar_content.py --warn-content
+
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

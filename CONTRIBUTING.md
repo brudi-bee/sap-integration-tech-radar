@@ -33,8 +33,13 @@ Nutze dafür das Issue Template: `.github/ISSUE_TEMPLATE/ring-change.md`
 
 - Änderungen kommen per **Issue + Pull Request**.
 - Vorschläge werden zuerst fachlich gesichtet (Architektur + Betrieb + Governance).
-- Merge erst nach Review/Freigabe (mindestens 1 Review).
+- Merge erst nach Review/Freigabe (mindestens 1 Review, empfohlen: 2 für Ring-Changes).
 - Keine direkten inhaltlichen Änderungen auf `main` ohne Review.
+- Empfohlener Reviewer-Kreis:
+  - Architektur (Tech Fit / Ring)
+  - Betrieb/Platform (Operability)
+  - optional Security bei AUTH/Secrets/Exposure-Themen
+- Empfohlener Cadence-Termin für Ring-Entscheidungen: monatlich (operativ) + quartalsweise Snapshot.
 
 ## Release process (lightweight)
 

@@ -1,0 +1,28 @@
+stages:
+  - validate
+  - deploy
+
+validate:radar-schema:
+  stage: validate
+  image: python:3.12-slim
+  script:
+    - python3 scripts/validate_radar_content.py
+
+validate:radar-content-warn:
+  stage: validate
+  image: python:3.12-slim
+  script:
+    - python3 scripts/validate_radar_content.py --warn-content
+  allow_failure: true
+
+pages:
+  stage: deploy
+  image: alpine:3.20
+  script:
+    - mkdir -p public
+    - cp -r docs/* public/
+  artifacts:
+    paths:
+      - public
+  only:
+    - main

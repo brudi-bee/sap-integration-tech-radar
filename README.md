@@ -39,13 +39,14 @@ Einträge werden anhand dieser Kriterien eingestuft:
 
 ## Version
 
-- Current baseline: **v0.1.0** (see `CHANGELOG.md`)
-- Draft update package: `docs/release-notes-v0.1.1-draft.md`
+- Current baseline: **v0.1.1** (see `CHANGELOG.md`)
 - Core focus set: `docs/core-blips-v0.1.1.md`
+- Content schema: `docs/CONTENT_SCHEMA.md`
+- Ready checklist: `docs/READY_CHECKLIST.md`
 - Contribution guide: `CONTRIBUTING.md`
 - PR checklist: `.github/pull_request_template.md`
 
-## Current highlights (v0.1.1 draft)
+## Current highlights (v0.1.1)
 
 - **SAP Cloud Integration (CI)** → ADOPT
   - Default-Wahl für iFlow-basierte Integrationen im SAP/BTP-Kontext.
