@@ -309,11 +309,11 @@
         "https://help.sap.com/docs/integration-suite/sap-integration-suite/trading-partner-management",
         "https://help.sap.com/docs/integration-suite/sap-integration-suite/b2b-integration"
       ],
-      "confidence": "Medium",
+      "confidence": "medium",
       "i18n": {
         "de": {
           "intro": "SAP Trading Partner Management (TPM) ist eine BTP-Komponente zur zentralen Verwaltung von B2B-Handelspartnerkonfigurationen, Kommunikationskanälen (AS2, SFTP, REST) und Agreement-Management. TPM integriert mit SAP Integration Advisor (MIGs) und CPI für durchgängige B2B-Prozesse ohne manuelle Einzelkonfigurationen pro Partner.",
-          "whyRing": "Dieser Punkt ist vielversprechend, sollte aber gezielt und mit klaren Guardrails eingesetzt werden.",
+          "whyRing": "Relevant ab ~20 Handelspartnern mit heterogenen Kommunikationsprotokollen. ASSESS korrekt: Plattform ist noch nicht in breiter Produktivnutzung; Integration mit IA und CPI reift kontinuierlich; Community-Erfahrung noch begrenzt. Gezielte Pilotevaluation empfohlen.",
           "risks": [
             "Geringe Marktdurchdringung bedeutet wenig Erfahrungsberichte und Community-Wissen. Integration mit bestehenden B2B-Gateways (Seeburger, OpenText) erfordert individuelle Prüfung. Migrationspfad von bestehenden Partnerkonfigurationen ist aufwändig und riskant."
           ],
@@ -329,7 +329,7 @@
         },
         "en": {
           "intro": "SAP Trading Partner Management (TPM) is a BTP component for centrally managing B2B trading partner configurations, communication channels (AS2, SFTP, REST), and agreement management. TPM integrates with SAP Integration Advisor (MIGs) and CPI for end-to-end B2B processes without manual per-partner configuration.",
-          "whyRing": "This item is promising but should be introduced selectively with clear guardrails.",
+          "whyRing": "Relevant for ~20+ trading partners with heterogeneous communication protocols. ASSESS is correct: platform is not yet in broad production use; integration with IA and CPI is continuously maturing; community experience still limited. Targeted pilot evaluation recommended.",
           "risks": [
             "Low market penetration means limited field reports and community knowledge. Integration with existing B2B gateways (Seeburger, OpenText) requires individual assessment. Migration path from existing partner configurations is effort-intensive and risky."
           ],
@@ -357,11 +357,11 @@
         "https://help.sap.com/docs/integration-suite/sap-integration-suite/operating-edge-integration-cell",
         "https://help.sap.com/docs/integration-suite/sap-integration-suite/edge-integration-cell-prerequisites"
       ],
-      "confidence": "Medium",
+      "confidence": "medium",
       "i18n": {
         "de": {
           "intro": "Die Edge Integration Cell (EIC) ist eine SAP-verwaltete Kubernetes-basierte Laufzeit für CPI-IFlows, die auf kundeneigener Infrastruktur (On-Premise oder Private Cloud) deployed wird. Datenverarbeitung findet lokal statt ohne Cloud-Transit. Richtet sich an Szenarien mit Datensouveränitätsanforderungen (DSGVO, Branchenregulatorik), latenzempfindlichen Integrationen oder Offline-fähigen Edge-Szenarien.",
-          "whyRing": "Dieser Punkt hat Potenzial, braucht aber vor breiter Nutzung noch strukturierte Validierung.",
+          "whyRing": "Strategisch wichtig für Branchen mit strikten Datenlokalisierungsanforderungen (Healthcare, Public Sector, regulierte Finanzbranche). TRIAL korrekt: Kubernetes-Betriebskompetenz zwingend, Feature-Parität mit Cloud-CPI noch nicht vollständig, Kundenbasis noch begrenzt.",
           "risks": [
             "Kubernetes-Betrieb (Cluster-Management, Upgrades, Zertifikatspflege) erheblicher Zusatzaufwand. SAP EIC-Update-Zyklen müssen aktiv verfolgt und zeitnah angewendet werden. Feature-Gaps gegenüber Cloud-CPI (nicht alle Adapter verfügbar). Monitoring und Alerting erfordern separate Konfiguration vs. Cloud-CPI."
           ],
@@ -377,13 +377,12 @@
         },
         "en": {
           "intro": "The Edge Integration Cell (EIC) is an SAP-managed Kubernetes-based runtime for CPI IFlows deployed on customer-owned infrastructure (on-premise or private cloud). Data processing occurs locally without cloud transit. Targets scenarios with data sovereignty requirements (GDPR, industry regulation), latency-sensitive integrations, or offline-capable edge scenarios.",
-          "whyRing": "This item has potential but requires structured validation before broader adoption.",
+          "whyRing": "Strategically important for industries with strict data localization requirements (healthcare, public sector, regulated finance). TRIAL is correct: Kubernetes operational competency is mandatory, feature parity with cloud CPI not yet complete, customer base still limited.",
           "risks": [
             "Kubernetes operations (cluster management, upgrades, certificate maintenance) add significant overhead. SAP EIC update cycles must be actively tracked and applied promptly. Feature gaps vs. cloud CPI (not all adapters available). Monitoring and alerting require separate configuration vs. cloud CPI."
           ],
           "do": [
-            "Only introduce when concrete, proven data sovereignty or latency requirements exist. Ensure Kubernetes expertise before rollout (internal or via partner). Set up monitoring integration with SAP Cloud ALM from day",
-            "Check feature parity with cloud CPI before project start (which adapters are missing?)."
+            "Only introduce when concrete, proven data sovereignty or latency requirements exist. Ensure Kubernetes expertise before rollout (internal or via partner). Set up monitoring integration with SAP Cloud ALM from day 1. Check feature parity with cloud CPI before project start (which adapters are missing?)."
           ],
           "dont": [
             "Do not adopt without an agreed operating model and ownership setup."
