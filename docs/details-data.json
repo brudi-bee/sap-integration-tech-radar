@@ -3424,41 +3424,80 @@
       "label": "SAP Datasphere Integration",
       "ring": "ADOPT",
       "quadrant": "Platforms",
-      "references": [],
+      "confidence": "High",
+      "references": [
+        "https://help.sap.com/docs/SAP_DATASPHERE",
+        "https://help.sap.com/docs/integration-suite",
+        "https://community.sap.com/t5/technology-blogs-by-sap/bg-p/technology-blogs-by-sapblog-board?labels=Datasphere",
+        "https://launchpad.support.sap.com/#/notes/2890171",
+        "https://launchpad.support.sap.com/#/notes/325574",
+        "https://launchpad.support.sap.com/#/notes/3297105"
+      ],
       "sources": [
-        "docs/proposed-new-entries-review-round-1.json"
+        "docs/proposed-new-entries-review-round-1.json",
+        "user-research-refinement-2026-02-24"
       ],
       "i18n": {
         "de": {
-          "intro": "Trennung von Daten-Integration (ETL/Virtuell) und Prozess-Integration.",
-          "whyRing": "Schutz der Prozess-Middleware vor Daten-Überlast.",
+          "intro": "SAP Datasphere ist SAPs strategische Business-Data-Fabric-Plattform für Datenintegration, semantische Modellierung und Analytics-Bereitstellung. Sie trennt Datenintegration (ETL, CDC, Föderation) klar von Prozessintegration (Integration Suite/CPI). Massendaten laufen über Replication/Data Flows und Federation, während transaktionale und eventgetriebene Prozessflüsse in CPI/Event Mesh bleiben.",
+          "whyRing": "ADOPT, weil die Rollentrennung Architektur-Risiken reduziert: CPI bleibt für prozessnahe Integrationen, Datasphere übernimmt datenlastige Extraktion, Harmonisierung und analytische Bereitstellung. Das verhindert Überlast der Prozess-Middleware und folgt der SAP-Strategie für Daten- und Analytics-Szenarien.",
           "risks": [
-            "Integration Suite Performance-Einbruch durch Massendaten-Moves."
+            "Fehlgeleitete ETL-Last auf CPI führt zu Laufzeitproblemen und Timeout-Kaskaden bei großen Datenmengen.",
+            "DP-Agent-On-Prem-Setups sind oft unterdimensioniert; produktive Last braucht i. d. R. deutlich mehr Ressourcen als Defaults.",
+            "ODP/API-Richtlinien und Tool-Nutzung müssen sauber geklärt sein (insb. bei Dritttool-Zugriffen).",
+            "Premium-Features (z. B. Outbound-Integration in externe Data Lakes) können zusätzliche Lizenzkosten erzeugen.",
+            "Ohne Foundation-Space-Ansatz entstehen unnötige Doppelreplikationen und Quellsystemlast."
           ],
           "do": [
-            "Data Sharing/Federation für Analytics."
+            "Federation-first anwenden und Replikation nur dort nutzen, wo Performance, Historisierung oder Entkopplung es erfordern.",
+            "Massendaten über Replication Flow + CDC aufsetzen; CPI für transaktionale Prozessintegration reservieren.",
+            "Einmal replizieren, mehrfach konsumieren: zentrale Foundation-Space-Modelle per Sharing bereitstellen.",
+            "Filterung und Reduktion möglichst quellsystemnah (z. B. CDS-seitig) definieren.",
+            "Task Chains + Alerting für Replikation/Transformation standardisieren und operativ überwachen.",
+            "SAC/Analytics direkt an Datasphere anbinden statt Umwege über Prozessmiddleware."
           ],
           "dont": [
-            "SAP CI für Terabyte-Transfers nutzen."
+            "Keine Massendaten-Batch-ETL über CPI-IFlows routen.",
+            "JDBC-Direktzugriff aus CPI nicht für analytische Reads/Massenabfragen missbrauchen.",
+            "Keine ODP-Zugriffe mit nicht freigegebenen Drittansätzen aufbauen.",
+            "Sensible Daten nicht ohne Space-Governance und Access-Control übergreifend teilen.",
+            "DP-Agent nicht mit Default-Sizing produktiv betreiben."
           ],
           "whenNotToUse": [
-            "Nicht einführen, wenn Nutzen, Betriebsmodell und Verantwortlichkeiten unklar sind."
+            "Nicht als Ersatz für transaktionale Prozessintegration mit synchroner Rückkopplung verwenden (dafür Integration Suite/CPI).",
+            "Nicht für sub-sekündiges Event-Streaming einsetzen (dafür Event Mesh/AEM).",
+            "Nicht als generische A2A-Middleware für RFC/IDoc/SOAP-Prozessflüsse verwenden."
           ]
         },
         "en": {
-          "intro": "Trennung von Daten-Integration (ETL/Virtuell) und Prozess-Integration.",
-          "whyRing": "Schutz der Prozess-Middleware vor Daten-Überlast.",
+          "intro": "SAP Datasphere is SAP’s strategic business data fabric platform for data integration, semantic modeling, and analytics delivery. It separates data integration (ETL, CDC, federation) from process integration (Integration Suite/CPI). High-volume data workloads belong in Datasphere flows, while transactional and event-driven process flows stay in CPI/Event Mesh.",
+          "whyRing": "ADOPT because this role split reduces architecture risk: CPI remains focused on process integration while Datasphere handles data-heavy extraction, harmonization, and analytic consumption according to SAP’s strategic direction.",
           "risks": [
-            "Integration Suite Performance-Einbruch durch Massendaten-Moves."
+            "Routing ETL-heavy workloads through CPI can cause runtime pressure and timeout cascades.",
+            "On-prem DP Agent setups are often undersized for production throughput.",
+            "ODP/API policy constraints must be validated early, especially for third-party access models.",
+            "Premium outbound scenarios may introduce additional licensing costs.",
+            "Without a foundation-space model, duplicate replications can overload source systems."
           ],
           "do": [
-            "Data Sharing/Federation für Analytics."
+            "Apply federation-first and replicate only where performance/history/offline needs justify it.",
+            "Use Replication Flow + CDC for high-volume scenarios and keep CPI for process-centric integration.",
+            "Replicate once, consume many times through shared foundation-space models.",
+            "Push filtering and reduction as close to the source as possible.",
+            "Operationalize task chains and alerting for replication/transformation reliability.",
+            "Connect SAC/analytics directly to Datasphere where appropriate."
           ],
           "dont": [
-            "SAP CI für Terabyte-Transfers nutzen."
+            "Do not route mass-data ETL through CPI iFlows.",
+            "Do not use CPI JDBC access for analytics-heavy reads.",
+            "Do not implement non-compliant ODP access patterns.",
+            "Do not share sensitive data across spaces without governance controls.",
+            "Do not run production DP Agent setups with default sizing."
           ],
           "whenNotToUse": [
-            "Do not introduce this when value, operating model, and ownership are still unclear."
+            "Do not use Datasphere as a replacement for transactional process integration with synchronous feedback.",
+            "Do not use it for sub-second event streaming (use Event Mesh/AEM instead).",
+            "Do not position it as a generic A2A middleware for RFC/IDoc/SOAP process flows."
           ]
         }
       }
