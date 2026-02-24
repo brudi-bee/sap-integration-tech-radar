@@ -69,8 +69,14 @@
     if (ringColors[ring]) {
       ringEl.style.background = ringColors[ring].bg;
       ringEl.style.borderColor = ringColors[ring].border;
-      // In light theme use strong text contrast for readability
-      ringEl.style.color = isLight ? '#1f3470' : ringColors[ring].text;
+      // In light theme enforce high contrast per ring
+      if (isLight) {
+        ringEl.style.color = ring === 'HOLD' ? '#8b1e2d' : '#1f3470';
+        ringEl.style.fontWeight = '700';
+      } else {
+        ringEl.style.color = ringColors[ring].text;
+        ringEl.style.fontWeight = '600';
+      }
     }
   }
 
